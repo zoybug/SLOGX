@@ -392,6 +392,11 @@ footer {
   color: var(--muted);
 }
 
-.drawer h2 { margin-top: 0; font-size: 1.15rem; }
-.drawer h3 { margin: 1.25rem 0 0.35rem; font-size: 0.95rem; }
-.drawer h4 { margin: 1rem 0 0.25rem; font-size: 0.85rem; color: var(--muted); }
+.drawer h2 { margin-top: 0; font-size: 1.25rem; font-weight: 700; }
+.drawer h3 { margin: 1.5rem 0 0.4rem; font-size: 1rem; font-weight: 600; color: var(--text); }
+.drawer .lead { font-size: 0.95rem; line-height: 1.55; margin-bottom: 0.75rem; }
+.drawer .drawer-section { margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+.drawer .drawer-section:first-of-type { margin-top: 1rem; border-top: none; padding-top: 0; }
+.drawer p { margin: 0.4rem 0 0.75rem; line-height: 1.55; }
+.drawer a { color: var(--accent); text-decoration: none; }
+.drawer a:hover { text-decoration: underline; }
