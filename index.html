@@ -17,6 +17,7 @@
   <body>
     <header>
       <h1>Exploring Global Shipping Connectivity</h1>
+      <button id="about-btn" class="about-btn" type="button" aria-label="About PLSCI and this site">About</button>
       <p>Port Liner Shipping Connectivity Index</p>
     </header>
 
@@ -85,5 +86,30 @@
     <footer>
       <p id="source-note"></p>
     </footer>
+
+    <!-- About / Definitions drawer -->
+    <div id="about-drawer" class="drawer hidden" role="dialog" aria-labelledby="about-title">
+      <div class="drawer-content">
+        <button id="about-close" class="drawer-close" type="button">×</button>
+        <h2 id="about-title">About PLSCI</h2>
+        <p>The Port Liner Shipping Connectivity Index (PLSCI) measures a port’s integration into global liner shipping networks. A higher value indicates better connectivity through regular container shipping services.</p>
+        <p><a href="https://unctadstat.unctad.org/datacentre/reportInfo/US.PLSCI" target="_blank" rel="noopener">Read the full UNCTAD methodology →</a></p>
+
+        <h3>About this site</h3>
+        <p>This site makes UNCTAD port connectivity data easier to explore. You choose a country, then view interactive charts of port performance—how ports compare within a country and against ports elsewhere.</p>
+
+        <h4>Data source</h4>
+        <p>All statistics shown on this site are sourced from UNCTAD (UN Trade and Development), including the Port Liner Shipping Connectivity Index (PLSCI) and related series. We do not own, collect, or claim rights to that data. UNCTAD remains the source and rights holder.</p>
+
+        <h4>What we provide</h4>
+        <p>Our product is the presentation layer: interactive charts, country and port selectors, side-by-side comparisons, and clear visuals that show which ports lead or lag—in one country or across two you pick. We transform publicly available UNCTAD series into a simpler browsing and comparison experience.</p>
+
+        <h4>Beta</h4>
+        <p>The site is in beta. Core country and port views are live; more features—deeper comparisons, filters, exports, and additional indicators—are planned. Layouts, metrics, and coverage may change as we test and improve. Feedback is welcome.</p>
+
+        <h4>Disclaimer</h4>
+        <p>Figures are for information and research support only. They are not official UNCTAD products unless we say so explicitly. For authoritative definitions, methodology, and licensing, use UNCTAD’s own resources.</p>
+      </div>
+    </div>
   </body>
 </html>

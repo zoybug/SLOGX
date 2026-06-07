@@ -341,3 +341,57 @@ footer {
   color: var(--muted);
   font-size: 0.8rem;
 }
+
+.about-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  cursor: pointer;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  max-width: 90vw;
+  height: 100vh;
+  background: var(--surface);
+  box-shadow: -8px 0 24px rgba(0,0,0,0.1);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.2s ease;
+}
+
+.drawer.hidden {
+  transform: translateX(100%);
+  display: block;
+}
+
+.drawer-content {
+  padding: 2rem 1.75rem 2.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.drawer-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.8rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.drawer h2 { margin-top: 0; font-size: 1.15rem; }
+.drawer h3 { margin: 1.25rem 0 0.35rem; font-size: 0.95rem; }
+.drawer h4 { margin: 1rem 0 0.25rem; font-size: 0.85rem; color: var(--muted); }

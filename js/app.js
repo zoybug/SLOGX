@@ -22,6 +22,56 @@ const PLOTLY_CONFIG = {
   modeBarButtonsToRemove: ["lasso2d", "select2d"],
 };
 
+const COUNTRY_ABBR = {
+  "Albania": "ALB", "Algeria": "DZA", "Angola": "AGO", "Antigua and Barbuda": "ATG",
+  "Argentina": "ARG", "Australia": "AUS", "Austria": "AUT", "Azerbaijan": "AZE",
+  "Bahamas": "BHS", "Bahrain": "BHR", "Bangladesh": "BGD", "Barbados": "BRB",
+  "Belgium": "BEL", "Belize": "BLZ", "Benin": "BEN", "Bolivia (Plurinational State of)": "BOL",
+  "Bosnia and Herzegovina": "BIH", "Botswana": "BWA", "Brazil": "BRA", "Brunei Darussalam": "BRN",
+  "Bulgaria": "BGR", "Burkina Faso": "BFA", "Burundi": "BDI", "Cabo Verde": "CPV",
+  "Cambodia": "KHM", "Cameroon": "CMR", "Canada": "CAN", "Central African Republic": "CAF",
+  "Chad": "TCD", "Chile": "CHL", "China": "CHN", "Colombia": "COL", "Comoros": "COM",
+  "Congo": "COG", "Costa Rica": "CRI", "Cote d'Ivoire": "CIV", "Croatia": "HRV",
+  "Cuba": "CUB", "Cyprus": "CYP", "Czechia": "CZE", "Dem. People's Rep. of Korea": "PRK",
+  "Dem. Rep. of the Congo": "COD", "Denmark": "DNK", "Djibouti": "DJI", "Dominica": "DMA",
+  "Dominican Republic": "DOM", "Ecuador": "ECU", "Egypt": "EGY", "El Salvador": "SLV",
+  "Equatorial Guinea": "GNQ", "Eritrea": "ERI", "Estonia": "EST", "Eswatini": "SWZ",
+  "Ethiopia": "ETH", "Fiji": "FJI", "Finland": "FIN", "France": "FRA", "Gabon": "GAB",
+  "Gambia": "GMB", "Georgia": "GEO", "Germany": "DEU", "Ghana": "GHA", "Greece": "GRC",
+  "Grenada": "GRD", "Guatemala": "GTM", "Guinea": "GIN", "Guinea-Bissau": "GNB",
+  "Guyana": "GUY", "Haiti": "HTI", "Honduras": "HND", "Hungary": "HUN", "Iceland": "ISL",
+  "India": "IND", "Indonesia": "IDN", "Iran (Islamic Republic of)": "IRN", "Iraq": "IRQ",
+  "Ireland": "IRL", "Israel": "ISR", "Italy": "ITA", "Jamaica": "JAM", "Japan": "JPN",
+  "Jordan": "JOR", "Kazakhstan": "KAZ", "Kenya": "KEN", "Kiribati": "KIR", "Kuwait": "KWT",
+  "Kyrgyzstan": "KGZ", "Lao People's Democratic Republic": "LAO", "Latvia": "LVA",
+  "Lebanon": "LBN", "Lesotho": "LSO", "Liberia": "LBR", "Libya": "LBY", "Lithuania": "LTU",
+  "Luxembourg": "LUX", "Madagascar": "MDG", "Malawi": "MWI", "Malaysia": "MYS",
+  "Maldives": "MDV", "Mali": "MLI", "Malta": "MLT", "Marshall Islands": "MHL",
+  "Mauritania": "MRT", "Mauritius": "MUS", "Mexico": "MEX",
+  "Micronesia (Federated States of)": "FSM", "Mongolia": "MNG", "Montenegro": "MNE",
+  "Morocco": "MAR", "Mozambique": "MOZ", "Myanmar": "MMR", "Namibia": "NAM", "Nauru": "NRU",
+  "Nepal": "NPL", "Netherlands (Kingdom of the)": "NLD", "New Zealand": "NZL",
+  "Nicaragua": "NIC", "Niger": "NER", "Nigeria": "NGA", "North Macedonia": "MKD",
+  "Norway": "NOR", "Oman": "OMN", "Pakistan": "PAK", "Palau": "PLW", "Panama": "PAN",
+  "Papua New Guinea": "PNG", "Paraguay": "PRY", "Peru": "PER", "Philippines": "PHL",
+  "Poland": "POL", "Portugal": "PRT", "Qatar": "QAT", "Republic of Korea": "KOR",
+  "Republic of Moldova": "MDA", "Romania": "ROU", "Russian Federation": "RUS", "Rwanda": "RWA",
+  "Saint Kitts and Nevis": "KNA", "Saint Lucia": "LCA",
+  "Saint Vincent and the Grenadines": "VCT", "Samoa": "WSM", "Sao Tome and Principe": "STP",
+  "Saudi Arabia": "SAU", "Senegal": "SEN", "Serbia": "SRB", "Seychelles": "SYC",
+  "Sierra Leone": "SLE", "Singapore": "SGP", "Slovakia": "SVK", "Slovenia": "SVN",
+  "Solomon Islands": "SLB", "Somalia": "SOM", "South Africa": "ZAF", "South Sudan": "SSD",
+  "Spain": "ESP", "Sri Lanka": "LKA", "Sudan": "SDN", "Suriname": "SUR", "Sweden": "SWE",
+  "Switzerland": "CHE", "Syrian Arab Republic": "SYR", "Tajikistan": "TJK", "Thailand": "THA",
+  "Timor-Leste": "TLS", "Togo": "TGO", "Tonga": "TON", "Trinidad and Tobago": "TTO",
+  "Tunisia": "TUN", "Turkiye": "TUR", "Turkmenistan": "TKM", "Tuvalu": "TUV", "Uganda": "UGA",
+  "Ukraine": "UKR", "United Arab Emirates": "ARE",
+  "United Kingdom": "GBR", "United Republic of Tanzania": "TZA", "United States": "USA",
+  "Uruguay": "URY", "Uzbekistan": "UZB", "Vanuatu": "VUT",
+  "Venezuela (Bolivarian Rep. of)": "VEN", "Viet Nam": "VNM", "Yemen": "YEM",
+  "Zambia": "ZMB", "Zimbabwe": "ZWE"
+};
+
 const state = {
   data: null,
   compareMode: false,
@@ -241,7 +291,8 @@ function shortPortLabel(name, maxLen = 16) {
 
 function traceLabel(entry) {
   if (state.compareMode) {
-    const prefix = entry.side === "a" ? entry.countryLabel.slice(0, 3).toUpperCase() : entry.countryLabel.slice(0, 2).toUpperCase();
+    const code = COUNTRY_ABBR[entry.countryLabel] || entry.countryLabel.slice(0, 3).toUpperCase();
+    const prefix = entry.side === "a" ? code : code.slice(0, 2);
     return `${prefix} · ${entry.port.name}`;
   }
   return entry.port.name;
@@ -250,6 +301,24 @@ function traceLabel(entry) {
 function hoverRowTemplate(label) {
   const text = shortPortLabel(label, 22);
   return `${text}  %{y:7.1f}<extra></extra>`;
+}
+
+function clampYAxis(chartEl, yMax) {
+  if (!chartEl || !yMax) return;
+  const clamp = () => {
+    const layout = chartEl._fullLayout;
+    if (!layout || !layout.yaxis) return;
+    const [ymin, ymax] = layout.yaxis.range || [0, yMax];
+    const clampedMin = Math.max(0, ymin);
+    const clampedMax = Math.min(yMax * 1.08, ymax);
+    if (clampedMin !== ymin || clampedMax !== ymax) {
+      Plotly.relayout(chartEl, { "yaxis.range": [clampedMin, clampedMax] });
+    }
+  };
+  if (!chartEl._zoomClamped) {
+    chartEl.on("plotly_relayout", clamp);
+    chartEl._zoomClamped = true;
+  }
 }
 
 function buildLabelAnnotations(entries, year, yMax) {
@@ -531,7 +600,7 @@ function renderCharts() {
     },
     yaxis: {
       title: "PLSCI",
-      range: [0, yMax],
+      range: [0, yMax * 1.05],
       gridcolor: "#ECECEC",
       zeroline: false,
       fixedrange: false,
@@ -565,6 +634,7 @@ function renderCharts() {
   };
 
   Plotly.react("chart", traces, layout, PLOTLY_CONFIG);
+  clampYAxis(document.getElementById("chart"), yMax);
 
   const year = rankingYear();
   if (state.compareMode) {
@@ -836,9 +906,22 @@ function bindControls() {
   document.getElementById("play-btn").addEventListener("click", toggleAnimation);
   document.getElementById("reset-btn").addEventListener("click", resetView);
 
+  const aboutBtn = document.getElementById("about-btn");
+  const aboutDrawer = document.getElementById("about-drawer");
+  const aboutClose = document.getElementById("about-close");
+  if (aboutBtn && aboutDrawer && aboutClose) {
+    aboutBtn.addEventListener("click", () => aboutDrawer.classList.remove("hidden"));
+    aboutClose.addEventListener("click", () => aboutDrawer.classList.add("hidden"));
+    aboutDrawer.addEventListener("click", (e) => {
+      if (e.target.id === "about-drawer") aboutDrawer.classList.add("hidden");
+    });
+  }
+
+  let sourceText = meta.source || "";
+  sourceText = sourceText.replace(/downloaded \d{1,2} \w+ \d{4}/i, "as per the data of 25 Mar. 2026");
   const metaNote = meta.nCountries
-    ? `${meta.source} ${meta.nCountries} countries, ${meta.nPorts} ports.`
-    : meta.source;
+    ? `${sourceText} ${meta.nCountries} countries, ${meta.nPorts} ports.`
+    : sourceText;
   document.getElementById("source-note").textContent = metaNote;
 }
 
