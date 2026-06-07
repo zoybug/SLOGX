@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLSCI Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Exploring Global Shipping Connectivity</h1>
+      <p>Port Liner Shipping Connectivity Index</p>
+    </header>
+
+    <section class="controls">
+      <div class="control">
+        <label for="country-a">Country</label>
+        <select id="country-a"></select>
+      </div>
+
+      <div class="control compare-control hidden" id="country-b-control">
+        <label for="country-b">Compare with</label>
+        <select id="country-b"></select>
+      </div>
+
+      <div class="control checkbox">
+        <input id="compare-mode" type="checkbox" />
+        <label for="compare-mode">Compare two countries</label>
+      </div>
+
+      <div class="control year-range">
+        <span class="label">Year range</span>
+        <div class="values">
+          <span id="year-start-value">2006</span>
+          –
+          <span id="year-end-value">2023</span>
+        </div>
+        <div class="sliders">
+          <input id="year-start" type="range" min="2006" max="2026" value="2006" />
+          <input id="year-end" type="range" min="2006" max="2026" value="2023" />
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="top-n">Top ports</label>
+        <select id="top-n">
+          <option value="5">Top 5</option>
+          <option value="10" selected>Top 10</option>
+          <option value="15">Top 15</option>
+          <option value="999">All ports</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="play-btn" class="primary" type="button">Play</button>
+        <button id="reset-btn" type="button">Reset</button>
+      </div>
+    </section>
+
+    <main id="main-view">
+      <section class="country-panel" id="panel-main">
+        <div class="panel-header">
+          <h2 class="panel-title" id="panel-title"></h2>
+          <div class="country-legend hidden" id="country-legend"></div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" id="chart"></div>
+          <aside class="ranking-sidebar" id="ranking-sidebar">
+            <div class="ranking" id="ranking-single"></div>
+            <div class="ranking compare-ranking hidden" id="ranking-a"></div>
+            <div class="ranking compare-ranking hidden" id="ranking-b"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p id="source-note"></p>
+    </footer>
+  </body>
+</html>

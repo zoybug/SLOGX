@@ -1,0 +1,343 @@
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #242424;
+  --muted: #6f6f6f;
+  --border: #e6e6e6;
+  --accent: #0072b2;
+  --accent-soft: #e8f3fa;
+  --shadow: 0 8px 24px rgba(36, 36, 36, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.45;
+}
+
+header {
+  padding: 1.5rem 1.75rem 0.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  align-items: end;
+  margin: 1rem 1.75rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 8rem;
+}
+
+.control label,
+.control .label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.control select,
+.control input[type="number"] {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+  background: #fff;
+}
+
+.year-range {
+  min-width: 16rem;
+}
+
+.year-range .values {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.year-range input[type="range"] {
+  width: 100%;
+}
+
+.year-range .sliders {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: auto;
+}
+
+.checkbox input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+button {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.checkbox label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+}
+
+.compare-control.hidden {
+  display: none;
+}
+
+main {
+  padding: 1rem 1.75rem 1.75rem;
+}
+
+.panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.country-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.country-legend.hidden {
+  display: none;
+}
+
+.legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.legend-chip .swatch {
+  width: 1.25rem;
+  height: 0.2rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-chip .swatch.solid {
+  background: currentColor;
+}
+
+.legend-chip .swatch.dashed {
+  background: transparent;
+  border-top: 3px dashed;
+}
+
+.legend-chip.side-a {
+  color: #0072b2;
+}
+
+.legend-chip.side-b {
+  color: #d55e00;
+}
+
+.panel-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17rem;
+  gap: 1rem;
+}
+
+.ranking-sidebar.compare-rankings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.ranking-sidebar.compare-rankings .compare-ranking {
+  flex: 1;
+  min-height: 0;
+  max-height: 17rem;
+  overflow-y: auto;
+}
+
+.ranking.hidden {
+  display: none;
+}
+
+.chart {
+  min-height: 34rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 0.25rem;
+}
+
+.ranking {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.ranking h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.ranking .year-badge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.chart .xtick text,
+.chart .xaxislayer-above text {
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .panel-body {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-sidebar.compare-rankings {
+    flex-direction: column;
+  }
+
+  .chart {
+    min-height: 24rem;
+  }
+
+  .actions {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.rank-row {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr auto;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0.45rem;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.rank-row:last-child {
+  border-bottom: none;
+}
+
+.rank-row:hover {
+  background: #f5f8fb;
+}
+
+.rank-row.highlighted {
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+.rank-row.highlighted .value {
+  color: var(--accent);
+}
+
+.rank-row .rank {
+  color: var(--muted);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-row .value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.rank-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.35rem;
+}
+
+footer {
+  padding: 0 1.75rem 1.5rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
