@@ -1,0 +1,102 @@
+{
+  "n": 30,
+  "geographies": {
+    "Vietnam": 11,
+    "Indonesia": 3,
+    "Chile": 1,
+    "Bangladesh": 1,
+    "Morocco": 1,
+    "Brazil": 1,
+    "China": 6,
+    "Russia": 2,
+    "Ghana": 1,
+    "Mexico": 1,
+    "Austria": 1
+  },
+  "q3": {
+    "AI": 24,
+    "Optimization": 22,
+    "IoT": 20,
+    "Automation": 19,
+    "Digital Twin": 17,
+    "Big Data": 15,
+    "Real-time Data": 7,
+    "Connectivity": 7,
+    "LLM": 5,
+    "Prediction": 5,
+    "Efficiency": 4,
+    "Visibility": 3,
+    "Data Analytics": 3,
+    "Transportation": 3,
+    "Sustainability": 3,
+    "Human Oversight": 2,
+    "Blockchain": 2,
+    "Resilience": 1,
+    "Technology": 1,
+    "Autonomy": 1,
+    "Digitalization": 1,
+    "UAV": 1,
+    "Risk": 1,
+    "Routing": 1,
+    "Scheduling": 1
+  },
+  "coMentions": {
+    "AI + Optimization": 17,
+    "IoT + Digital Twin": 15
+  },
+  "cases": [
+    {
+      "geography": "Vietnam",
+      "name": "Viettel Post sorting",
+      "type": "Warehouse automation"
+    },
+    {
+      "geography": "China",
+      "name": "JD Logistics delivery",
+      "type": "Autonomous delivery"
+    },
+    {
+      "geography": "Indonesia",
+      "name": "Cikarang 5G warehouse",
+      "type": "Connectivity + AGVs"
+    },
+    {
+      "geography": "Morocco",
+      "name": "Tanger Med assistants",
+      "type": "Port + AI services"
+    },
+    {
+      "geography": "Chile",
+      "name": "San Antonio port",
+      "type": "Terminal + rail links"
+    },
+    {
+      "geography": "Brazil",
+      "name": "APM Suape terminal",
+      "type": "Port electrification"
+    },
+    {
+      "geography": "Russia",
+      "name": "Yandex delivery robots",
+      "type": "Last-mile robotics"
+    },
+    {
+      "geography": "Austria",
+      "name": "Post Vienna-Inzersdorf",
+      "type": "Sorting operations"
+    },
+    {
+      "geography": "Bangladesh",
+      "name": "National Logistics Policy",
+      "type": "Policy / infrastructure"
+    }
+  ],
+  "insights": [
+    "Start with data, not tools.",
+    "AI predicts; Operations Research decides.",
+    "Automate the plan, but keep a human on the button.",
+    "Prediction creates value only when joined to optimization and operational execution.",
+    "The real transition is from rigid logistics to adaptive logistics.",
+    "Even advanced AI cannot coordinate logistics if partners use incompatible data."
+  ]
+}
