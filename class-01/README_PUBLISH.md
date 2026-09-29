@@ -1,9 +1,7 @@
-# Class Smart Logistics Intelligence Map
+# Introduction to Smart Logistics / Class Atlas
 
-The `deliverables` folder is a self-contained website and artifact package. Its `index.html` opens the interactive companion. The PDFs, high-resolution PNG, SVG poster source, editable brief HTML, and method note are in the same folder. No build step, account, analytics service, or external JavaScript library is required.
+This folder is a self-contained course site. `index.html` opens the eight-lecture register; `lecture-01/index.html` contains the first lecture page and quiz. The `interactive/` address redirects to Lecture 01 so existing links still work. PDFs, a high-resolution PNG, an editable SVG poster, and an editable HTML brief are included. No build step is required.
 
 ## GitHub Pages
 
-Copy the **contents** of this folder into the directory that GitHub Pages publishes (the repository root, `/docs`, or a project subdirectory). Keep the `interactive` folder beside the PDFs so its download links work. If the repository already has a homepage, copy this package into a `class-smart-logistics` subdirectory; then the experience will be available at `/class-smart-logistics/` without replacing the existing homepage.
-
-Before publication, review the student-cited case labels with the course owner if public fact claims are desired. The website intentionally describes them as examples discussed by students, and does not claim independent verification of dates or operational outcomes.
+Copy the **contents** of this folder into the directory that GitHub Pages publishes. Keep the `assets`, `lecture-01`, and `interactive` folders beside the PDFs so their relative links work. The public version lives at `/SLOGX/class-01/`.
