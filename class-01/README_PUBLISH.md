@@ -1,6 +1,6 @@
 # Introduction to Smart Logistics / Class Atlas
 
-This folder is a self-contained course site. `index.html` opens the eight-lecture register; `lecture-01/index.html` presents seven full-screen chapters with previous/next controls. Five class findings are followed by a separate reading room and 20-question decision lab. The `interactive/` address redirects to Lecture 01 so existing links still work. PDFs, a high-resolution PNG, an editable SVG poster, and an editable HTML brief are included. No build step is required.
+This folder is a self-contained course site. `index.html` opens the eight-lecture register; `lecture-01/index.html` presents a five-part student slideshow with previous/next controls and a compact table of contents. The reading room and 20-question decision lab live on the Lecture 01 page. The `interactive/` address redirects to Lecture 01 so existing links still work. PDFs, a high-resolution PNG, an editable SVG poster, and an editable HTML brief are included. No build step is required.
 
 ## GitHub Pages
 
