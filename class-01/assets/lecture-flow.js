@@ -31,10 +31,7 @@
       const name = button.querySelector('.deck-neighbor');
       if (name) name.textContent = current === slides.length - 1 ? 'End' : slideTitle(current + 1);
     });
-    const position = current === 0 ? 'CONTENTS / 05' : `${String(current).padStart(2, '0')} / 05 · ${slideTitle(current).toUpperCase()}`;
-    document.querySelector('#deck-position').textContent = position;
     document.querySelector('#deck-mobile-position').textContent = current === 0 ? 'Contents' : `${String(current).padStart(2, '0')} / 05`;
-    document.querySelector('#deck-progress-fill').style.width = `${current / (slides.length - 1) * 100}%`;
   }
 
   function goTo(index, smooth = true) {

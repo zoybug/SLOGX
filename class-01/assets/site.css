@@ -229,3 +229,14 @@ body.modal-open{overflow:hidden}
   .quiz-board{grid-template-columns:1fr}
   .quiz-side{order:0}
 }
+
+/* Course register uses the same restrained green and vivid orange as Lecture 01. */
+.course-home .hub-heading h1 em{color:var(--secondary)}
+.course-home .hub-feature{border-top:3px solid var(--secondary)}
+.course-home .hub-feature .feature-label{color:var(--secondary-deep)}
+.course-home .hub-feature .button-link{background:var(--secondary);border-color:var(--secondary)}
+.course-home .hub-feature .button-link:hover{background:var(--secondary-deep)}
+.course-home .register-head{border-bottom-color:var(--secondary)}
+.course-home .lecture-row.available{border-left:3px solid var(--secondary);padding-left:8px}
+.course-home .lecture-row.available:hover{background:var(--secondary-pale)}
+.course-home .lecture-row.available .number,.course-home .lecture-row.available .status{color:var(--secondary-deep)}
