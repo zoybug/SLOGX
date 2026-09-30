@@ -1,151 +1,151 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1131" viewBox="0 0 1600 1131" role="img" aria-label="Class Smart Logistics Intelligence Map">
 <title>Class Smart Logistics Intelligence Map</title>
-<rect x="0" y="0" width="1600" height="1131" rx="0" fill="#F8F7F3" stroke="none" stroke-width="1"/>
-<rect x="0" y="0" width="1600" height="188" rx="0" fill="#5F2167" stroke="none" stroke-width="1"/>
-<rect x="40" y="34" width="8" height="40" rx="0" fill="#409AD8" stroke="none" stroke-width="1"/>
-<text x="66" y="62" fill="#E9D9ED" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" letter-spacing="2">LECTURE 01  /  CLASS INTELLIGENCE MAP</text>
+<rect x="0" y="0" width="1600" height="1131" rx="0" fill="#F6F8F5" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="1600" height="188" rx="0" fill="#315751" stroke="none" stroke-width="1"/>
+<rect x="40" y="34" width="8" height="40" rx="0" fill="#B58E62" stroke="none" stroke-width="1"/>
+<text x="66" y="62" fill="#E5EFEA" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" letter-spacing="2">LECTURE 01  /  CLASS INTELLIGENCE MAP</text>
 <text x="40" y="119" fill="#FFFFFF" font-family="Georgia, serif" font-size="58" font-weight="750" text-anchor="start">Smart logistics is a decision loop</text>
-<text x="42" y="158" fill="#F0E7F1" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start">Digital Transformation of Modern Supply Chains · Professor Wai Kin (Victor) Chan</text>
+<text x="42" y="158" fill="#D9E6DF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start">Digital Transformation of Modern Supply Chains · Professor Wai Kin (Victor) Chan</text>
 <text x="1195" y="80" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750" text-anchor="start">30</text>
-<text x="1195" y="111" fill="#F0E7F1" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">submissions</text>
+<text x="1195" y="111" fill="#D9E6DF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">submissions</text>
 <text x="1328" y="80" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750" text-anchor="start">11</text>
-<text x="1328" y="111" fill="#F0E7F1" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">example geographies</text>
+<text x="1328" y="111" fill="#D9E6DF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">example geographies</text>
 <text x="1480" y="80" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="750" text-anchor="start">6</text>
-<text x="1480" y="111" fill="#F0E7F1" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">linked stages</text>
-<rect x="40" y="212" width="1000" height="520" rx="0" fill="#FFFFFF" stroke="#C8C0C9" stroke-width="1"/>
-<text x="68" y="252" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.4">A CLASS-BUILT OPERATING MODEL</text>
-<text x="68" y="285" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start">Observe → decide → execute → learn</text>
-<rect x="68" y="318" width="145" height="151" rx="0" fill="#EEE7EF" stroke="none" stroke-width="1"/>
-<text x="82" y="347" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">01</text>
-<text x="82" y="385" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">SENSE</text>
-<text x="82" y="421" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">IoT, sensors,</text>
-<text x="82" y="444" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">live visibility</text>
-<text x="220" y="403" fill="#7A6F7D" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="228" y="318" width="145" height="151" rx="0" fill="#EAF3F9" stroke="none" stroke-width="1"/>
-<text x="242" y="347" fill="#2D7FB5" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">02</text>
-<text x="242" y="385" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">CONNECT</text>
-<text x="242" y="421" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Shared data,</text>
-<text x="242" y="444" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">interoperability</text>
-<text x="380" y="403" fill="#7A6F7D" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="388" y="318" width="145" height="151" rx="0" fill="#EAF3F9" stroke="none" stroke-width="1"/>
-<text x="402" y="347" fill="#2D7FB5" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">03</text>
-<text x="402" y="385" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">PREDICT</text>
-<text x="402" y="421" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">AI, analytics,</text>
-<text x="402" y="444" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">future conditions</text>
-<text x="540" y="403" fill="#7A6F7D" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="548" y="318" width="145" height="151" rx="0" fill="#F4EBF3" stroke="none" stroke-width="1"/>
-<text x="562" y="347" fill="#7A2A83" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">04</text>
-<text x="562" y="385" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">OPTIMIZE</text>
-<text x="562" y="421" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">OR, routing,</text>
-<text x="562" y="444" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">feasible choices</text>
-<text x="700" y="403" fill="#7A6F7D" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="708" y="318" width="145" height="151" rx="0" fill="#F4EBF3" stroke="none" stroke-width="1"/>
-<text x="722" y="347" fill="#7A2A83" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">05</text>
-<text x="722" y="385" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">ACT</text>
-<text x="722" y="421" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Robots, workflows,</text>
-<text x="722" y="444" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">human decisions</text>
-<text x="860" y="403" fill="#7A6F7D" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="868" y="318" width="145" height="151" rx="0" fill="#EEE7EF" stroke="none" stroke-width="1"/>
-<text x="882" y="347" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">06</text>
-<text x="882" y="385" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">LEARN</text>
-<text x="882" y="421" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Feedback, twins,</text>
-<text x="882" y="444" fill="#57515B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">re-optimization</text>
-<text x="68" y="502" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="750" text-anchor="start">17 paired AI + optimization</text>
-<text x="538" y="502" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="750" text-anchor="start">15 paired IoT + digital twin</text>
-<rect x="68" y="526" width="944" height="1" rx="0" fill="#C8C0C9" stroke="none" stroke-width="1"/>
-<text x="68" y="559" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="750" text-anchor="start" letter-spacing="1.1">THE GUARDRAILS AROUND THE LOOP</text>
-<rect x="68" y="578" width="300" height="76" rx="0" fill="#F1EDF1" stroke="none" stroke-width="1"/>
-<text x="83" y="607" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">PEOPLE</text>
-<text x="83" y="633" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Skills, judgement, supervision</text>
-<rect x="383" y="578" width="300" height="76" rx="0" fill="#F1EDF1" stroke="none" stroke-width="1"/>
-<text x="398" y="607" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">GOVERNANCE</text>
-<text x="398" y="633" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Privacy, safety, responsibility</text>
-<rect x="698" y="578" width="300" height="76" rx="0" fill="#F1EDF1" stroke="none" stroke-width="1"/>
-<text x="713" y="607" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">RESILIENCE + SUSTAINABILITY</text>
-<text x="713" y="633" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Limits, disruption, resource use</text>
-<text x="68" y="689" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="650" text-anchor="start">“Start with data, not tools.”</text>
-<text x="489" y="689" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="650" text-anchor="start">“AI predicts; Operations Research decides.”</text>
-<rect x="1062" y="212" width="498" height="520" rx="0" fill="#FFFFFF" stroke="#C8C0C9" stroke-width="1"/>
-<text x="1090" y="252" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.4">WHAT Q3 MENTIONED</text>
-<text x="1090" y="284" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start">Technology and systems</text>
-<text x="1090" y="323" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">AI</text>
-<rect x="1090" y="335" width="395" height="16" rx="0" fill="#E5E1E5" stroke="none" stroke-width="1"/>
-<rect x="1090" y="335" width="316.0" height="16" rx="0" fill="#5F2167" stroke="none" stroke-width="1"/>
-<text x="1524" y="348" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">24/30</text>
-<text x="1090" y="383" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Optimization</text>
-<rect x="1090" y="395" width="395" height="16" rx="0" fill="#E5E1E5" stroke="none" stroke-width="1"/>
-<rect x="1090" y="395" width="289.6666666666667" height="16" rx="0" fill="#5F2167" stroke="none" stroke-width="1"/>
-<text x="1524" y="408" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">22/30</text>
-<text x="1090" y="443" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">IoT</text>
-<rect x="1090" y="455" width="395" height="16" rx="0" fill="#E5E1E5" stroke="none" stroke-width="1"/>
-<rect x="1090" y="455" width="263.3333333333333" height="16" rx="0" fill="#5F2167" stroke="none" stroke-width="1"/>
-<text x="1524" y="468" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">20/30</text>
-<text x="1090" y="503" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Automation</text>
-<rect x="1090" y="515" width="395" height="16" rx="0" fill="#E5E1E5" stroke="none" stroke-width="1"/>
-<rect x="1090" y="515" width="250.16666666666666" height="16" rx="0" fill="#409AD8" stroke="none" stroke-width="1"/>
-<text x="1524" y="528" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">19/30</text>
-<text x="1090" y="563" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Digital Twin</text>
-<rect x="1090" y="575" width="395" height="16" rx="0" fill="#E5E1E5" stroke="none" stroke-width="1"/>
-<rect x="1090" y="575" width="223.83333333333334" height="16" rx="0" fill="#409AD8" stroke="none" stroke-width="1"/>
-<text x="1524" y="588" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">17/30</text>
-<text x="1090" y="623" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Big Data</text>
-<rect x="1090" y="635" width="395" height="16" rx="0" fill="#E5E1E5" stroke="none" stroke-width="1"/>
-<rect x="1090" y="635" width="197.5" height="16" rx="0" fill="#409AD8" stroke="none" stroke-width="1"/>
-<text x="1524" y="648" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">15/30</text>
-<text x="1090" y="696" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">A shared vocabulary with several connected layers.</text>
-<rect x="40" y="752" width="600" height="302" rx="0" fill="#FFFFFF" stroke="#C8C0C9" stroke-width="1"/>
-<text x="68" y="790" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.4">THE NEXT 5–10 YEARS</text>
-<text x="68" y="823" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start">The class expects a wider system shift</text>
-<text x="68" y="861" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">01</text>
-<text x="108" y="861" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Decision intelligence</text>
-<text x="108" y="883" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Prediction joined to optimization and adaptive action</text>
-<text x="68" y="909" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">02</text>
-<text x="108" y="909" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Physical execution</text>
-<text x="108" y="931" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Sorting, robotics and selective autonomous delivery</text>
-<text x="68" y="957" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">03</text>
-<text x="108" y="957" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Shared foundations</text>
-<text x="108" y="979" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Interoperable data, infrastructure and digital twins</text>
-<text x="68" y="1005" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">04</text>
-<text x="108" y="1005" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Human direction</text>
-<text x="108" y="1027" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Reskilling, safety, accountability and realistic limits</text>
-<rect x="660" y="752" width="900" height="302" rx="0" fill="#FFFFFF" stroke="#C8C0C9" stroke-width="1"/>
-<text x="687" y="790" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.2">EXAMPLES STUDENTS BROUGHT INTO THE ROOM</text>
-<text x="687" y="823" fill="#242129" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Nine snapshots across different systems and regions</text>
-<rect x="687" y="846" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="698" y="863" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">VIETNAM</text>
-<text x="698" y="883" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Viettel Post sorting</text>
-<text x="698" y="899" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Warehouse automation</text>
-<rect x="973" y="846" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="984" y="863" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">CHINA</text>
-<text x="984" y="883" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">JD Logistics delivery</text>
-<text x="984" y="899" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Autonomous delivery</text>
-<rect x="1259" y="846" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="1270" y="863" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">INDONESIA</text>
-<text x="1270" y="883" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Cikarang 5G warehouse</text>
-<text x="1270" y="899" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Connectivity + AGVs</text>
-<rect x="687" y="911" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="698" y="928" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">MOROCCO</text>
-<text x="698" y="948" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Tanger Med assistants</text>
-<text x="698" y="964" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Port + AI services</text>
-<rect x="973" y="911" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="984" y="928" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">CHILE</text>
-<text x="984" y="948" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">San Antonio port</text>
-<text x="984" y="964" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Terminal + rail links</text>
-<rect x="1259" y="911" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="1270" y="928" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">BRAZIL</text>
-<text x="1270" y="948" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">APM Suape terminal</text>
-<text x="1270" y="964" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Port electrification</text>
-<rect x="687" y="976" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="698" y="993" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">RUSSIA</text>
-<text x="698" y="1013" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Yandex delivery robots</text>
-<text x="698" y="1029" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Last-mile robotics</text>
-<rect x="973" y="976" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="984" y="993" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">AUSTRIA</text>
-<text x="984" y="1013" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Post Vienna-Inzersdorf</text>
-<text x="984" y="1029" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Sorting operations</text>
-<rect x="1259" y="976" width="270" height="60" rx="0" fill="#F3F0F2" stroke="none" stroke-width="1"/>
-<text x="1270" y="993" fill="#5F2167" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">BANGLADESH</text>
-<text x="1270" y="1013" fill="#332F38" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">National Logistics Policy</text>
-<text x="1270" y="1029" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Policy / infrastructure</text>
-<text x="40" y="1101" fill="#625B66" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">The first assignment submissions were synthesized for the findings on this page.</text>
+<text x="1480" y="111" fill="#D9E6DF" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">linked stages</text>
+<rect x="40" y="212" width="1000" height="520" rx="0" fill="#FFFFFF" stroke="#D5DFDA" stroke-width="1"/>
+<text x="68" y="252" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.4">A CLASS-BUILT OPERATING MODEL</text>
+<text x="68" y="285" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start">Observe → decide → execute → learn</text>
+<rect x="68" y="318" width="145" height="151" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<text x="82" y="347" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">01</text>
+<text x="82" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">SENSE</text>
+<text x="82" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">IoT, sensors,</text>
+<text x="82" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">live visibility</text>
+<text x="220" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
+<rect x="228" y="318" width="145" height="151" rx="0" fill="#EAF1EE" stroke="none" stroke-width="1"/>
+<text x="242" y="347" fill="#5B8279" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">02</text>
+<text x="242" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">CONNECT</text>
+<text x="242" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Shared data,</text>
+<text x="242" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">interoperability</text>
+<text x="380" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
+<rect x="388" y="318" width="145" height="151" rx="0" fill="#EAF1EE" stroke="none" stroke-width="1"/>
+<text x="402" y="347" fill="#5B8279" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">03</text>
+<text x="402" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">PREDICT</text>
+<text x="402" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">AI, analytics,</text>
+<text x="402" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">future conditions</text>
+<text x="540" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
+<rect x="548" y="318" width="145" height="151" rx="0" fill="#F4EFE7" stroke="none" stroke-width="1"/>
+<text x="562" y="347" fill="#A47C4F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">04</text>
+<text x="562" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">OPTIMIZE</text>
+<text x="562" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">OR, routing,</text>
+<text x="562" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">feasible choices</text>
+<text x="700" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
+<rect x="708" y="318" width="145" height="151" rx="0" fill="#F4EFE7" stroke="none" stroke-width="1"/>
+<text x="722" y="347" fill="#A47C4F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">05</text>
+<text x="722" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">ACT</text>
+<text x="722" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Robots, workflows,</text>
+<text x="722" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">human decisions</text>
+<text x="860" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
+<rect x="868" y="318" width="145" height="151" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<text x="882" y="347" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">06</text>
+<text x="882" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">LEARN</text>
+<text x="882" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Feedback, twins,</text>
+<text x="882" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">re-optimization</text>
+<text x="68" y="502" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="750" text-anchor="start">17 paired AI + optimization</text>
+<text x="538" y="502" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="750" text-anchor="start">15 paired IoT + digital twin</text>
+<rect x="68" y="526" width="944" height="1" rx="0" fill="#D5DFDA" stroke="none" stroke-width="1"/>
+<text x="68" y="559" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="750" text-anchor="start" letter-spacing="1.1">THE GUARDRAILS AROUND THE LOOP</text>
+<rect x="68" y="578" width="300" height="76" rx="0" fill="#EEF3EF" stroke="none" stroke-width="1"/>
+<text x="83" y="607" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">PEOPLE</text>
+<text x="83" y="633" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Skills, judgement, supervision</text>
+<rect x="383" y="578" width="300" height="76" rx="0" fill="#EEF3EF" stroke="none" stroke-width="1"/>
+<text x="398" y="607" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">GOVERNANCE</text>
+<text x="398" y="633" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Privacy, safety, responsibility</text>
+<rect x="698" y="578" width="300" height="76" rx="0" fill="#EEF3EF" stroke="none" stroke-width="1"/>
+<text x="713" y="607" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">RESILIENCE + SUSTAINABILITY</text>
+<text x="713" y="633" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Limits, disruption, resource use</text>
+<text x="68" y="689" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="650" text-anchor="start">“Start with data, not tools.”</text>
+<text x="489" y="689" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="650" text-anchor="start">“AI predicts; Operations Research decides.”</text>
+<rect x="1062" y="212" width="498" height="520" rx="0" fill="#FFFFFF" stroke="#D5DFDA" stroke-width="1"/>
+<text x="1090" y="252" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.4">WHAT Q3 MENTIONED</text>
+<text x="1090" y="284" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="start">Technology and systems</text>
+<text x="1090" y="323" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">AI</text>
+<rect x="1090" y="335" width="395" height="16" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<rect x="1090" y="335" width="316.0" height="16" rx="0" fill="#6E978B" stroke="none" stroke-width="1"/>
+<text x="1524" y="348" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">24/30</text>
+<text x="1090" y="383" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Optimization</text>
+<rect x="1090" y="395" width="395" height="16" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<rect x="1090" y="395" width="289.6666666666667" height="16" rx="0" fill="#6E978B" stroke="none" stroke-width="1"/>
+<text x="1524" y="408" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">22/30</text>
+<text x="1090" y="443" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">IoT</text>
+<rect x="1090" y="455" width="395" height="16" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<rect x="1090" y="455" width="263.3333333333333" height="16" rx="0" fill="#6E978B" stroke="none" stroke-width="1"/>
+<text x="1524" y="468" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">20/30</text>
+<text x="1090" y="503" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Automation</text>
+<rect x="1090" y="515" width="395" height="16" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<rect x="1090" y="515" width="250.16666666666666" height="16" rx="0" fill="#8CAC9F" stroke="none" stroke-width="1"/>
+<text x="1524" y="528" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">19/30</text>
+<text x="1090" y="563" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Digital Twin</text>
+<rect x="1090" y="575" width="395" height="16" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<rect x="1090" y="575" width="223.83333333333334" height="16" rx="0" fill="#8CAC9F" stroke="none" stroke-width="1"/>
+<text x="1524" y="588" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">17/30</text>
+<text x="1090" y="623" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="650" text-anchor="start">Big Data</text>
+<rect x="1090" y="635" width="395" height="16" rx="0" fill="#E5EFEA" stroke="none" stroke-width="1"/>
+<rect x="1090" y="635" width="197.5" height="16" rx="0" fill="#8CAC9F" stroke="none" stroke-width="1"/>
+<text x="1524" y="648" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="750" text-anchor="end">15/30</text>
+<text x="1090" y="696" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">A shared vocabulary with several connected layers.</text>
+<rect x="40" y="752" width="600" height="302" rx="0" fill="#FFFFFF" stroke="#D5DFDA" stroke-width="1"/>
+<text x="68" y="790" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.4">THE NEXT 5–10 YEARS</text>
+<text x="68" y="823" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start">The class expects a wider system shift</text>
+<text x="68" y="861" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">01</text>
+<text x="108" y="861" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Decision intelligence</text>
+<text x="108" y="883" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Prediction joined to optimization and adaptive action</text>
+<text x="68" y="909" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">02</text>
+<text x="108" y="909" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Physical execution</text>
+<text x="108" y="931" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Sorting, robotics and selective autonomous delivery</text>
+<text x="68" y="957" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">03</text>
+<text x="108" y="957" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Shared foundations</text>
+<text x="108" y="979" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Interoperable data, infrastructure and digital twins</text>
+<text x="68" y="1005" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" text-anchor="start">04</text>
+<text x="108" y="1005" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start">Human direction</text>
+<text x="108" y="1027" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start">Reskilling, safety, accountability and realistic limits</text>
+<rect x="660" y="752" width="900" height="302" rx="0" fill="#FFFFFF" stroke="#D5DFDA" stroke-width="1"/>
+<text x="687" y="790" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="750" text-anchor="start" letter-spacing="1.2">EXAMPLES STUDENTS BROUGHT INTO THE ROOM</text>
+<text x="687" y="823" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start">Nine snapshots across different systems and regions</text>
+<rect x="687" y="846" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="698" y="863" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">VIETNAM</text>
+<text x="698" y="883" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Viettel Post sorting</text>
+<text x="698" y="899" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Warehouse automation</text>
+<rect x="973" y="846" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="984" y="863" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">CHINA</text>
+<text x="984" y="883" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">JD Logistics delivery</text>
+<text x="984" y="899" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Autonomous delivery</text>
+<rect x="1259" y="846" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="1270" y="863" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">INDONESIA</text>
+<text x="1270" y="883" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Cikarang 5G warehouse</text>
+<text x="1270" y="899" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Connectivity + AGVs</text>
+<rect x="687" y="911" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="698" y="928" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">MOROCCO</text>
+<text x="698" y="948" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Tanger Med assistants</text>
+<text x="698" y="964" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Port + AI services</text>
+<rect x="973" y="911" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="984" y="928" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">CHILE</text>
+<text x="984" y="948" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">San Antonio port</text>
+<text x="984" y="964" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Terminal + rail links</text>
+<rect x="1259" y="911" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="1270" y="928" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">BRAZIL</text>
+<text x="1270" y="948" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">APM Suape terminal</text>
+<text x="1270" y="964" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Port electrification</text>
+<rect x="687" y="976" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="698" y="993" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">RUSSIA</text>
+<text x="698" y="1013" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Yandex delivery robots</text>
+<text x="698" y="1029" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Last-mile robotics</text>
+<rect x="973" y="976" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="984" y="993" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">AUSTRIA</text>
+<text x="984" y="1013" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">Post Vienna-Inzersdorf</text>
+<text x="984" y="1029" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Sorting operations</text>
+<rect x="1259" y="976" width="270" height="60" rx="0" fill="#F1F5F1" stroke="none" stroke-width="1"/>
+<text x="1270" y="993" fill="#456E68" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="0.5">BANGLADESH</text>
+<text x="1270" y="1013" fill="#315751" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="650" text-anchor="start">National Logistics Policy</text>
+<text x="1270" y="1029" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Policy / infrastructure</text>
+<text x="40" y="1101" fill="#667878" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">The first assignment submissions were synthesized for the findings on this page.</text>
 </svg>
