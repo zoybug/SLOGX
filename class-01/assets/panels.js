@@ -2,35 +2,68 @@
   const panels = [...document.querySelectorAll('.content-dialog')];
   const openers = [...document.querySelectorAll('[data-panel]')];
   if (!panels.length) return;
-  let lastOpener = null;
 
-  function openPanel(id, opener = null) {
+  let returnFocus = null;
+  const titleOf = panel => panel.querySelector('.dialog-intro h2').textContent.trim();
+  const numberOf = panel => String(panels.indexOf(panel) + 1).padStart(2, '0');
+
+  function setNeighbor(button, target, direction) {
+    button.disabled = !target;
+    button.setAttribute('aria-label', target ? `${direction} chapter: ${titleOf(target)}` : `No ${direction.toLowerCase()} chapter`);
+    const title = button.querySelector('.neighbor-title, .mobile-neighbor');
+    if (title) title.textContent = target ? titleOf(target) : direction === 'Previous' ? 'Start' : 'End';
+    const number = button.querySelector('.neighbor-number');
+    if (number) number.textContent = target ? `${numberOf(target)} / 07` : '';
+  }
+
+  function updateNavigation(panel) {
+    const index = panels.indexOf(panel);
+    const previous = panels[index - 1];
+    const next = panels[index + 1];
+    panel.querySelectorAll('[data-step="-1"]').forEach(button => setNeighbor(button, previous, 'Previous'));
+    panel.querySelectorAll('[data-step="1"]').forEach(button => setNeighbor(button, next, 'Next'));
+    panel.querySelector('.mobile-progress').textContent = `${numberOf(panel)} / 07`;
+  }
+
+  function openPanel(id) {
     const panel = document.getElementById(id);
     if (!panel || !panel.matches('dialog')) return;
     const current = panels.find(item => item.open);
-    if (current && current !== panel) current.close();
-    lastOpener = opener;
-    if (!panel.open) panel.showModal();
+    if (current === panel) return;
+    if (current) current.close();
+    returnFocus = openers.find(button => button.dataset.panel === id) || null;
+    updateNavigation(panel);
+    panel.showModal();
+    panel.querySelector('.dialog-scroll').scrollTop = 0;
+    // A direct hash link can scroll to a nested section after the dialog opens.
+    requestAnimationFrame(() => {
+      if (panel.open) panel.querySelector('.dialog-scroll').scrollTop = 0;
+    });
     document.body.classList.add('modal-open');
-    const close = panel.querySelector('[data-close]');
-    if (close) close.focus({ preventScroll: true });
-    history.replaceState(null, '', `#${id.replace(/^panel-/, '')}`);
+    panel.querySelector('[data-close]').focus({ preventScroll: true });
+    history.replaceState(null, '', `${location.pathname}${location.search}#${id.replace(/^panel-/, '')}`);
   }
 
-  openers.forEach(button => button.addEventListener('click', () => openPanel(button.dataset.panel, button)));
+  openers.forEach(button => button.addEventListener('click', () => openPanel(button.dataset.panel)));
   panels.forEach(panel => {
     panel.querySelector('[data-close]').addEventListener('click', () => panel.close());
-    panel.addEventListener('click', event => { if (event.target === panel) panel.close(); });
+    panel.querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => {
+      const target = panels[panels.indexOf(panel) + Number(button.dataset.step)];
+      if (target) openPanel(target.id);
+    }));
     panel.addEventListener('close', () => {
+      if (panels.some(item => item.open)) return;
       document.body.classList.remove('modal-open');
       if (location.hash === `#${panel.id.replace(/^panel-/, '')}`) history.replaceState(null, '', location.pathname + location.search);
-      if (lastOpener) lastOpener.focus({ preventScroll: true });
+      if (returnFocus) returnFocus.focus({ preventScroll: true });
     });
   });
+
   const initial = location.hash.slice(1);
   if (initial) openPanel(`panel-${initial}`);
   window.addEventListener('hashchange', () => {
     const id = location.hash.slice(1);
     if (id && panels.some(panel => panel.id === `panel-${id}`)) openPanel(`panel-${id}`);
+    else panels.find(panel => panel.open)?.close();
   });
 })();

@@ -2,7 +2,7 @@
 <title>Class Smart Logistics Intelligence Map</title>
 <rect x="0" y="0" width="1600" height="1131" rx="0" fill="#F6F8F5" stroke="none" stroke-width="1"/>
 <rect x="0" y="0" width="1600" height="188" rx="0" fill="#315751" stroke="none" stroke-width="1"/>
-<rect x="40" y="34" width="8" height="40" rx="0" fill="#B58E62" stroke="none" stroke-width="1"/>
+<rect x="40" y="34" width="8" height="40" rx="0" fill="#D05A38" stroke="none" stroke-width="1"/>
 <text x="66" y="62" fill="#E5EFEA" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" letter-spacing="2">LECTURE 01  /  CLASS INTELLIGENCE MAP</text>
 <text x="40" y="119" fill="#FFFFFF" font-family="Georgia, serif" font-size="58" font-weight="750" text-anchor="start">Smart logistics is a decision loop</text>
 <text x="42" y="158" fill="#D9E6DF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start">Digital Transformation of Modern Supply Chains · Professor Wai Kin (Victor) Chan</text>
@@ -33,14 +33,14 @@
 <text x="402" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">AI, analytics,</text>
 <text x="402" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">future conditions</text>
 <text x="540" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="548" y="318" width="145" height="151" rx="0" fill="#F4EFE7" stroke="none" stroke-width="1"/>
-<text x="562" y="347" fill="#A47C4F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">04</text>
+<rect x="548" y="318" width="145" height="151" rx="0" fill="#FCEBE5" stroke="none" stroke-width="1"/>
+<text x="562" y="347" fill="#B04A2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">04</text>
 <text x="562" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">OPTIMIZE</text>
 <text x="562" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">OR, routing,</text>
 <text x="562" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">feasible choices</text>
 <text x="700" y="403" fill="#9AB4AA" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">→</text>
-<rect x="708" y="318" width="145" height="151" rx="0" fill="#F4EFE7" stroke="none" stroke-width="1"/>
-<text x="722" y="347" fill="#A47C4F" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">05</text>
+<rect x="708" y="318" width="145" height="151" rx="0" fill="#FCEBE5" stroke="none" stroke-width="1"/>
+<text x="722" y="347" fill="#B04A2E" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" text-anchor="start">05</text>
 <text x="722" y="385" fill="#243A3B" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="800" text-anchor="start">ACT</text>
 <text x="722" y="421" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">Robots, workflows,</text>
 <text x="722" y="444" fill="#526967" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start">human decisions</text>
