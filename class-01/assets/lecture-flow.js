@@ -1,7 +1,7 @@
 (() => {
   const track = document.querySelector('#slide-track');
   const slides = [...document.querySelectorAll('[data-slide]')];
-  const sections = [...document.querySelectorAll('[data-parallax]')];
+  const sections = [...document.querySelectorAll('.lecture-section')];
   const header = document.querySelector('.unified-header');
   const sectionLinks = [...document.querySelectorAll('[data-section]')];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -70,14 +70,6 @@
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
       if (rect.top <= threshold) active = section;
-      if (reducedMotion.matches) {
-        section.style.removeProperty('--parallax-y');
-        section.style.removeProperty('--art-y');
-      } else {
-        const offset = Math.max(-90, Math.min(90, -rect.top * 0.12));
-        section.style.setProperty('--parallax-y', `${offset.toFixed(1)}px`);
-        if (section.id === 'intro') section.style.setProperty('--art-y', `${(-offset * 0.25).toFixed(1)}px`);
-      }
     });
     sectionLinks.forEach(link => {
       if (link.dataset.section === active?.id) link.setAttribute('aria-current', 'location');
@@ -92,7 +84,6 @@
     goTo(current, false);
     schedulePage();
   });
-  reducedMotion.addEventListener('change', schedulePage);
 
   const oldLinks = { responses: 1, model: 2, evidence: 3, future: 4, world: 5 };
   function openHash() {
