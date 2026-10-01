@@ -1,0 +1,72 @@
+/* V2 visual study: section-specific curves and readable copy. */
+body{background:#f6f8f5}
+.course-home .hub-heading,.course-home .register{background-repeat:no-repeat;background-size:cover}
+.course-home .hub-heading{background-image:url("curve-home.svg");background-position:center;padding:22px 26px 24px;margin:-22px -26px 0}
+.course-home .register{background-image:url("curve-register.svg");background-position:right center;padding:24px 26px 16px;margin-left:-26px;margin-right:-26px}
+.lecture-main .intro-section{background-color:#f5f7f3;background-image:url("curve-intro.svg");background-repeat:no-repeat;background-position:right center;background-size:cover}
+.lecture-main .student-section{background-color:#fff;background-image:url("curve-students.svg");background-repeat:no-repeat;background-position:center;background-size:cover}
+.lecture-main .student-slide{background-color:#fff;background-image:url("curve-students.svg");background-repeat:no-repeat;background-position:right center;background-size:cover}
+.lecture-main .resources-section{background-color:#eaf2ec;background-image:url("curve-resources.svg");background-repeat:no-repeat;background-position:left center;background-size:cover}
+.lecture-main .quiz-section{background-color:#fff1e9;background-image:url("curve-quiz.svg");background-repeat:no-repeat;background-position:right bottom;background-size:cover}
+.lecture-main .materials-section{background-color:#f5f7f3;background-image:url("curve-materials.svg");background-repeat:no-repeat;background-position:center;background-size:cover}
+.hero-art,.hub-feature img{background-color:#e9f1ea}
+
+/* Increase explanatory copy; keep tiny labels as navigation signals. */
+.course-home .hub-heading>p:last-child,.course-home .hub-feature p,.lecture-main .hero-summary,
+.lecture-main .contents-deck,.lecture-main .slide-intro p,.lecture-main .section-heading .intro{font-size:clamp(15px,1.3vw,17px);line-height:1.56}
+.lecture-main .slide-toc-row small,.lecture-main .resource-group a span,.lecture-main .response-prompts p,
+.lecture-main .outlook-lead p,.lecture-main .outlook-item p,.lecture-main .quiz-side p,
+.lecture-main .stage-detail p,.lecture-main .guardrail span,.lecture-main .stat-block span,
+.lecture-main .choice,.lecture-main .feedback,.lecture-main .resource-group a b,
+.course-home .lecture-row strong{font-size:clamp(14px,1.1vw,16px);line-height:1.5}
+.lecture-main .slide-toc-row{min-height:61px}
+.lecture-main .resource-group a{padding-block:13px}
+.lecture-main .resource-group a span{margin-top:5px}
+.lecture-main .quiz-topic,.lecture-main .response-agenda,.lecture-main .case-table{font-size:13px}
+.lecture-main .slide-content{width:min(100%,1050px)}
+.lecture-main .contents-slide .slide-content{max-width:780px}
+
+/* A simple route cue rewards hover without obscuring the page. */
+.course-home .lecture-row.available,.lecture-main .slide-toc-row{transition:background .2s ease,padding-left .2s ease}
+.course-home .lecture-row.available:hover{padding-left:15px}
+.lecture-main .slide-toc-row:hover{padding-left:12px}
+.lecture-main .stage-button:hover,.lecture-main .filter-button:hover{border-color:var(--secondary)}
+
+/* Fixed companion. The fact panel opens above it, never over the reading column. */
+.zoybug-widget{position:fixed;z-index:80;right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);display:flex;flex-direction:column;align-items:flex-end;gap:10px;pointer-events:none}
+.zoybug-widget>*{pointer-events:auto}
+.zoybug-trigger{position:relative;display:grid;place-items:center;width:82px;height:82px;border:0;background:transparent;padding:0;filter:drop-shadow(0 7px 8px #18322b36);animation:zoybug-drift 5s ease-in-out infinite}
+.zoybug-trigger::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--secondary) var(--discovery-progress,0%),#cbd8d0 0);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));pointer-events:none}
+.zoybug-trigger:hover{transform:scale(1.06);filter:drop-shadow(0 9px 12px #18322b55)}
+.zoybug-trigger:focus-visible{outline:3px solid var(--secondary);outline-offset:2px;border-radius:50%}
+.zoybug-trigger svg{display:block;width:82px;height:82px}
+.zoybug-wing{transform-origin:center;animation:zoybug-wing 1.6s ease-in-out infinite alternate}
+.zoybug-eye{transform-origin:center;animation:zoybug-blink 6.5s infinite}
+.zoybug-hint{position:absolute;right:77px;top:20px;white-space:nowrap;background:#fff;border:1px solid var(--line-dark);padding:5px 9px;color:var(--ink);font:700 11px var(--mono);box-shadow:0 3px 7px #243a3b13}
+.zoybug-widget[data-visited="true"] .zoybug-hint{display:none}
+.zoybug-card{width:min(360px,calc(100vw - 24px));border:1px solid var(--line-dark);border-top:3px solid var(--secondary);background:#fff;color:var(--ink);box-shadow:0 14px 42px #203a3450;padding:15px 16px 14px;animation:zoybug-card-in .24s ease-out both}
+.zoybug-card[hidden]{display:none}
+.zoybug-card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font:700 10px var(--mono);letter-spacing:.06em;color:var(--secondary-deep)}
+.zoybug-close{border:0;background:transparent;color:var(--ink);padding:2px 4px;font-size:20px;line-height:1}
+.zoybug-fact{font:600 clamp(18px,2.1vw,22px)/1.32 var(--serif);letter-spacing:-.02em;margin:11px 0 13px}
+.zoybug-card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:9px}
+.zoybug-card-foot a{color:var(--secondary-deep);font-size:12px;font-weight:700;text-underline-offset:3px}
+.zoybug-card-foot span{font:700 10px var(--mono);white-space:nowrap;color:var(--muted)}
+@keyframes zoybug-drift{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes zoybug-wing{from{transform:rotate(-5deg)}to{transform:rotate(7deg)}}
+@keyframes zoybug-blink{0%,93%,97%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}}
+@keyframes zoybug-card-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){
+  .course-home .hub-heading{margin-inline:-10px;padding-inline:10px}
+  .course-home .register{margin-inline:-10px;padding-inline:10px}
+  .lecture-main .intro-section,.lecture-main .student-section,.lecture-main .student-slide,
+  .lecture-main .resources-section,.lecture-main .quiz-section,.lecture-main .materials-section{background-size:100% 100%}
+  .zoybug-widget{right:10px;bottom:12px}
+  .lecture-page .zoybug-widget{bottom:86px}
+  .zoybug-trigger,.zoybug-trigger svg{width:68px;height:68px}
+  .zoybug-hint{right:64px;top:15px}
+  .lecture-main .slide-toc-row{min-height:69px}
+}
+@media(prefers-reduced-motion:reduce){
+  .zoybug-trigger,.zoybug-wing,.zoybug-eye,.zoybug-card{animation:none!important;transition:none!important}
+}
