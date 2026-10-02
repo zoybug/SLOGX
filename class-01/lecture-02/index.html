@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f5">
+  <meta name="description" content="Prof. Mingyao Qi's Lecture 02 on smart transportation and distribution: scenarios, technologies, routing algorithms, 33 anonymous student reports, readings, and a decision lab.">
+  <title>Lecture 02 | Smart Transportation and Distribution</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/lecture-flow.css">
+  <link rel="stylesheet" href="../assets/v2.css">
+  <link rel="stylesheet" href="../assets/lecture-02.css">
+  <script src="../assets/lecture-flow.js" defer></script>
+  <script src="../assets/lecture-02.js" defer></script>
+  <script src="../assets/zoybug-facts.js" defer></script>
+  <script src="../assets/zoybug.js" defer></script>
+</head>
+<body class="lecture-page lecture-two">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead unified-header"><div class="shell header-inner">
+    <a class="brand" href="../"><span><strong>Smart Logistics</strong><small>COURSE ATLAS · FALL 2026</small></span></a>
+    <nav class="unified-nav" aria-label="Course and lecture navigation">
+      <details class="lecture-picker"><summary>Lecture 02 <span>/ 08</span></summary><div class="lecture-options">
+        <a href="../lecture-01/">01 · Digital transformation</a>
+        <a href="./" aria-current="page">02 · Smart transportation</a>
+        <span aria-disabled="true">03 · Coming later</span><span aria-disabled="true">04 · Coming later</span>
+        <span aria-disabled="true">05 · Coming later</span><span aria-disabled="true">06 · Coming later</span>
+        <span aria-disabled="true">07 · Coming later</span><span aria-disabled="true">08 · Coming later</span>
+      </div></details>
+      <div class="top-section-links"><a href="#intro" data-section="intro">Lecture intro</a><a href="#students" data-section="students">Student content</a><a href="#resources" data-section="resources">Resources</a><a href="#quiz" data-section="quiz">Quiz</a></div>
+    </nav>
+  </div></header>
+  <main id="main" class="lecture-main">
+    <section class="lecture-section intro-section" id="intro" aria-labelledby="lecture-title"><div class="shell section-inner">
+      <section class="lecture-hero" aria-labelledby="lecture-title">
+        <div class="hero-copy">
+          <p class="eyebrow">LECTURE 02 / PROF. MINGYAO QI</p>
+          <h1 id="lecture-title">Smart transportation <em>&amp; distribution.</em></h1>
+          <p class="hero-deck">Every route is a decision.</p>
+          <p class="hero-summary">Prof. Mingyao Qi moves from freight and delivery scenarios to vehicle and data technologies, then to the algorithms that build feasible routes. Anonymous findings from 33 Assignment 02 reports connect those ideas to operating cases around the world.</p>
+          <div class="hero-meta"><span>22 SEPTEMBER 2026 · TSINGHUA SIGS</span><span>HOST: PROF. WAI KIN (VICTOR) CHAN</span></div>
+          <a class="hero-start" href="#students">Explore student content <span>00 / 05</span></a>
+        </div>
+        <div class="hero-art route-art" aria-hidden="true"><div class="route-art-inner"><span class="route-node origin">REQUEST</span><span class="route-node choice">CHOOSE</span><span class="route-node arrival">ARRIVE</span><i class="route-line first"></i><i class="route-line second"></i><span class="route-constraint">TIME · CAPACITY · SAFETY</span></div></div>
+      </section>
+      <div class="lecture-roadmap" aria-label="Lecture 02 outline">
+        <article><span>01 / SCENARIOS</span><h2>What moves, and for whom?</h2><p>Road, rail, air, water, and intermodal freight; express, instant, humanitarian, and service delivery.</p></article>
+        <article><span>02 / TECHNOLOGIES</span><h2>What can the system sense and do?</h2><p>Connected and electric vehicles, drones, automated port equipment, lockers, and the data that connect them.</p></article>
+        <article><span>03 / ALGORITHMS</span><h2>Which plan is feasible?</h2><p>Matching, location, routing, scheduling, and route construction under capacity, time, energy, and safety limits.</p></article>
+      </div>
+    </div></section>
+
+    <section class="lecture-section student-section" id="students" aria-label="Student content slideshow">
+      <div class="deck-layout">
+        <button class="deck-edge" type="button" data-deck-prev aria-label="Previous slide"><span>PREVIOUS</span><strong class="deck-neighbor"></strong></button>
+        <div class="deck-frame"><div class="slide-track" id="slide-track" role="region" aria-roledescription="carousel" tabindex="0" aria-label="Student content slideshow">
+          <article class="student-slide contents-slide" id="slide-contents" data-slide role="group" aria-roledescription="slide" aria-label="Table of contents"><div class="slide-content">
+            <div class="slide-meta"><span>STUDENT CONTENT / CONTENTS</span><span>LECTURE 02</span></div>
+            <p class="contents-kicker">THE CLASS AS A FIELD NOTEBOOK</p><h3>Five lenses on movement.</h3>
+            <p class="contents-deck">The class cases bring Prof. Qi's scenarios, technology layers, and routing decisions into focus. Counts describe one primary application per student; examples and callouts are paraphrased and anonymous.</p>
+            <div class="slide-toc">
+              <button class="slide-toc-row" type="button" data-go-slide="1"><span>01</span><strong>Application atlas</strong><small>Where the 33 reports focused.</small></button>
+              <button class="slide-toc-row" type="button" data-go-slide="2"><span>02</span><strong>One operating loop</strong><small>How data reaches a delivery decision.</small></button>
+              <button class="slide-toc-row" type="button" data-go-slide="3"><span>03</span><strong>Decisions under constraints</strong><small>Assignment, sequence, path, and feasibility.</small></button>
+              <button class="slide-toc-row" type="button" data-go-slide="4"><span>04</span><strong>Benefit or proof?</strong><small>Separate operation, claim, model, and proposal.</small></button>
+              <button class="slide-toc-row" type="button" data-go-slide="5"><span>05</span><strong>Different places, different answers</strong><small>Regional constraints and the next decade.</small></button>
+            </div><button class="start-slideshow" type="button" data-go-slide="1">Start the slideshow <span>01 / 05</span></button>
+          </div></article>
+
+          <article class="student-slide" id="slide-atlas" data-slide role="group" aria-roledescription="slide" aria-label="1 of 5: Application atlas"><div class="slide-content">
+            <div class="slide-meta"><span>STUDENT CONTENT / 01 OF 05</span><span>LECTURE 02</span></div>
+            <div class="slide-intro"><span class="shape shape-bars" aria-hidden="true"></span><h2>Application atlas</h2><p>Each of 33 unique reports is assigned to its main application. Categories are mutually exclusive; 33/33 reports are represented.</p></div>
+            <div class="atlas-layout"><div class="atlas-bars" role="img" aria-label="Of 33 reports: 14 on-demand platforms, 6 parcel or fleet routing, 5 aerial delivery, 3 autonomous ground, 3 other coordination networks, and 2 parcel lockers.">
+              <div class="atlas-row"><span>On-demand platforms</span><div class="atlas-track"><i style="width:100%"></i></div><strong>14/33</strong></div>
+              <div class="atlas-row"><span>Parcel + fleet routing</span><div class="atlas-track"><i style="width:42.86%"></i></div><strong>6/33</strong></div>
+              <div class="atlas-row"><span>Aerial delivery</span><div class="atlas-track"><i style="width:35.71%"></i></div><strong>5/33</strong></div>
+              <div class="atlas-row"><span>Autonomous ground</span><div class="atlas-track"><i style="width:21.43%"></i></div><strong>3/33</strong></div>
+              <div class="atlas-row"><span>Other networks</span><div class="atlas-track"><i style="width:21.43%"></i></div><strong>3/33</strong></div>
+              <div class="atlas-row"><span>Parcel lockers</span><div class="atlas-track"><i style="width:14.29%"></i></div><strong>2/33</strong></div>
+            </div><aside class="atlas-note"><span class="smallcaps">WHY THE SPREAD MATTERS</span><h3>“Last mile” is not one problem.</h3><p>A meal platform weighs freshness and courier workload. A medical drone weighs urgency, weather, and payload. A locker network weighs van efficiency against the customer's walk. A port moves information as well as containers.</p><p class="minor">Operating contexts discussed include Indonesia, Vietnam, China, Rwanda, Mexico, Morocco, Chile, Brazil, Russia, the US, and the UK. These are case locations, not student origins.</p></aside></div>
+          </div></article>
+
+          <article class="student-slide" id="slide-loop" data-slide role="group" aria-roledescription="slide" aria-label="2 of 5: One operating loop"><div class="slide-content">
+            <div class="slide-meta"><span>STUDENT CONTENT / 02 OF 05</span><span>LECTURE 02</span></div>
+            <div class="slide-intro"><span class="shape shape-orbit" aria-hidden="true"></span><h2>One operating loop</h2><p>Use the same six questions to understand very different transportation systems.</p></div>
+            <ol class="loop-strip" aria-label="Operating decision loop"><li><b>01 · Request</b><span>What must move?</span></li><li><b>02 · Sense</b><span>Where, when, how much?</span></li><li><b>03 · Check</b><span>What is feasible?</span></li><li><b>04 · Choose</b><span>Who, when, which route?</span></li><li><b>05 · Execute</b><span>Deliver and confirm.</span></li><li><b>06 · Learn</b><span>Compare plan with outcome.</span></li></ol>
+            <p class="slide-subline">SELECT AN APPLICATION TO SEE WHICH DATA AND HAND-OFFS CHANGE</p>
+            <div class="system-tabs" id="system-tabs" role="group" aria-label="Application examples"></div>
+            <div class="system-detail" id="system-detail" aria-live="polite"></div>
+            <div class="lecture-bridge"><span>FROM PROF. QI'S LECTURE / A SYSTEM, NOT A TOOL LIST</span><p><b>Physical layer:</b> EVs, UAVs, port AGVs, lockers. <b>Signal layer:</b> GPS, RFID, IoT, vehicle trajectories, and port data. <b>Decision layer:</b> prediction, matching, location, routing, and scheduling. The data must change an operational choice.</p></div>
+            <p class="editorial-note">Student reports supplied the operating questions. The lecture's technology framework explains how those questions become decisions; case-specific capabilities are linked in the reading room.</p>
+          </div></article>
+
+          <article class="student-slide" id="slide-decisions" data-slide role="group" aria-roledescription="slide" aria-label="3 of 5: Decisions under constraints"><div class="slide-content">
+            <div class="slide-meta"><span>STUDENT CONTENT / 03 OF 05</span><span>LECTURE 02</span></div>
+            <div class="slide-intro"><span class="shape shape-triangle" aria-hidden="true"></span><h2>Decisions under constraints</h2><p>“Find the nearest” is a starting rule. It does not yet solve the whole delivery problem.</p></div>
+            <div class="decision-grid"><article><span>01 / ASSIGN</span><h3>Who should serve it?</h3><p>Compare availability, pickup ETA, payload, battery, and existing work.</p></article><article><span>02 / SEQUENCE</span><h3>In what order?</h3><p>Group stops without missing promised windows or overloading a partner.</p></article><article><span>03 / PATH</span><h3>How to travel?</h3><p>Choose a road or air route that obeys access, traffic, and safety limits.</p></article></div>
+            <div class="scenario" aria-labelledby="scenario-title"><div><span class="smallcaps">TRY A NETWORK DECISION</span><h3 id="scenario-title">A hot meal is ready. Which courier gets it?</h3><p>Courier A is geographically closer but already has a stop that risks the meal's delivery window. Courier B is slightly farther away and available for an on-time pickup. The map distance alone is not enough.</p></div><div class="scenario-actions"><button type="button" data-scenario="near">Choose A · nearest</button><button type="button" data-scenario="feasible">Choose B · feasible ETA</button><p id="scenario-feedback" aria-live="polite">Choose an option to see the trade-off.</p></div></div>
+            <div class="method-strip" aria-label="Route planning methods from the lecture"><span>PROF. QI'S ROUTING TOOLKIT</span><div><b>Construct</b><p>Nearest neighbor or Clarke-Wright savings builds a starting route.</p></div><div><b>Improve</b><p>2-opt tests whether swapping route edges reduces travel while preserving constraints.</p></div><div><b>Validate</b><p>Capacity, time windows, energy, and safety decide whether a shorter route can actually run.</p></div></div>
+            <p class="decision-source">The class raised this distinction in ride-hailing, courier batching, electric vehicles, drone stations, and UPS stop sequencing. See <a href="https://www.grab.com/inside-grab/stories/matching-driver-partners-and-riders-allocation/" target="_blank" rel="noopener noreferrer">Grab's allocation explanation</a> and <a href="https://about.ups.com/us/en/newsroom/press-releases/innovation-driven/ups-deploys-purpose-built-navigation-for-ups-service-personnel.html" target="_blank" rel="noopener noreferrer">UPS on ORION versus UPSNav</a>.</p>
+          </div></article>
+
+          <article class="student-slide" id="slide-evidence" data-slide role="group" aria-roledescription="slide" aria-label="4 of 5: Benefit or proof"><div class="slide-content">
+            <div class="slide-meta"><span>STUDENT CONTENT / 04 OF 05</span><span>LECTURE 02</span></div>
+            <div class="slide-intro"><span class="shape shape-grid" aria-hidden="true"></span><h2>Benefit or proof?</h2><p>The class found plausible advantages. The evidence label tells us how firmly to state them.</p></div>
+            <div class="proof-grid"><article><span>A / DEMONSTRATED</span><h3>Observed operation</h3><p>A dated deployment with a defined unit: trips, delivery time, route miles, or a documented process.</p></article><article><span>B / COMPANY CLAIM</span><h3>Reported benefit</h3><p>A supplier or operator reports an effect. Record whose claim it is and the comparison baseline.</p></article><article><span>C / MODELLED</span><h3>Study result</h3><p>A simulation or experiment suggests a gain under stated assumptions. Do not call it a live service result.</p></article><article><span>D / PROPOSED</span><h3>Future design</h3><p>A useful idea—such as joint charging and dispatch—can be analyzed without saying it is already deployed.</p></article></div>
+            <div class="proof-note"><strong>Scope changes meaning.</strong><span>Wing's million-plus figure is cumulative commercial deliveries, not deliveries per year. Grab's company revenue is not a dispatch-effect measure. Zipline's reported 51% finding concerns in-hospital deaths due to postpartum hemorrhage, not all maternal deaths.</span></div>
+            <p class="decision-source">Check the underlying <a href="https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery" target="_blank" rel="noopener noreferrer">Wing update</a>, <a href="https://www.grab.com/sg/press/others/grab-reports-record-second-quarter-2026-results-raises-full-year-guidance-and-announces-750-million-share-repurchase-program/" target="_blank" rel="noopener noreferrer">Grab results</a>, and <a href="https://www.zipline.com/newsroom/celebrating-dr-sabin-nsanzimana-a-2025-time100-next-leader-transforming-rwanda-s-health-system" target="_blank" rel="noopener noreferrer">Zipline's study summary</a>.</p>
+          </div></article>
+
+          <article class="student-slide" id="slide-regions" data-slide role="group" aria-roledescription="slide" aria-label="5 of 5: Different places, different answers"><div class="slide-content">
+            <div class="slide-meta"><span>STUDENT CONTENT / 05 OF 05</span><span>LECTURE 02</span></div>
+            <div class="slide-intro"><span class="shape shape-circle" aria-hidden="true"></span><h2>Different places, different answers</h2><p>Optimization works inside local roads, rules, partners, and human needs.</p></div>
+            <div class="region-grid"><article><span>VIETNAM · URBAN DELIVERY</span><h3>Small streets, shared fleets</h3><p>Reports explored alley-level maps, motorbike batching, EV charging, and whether the assignment is fair to the courier.</p></article><article><span>RWANDA · MEDICAL ACCESS</span><h3>Urgency changes the objective</h3><p>The fastest feasible blood delivery may matter more than minimizing vehicle kilometers.</p></article><article><span>MEXICO · FREIGHT SAFETY</span><h3>Route and safety data differ</h3><p>Telematics can support visibility while cameras help investigate incidents; each needs its own outcome measure.</p></article><article><span>MOROCCO · PORT COMMUNITY</span><h3>Partners share the clock</h3><p>Vessel arrival, documents, berth, yard, and gate plans depend on information crossing organizations.</p></article></div>
+            <div class="future-line"><span class="smallcaps">THE NEXT 5–10 YEARS / STUDENT OUTLOOK</span><p>Students proposed more predictive dispatch, mixed human and autonomous fleets, and tighter air-ground or port coordination. The strongest shared condition is trustworthy data joined to feasible decisions, with safety and worker impacts measured alongside speed.</p></div>
+            <p class="slide-subline">ANONYMOUS CLASS INSIGHT · PARAPHRASED</p><blockquote class="student-callout">A route with a believable arrival promise can be better than a nominally faster route that repeatedly misses it.</blockquote>
+          </div></article>
+        </div></div>
+        <button class="deck-edge" type="button" data-deck-next aria-label="Next slide"><span>NEXT</span><strong class="deck-neighbor"></strong></button>
+      </div>
+      <nav class="deck-mobile-nav" aria-label="Slideshow controls"><button type="button" data-deck-prev>Previous</button><span id="deck-mobile-position">Contents</span><button type="button" data-deck-next>Next</button></nav>
+    </section>
+
+    <section class="lecture-section resources-section" id="resources" aria-labelledby="resources-title"><div class="shell section-inner"><section class="main-feature reading-feature" aria-labelledby="resources-title">
+      <div class="section-heading"><h2 id="resources-title">Reading room</h2><p class="intro">Start with the course's route-planning prewatch and Prof. Qi's research themes, then test the class's case claims against primary sources. For each example, ask whether it describes a deployed service, a model, or a proposed design.</p></div>
+      <div class="resource-grid">
+        <div class="resource-group"><div class="resource-group-head"><span>A / ROUTING</span><h3>Who goes, and which way?</h3></div>
+          <a href="https://www.grab.com/inside-grab/stories/matching-driver-partners-and-riders-allocation/" target="_blank" rel="noopener noreferrer"><b>Grab · Matching and batching</b><span>Why pickup ETA, eligibility, and network effects can outweigh simple proximity.</span></a>
+          <a href="https://about.ups.com/us/en/newsroom/press-releases/innovation-driven/ups-deploys-purpose-built-navigation-for-ups-service-personnel.html" target="_blank" rel="noopener noreferrer"><b>UPS · ORION and UPSNav</b><span>Separate the stop sequence from navigation to each entrance.</span></a>
+          <a href="https://www.samsara.com/mx/customers/potosinos-ultima-milla" target="_blank" rel="noopener noreferrer"><b>Samsara · Potosinos last mile</b><span>Compare route-time productivity with safety and fuel measures.</span></a>
+          <a href="https://arxiv.org/abs/2302.12650" target="_blank" rel="noopener noreferrer"><b>EV fleet dispatch + charging · Research</b><span>A modeled ride-hailing fleet shows why trip matching and charging must be planned together.</span></a>
+          <a href="https://www.youtube.com/watch?v=CGfLDLc4sA0" target="_blank" rel="noopener noreferrer"><b>Course prewatch · Route4Me video</b><span>Plan 5,000 addresses, then ask which data and constraints make manual routing impractical.</span></a>
+          <a href="https://developers.google.com/optimization/routing/vrptw" target="_blank" rel="noopener noreferrer"><b>Google OR-Tools · Time windows</b><span>A worked vehicle-routing example turns promised arrival windows into model constraints.</span></a>
+          <a href="https://epubs.siam.org/doi/10.1137/1.9781611973594" target="_blank" rel="noopener noreferrer"><b>SIAM · Vehicle routing reference</b><span>Prof. Qi's cited reference on routing problems, exact methods, and heuristics.</span></a>
+        </div>
+        <div class="resource-group"><div class="resource-group-head"><span>B / NEW MODES</span><h3>Where autonomy fits</h3></div>
+          <a href="https://wing.com/news/wing-and-walmart-seven-new-markets-drone-delivery" target="_blank" rel="noopener noreferrer"><b>Wing + Walmart · 2026 expansion</b><span>A retail drone network and a clearly cumulative delivery figure.</span></a>
+          <a href="https://www.zipline.com/newsroom/celebrating-dr-sabin-nsanzimana-a-2025-time100-next-leader-transforming-rwanda-s-health-system" target="_blank" rel="noopener noreferrer"><b>Zipline · Rwanda outcome</b><span>Why a medical result needs a precise patient group and outcome definition.</span></a>
+          <a href="https://www.grab.com/inside-grab/stories/meet-carri-the-food-delivery-robot-at-grab-hq/" target="_blank" rel="noopener noreferrer"><b>Grab · Carri at its HQ</b><span>An indoor final-leg pilot with a clear boundary around what was tested.</span></a>
+          <a href="https://www.faa.gov/documentlibrary/media/advisory_circular/ac_107-2.pdf" target="_blank" rel="noopener noreferrer"><b>FAA · Small UAS guidance</b><span>Weather, wind, and operating limits are feasibility checks before flight.</span></a>
+          <a href="https://arxiv.org/abs/2302.00240" target="_blank" rel="noopener noreferrer"><b>Electric trucks · Joint routing and charging</b><span>A lecture-cited model combines travel, charging cost, and tardiness; its results are simulated.</span></a>
+          <a href="https://ira.lib.polyu.edu.hk/handle/10397/107810" target="_blank" rel="noopener noreferrer"><b>Truck + drone · Cooperative pickup</b><span>A lecture-cited research model schedules pickups and deliveries under vehicle capacity and customer due times.</span></a>
+        </div>
+        <div class="resource-group"><div class="resource-group-head"><span>C / NETWORKS</span><h3>Partners and proof</h3></div>
+          <a href="https://unctad.org/system/files/official-document/rmt2025_en.pdf" target="_blank" rel="noopener noreferrer"><b>UNCTAD · Maritime transport 2025</b><span>Box IV.5 explains Morocco's PORTNET single window and data reuse.</span></a>
+          <a href="https://www.tangermed.ma/wp-content/uploads/press-releases/2026/CP-TMPA-PORT-ACTIVITY-REPORT-IN-2025.pdf" target="_blank" rel="noopener noreferrer"><b>Tanger Med · 2025 activity</b><span>Connect a throughput number to its stated terminal-capacity context.</span></a>
+          <a href="https://www.blue.cl/lockers-puntos/encuentra-tu-punto" target="_blank" rel="noopener noreferrer"><b>Blue Express · Pickup network</b><span>See how a locker changes the final hand-off and customer access.</span></a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0968090X22002091" target="_blank" rel="noopener noreferrer"><b>Mobile parcel lockers · Benchmark study</b><span>Prof. Qi's cited study compares moving-locker concepts and customer walking distance.</span></a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0968090X2200136X" target="_blank" rel="noopener noreferrer"><b>EV charging stations · Location and routing</b><span>Why facility placement and daily electric-delivery routes are coupled decisions.</span></a>
+        </div>
+      </div>
+    </section></div></section>
+
+    <section class="lecture-section quiz-section" id="quiz" aria-labelledby="quiz-title"><div class="shell section-inner"><section class="main-feature quiz-feature" aria-labelledby="quiz-title">
+      <div class="section-heading"><h2 id="quiz-title">Decision lab</h2><p class="intro">Twelve short scenarios join the class findings with Prof. Qi's routing toolkit. Choose a feasible plan, read the explanation, and test what the evidence can actually support.</p></div>
+      <div class="quiz-board"><div class="quiz-side"><div class="big" aria-hidden="true">12</div><h3>Think like a dispatcher</h3><p>Three rounds: design the trip, test the claim, and apply the lecture's methods.</p><div class="quiz-rounds">ROUND 01 / DESIGN THE TRIP<br>ROUND 02 / TEST THE CLAIM<br>ROUND 03 / APPLY THE METHOD</div><button type="button" class="next-button" id="quiz-restart" hidden>Restart challenge ↺</button></div>
+        <div class="quiz-main"><div class="quiz-head"><span class="quiz-status" id="quiz-status"></span><span class="quiz-track" aria-hidden="true"><i id="quiz-progress"></i></span></div><div class="quiz-topic" id="quiz-topic"></div><div class="question" id="quiz-question"></div><div class="choices" id="quiz-choices"></div><div class="feedback" id="quiz-feedback" aria-live="polite"></div><button type="button" class="next-button" id="quiz-next" disabled>Next question →</button></div>
+      </div>
+    </section></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><strong>ISL / 02</strong><span>Anonymous synthesis of 33 unique Assignment 02 reports; company and research sources are linked where used.</span><a href="../">Course register</a></div></footer>
+</body>
+</html>

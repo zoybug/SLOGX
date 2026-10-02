@@ -31,7 +31,7 @@
       const name = button.querySelector('.deck-neighbor');
       if (name) name.textContent = current === slides.length - 1 ? 'End' : slideTitle(current + 1);
     });
-    document.querySelector('#deck-mobile-position').textContent = current === 0 ? 'Contents' : `${String(current).padStart(2, '0')} / 05`;
+    document.querySelector('#deck-mobile-position').textContent = current === 0 ? 'Contents' : `${String(current).padStart(2, '0')} / ${String(slides.length - 1).padStart(2, '0')}`;
   }
 
   function goTo(index, smooth = true) {

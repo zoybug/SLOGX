@@ -29,6 +29,8 @@ body{background:#f6f8f5}
 /* A simple route cue rewards hover without obscuring the page. */
 .course-home .lecture-row.available,.lecture-main .slide-toc-row{transition:background .2s ease,padding-left .2s ease}
 .course-home .lecture-row.available:hover{padding-left:15px}
+.course-home .lecture-row-featured{min-height:67px;padding-block:7px}
+.course-home .lecture-row-featured small{display:block;margin-top:1px;color:var(--muted);font:500 12px/1.35 var(--sans)}
 .lecture-main .slide-toc-row:hover{padding-left:12px}
 .lecture-main .stage-button:hover,.lecture-main .filter-button:hover{border-color:var(--secondary)}
 
