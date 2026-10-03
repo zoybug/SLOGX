@@ -83,10 +83,14 @@
     schedulePage();
   });
 
-  const oldLinks = { responses: 1, model: 2, evidence: 3, future: 4, world: 5 };
   function openHash() {
     const hash = decodeURIComponent(location.hash.slice(1));
-    const slideIndex = oldLinks[hash] ?? slides.findIndex(slide => slide.id === hash);
+    // Resolve stable IDs against the actual order so editorial reordering keeps
+    // both panel links and legacy section links pointing to the right content.
+    const target = document.getElementById(hash);
+    const panel = target?.closest('[data-slide]');
+    const slideIndex = panel ? slides.indexOf(panel)
+      : slides.findIndex(slide => slide.id === `slide-${hash}`);
     if (slideIndex > 0) {
       document.querySelector('#students').scrollIntoView({ behavior: 'auto', block: 'start' });
       goTo(slideIndex, false);
