@@ -35,12 +35,19 @@ The 2025 pages publish learning content directly in HTML. Standalone synthesis e
 
 ## Fall 2025 Lecture 06
 
-`2025/lecture-06/` adds Prof. Bokui Chen’s dated lecture context, five learning panels, a responsibility explorer, five-step cognition loop, constructed headway and shuttle-capacity calculations, ten primary/syllabus companion links and twelve review questions. The corpus contains 30 identified student submissions including one name-only record, plus a separately titled unattributed companion outside the identified denominator. Three repeated page headers across two continuing reports are merged. Student concepts, personal experience and historical industry claims retain their evidence boundaries. Private source/identity audits remain in `2025/L6_grading` outside this repository. No synthesis exports or raw lecture/assignment downloads are generated.
+`2025/lecture-06/` adds Prof. Bokui Chen’s dated lecture context, six learning views, a responsibility explorer, five-step cognition loop, separate constructed headway and shuttle-capacity calculations, ten primary/syllabus companion links and twelve review questions. The corpus contains 30 identified student submissions including one name-only record, plus a separately titled unattributed companion outside the identified denominator. Three repeated page headers across two continuing reports are merged. Student concepts, personal experience and historical industry claims retain their evidence boundaries. Private source/identity audits remain in `2025/L6_grading` outside this repository. No synthesis exports or raw lecture/assignment downloads are generated.
 
 ## Fall 2025 editorial source
 
-The 2025 pages share the section names **Lecture overview**, **Student perspectives**, **Resources** and **Quiz**. Copy conventions are documented in `EDITORIAL_STYLE.md`. The served HTML and `assets/lecture-2025-*.js` files are the authoritative editorial source and need no build step. Historical intake/generation scripts outside this repository are not the current copy source. Panel links resolve stable IDs against the actual panel order, including the revised Lecture 01 and Lecture 02 sequences.
+The 2025 pages share the section names **Overview**, **Student synthesis**, **Resources** and **Quiz**. Copy conventions are documented in `EDITORIAL_STYLE.md`. The served HTML and `assets/lecture-2025-*.js` files are the authoritative editorial source and need no build step. Historical intake/generation scripts outside this repository are not the current copy source. Panel links resolve stable IDs against the actual panel order, including the revised Lecture 01 and Lecture 02 sequences.
 
 ## Fall 2025 color identities
 
 The 2025 register and Lectures 01–06 load `assets/2025-theme.css` after the shared styles. Four tokens give each lecture a topic color while body text, cards, borders and course-year navigation stay neutral. The supplied 2026 direction is mapped to the actual 2025 subjects: Lecture 04 is cyan for drones, and Lecture 06 uses graphite for autonomous driving. Lecture 07 has a navy/coral register identity and remains unavailable. Component and contrast conventions are documented in `COLOR_STYLE_2025.md`. SVG variants are generated with `python class-01/tools/build-2025-theme-art.py`; shared originals and 2026 colors remain unchanged.
+
+
+## Fall 2025 briefing layout
+
+The 2025 register and Lectures 01–06 load `assets/briefing-2025.css` after the topic colors and `assets/briefing-2025.js` after the interactive scripts. The archive leads with the lecture register. Each lecture has a compact overview, a lecture rail, one active synthesis view, grouped resources and a single-question quiz. Detailed source notes and original explanations are available through disclosures. Desktop content stays in ordinary document flow with no nested deck scrolling; mobile uses a single column. Lecture 06 separates traffic headway from shuttle capacity. The optional fact companion lives in the footer.
+
+`LAYOUT_STYLE_2025.md` documents the grid, navigation, disclosure and maintenance conventions. Fonts are served locally from `assets/fonts/` with their license. The 2026 layout and URLs remain unchanged. No build step is required.

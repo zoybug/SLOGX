@@ -1,6 +1,6 @@
 # Fall 2025 lecture colors
 
-`assets/2025-theme.css` is the palette and component source. Each 2025 page loads it last and identifies its year and lecture with data attributes. The layout, typography and spacing remain shared. The 2026 pages do not load this file.
+`assets/2025-theme.css` defines the palette and topic identities. Each 2025 page identifies its year and lecture with data attributes. The 2025 briefing layout loads `assets/briefing-2025.css` after the color styles; see `LAYOUT_STYLE_2025.md` for typography and spacing. The 2026 pages do not load either file.
 
 | 2025 lecture | Topic | Primary | Deep | Soft | Accent |
 | --- | --- | --- | --- | --- | --- |
@@ -16,6 +16,6 @@ The supplied direction describes 2026. Colors follow the actual 2025 topics: cya
 
 The canvas is #F7F7F4, text #111827, white surfaces #FFFFFF and borders #DDE1E7. Secondary text uses #64748B on white; #5F6F85 on the canvas provides sufficient contrast for small text (4.77:1 versus 4.43:1 with the original gray).
 
-Primary colors identify hero emphasis, lecture numbers, selected navigation, controls, progress and chart series. Deep colors support small labels and links. Soft colors are limited to hero art, resource headings, callouts and selected/hover states. Accent colors mark diagram signals and movement. White-text buttons use primary colors, all exceeding 4.5:1 contrast; bright accents are not button fills. Quiz success/error feedback keeps its semantic colors. Ordinary body copy, card surfaces, borders, course-year navigation and footer text remain neutral. The shared Zoybug mascot keeps its brand colors; its progress ring and fact-card accents follow the current lecture.
+Primary colors identify hero emphasis, lecture numbers, selected navigation, controls, progress and chart series. Deep colors support small labels and links. Soft colors are limited to selected/hover states and supporting diagram surfaces. Accent colors mark diagram signals and movement. White-text buttons use primary colors, all exceeding 4.5:1 contrast; bright accents are not button fills. Quiz success/error feedback keeps its semantic colors. Ordinary body copy, surfaces, borders, course-year navigation and footer text remain neutral. The shared Zoybug mascot keeps its brand colors in the footer; its fact-card accents follow the current lecture.
 
 SVG variants live in `assets/2025-theme/`. After changing palette tokens, run `python class-01/tools/build-2025-theme-art.py` from the repository root. This rebuilds only the 2025 variants from the shared originals. The positioning lab uses the same tokens directly in its inline SVG. No website build is needed.

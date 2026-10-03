@@ -8,11 +8,11 @@ explains a problem, shows an example and helps the reader reason about it.
 
 | Role | Reader-facing name | Related controls |
 |---|---|---|
-| Lecture introduction and outline | Lecture overview | — |
-| Anonymous reflection panels and associated teaching comparisons | Student perspectives | Explore student perspectives; Start the slideshow; Previous; Next |
+| Lecture introduction and outline | Overview | — |
+| Anonymous reflection views and associated teaching comparisons | Student synthesis | Explore student synthesis; Contents; Previous; Next; Full notes and assumptions |
 | Related readings and source links | Resources | Related reading |
 | Multiple-choice practice activity | Quiz | Next question; See quiz result; Restart quiz; Quiz complete |
-| Provenance and inclusion details | About the source material | Expandable note |
+| Provenance and inclusion details | About this synthesis | Expandable note |
 | Archive page linking the lectures | 2025 lectures | Not yet available for an unpublished lecture |
 
 Use the same name in navigation, headings, accessible labels, buttons and status
@@ -20,9 +20,9 @@ messages. Do not call the quiz a challenge, lab or decision lab. Worked models
 can still be described as examples or exercises because they perform a different
 role from the multiple-choice quiz.
 
-Keep official syllabus lecture titles in the lecture subtitle, archive list and
-browser title. A shorter hero heading may introduce the topic, but it should make
-the subject clear. Use the same abbreviated lecture label throughout the dropdown:
+Keep official syllabus lecture titles in Lecture details and sources, the archive's
+course-details disclosure and browser title. A shorter hero heading introduces the
+topic. Use the same abbreviated lecture label throughout the register and lecture rail:
 Digital supply chains; Smart transportation; Intelligent warehousing; Urban drone
 logistics; High-precision positioning; Autonomous driving; Container terminals.
 
@@ -33,11 +33,11 @@ matters, then a short outline of what students will explore. A useful panel
 sequence is process → concrete comparisons or exercises → student questions →
 evaluation. Adapt it when the topic needs a different order.
 
-Each panel introduction should connect to the preceding idea and tell the reader
-what the next example helps them understand. Contents descriptions should remain
-short; they do not need to repeat the complete panel introduction. Keep technical
-assumptions next to the model they qualify. Place detailed source counting and
-document reconciliation in expandable notes rather than leading with them.
+Each synthesis view presents one takeaway, two supporting points and a useful
+chart, comparison or model. Full notes retain the original explanations and
+qualifications. Keep a short assumption beside the model when it affects the
+reader's interpretation; put detailed assumptions in its full notes. Source
+counts and document reconciliation belong in About this synthesis.
 
 ## Language and headings
 
@@ -45,8 +45,8 @@ Use concrete actors and actions: a dispatcher assigns a route, a station checks 
 package, a filter weights a measurement. Prefer these to clusters such as
 “connected, predictive, adaptive intelligence” without a worked explanation.
 
-Use sentence case for headings and controls. Omit terminal periods from headings
-except the established two-line hero treatment. Decorative topic markers may
+Use sentence case for headings and controls. Omit terminal periods from headings.
+Decorative topic markers may
 remain uppercase. Use question headings when they introduce an actual question;
 avoid alternating metaphors and technical labels for the same function.
 
