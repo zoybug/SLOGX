@@ -8,7 +8,7 @@ The public version lives at `/SLOGX/class-01/`. GitHub Pages publishes the repos
 
 ## Course years
 
-The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; Lectures 01–03 have published learning pages.
+The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; Lectures 01–04 have published learning pages.
 
 `2025/lecture-01/` follows the same four-part lecture structure. It includes the professor, lecture title/date and shared lecture outline; five slides covering Q1–Q4; an interactive six-stage decision loop; a comparison of three lecture cases; eight companion readings; a 12-question scenario quiz; and anonymous webpage learning content. The synthesis covers 30 Lecture 01 reflections from the two supplied batches, with a report about another lecture excluded. Counts describe the submitted corpus, not a verified enrollment roster. Q3 counts group explicit keyword headings by synonyms, once per reflection per family; only the after-lecture list is used where both are supplied. Student identities and the private audit remain outside this repository.
 
@@ -22,4 +22,8 @@ The shared professor/deck context enriches the 2026 Lecture 01 introduction. Stu
 
 `2025/lecture-03/` presents warehousing operations, four system comparisons, a constructed batching/deadline lab, different student perspectives, measurement boundaries and twelve review questions. The two supplied files contain 30 identified records: 29 warehousing reflections and one transportation reflection routed to Lecture 02. An additional unattributed warehousing text has unresolved authorship and is outside the identified denominator. Private identity/source evidence stays outside this repository.
 
-The 2025 pages publish learning content directly in HTML. Standalone synthesis exports, raw lecture TXT files and assignment-outline downloads were removed from Lectures 01 and 02 and are not generated for Lecture 03. Original sources and private audits are retained outside the website. The main Fall 2026 pages retain their existing resources.
+The 2025 pages publish learning content directly in HTML. Standalone synthesis exports, raw lecture TXT files and assignment-outline downloads were removed from Lectures 01 and 02 and are not generated for later lectures. Original sources and private audits are retained outside the website. The main Fall 2026 pages retain their existing resources.
+
+## Fall 2025 Lecture 04
+
+`2025/lecture-04/` includes the lecture introduction, five learning panels, a six-stage relay explorer, four urban constraint comparisons, a constructed latency model, eight companion resources and twelve review questions. The supplied corpus contains 29 distinct identified reflections from 29 students after merging one repeated block. Name-only and ID-only records are retained. A separate unattributed essay remains outside that count. Identity evidence and verification artifacts stay in the private `2025/L4_grading` folder, outside this repository.
