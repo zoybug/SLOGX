@@ -24,7 +24,7 @@ Lecture 06 has six views: the traffic-headway and shuttle-fleet calculations are
 
 Resources form grouped reading rows, with a visible description and external-link indication. The quiz retains its twelve questions, answer keys, immediate explanations, related readings and restart behavior. It uses one main column with optional instructions. Both remain accessible by keyboard.
 
-The shared Zoybug fact companion is placed in the footer on 2025 pages, so it cannot overlap text or interactive controls. Its facts, source links and discovery history are preserved.
+Zoybug is a floating logistics familiar on 2025 pages. Its original parcel-creature SVG bobs, blinks and carries a forehead display of the number of discovered facts. Facts remain hidden until click or keyboard activation; close and Escape return focus to the companion. It shifts vertically when it would cover a visible control. Reduced-motion preferences stop decorative animation. Its 100 facts, source links and saved discovery history are preserved.
 
 ## Maintenance
 

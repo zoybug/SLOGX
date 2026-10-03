@@ -3,14 +3,44 @@
   if (document.body.dataset.courseYear !== '2025') return;
   document.addEventListener('DOMContentLoaded', () => {
     const widget = document.querySelector('.zoybug-widget');
-    const dock = document.querySelector('#fact-dock');
-    if (widget && dock) {
-      dock.append(widget);
-      const label = document.createElement('span');
-      label.className = 'fact-label';
-      label.textContent = 'Explore a logistics fact';
-      widget.querySelector('.zoybug-trigger').append(label);
+    if (!widget) return;
+    let pending = false;
+    function placeCompanion() {
+      pending = false;
+      const trigger = widget.querySelector('.zoybug-trigger');
+      const base = 16;
+      // Keep the familiar in the lower corner while its intentional popup is open.
+      if (trigger.getAttribute('aria-expanded') === 'true') {
+        widget.style.setProperty('--zoybug-bottom', `${base}px`);
+        return;
+      }
+      const rect = widget.getBoundingClientRect();
+      const headerBottom = document.querySelector('.masthead')?.getBoundingClientRect().bottom ?? 0;
+      const maxBottom = Math.max(base, window.innerHeight - headerBottom - rect.height - 16);
+      const controls = [...document.querySelectorAll('a, button, input, select, summary')]
+        .filter(control => !widget.contains(control))
+        .map(control => control.getBoundingClientRect())
+        .filter(box => box.width && box.height && box.bottom > headerBottom && box.top < window.innerHeight);
+      const overlaps = bottom => {
+        const top = window.innerHeight - bottom - rect.height;
+        return controls.filter(box => box.left < rect.right + 8 && box.right > rect.left - 8 && box.top < top + rect.height + 8 && box.bottom > top - 16).length;
+      };
+      let best = base;
+      let score = overlaps(best);
+      for (let bottom = base + rect.height + 16; score && bottom <= maxBottom; bottom += rect.height + 16) {
+        const candidate = overlaps(bottom);
+        if (candidate < score) { best = bottom; score = candidate; }
+      }
+      widget.style.setProperty('--zoybug-bottom', `${best}px`);
     }
+    function schedulePlacement() {
+      if (!pending) { pending = true; requestAnimationFrame(placeCompanion); }
+    }
+    window.addEventListener('scroll', schedulePlacement, { passive: true });
+    window.addEventListener('resize', schedulePlacement);
+    document.addEventListener('click', placeCompanion);
+    document.addEventListener('keydown', placeCompanion);
+    schedulePlacement();
   });
 
   const track = document.querySelector('#slide-track');

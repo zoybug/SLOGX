@@ -257,17 +257,48 @@ body[data-course-year="2025"] .lecture-row { grid-template-columns: 40px minmax(
 .footer-inner { padding-block: 22px; font-size: 12px; }
 .footer-inner strong { font: 500 11px var(--mono); }
 
-/* Optional facts live in the footer, with no overlay on text or model controls. */
-.fact-dock { padding-bottom: 24px; }
-.fact-dock .zoybug-widget { position: static; display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 12px; pointer-events: auto; }
-.fact-dock .zoybug-trigger { display: inline-flex; gap: 9px; width: auto; height: auto; min-height: 40px; padding: 4px 10px 4px 0; color: var(--ink); animation: none; filter: none; }
-.fact-dock .zoybug-trigger svg { width: 36px; height: 36px; }
-.fact-dock .zoybug-trigger::before, .fact-dock .zoybug-hint { display: none; }
-.fact-dock .zoybug-trigger .fact-label { font: 500 13px var(--sans); }
-.fact-dock .zoybug-trigger:hover { transform: none; filter: none; }
-.fact-dock .zoybug-card { width: min(100%, 640px); box-shadow: none; padding: 20px; animation: none; }
-.fact-dock .zoybug-fact { font: 500 20px/1.45 var(--sans); }
-.fact-dock .zoybug-card-foot { flex-wrap: wrap; }
+/* Zoybug is a floating familiar; facts appear only after intentional activation. */
+body[data-course-year="2025"] .zoybug-widget {
+  position: fixed; z-index: 80; right: max(14px, env(safe-area-inset-right));
+  bottom: max(var(--zoybug-bottom, 16px), env(safe-area-inset-bottom));
+  transition: none; pointer-events: none;
+}
+.zoybug-familiar .zoybug-trigger {
+  width: 96px; height: 114px; padding: 0; border: 0; background: none;
+  filter: drop-shadow(0 7px 9px #183b3520); animation: zoybug-hover 4.8s ease-in-out infinite;
+  touch-action: manipulation;
+}
+.zoybug-familiar .zoybug-trigger svg { width: 96px; height: 114px; overflow: visible; }
+.zoybug-familiar .zoybug-trigger::before, .zoybug-familiar .zoybug-hint { display: none; }
+.zoybug-familiar .zoybug-trigger:hover { filter: drop-shadow(0 8px 12px #183b3540); }
+.zoybug-familiar .zoybug-trigger:focus-visible { border-radius: 22px; outline-offset: 1px; }
+.zoybug-familiar .zoybug-eye { transform-box: fill-box; transform-origin: center; }
+.zoybug-fin { transform-box: fill-box; transform-origin: center; animation: zoybug-fin 2.3s ease-in-out infinite alternate; }
+.zoybug-fin-right { animation-delay: -.8s; }
+.zoybug-aura { animation: zoybug-shimmer 4.8s ease-in-out infinite; }
+.zoybug-familiar[data-open="true"] .zoybug-meter { fill: #e4ffbf; }
+.zoybug-familiar .zoybug-card {
+  position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: 140px;
+  width: min(360px, calc(100% - 32px));
+  max-height: calc(100dvh - var(--briefing-header-height) - 164px); overflow-y: auto;
+  border: 1px solid var(--line); border-top: 3px solid var(--lecture-primary); border-radius: 16px;
+  padding: 20px; box-shadow: 0 14px 44px #173e352b; background: #fff;
+}
+.zoybug-identity { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+.zoybug-identity strong { color: #173e35; font: 600 23px/1.2 var(--sans); letter-spacing: -.035em; }
+.zoybug-identity span { color: var(--muted); font: 400 11px/1.5 var(--sans); }
+.zoybug-familiar .zoybug-card-head { font: 500 10px/1.5 var(--mono); color: var(--lecture-deep); }
+.zoybug-familiar .zoybug-close { min-width: 32px; min-height: 32px; padding: 4px; border-radius: 50%; background: var(--lecture-soft); }
+.zoybug-familiar .zoybug-fact { font: 500 20px/1.45 var(--sans); margin: 10px 0 18px; }
+.zoybug-familiar .zoybug-card-foot { flex-wrap: wrap; gap: 10px; }
+.zoybug-familiar .zoybug-count { font: 500 10px/1.5 var(--mono); }
+@keyframes zoybug-hover { 0%,100% { translate: 0 0; rotate: -1deg; } 50% { translate: -3px -8px; rotate: 2deg; } }
+@keyframes zoybug-fin { from { rotate: -5deg; } to { rotate: 8deg; } }
+@keyframes zoybug-shimmer { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+@media (min-width: 801px) {
+  /* Leave the floating corner free beside the synthesis navigation. */
+  .deck-controls { padding-right: 112px; }
+}
 
 @media (max-width: 1100px) {
   .shell { width: min(calc(100% - 64px), 1200px); }
@@ -354,6 +385,12 @@ body[data-course-year="2025"] .lecture-row { grid-template-columns: 40px minmax(
   .lecture-row.available .status::after { content: "→"; font-size: 22px; }
   .lecture-row.muted .status { font-size: 11px; }
   .footer-inner { flex-wrap: wrap; gap: 8px 20px; }
-  .fact-dock .zoybug-card { padding: 16px; }
+  body[data-course-year="2025"] .zoybug-widget { right: max(8px, env(safe-area-inset-right)); }
+  .zoybug-familiar .zoybug-trigger, .zoybug-familiar .zoybug-trigger svg { width: 76px; height: 90px; }
+  .zoybug-familiar .zoybug-card { right: 16px; bottom: 118px; padding: 18px; max-height: calc(100dvh - var(--briefing-header-height) - 142px); }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .zoybug-widget { transition: none !important; }
+  .zoybug-fin, .zoybug-aura { animation: none !important; }
+}
