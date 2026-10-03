@@ -8,12 +8,18 @@ The public version lives at `/SLOGX/class-01/`. GitHub Pages publishes the repos
 
 ## Course years
 
-The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; only Lecture 01 has a published synthesis so far.
+The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; Lectures 01–03 have published learning pages.
 
-`2025/lecture-01/` follows the same four-part lecture structure. It includes the professor, lecture title/date and shared lecture outline; five slides covering Q1–Q4; an interactive six-stage decision loop; a comparison of three lecture cases; eight companion readings; a 12-question scenario quiz; and an anonymous downloadable Markdown brief. The synthesis covers 30 Lecture 01 reflections from the two supplied batches, with a report about another lecture excluded. Counts describe the submitted corpus, not a verified enrollment roster. Q3 counts group explicit keyword headings by synonyms, once per reflection per family; only the after-lecture list is used where both are supplied. Student identities and the private audit remain outside this repository.
+`2025/lecture-01/` follows the same four-part lecture structure. It includes the professor, lecture title/date and shared lecture outline; five slides covering Q1–Q4; an interactive six-stage decision loop; a comparison of three lecture cases; eight companion readings; a 12-question scenario quiz; and anonymous webpage learning content. The synthesis covers 30 Lecture 01 reflections from the two supplied batches, with a report about another lecture excluded. Counts describe the submitted corpus, not a verified enrollment roster. Q3 counts group explicit keyword headings by synonyms, once per reflection per family; only the after-lecture list is used where both are supplied. Student identities and the private audit remain outside this repository.
 
 The shared professor/deck context enriches the 2026 Lecture 01 introduction. Student evidence is kept separate by year. Companion links were checked in October 2026, and historical case evidence is distinguished from living product pages. The S.F. Holding 2024 report link points to the issuer's filing hosted by the Shenzhen Stock Exchange.
 
 ## Fall 2025 Lecture 02
 
-`2025/lecture-02/` publishes anonymous synthesis of 29 attributed reports, a six-family application map, coordination loop, case comparisons, twelve scenario questions and supplied lecture/assignment downloads. One unattributed repeated CityFlow block is excluded. Private identities and source evidence remain outside the repository in `2025/L2_grading`. Pages uses the `prod` branch, root `/`.
+`2025/lecture-02/` publishes anonymous synthesis of 29 attributed reports, a six-family application map, coordination loop, case comparisons, twelve scenario questions and primary companion readings. One unattributed repeated CityFlow block is excluded. Private identities and source evidence remain outside the repository in `2025/L2_grading`. Pages uses the `prod` branch, root `/`.
+
+## Fall 2025 Lecture 03 and resource policy
+
+`2025/lecture-03/` presents warehousing operations, four system comparisons, a constructed batching/deadline lab, different student perspectives, measurement boundaries and twelve review questions. The two supplied files contain 30 identified records: 29 warehousing reflections and one excluded transportation reflection. An additional unattributed warehousing text has unresolved authorship and is outside the identified denominator. Private identity/source evidence stays outside this repository.
+
+The 2025 pages publish learning content directly in HTML. Standalone synthesis exports, raw lecture TXT files and assignment-outline downloads were removed from Lectures 01 and 02 and are not generated for Lecture 03. Original sources and private audits are retained outside the website. The main Fall 2026 pages retain their existing resources.
