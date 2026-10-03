@@ -4,4 +4,12 @@ This folder is a self-contained course site. `index.html` opens the eight-lectur
 
 ## GitHub Pages
 
-Copy the **contents** of this folder into the directory that GitHub Pages publishes. Keep the `assets`, `lecture-01`, `lecture-02`, and `interactive` folders beside the PDFs so their relative links work. The public version lives at `/SLOGX/class-01/`.
+The public version lives at `/SLOGX/class-01/`. GitHub Pages publishes the repository root from the `prod` branch; preserve the `class-01` directory and its relative paths. No build step is required.
+
+## Course years
+
+The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; only Lecture 01 has a published synthesis so far.
+
+`2025/lecture-01/` follows the same four-part lecture structure. It includes the professor, lecture title/date and shared lecture outline; five slides covering Q1–Q4; an interactive six-stage decision loop; a comparison of three lecture cases; eight companion readings; a 12-question scenario quiz; and an anonymous downloadable Markdown brief. The synthesis covers 30 Lecture 01 reflections from the two supplied batches, with a report about another lecture excluded. Counts describe the submitted corpus, not a verified enrollment roster. Q3 counts group explicit keyword headings by synonyms, once per reflection per family; only the after-lecture list is used where both are supplied. Student identities and the private audit remain outside this repository.
+
+The shared professor/deck context enriches the 2026 Lecture 01 introduction. Student evidence is kept separate by year. Companion links were checked in October 2026, and historical case evidence is distinguished from living product pages. The S.F. Holding 2024 report link points to the issuer's filing hosted by the Shenzhen Stock Exchange.

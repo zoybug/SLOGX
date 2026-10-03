@@ -149,7 +149,7 @@ window.ZOYBUG_FACTS = [
     ]
   },
   {
-    topic: 'NETWORK INTELLIGENCE', source: 'S.F. Holding 2024 annual report', url: 'https://ir.sf-express.com/media/v0bnjot2/2024-annual-report-e.pdf', facts: [
+    topic: 'NETWORK INTELLIGENCE', source: 'S.F. Holding 2024 annual report', url: 'https://disc.static.szse.cn/disc/disk03/finalpage/2025-03-29/6ae45a66-923f-472f-bd3a-204455cb9152.PDF', facts: [
       'S.F. Holding describes its Smart Brain as a way to coordinate collection, transit and delivery.',
       'S.F. Holding links predictive algorithms with monitoring and early warnings across its network.',
       'The company describes intelligent route planning and scheduling as a network-wide goal.',
