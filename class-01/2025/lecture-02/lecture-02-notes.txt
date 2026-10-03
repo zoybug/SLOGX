@@ -1,0 +1,835 @@
+SUPPLIED LECTURE TEXT — FALL 2025
+Prof. Mingyao Qi · Smart Transportation and Distribution
+Text extraction supplied by the course TA; diagrams, tables and layout may be incomplete. Historical claims retain their original context. Contact fields omitted. See the page’s teaching clarifications for concepts versus deployment, example-specific payloads, and algorithm limitations.
+
+Introduction to Smart Logistics
+(85991591)
+
+Lecture 2 Smart Transportation and Distribution
+Mingyao QI
+Institute of Data and Information,
+Tsinghua SIGS
+
+Contents
+
+➢ Scenarios of Freight Transportation and Distribution
+➢ Technologies of Smart Transportation and Distribution
+➢ Algorithms for Smart Transportation and Distribution
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+2
+
+1. Scenarios of Freight Transportation and Distribution
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+3
+
+Logistics System
+◼ A logistics system is a network of people, resources, information, activities, and organizations
+that manage the physical flow of products from a supplier to a customer.
+◼ It includes the movement of materials, information, and services from the beginning of the
+supply chain to the end.
+◼ Activities
+✓ Order processing
+
+✓ Inventory
+management
+✓ Freight
+transportation
+
+✓ Warehousing
+Murphy P R, Wood D F. Contemporary
+logistics[M]. Pearson Prentice Hall, 2018.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+4
+
+Freight Transportation Modes
+➢ Single mode (Differ with respect to cost and transit time)
+–
+–
+–
+–
+
+–
+
+Road vehicle (e.g. truck);
+Train;
+Aircraft;
+Ship (for transport on oceans, seas, lakes, canals and rivers);
+Pipeline.
+
+➢ Intermodal transport
+–
+
+–
+
+Some modes of transport do not allow a door-to-door connection between
+any origin and destination and should be used jointly with other modes;
+the commodities can be stored temporarily and then consolidated into
+different bins.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+5
+
+Global Logistics Costs by Function and Mode
+◼ Transportation costs remain the dominant consideration as they account for
+more than half of the logistics costs.
+
+Global Logistics Costs by Function and Mode, 2018
+Source: https://transportgeography.org/contents/chapter7/logistics-freight-distribution/global-logistics-costs-function/
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+6
+
+Significance of Freight Transportation
+◼ Determines the most important part (often between one-third and two-thirds) of
+the logistics costs;
+◼ Signiﬁcantly affects the service level provided to customers;
+◼ Affects the location of production plants;
+◼ Allows the possibility to supply time-critical goods (e.g., perishable foods,
+vaccines).
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+7
+
+Players
+◼ Shippers (e.g., manufacturing companies, sellers, individuals), at which the
+demand for transport originates and which, in some cases, carry out the
+transport services on their own, by using a private ﬂeet of vehicles;
+◼ Carriers, which provide transport services to customers;
+–
+
+Public, contracted, private
+
+◼ Governments, which construct and operate the transport infrastructures and set
+the transport policies at a regional, national or international level.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+8
+
+Classification of freight transportation
+On the basis of the distance between the origin and the destination of the
+shipment:
+–
+
+–
+
+Long-haul transport: goods are moved over relatively long distances (from
+some hundreds to some thousands of kilometers)
+Short-haul transport: origins and destinations in a relatively small-sized
+geographic area (a city or a county).
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+9
+
+Types of Short-Haul (Delivery) Systems
+◼ Product Distribution
+–
+–
+
+Supplementation from DC to stores
+Home appliances delivery
+
+◼ Express Delivery
+
+According to the
+delivered goods
+
+–
+–
+
+Between different cities
+Within the same city
+
+◼ Instant Delivery / Last-mile Delivery
+–
+–
+
+Takeaway food delivery
+Supermarket/grocery store delivery
+
+◼ Non-profit Delivery
+–
+–
+
+Humanitarian distribution
+Emergency Medical Delivery
+
+◼ Service-related distribution
+–
+–
+
+Technician scheduling and routing
+Road snow sweeping
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+10
+
+2.Technologies of Smart Transportation and Distribution
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+11
+
+Technologies in Transportation
+Autonomous Vehicle(AV)
+Connected Vehicle(CV)
+Module Vehicle (MV)
+Unmanned Aerial Vehicle (UAV)
+Electric Vehicle (EV)
+E-bus, E-scooter
+RFID, IoT
+GPS, Radar, INS
+Computer vision
+Loop detector
+EDI, AIS
+
+Virtual
+
+Physical
+
+Novel Transport
+Big Data
+Data Collector
+Algorithm
+Operation Mode
+
+Intermodal
+Crowdsourcing
+Ride-hailing
+Ride-sharing
+Pickup locker
+
+Data driven
+Social network data
+Vehicle trajectory data
+Mobile phone data
+Blue tooth data
+Data fusion, Digital twin
+Blockchain
+
+Facility location
+
+Network design
+
+Vehicle routing
+
+Scheduling
+
+Matching
+
+Bin packing
+
+Prediction
+
+Pricing
+
+Reinforcement Learning(RL)
+Machine learning(ML)
+Deep learning
+LSTM, GNN, RNN
+Multi-agent
+Bender decomposition
+BP, BC, CG
+
+Simulation
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+12
+
+Electric Vehicles-Enabled Transportation
+Classification of charging technology
+• Conductive charging
+Using a charger to physically connect with an electric vehicle to achieve the charging process of the battery. Charging
+systems typically consist of alternating current (AC)/direct current (DC) converters, direct current/direct current converters,
+and power factor correction (PFC) components.
+
+导电充电
+
+Tesla Model3 in charging
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+13
+
+Electric Vehicles-Enabled Transportation
+Classification of charging technology
+• Wireless charging
+•
+•
+•
+
+This technology does not require physical connections through cables, effectively eliminating sparks that may be caused by the insertion
+and removal process, and reducing restrictions on electric vehicle applications in certain situations, such as near gas stations or airports.
+One of the biggest advantages of induction charging is its convenience. Users do not need to handle the charging plug and only need to
+park the vehicle in a suitable charging area to complete the charging.
+Another significant advantage of induction charging is that it allows for charging while driving, achieving the concept of "charging while
+driving"
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+14
+
+Electric Vehicles-Enabled Transportation
+Classification of charging technology
+• Battery replacement
+•
+•
+•
+
+Battery swapping is one of the efficient and fast charging methods. Through battery swapping stations (BSS), electric vehicle owners can
+easily replace depleted batteries with fully charged new ones.
+BSS includes distribution transformers, AC/DC converters, battery chargers, robotic arms, charging racks, maintenance systems, control
+systems, and other equipment, aiming to provide battery exchange and charging services.
+From the perspective of the power grid, the variable demand of BSS makes it a flexible resource. When the power grid is under high
+pressure, BSS can inject electricity into the power system to balance the load demand of the grid and provide services to the grid.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+15
+
+Electric Vehicles-Enabled Transportation
+➢ Toward efficient transportation electrification of heavy-duty trucks: Joint scheduling of truck
+routing and charging
+To reduce GHG emissions by facilitating
+freight electrification, this paper proposes
+Jo in t R o u t i n g an d C h a rg in g ( JRC )
+scheduling for electric trucks. The objective
+of the associated optimization problem is to
+minimize the cost of transportation,
+charging, and tardiness. A large number of
+possible combinations of road segments as
+well as a large number of combinations of
+charging decisions and charging durations
+leads to a combinatorial explosion in the
+possible decisions electric trucks can make.
+
+点击文本内容
+
+Bragin, M. A., Ye, Z., & Yu, N. (2024). Toward efficient transportation electrification of heavy-duty trucks: Joint scheduling of
+truck routing and charging. Transportation Research Part C: Emerging Technologies, 160, 104494.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+16
+
+Electric Vehicles-Enabled Transportation
+➢ Integrated electric logistics vehicle recharging station location–routing problem with mixed
+backhauls and recharging strategies
+The widespread application of electric vehicles for city last-mile logistics has been enhanced by the emerging trend of
+urban sustainable mobility, which intends to reduce vehicle emissions and the dependence on fossil fuels. The
+recharging facility location is critical for electric logistics network planning, because it significantly affects future
+operation costs and efficiency.
+
+Yang, S., Ning, L., Tong, L. C., & Shang, P. (2022). Integrated electric logistics vehicle recharging station location–routing problem
+with mixed backhauls and recharging strategies. Transportation Research Part C: Emerging Technologies, 140, 103695.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+17
+
+Electric Vehicles-Enabled Transportation
+➢ Optimal dispatching of electric vehicles for providing charging on-demand service
+leveraging charging-on-the-move technology
+
+Range anxiety and charging infrastructure
+scarcity have been the main challenges for the
+mass adoption of electric vehicles (EVs). The
+emerging mobile electric-vehicle-to-electricvehicle (mE2) charging technology offers a
+promising solution, which combines batteryto-battery and connected and autonomous
+vehicle technologies to enable an EV with an
+extra battery to charge another EV on the
+move.
+
+electricity demand
+electricity provider
+
+Qiu, J., & Du, L. (2023). Optimal dispatching of electric vehicles for providing charging on-demand service leveraging
+charging-on-the-move technology. Transportation Research Part C: Emerging Technologies, 146, 103968.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+18
+
+Modular Vehicles-Enabled Transportation
+➢ Modular vehicle-based transit system for passenger and freight co-modal transportation
+The emergence of vehicle modularity technologies provides an opportunity to develop flexible public transport
+services that allow en-route vehicle capacity adjustments to meet fluctuating demands. Given the largely imbalanced
+demands for passenger and freight transport in urban areas, the use of modular vehicles in collaborative passenger
+and freight transport (co-modality) is expected to increase overall transport efficiency.
+
+https://solarimpulse.com/solutions-explorer/nextmodular-electric-vehicles#video
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+19
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+20
+
+Truck Platooning
+◼ Truck platooning allows trucks to follow each other closely, thereby reducing
+air drag and improving fuel economy.
+◼ Platooning also has the potential to increase vehicle capacity on our highways,
+particularly along freight corridors.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+21
+
+Automated Guided Vehicles in Smart Ports
+
+AGV: Automated Guided Vehicle
+
+QC
+
+AGV
+
+ARMG: Automated Rail-Mounted Gantry
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+22
+
+Paired AGV in container terminals
+➢ Two IAVs can couple (pair) in a leader–follower manner resulting
+in a 40-ft capacity able to transport the containers of relevant size.
+
+➢ Every IAV is conceived in such a way as it can become leader or
+follower at any point in time during operations.
+➢ It’s crucial to facilitate cooperation and scheduling, so as to
+
+minimize completion time of the given tasks.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+23
+
+Waterborne AGVs
+Inter Terminal Transport (ITT)：
+• Large throughput of containers happens both inside
+terminals, likely handled in automated container
+terminals by Automated Guided Vehicles and
+among various terminals by various modalities.
+• Port of Rotterdam project to develop autonomous econtainer shuttle.
+Waterborne AGV
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+24
+
+Urban Air Mobility
+Definition：
+• Urban Air Mobility (UAM, advanced air mobility)
+• a safe, sustainable, affordable, and accessible air transportation system
+• for emergency management, cargo delivery, and passenger mobility
+• within or traversing dense city regions
+Technology Basis:
+• battery, distributed electric
+propulsion, autonomy technologies
+• shared autonomous electric vehicles
+• safer, quieter, and less expensive
+than helicopters (operate, maintain )
+Garrow, L. A., German, B. J., & Leonard, C. E. (2021). Urban air mobility: A comprehensive review and comparative analysis with autonomous
+and electric ground transportation for informing future research. Transportation Research Part C: Emerging Technologies, 132, 103377.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+25
+
+UAM introduction
+• History
+•
+•
+•
+•
+
+Begin: 1940s Los Angeles Airways used helicopters to transport people and mail.
+End: Early UAM operations ceased operations due to safety concerns. (20 years ago)
+Again: modern-day on-demand helicopter services
+• air-taxi helicopter
+New eVTOL (electric vertical take-off and landing) aircraft
+• stimulate demand through lower per-passenger mile operating costs
+
+• Emerging background of eVTOL
+•
+•
+•
+
+Advances in electric propulsion (motors, batteries, fuel cells, electronic controllers)
+New aerial vehicles: greener and quieter flights
+Electric and hybrid propulsion system: lower the operating costs of aircraft
+
+26
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+26
+
+Use Cases of eVTOL
+On-demand passenger services (air taxi)
+Parcels and deliveries (eVTOL drone)
+Air cargo (a cargo eVTOL aircraft)
+Agriculture (crop protection and cover cropping)
+Emergency medical services (small, one-seater, faster, electric motor)
+Recreational flights (recreational or sporting aviation)
+Military applications
+Garrow, L. A., German, B. J., & Leonard, C. E. (2021). Urban air mobility: A comprehensive review and comparative analysis with autonomous
+and electric ground transportation for informing future research. Transportation Research Part C: Emerging Technologies, 132, 103377.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+27
+
+27
+
+eVTOL Aircraft
+Recent News
+• First inter-city electric air-taxi
+demonstration flight in 2024
+• from Shekou Cruise Homeport in
+Shenzhen to Jiuzhou Port in Zhuhai
+
+• Five-seater eVTOL aircraft
+• made its maiden cross-city and
+cross-sea flight
+• autonomously flew 50km (31 miles)
+route and only took 20 minutes
+• 3h by car, 2h by High-speed Railway
+https://www.nationthailand.com/world/china/40035975
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+28
+
+UAM Framework
+
+29
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+29
+
+Potential UAM research directions
+
+• Demand models that incorporate the timing of when individuals will adopt
+• High-fidelity simulation models for UAM operations
+
+• Locations, topology, demand, pricing, dispatching, and airspace restrictions
+• Oneway demand and parking constraints
+• Realistic time-of-day energy profiles for UAM vehicles
+• To assess current electrical grid available for support UAM operations
+
+30
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+30
+
+Drone Delivery
+Drone (Unmanned Aerial Vehicle, UAV)
+• Autonomous aircrafts, copters or vertically starting planes, carry parcels (e.g., up to 15 kg) to their
+destination along the most direct route and at relatively high average speed.
+• Most drone deliveries are single drops.
+depot
+
+drone
+
+uHome
+
+A typical
+application
+mode
+
+Boysen, N., Fedtke, S., & Schwerdfeger, S. (2021). Last-mile delivery concepts: a survey from an operational research perspective. Or Spectrum, 43(1), 1-58.
+31
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+31
+
+Truck-and-Drone Delivery
+➢ Multi-trucks-and-drones cooperative pickup and delivery problem
+This study aims to propose a decision methodology on scheduling trucks and drones for truck-and-drone cooperative
+delivery and pickup system. A fleet contains multiple truck groups; each truck group is a truck with carrying multiple
+drones. The fleet serves a set of dispersed customers who have the requirements of pickup and delivery services as well as
+their due time for service.
+
+Gao, J., Zhen, L., & Wang, S. (2023). Multi-trucks-and-drones cooperative pickup and delivery problem.
+Transportation Research Part C: Emerging Technologies, 157, 104407.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+32
+
+Drone-Truck Surveillance
+➢ Nested vehicle routing problem: Optimizing drone-truck surveillance operations
+Unmanned aerial vehicles or drones are becoming increasingly popular due to their low cost and high mobility. In this
+paper we address the routing and coordination of a drone-truck pairing where the drone travels to multiple locations to
+perform specified observation tasks and rendezvous periodically with the truck to swap its batteries. We refer to this as the
+Nested-Vehicle Routing Problem (Nested-VRP) and develop a Mixed Integer Quadratically Constrained Programming
+(MIQCP) formulation with critical operational constraints, including drone battery capacity and synchronization of both
+vehicles during scheduled rendezvous.
+
+Zeng, F., Chen, Z., Clarke, J. P., & Goldsman, D. (2022). Nested vehicle routing problem: Optimizing drone-truck
+surveillance operations. Transportation Research Part C: Emerging Technologies, 139, 103645.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+33
+
+Amazon Airborne Fulfillment Center
+➢ Optimal scheduling and quantitative analysis for multi-flying warehouse scheduling problem:
+Amazon airborne fulfillment center
+
+The concept of the flying warehouse delivery
+service has firstly filed as a patent by the ecommerce giant Amazon.
+The service utilizes airborne fulfillment centers
+(AFCs), an airship that floats at an altitude of
+around 45,000. The airship has stocked with
+inventory, and when a customer places an order,
+UAVs fly down and deliver the package.
+AFCs use UAVs to provide delivery services until
+the UAVs in the aircraft run out or get
+replenishment from the shuttle
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+MHF: material handling facilities
+34
+
+An Alternative Delivery Fashion: Mobile Parcel Locker
+➢ Who moves the locker? A benchmark study of alternative mobile parcel locker concepts
+• Stationary parcel lockers can be inconvenient
+for customers.
+• Mobile parcel lockers, especially when driving
+autonomously, can be positioned closer to the
+customers and thus seem as a logical next
+evolutionary step to reduce customer
+inconvenience.
+• Until autonomous driving is finally realized,
+however, mobile parcel lockers depend on
+human-driven vehicles to reposition them, and
+this paper compares optional locker–vehicle–
+driver setups.
+Schwerdfeger, S., & Boysen, N. (2022). Who moves the locker? A benchmark study of alternative mobile parcel locker
+concepts. Transportation Research Part C: Emerging Technologies, 142, 103780.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+35
+
+Smart Vehicle Routing Technology
+A Vehicle Routing Software for Power Grid Materials Distribution
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+36
+
+Smart Vehicle Routing Technology
+A Vehicle Routing Software for Power Grid Materials Distribution
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+37
+
+Smart Vehicle Routing Technology
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+38
+
+Smart Bin Packing Technology
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+39
+
+Smart Bin Packing Technology
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+40
+
+2. Algorithms for Smart Transportation and Distribution
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+41
+
+Optimization Algorithms
+◼ Exact
+–
+–
+
+Mixed Integer Programming（branch-and-cut, branch-and-price, etc.）
+Can solve problems with (only) up to approx. 100 customers.
+
+◼ Heuristics
+–
+
+–
+
+A heuristic algorithm is one that is designed to solve a problem in a faster and more
+efficient fashion than traditional methods by sacrificing optimality, accuracy,
+precision, or completeness for speed.
+Heuristic is often greedy, myopic, or rule-based.
+
+◼ Metaheuristics
+–
+
+–
+–
+
+a higher-level procedure designed to find, generate, or select a heuristic (partial
+search algorithm) that may provide a sufficiently good solution to an optimization
+problem.
+Can temporarily accept worse or even infeasible solutions.
+For example, Genetic Algorithm, Tabu Search, Variable Neighborhood Search.
+
+◼ Machine Learning
+–
+
+can be end-to-end, or combined with metaheuristic or exact algorithms.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+42
+
+Heuristic Algorithms for Vehicle Routing Problems (VRP)
+◼ Tour constructive heuristics
+– Nearest Neighbor
+– Nearest Addition
+– Farthest Addition
+– Saving method
+– Sweeping method
+– Two-phase method
+◼ Tour improvement heuristics
+– 2-opt
+– 3-opt
+– Other neighbor structures
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+43
+
+Tour Constructive Heuristic: Nearest Neighbor (NN)
+
+Bently (1992)
+
+NN (Flood,1956)
+1. Randomly Select a starting node;
+2. Add to the last node the closest node until no more node is available.
+Running time O(n^2)
+Flood, M. M. (1956). The traveling-salesman problem. Operations research, 4(1), 61-75.
+Bentley, J. J., (1992) Fast Algorithms for Geometric Traveling Salesman Problems. ORSA Journal on
+Computing 4(4):387-411.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+44
+
+Tour Constructive Heuristic: Nearest Addition (NA) 1/2
+
+Bently (1992)
+
+NA:
+1.Select a node and its closest node and build a tour of two nodes.
+2. Insert in the tour the closest node Y until no more node is available.
+Running time O(n^3)
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+45
+
+Tour Constructive Heuristic: Nearest Addition (NA) 2/2
+What is the closest node to the route?
+
+0
+
+Running time O(n^3)
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+46
+
+Tour Constructive Heuristic: Farthest Addition (FA)
+
+Bently (1992)
+
+FA:
+1. Select a node and its farthest node and build a tour of two nodes;
+2. Insert in the tour the farthest node until no more node is available.
+FA is more effcient (for TSP) than NA because the ﬁrst sketch is a broad outline
+of the tour that is reﬁned after.
+Running time O(n^3)
+Bentley, J. J. (1992). Fast algorithms for geometric traveling salesman problems. ORSA Journal on computing, 4(4), 387-411.
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+47
+
+Nearest Addition
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+48
+
+Clarke-Wright Saving Heuristic (1964) 1/2
+◼ 1. Start with an initial allocation of one vehicle to each
+customer (0 is the depot for VRP)
+◼ 2. Calculate saving sij=c0i+c0j-cij and order the saving in
+increasing order
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+49
+
+Clarke-Wright Saving Heuristic (1964) 2/2
+◼ 3. At each step, find the largest saving sij where:
+–
+–
+–
+
+i and j are not in the same tour
+neither i and j are interior to an existing route
+vehicle capacity and time are not exceeded
+
+◼ 4. link i and j together to form a new tour (replacing to other routes)
+
+a
+
+b
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+c
+50
+
+Sweep algorithm
+Gillett and Miller (1974)
+
+The vehicle capacity
+is Q = 10. Customer
+demands are shown
+next to the vertices
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+51
+
+VRP References
+
+◼ Toth P. and Vigo D., 2014. Vehicle Routing Problems, Methods, and
+Applications (2nd ed.). SIAM (Society for Industrial and Applied
+Mathematics).
+https://epubs.siam.org/doi/abs/10.1137/1.9781611973594
+◼ Bräysy, O., and M. Gendreau. Vehicle Routing Problem, Part I: Route
+Construction and Local Search Algorithms. Transportation Science,
+Vol. 39, No. 1, 2005, pp. 104–118.
+◼ Bräysy, O., and M. Gendreau. Vehicle Routing Problem with Time
+Windows, Part II: Metaheuristics. Transportation Science, Vol. 39, No.
+1, 2005, pp. 119–139.
+
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+52
+
+Q&A
+Dr. Mingyao Qi, Professor @ SIGS, Tsinghua
+Web page: https://www.sigs.tsinghua.edu.cn/qmy_en/main.htm
+Tsinghua Shenzhen International Graduate School, Institute of Data and Information, Prof. Mingyao Qi
+
+53
+
+

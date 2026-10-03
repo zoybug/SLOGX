@@ -37,7 +37,8 @@
   function goTo(index, smooth = true) {
     const next = Math.max(0, Math.min(slides.length - 1, index));
     updateDeck(next);
-    track.scrollTo({ left: next * track.clientWidth, behavior: smooth && !reducedMotion.matches ? 'smooth' : 'auto' });
+    // "auto" inherits CSS scroll-behavior; resets and hash links must be immediate.
+    track.scrollTo({ left: next * track.clientWidth, behavior: smooth && !reducedMotion.matches ? 'smooth' : 'instant' });
   }
 
   document.querySelectorAll('[data-go-slide]').forEach(button => button.addEventListener('click', () => {
