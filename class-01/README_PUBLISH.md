@@ -8,7 +8,7 @@ The public version lives at `/SLOGX/class-01/`. GitHub Pages publishes the repos
 
 ## Course years
 
-The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; Lectures 01–05 have published learning pages.
+The default register and existing lecture URLs remain Fall 2026. Visible year links lead to the Fall 2025 archive at `2025/`. The archive lists the seven sessions in the supplied 2025 syllabus; Lectures 01–06 have published learning pages.
 
 `2025/lecture-01/` follows the same four-part lecture structure. It includes the professor, lecture title/date and shared lecture outline; five slides covering Q1–Q4; an interactive six-stage decision loop; a comparison of three lecture cases; eight companion readings; a 12-question scenario quiz; and anonymous webpage learning content. The synthesis covers 30 Lecture 01 reflections from the two supplied batches, with a report about another lecture excluded. Counts describe the submitted corpus, not a verified enrollment roster. Q3 counts group explicit keyword headings by synonyms, once per reflection per family; only the after-lecture list is used where both are supplied. Student identities and the private audit remain outside this repository.
 
@@ -31,3 +31,8 @@ The 2025 pages publish learning content directly in HTML. Standalone synthesis e
 ## Fall 2025 Lecture 05
 
 `2025/lecture-05/` includes the lecture introduction, five learning panels, a six-stage positioning explorer, a scalar Kalman-update model, a two-road HMM/Viterbi model, eight primary companion readings and twelve review questions. The corpus contains 30 distinct identified reflections from 30 students, including one name-only record, plus a separate unattributed companion outside that count. Private evidence and checks stay in `2025/L5_grading`, outside this repository. No reports or raw course-text downloads are generated.
+
+
+## Fall 2025 Lecture 06
+
+`2025/lecture-06/` adds Prof. Bokui Chen’s dated lecture context, five learning panels, a responsibility explorer, five-step cognition loop, constructed headway and shuttle-capacity calculations, ten primary/syllabus companion links and twelve review questions. The corpus contains 30 identified student submissions including one name-only record, plus a separately titled unattributed companion outside the identified denominator. Three repeated page headers across two continuing reports are merged. Student concepts, personal experience and historical industry claims retain their evidence boundaries. Private source/identity audits remain in `2025/L6_grading` outside this repository. No synthesis exports or raw lecture/assignment downloads are generated.
