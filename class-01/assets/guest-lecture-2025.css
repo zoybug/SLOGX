@@ -1,0 +1,37 @@
+/* Guest lecture 07: concise notes within the shared centered workspace. */
+.guest-lecture-page .intro-section .lecture-hero { display: block; max-width: 700px; margin-inline: auto; }
+.guest-lecture-page .hero-copy h1 { max-width: 700px; font-size: 36px; }
+.guest-lecture-page .hero-copy h1 > span { display: block; margin-top: 12px; font: 500 23px/1.4 var(--sans); color: var(--lecture-primary); letter-spacing: -.02em; }
+.guest-lecture-page .hero-meta { flex-wrap: wrap; }
+.guest-event-details { font-size: 14px; margin-top: 18px; }
+.guest-event-body { padding-top: 12px; }
+.guest-event-body p { font-size: 14px; line-height: 1.65; }
+.guest-event-body img { display: block; width: min(100%, 420px); height: auto; margin-top: 20px; border: 1px solid var(--app-line); border-radius: 10px; }
+.guest-lecture-page .briefing-grid { min-height: 260px; }
+.guest-concepts > div { grid-template-columns: 148px minmax(0, 1fr); }
+.guest-context h3, .guest-company-context h3 { font: 600 19px/1.4 var(--sans); margin: 0 0 10px; }
+.guest-context p, .guest-company-context p { font-size: 16px; line-height: 1.6; margin: 0 0 16px; }
+.guest-context ul { padding-left: 18px; margin: 0 0 18px; }
+.guest-context li { font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
+.guest-participants { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 8px; margin: 4px 0 24px; }
+.guest-participants > div { padding: 12px 8px; border: 1px solid var(--app-line); border-radius: 9px; background: #FFFFFF; text-align: center; font-size: 14px; font-weight: 500; }
+.guest-company-context { padding-top: 16px; border-top: 1px solid var(--app-line); }
+.guest-company-context .guest-source-note { margin: 14px 0 0; font-size: 13px; color: var(--muted); }
+.guest-reading { max-width: 700px; margin-inline: auto; }
+.guest-reading h2 { font: 600 28px/1.3 var(--sans); margin: 0 0 14px; }
+.guest-background { margin: 24px 0 0; }
+.guest-background > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid var(--app-line); }
+.guest-background dt { font-size: 15px; font-weight: 500; }
+.guest-background dd { margin: 0; font-size: 16px; line-height: 1.6; }
+.guest-background a { color: var(--lecture-deep); font-size: 13px; font-weight: 500; text-underline-offset: 3px; white-space: nowrap; }
+@media (max-width: 800px) {
+  .guest-lecture-page .briefing-grid { min-height: 0; }
+}
+@media (max-width: 540px) {
+  .guest-lecture-page .hero-copy h1 { font-size: 30px; }
+  .guest-lecture-page .hero-copy h1 > span { font-size: 21px; }
+  .guest-concepts > div { grid-template-columns: 1fr; gap: 6px; padding: 12px 0; }
+  .guest-participants { grid-template-columns: 1fr; gap: 6px; margin-bottom: 18px; }
+  .guest-participants > div { padding: 10px 12px; text-align: left; }
+  .guest-background > div { grid-template-columns: 1fr; gap: 6px; }
+}

@@ -1,14 +1,14 @@
 # Fall 2025 centered learning workspace
 
-The 2025 archive, six lecture pages and closing industry visit load `assets/briefing-2025.css` and `assets/briefing-2025.js`. They retain the topic color tokens in `assets/2025-theme.css`. The served HTML is the content source; no website build is required.
+The 2025 archive, seven lecture pages and closing industry visit load `assets/briefing-2025.css` and `assets/briefing-2025.js`. They retain the topic color tokens in `assets/2025-theme.css`. The served HTML is the content source; no website build is required.
 
 ## Hierarchy and navigation
 
 The browser canvas surrounds one white application shell: `max-width: 1080px`, centered with substantial space on large monitors. The shell has a subtle border, restrained shadow and rounded corners. Desktop inner gutters are 40 px, reducing to 32 px on compact desktops, 20 px on tablets and 16 px on phones. Reading sections and full notes stay within 700 px. Never widen the workspace to accommodate longer prose.
 
-The archive's primary task is choosing a session. Its compact register uses topic-colored numbers, short titles, subject keywords and speaker/date metadata. Official syllabus titles remain in the course-details disclosure and accessible lecture labels. The industry visit follows the syllabus entries and uses an unnumbered **Visit** selector, with the full topic and date in its accessible label. Lecture 07 remains unavailable.
+The archive's primary task is choosing a session. Its compact register uses topic-colored numbers, short titles, subject keywords and speaker/date metadata. Full session titles remain in the course-details disclosure and accessible lecture labels. The industry visit follows the lecture entries and uses an unnumbered **Visit** selector, with the full topic and date in its accessible label. Lecture 07 links to Henry Ko's guest lecture, which replaced the scheduled container-terminals session.
 
-Lecture pages use a compact sticky course header, a numbered lecture switcher, and the same four section labels: **Overview**, **Student synthesis**, **Resources**, **Quiz**. Full lecture names remain available through accessible labels and link titles. Three outline disclosures offer detail on demand. The measured header offset keeps anchors and direct synthesis links below the navigation.
+Lectures 01–06 use a compact sticky course header, a numbered lecture switcher, and the same four section labels: **Overview**, **Student synthesis**, **Resources**, **Quiz**. Full lecture names remain available through accessible labels and link titles. Three outline disclosures offer detail on demand. The measured header offset keeps anchors and direct synthesis links below the navigation.
 
 IBM Plex Sans is used for headings and body text; IBM Plex Mono is limited to numbers and technical labels. Body text remains readable at 16 px. Main statements retain a clear hierarchy without oversized editorial titles. Unmodified fonts are served locally with their IBM license in `assets/fonts/`.
 
@@ -23,6 +23,8 @@ Full notes and model assumptions open as a regular 700 px reading section below 
 Lecture 06 has six views: the traffic-headway and shuttle-fleet calculations are separate questions. The shuttle quiz's related reading targets `#slide-capacity`. Existing panel IDs and legacy hashes continue to open the matching view; deeper note targets open their full notes.
 
 The industry visit has four synthesis views and uses **Overview**, **Visit synthesis**, **Did you know?** and **Resources** as its sections. Parcel-stage, service and Q&A controls update one focused explanation. Historical SF facts appear one at a time with source links and previous/next controls. The original school article opens externally for detail; the page uses the organizer's supplied summary and an original parcel illustration. Its 1080/700 px width constraints, disclosures, keyboard navigation and floating Zoybug follow the lecture conventions.
+
+Lecture 07 is a concise guest session with **Overview**, **Lecture summary**, **Speaker** and **Resources**. Three summary views follow the organizer's notes, with the supplied event abstract and a clearly separate company-context link. The original poster stays behind a native disclosure in the 700 px overview column. Two brief speaker facts and five resources use the same reading width. No filler models, quiz or submission statistics are added. It retains the shared deck navigation and floating Zoybug.
 
 ## Resources, quiz and facts
 

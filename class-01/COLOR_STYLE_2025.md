@@ -10,10 +10,10 @@
 | 04 | Urban drone logistics | #0E7490 | #164E63 | #ECFEFF | #38BDF8 |
 | 05 | Positioning | #047857 | #064E3B | #ECFDF5 | #84CC16 |
 | 06 | Autonomous driving | #52525B | #27272A | #F4F4F5 | #A1A1AA |
-| 07 | Container terminals | #1E3A8A | #0F172A | #F1F5F9 | #E85D3F |
+| 07 | Global trade and growth · Henry Ko | #1E3A8A | #0F172A | #F1F5F9 | #E85D3F |
 | Visit | SF Express Shenzhen | #B91C1C | #7F1D1D | #FEF2F2 | #F97316 |
 
-The supplied direction describes 2026. Colors follow the actual 2025 topics: cyan belongs to Lecture 04. The supplied graphite palette is used for Lecture 06 because no autonomous-driving palette was specified. Lecture 07 has a register/selector identity but remains unavailable until its learning materials exist.
+The supplied direction describes 2026. Colors follow the actual 2025 topics: cyan belongs to Lecture 04. The supplied graphite palette is used for Lecture 06 because no autonomous-driving palette was specified. Lecture 07 retains its navy/coral identity for Henry Ko's guest lecture, which replaced the scheduled container-terminals session on 3 November 2025.
 
 The closing industry visit's red tokens are defined in `assets/briefing-2025.css` for `data-lecture="visit"`, including its register row and navigation link. They provide small accents, selected states and the code-native parcel illustration. The main workspace remains white; no large red backgrounds are used.
 
