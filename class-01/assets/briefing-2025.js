@@ -55,7 +55,8 @@
   let frame = 0;
 
   function updateHeader() {
-    document.body.style.setProperty('--briefing-header-height', `${header.getBoundingClientRect().height}px`);
+    const stickyInset = Math.max(0, Number(getComputedStyle(header).top.replace('px', '')) || 0);
+    document.body.style.setProperty('--briefing-header-height', `${header.getBoundingClientRect().height + stickyInset}px`);
   }
 
   function closeNotes() {
@@ -151,7 +152,7 @@
   }
   function updateSection() {
     frame = 0;
-    const threshold = header.getBoundingClientRect().height + 80;
+    const threshold = header.getBoundingClientRect().bottom + 80;
     let active = sections[0];
     sections.forEach(section => { if (section.getBoundingClientRect().top <= threshold) active = section; });
     links.forEach(link => {
@@ -163,6 +164,12 @@
   window.addEventListener('scroll', scheduleSection, { passive: true });
   window.addEventListener('resize', () => { updateHeader(); scheduleSection(); });
   window.addEventListener('hashchange', openHash);
+  // Initial fragment scrolling happens after deferred scripts. Re-align the
+  // selected view once the browser has finished loading the page and artwork.
+  window.addEventListener('load', () => {
+    updateHeader();
+    requestAnimationFrame(openHash);
+  });
   updateHeader();
   select(0);
   openHash();
