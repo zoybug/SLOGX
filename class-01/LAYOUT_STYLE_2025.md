@@ -24,7 +24,7 @@ Lecture 06 has six views: the traffic-headway and shuttle-fleet calculations are
 
 The industry visit has four synthesis views and uses **Overview**, **Visit synthesis**, **Did you know?** and **Resources** as its sections. Parcel-stage, service and Q&A controls update one focused explanation. Historical SF facts appear one at a time with source links and previous/next controls. The original school article opens externally for detail; the page uses the organizer's supplied summary and an original parcel illustration. Its 1080/700 px width constraints, disclosures, keyboard navigation and floating Zoybug follow the lecture conventions.
 
-Lecture 07 is a concise guest session with **Overview**, **Lecture summary**, **Speaker** and **Resources**. Three summary views follow the organizer's notes, with the supplied event abstract and a clearly separate company-context link. The original poster stays behind a native disclosure in the 700 px overview column. Two brief speaker facts and five resources use the same reading width. No filler models, quiz or submission statistics are added. It retains the shared deck navigation and floating Zoybug.
+Lecture 07 is a concise guest session with **Overview**, **Lecture summary**, **Speaker** and **Resources**. Three summary views follow the organizer's notes, with the supplied event abstract and a clearly separate company-context link. The original poster stays behind a native disclosure in the 700 px overview column. Three brief speaker facts and five resources use the same reading width. No filler models, quiz or submission statistics are added. It retains the shared deck navigation and floating Zoybug.
 
 ## Resources, quiz and facts
 
