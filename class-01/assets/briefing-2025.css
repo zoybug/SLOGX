@@ -44,6 +44,17 @@ p { max-width: 700px; }
 .brand small { display: none; }
 .brand-symbol { display: none; }
 .masthead-inner { height: 64px; }
+.course-home .header-actions { display: flex; align-items: center; gap: 14px; }
+body[data-course-year="2025"].course-home .header-profile {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 7px 11px;
+  border: 1px solid var(--app-line); border-radius: 9px; background: var(--app-subtle);
+  color: #181818; font: 500 13px/1.4 var(--sans); text-decoration: none; white-space: nowrap;
+  transition: background .18s, border-color .18s;
+}
+.course-home .header-profile img { display: block; width: 20px; height: 20px; flex: none; }
+body[data-course-year="2025"].course-home .header-profile:hover { background: #EEF1F5; border-color: #C8D0DC; }
+.course-home .header-profile:focus-visible { outline: 2px solid var(--lecture-primary); outline-offset: 3px; }
+
 .brand-wrap { display: contents; }
 .briefing-header { min-height: 64px; display: flex; align-items: center; gap: 24px; }
 .briefing-header .top-section-links { margin-left: auto; gap: 3px; }
@@ -370,6 +381,11 @@ body[data-course-year="2025"] .zoybug-widget {
   .notes-heading { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 @media (max-width: 540px) {
+  .course-home .masthead-inner { height: auto; min-height: 64px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px; padding-block: 12px; }
+  .course-home .header-actions { display: contents; }
+  .course-home .header-profile { grid-column: 1 / -1; grid-row: 2; justify-self: start; }
+  .course-home .header-actions .year-nav { grid-column: 2; grid-row: 1; }
+
   .course-workspace { width: calc(100% - 16px); margin-block: 8px 16px; border-radius: 16px; }
   .course-workspace .masthead { border-radius: 16px 16px 0 0; }
   .shell, .synthesis-notes { width: calc(100% - 32px); }
@@ -436,7 +452,6 @@ body[data-course-year="2025"] .zoybug-widget {
   .lecture-row.available .status::after { content: "→"; font-size: 22px; }
   .lecture-row.muted .status { font-size: 11px; }
   .footer-inner { flex-wrap: wrap; gap: 8px 20px; }
-  .footer-inner .footer-profile { flex-basis: 100%; }
   body[data-course-year="2025"] .zoybug-widget { right: max(8px, env(safe-area-inset-right)); }
   .zoybug-familiar .zoybug-trigger, .zoybug-familiar .zoybug-trigger svg { width: 76px; height: 90px; }
   .zoybug-familiar .zoybug-card { right: 16px; bottom: 118px; padding: 18px; max-height: calc(100dvh - var(--briefing-header-height) - 142px); }
