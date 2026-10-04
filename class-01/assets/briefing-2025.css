@@ -436,6 +436,7 @@ body[data-course-year="2025"] .zoybug-widget {
   .lecture-row.available .status::after { content: "→"; font-size: 22px; }
   .lecture-row.muted .status { font-size: 11px; }
   .footer-inner { flex-wrap: wrap; gap: 8px 20px; }
+  .footer-inner .footer-profile { flex-basis: 100%; }
   body[data-course-year="2025"] .zoybug-widget { right: max(8px, env(safe-area-inset-right)); }
   .zoybug-familiar .zoybug-trigger, .zoybug-familiar .zoybug-trigger svg { width: 76px; height: 90px; }
   .zoybug-familiar .zoybug-card { right: 16px; bottom: 118px; padding: 18px; max-height: calc(100dvh - var(--briefing-header-height) - 142px); }
