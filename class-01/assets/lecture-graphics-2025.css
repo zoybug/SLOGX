@@ -18,11 +18,11 @@ body[data-course-year="2025"] .lecture-hero-illustrated .hero-art {
   height: auto;
   max-height: none;
   padding: 0;
-  overflow: hidden;
-  border: 1px solid var(--app-line);
-  border-radius: 14px;
-  background: var(--lecture-soft);
-  box-shadow: 0 4px 18px #17243b06;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 body[data-course-year="2025"] .lecture-hero-illustrated .hero-art img {
   display: block;
@@ -30,7 +30,7 @@ body[data-course-year="2025"] .lecture-hero-illustrated .hero-art img {
   height: auto;
   max-height: none;
   aspect-ratio: 3 / 2;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0;
 }
 @media (max-width: 1100px) {
