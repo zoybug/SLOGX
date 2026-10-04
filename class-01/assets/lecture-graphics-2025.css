@@ -1,4 +1,4 @@
-/* Rectangular concept illustrations for 2025 Lectures 01–03 only. */
+/* Rectangular concept illustrations for 2025 Lectures 01–06. */
 body[data-course-year="2025"] .intro-section .lecture-hero-illustrated {
   grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
   align-items: center;
