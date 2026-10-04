@@ -1,0 +1,43 @@
+/* Rectangular concept illustrations for 2025 Lectures 01–03 only. */
+body[data-course-year="2025"] .intro-section .lecture-hero-illustrated {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+  align-items: center;
+  gap: 32px;
+}
+body[data-course-year="2025"] .lecture-hero-illustrated .hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--app-line);
+  border-radius: 14px;
+  background: var(--lecture-soft);
+  box-shadow: 0 4px 18px #17243b06;
+}
+body[data-course-year="2025"] .lecture-hero-illustrated .hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0;
+}
+@media (max-width: 1100px) {
+  body[data-course-year="2025"] .intro-section .lecture-hero-illustrated {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    gap: 24px;
+  }
+}
+@media (max-width: 760px) {
+  body[data-course-year="2025"] .intro-section .lecture-hero-illustrated {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  body[data-course-year="2025"] .lecture-hero-illustrated .hero-art {
+    max-width: 460px;
+    justify-self: start;
+  }
+}
