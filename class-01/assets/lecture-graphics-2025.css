@@ -1,8 +1,16 @@
-/* Rectangular concept illustrations for 2025 Lectures 01–06. */
+/* Rectangular concept illustrations for all 2025 lectures and the industry visit. */
 body[data-course-year="2025"] .intro-section .lecture-hero-illustrated {
   grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
   align-items: center;
   gap: 32px;
+}
+body[data-course-year="2025"].guest-lecture-page .intro-section .lecture-hero-illustrated {
+  display: grid;
+  max-width: none;
+  margin-inline: 0;
+}
+body[data-course-year="2025"].guest-lecture-page .lecture-hero-illustrated .hero-art {
+  align-self: start;
 }
 body[data-course-year="2025"] .lecture-hero-illustrated .hero-art {
   display: block;
