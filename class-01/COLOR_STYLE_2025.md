@@ -11,8 +11,11 @@
 | 05 | Positioning | #047857 | #064E3B | #ECFDF5 | #84CC16 |
 | 06 | Autonomous driving | #52525B | #27272A | #F4F4F5 | #A1A1AA |
 | 07 | Container terminals | #1E3A8A | #0F172A | #F1F5F9 | #E85D3F |
+| Visit | SF Express Shenzhen | #B91C1C | #7F1D1D | #FEF2F2 | #F97316 |
 
 The supplied direction describes 2026. Colors follow the actual 2025 topics: cyan belongs to Lecture 04. The supplied graphite palette is used for Lecture 06 because no autonomous-driving palette was specified. Lecture 07 has a register/selector identity but remains unavailable until its learning materials exist.
+
+The closing industry visit's red tokens are defined in `assets/briefing-2025.css` for `data-lecture="visit"`, including its register row and navigation link. They provide small accents, selected states and the code-native parcel illustration. The main workspace remains white; no large red backgrounds are used.
 
 The centered workspace overrides the base canvas with #F3F5F8, surrounding a white #FFFFFF application shell. Light supporting surfaces use #F8FAFC and #FAFBFD, with subtle #E4E8EF workspace borders. Text remains #111827. Secondary text uses #64748B on white and #5F6F85 on neutral surfaces. The topic palette stays unchanged and is used primarily for accents inside the shell.
 
