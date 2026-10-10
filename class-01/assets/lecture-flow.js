@@ -4,11 +4,9 @@
   const sections = [...document.querySelectorAll('.lecture-section')];
   const header = document.querySelector('.unified-header');
   const sectionLinks = [...document.querySelectorAll('[data-section]')];
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (!track || !slides.length) return;
 
   let current = 0;
-  let trackFrame = 0;
   let pageFrame = 0;
   const slideTitle = index => index === 0 ? 'Contents' : slides[index].querySelector('.slide-intro h2').textContent.trim();
 
@@ -16,6 +14,7 @@
     current = Math.max(0, Math.min(slides.length - 1, index));
     slides.forEach((slide, slideIndex) => {
       const active = slideIndex === current;
+      slide.hidden = !active;
       slide.inert = !active;
       slide.setAttribute('aria-hidden', String(!active));
     });
@@ -34,11 +33,12 @@
     document.querySelector('#deck-mobile-position').textContent = current === 0 ? 'Contents' : `${String(current).padStart(2, '0')} / ${String(slides.length - 1).padStart(2, '0')}`;
   }
 
-  function goTo(index, smooth = true) {
+  function goTo(index, scroll = true) {
     const next = Math.max(0, Math.min(slides.length - 1, index));
     updateDeck(next);
-    // "auto" inherits CSS scroll-behavior; resets and hash links must be immediate.
-    track.scrollTo({ left: next * track.clientWidth, behavior: smooth && !reducedMotion.matches ? 'smooth' : 'instant' });
+    // Synthesis grows with its contents. Selecting a view uses ordinary page
+    // scrolling so long student contributions never need an inner scrollbar.
+    if (scroll) document.querySelector('#students').scrollIntoView({ block: 'start', behavior: 'instant' });
   }
 
   document.querySelectorAll('[data-go-slide]').forEach(button => button.addEventListener('click', () => {
@@ -53,13 +53,20 @@
     if (event.key === 'ArrowRight') { event.preventDefault(); goTo(current + 1); }
     if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(current - 1); }
   });
-  track.addEventListener('scroll', () => {
-    if (trackFrame) return;
-    trackFrame = requestAnimationFrame(() => {
-      trackFrame = 0;
-      updateDeck(Math.round(track.scrollLeft / Math.max(track.clientWidth, 1)));
-    });
+  // Retain the old deck's touch navigation without trapping vertical reading.
+  let touchStart = null;
+  track.addEventListener('touchstart', event => {
+    if (event.touches.length !== 1 || event.target.closest('button, a, input, select, summary')) return;
+    touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
   }, { passive: true });
+  track.addEventListener('touchend', event => {
+    if (!touchStart) return;
+    const dx = event.changedTouches[0].clientX - touchStart.x;
+    const dy = event.changedTouches[0].clientY - touchStart.y;
+    touchStart = null;
+    if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 1.5) goTo(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  track.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
 
   function updatePage() {
     pageFrame = 0;

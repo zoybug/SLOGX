@@ -1,3 +1,5 @@
+> Superseded for presentation by the shared 10 October 2026 editorial refactor. See [EDITORIAL_DESIGN.md](EDITORIAL_DESIGN.md). Content and interaction conventions below remain useful; earlier font, width and decoration descriptions are historical. Original lecture palettes remain active as documented in [COLOR_STYLE_2025.md](COLOR_STYLE_2025.md).
+
 # Fall 2025 centered learning workspace
 
 The 2025 archive, seven lecture pages and closing industry visit load `assets/briefing-2025.css` and `assets/briefing-2025.js`. They retain the topic color tokens in `assets/2025-theme.css`. The served HTML is the content source; no website build is required.

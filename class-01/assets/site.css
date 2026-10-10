@@ -1,4 +1,5 @@
-:root{--paper:#f6f8f5;--surface:#ffffff;--ink:#243a3b;--muted:#667878;--accent:#456e68;--accent-deep:#315751;--accent-pale:#e5efea;--secondary:#d05a38;--secondary-deep:#a63f25;--secondary-pale:#fcebe5;--line:#d5dfda;--line-dark:#aebfba;--warm:#d05a38;--correct:#2e6540;--incorrect:#a93434;--sans:"Aptos","Segoe UI",Arial,sans-serif;--serif:Charter,"Iowan Old Style",Georgia,serif;--mono:"IBM Plex Mono",Consolas,"Courier New",monospace}
+@import url("design-tokens.css?v=20261010");
+:root{--paper:var(--color-canvas);--surface:var(--color-surface);--ink:var(--color-ink);--muted:var(--color-muted);--accent:var(--color-accent);--accent-deep:var(--color-accent-deep);--accent-pale:var(--color-active);--secondary:var(--color-accent);--secondary-deep:var(--color-accent-deep);--secondary-pale:var(--color-active);--line:var(--color-line);--line-dark:var(--color-control-line);--warm:var(--color-accent);--correct:var(--color-success);--incorrect:var(--color-error);--sans:var(--font-sans);--serif:var(--font-serif);--mono:var(--font-sans)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 var(--sans)}

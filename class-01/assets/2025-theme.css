@@ -1,105 +1,55 @@
-/* Fall 2025 only. Shared layouts and the 2026 palette remain independent.
-   The four lecture tokens are also used by tools/build-2025-theme-art.py. */
-body[data-course-year="2025"],
-body[data-course-year="2025"] [data-lecture] {
+/* Original Fall 2025 topic identities. Typography and layout are shared through
+   editorial.css; these tokens also drive the instructional SVG palettes. */
+body[data-course-year="2025"], body[data-course-year="2025"] [data-lecture] {
   --lecture-deep: #27272A;
   --lecture-primary: #52525B;
   --lecture-soft: #F4F4F5;
   --lecture-accent: #A1A1AA;
-  --paper: #F7F7F4;
-  --surface: #FFFFFF;
-  --ink: #111827;
-  --neutral-muted: #64748B;
-  --muted-on-canvas: #5F6F85;
-  --muted: var(--muted-on-canvas);
-  --line: #DDE1E7;
-  --line-dark: #CBD5E1;
-  --accent: var(--lecture-primary);
-  --accent-deep: var(--lecture-deep);
-  --accent-pale: var(--lecture-soft);
-  /* Bright micro-accents are decorative, never white-text button fills. */
-  --secondary: var(--lecture-primary);
-  --secondary-deep: var(--lecture-deep);
-  --secondary-pale: var(--lecture-soft);
-  --warm: var(--lecture-accent);
-  background-color: var(--paper);
-  color: var(--ink);
+  --neutral-muted: var(--color-muted);
+  --muted-on-canvas: var(--color-muted);
 }
-
 body[data-course-year="2025"][data-lecture="01"],
 body[data-course-year="2025"] [data-lecture="01"] {
   --lecture-deep: #1E1B4B;
   --lecture-primary: #4338CA;
   --lecture-soft: #EEF2FF;
   --lecture-accent: #06B6D4;
-  --curve-intro: url("2025-theme/01/curve-intro.svg");
-  --curve-students: url("2025-theme/01/curve-students.svg");
-  --curve-resources: url("2025-theme/01/curve-resources.svg");
-  --curve-quiz: url("2025-theme/01/curve-quiz.svg");
 }
-
 body[data-course-year="2025"][data-lecture="02"],
 body[data-course-year="2025"] [data-lecture="02"] {
   --lecture-deep: #172554;
   --lecture-primary: #1D4ED8;
   --lecture-soft: #EFF6FF;
   --lecture-accent: #F97316;
-  --curve-intro: url("2025-theme/02/curve-intro.svg");
-  --curve-students: url("2025-theme/02/curve-students.svg");
-  --curve-resources: url("2025-theme/02/curve-resources.svg");
-  --curve-quiz: url("2025-theme/02/curve-quiz.svg");
 }
-
 body[data-course-year="2025"][data-lecture="03"],
 body[data-course-year="2025"] [data-lecture="03"] {
   --lecture-deep: #451A03;
   --lecture-primary: #B45309;
   --lecture-soft: #FFFBEB;
   --lecture-accent: #475569;
-  --curve-intro: url("2025-theme/03/curve-intro.svg");
-  --curve-students: url("2025-theme/03/curve-students.svg");
-  --curve-resources: url("2025-theme/03/curve-resources.svg");
-  --curve-quiz: url("2025-theme/03/curve-quiz.svg");
 }
-
-/* The 2025 drone lecture is 04, rather than 06 in the 2026 outline. */
 body[data-course-year="2025"][data-lecture="04"],
 body[data-course-year="2025"] [data-lecture="04"] {
   --lecture-deep: #164E63;
   --lecture-primary: #0E7490;
   --lecture-soft: #ECFEFF;
   --lecture-accent: #38BDF8;
-  --curve-intro: url("2025-theme/04/curve-intro.svg");
-  --curve-students: url("2025-theme/04/curve-students.svg");
-  --curve-resources: url("2025-theme/04/curve-resources.svg");
-  --curve-quiz: url("2025-theme/04/curve-quiz.svg");
 }
-
 body[data-course-year="2025"][data-lecture="05"],
 body[data-course-year="2025"] [data-lecture="05"] {
   --lecture-deep: #064E3B;
   --lecture-primary: #047857;
   --lecture-soft: #ECFDF5;
   --lecture-accent: #84CC16;
-  --curve-intro: url("2025-theme/05/curve-intro.svg");
-  --curve-students: url("2025-theme/05/curve-students.svg");
-  --curve-resources: url("2025-theme/05/curve-resources.svg");
-  --curve-quiz: url("2025-theme/05/curve-quiz.svg");
 }
-
-/* Autonomous driving has no dedicated palette in the attachment. */
 body[data-course-year="2025"][data-lecture="06"],
 body[data-course-year="2025"] [data-lecture="06"] {
   --lecture-deep: #27272A;
   --lecture-primary: #52525B;
   --lecture-soft: #F4F4F5;
   --lecture-accent: #A1A1AA;
-  --curve-intro: url("2025-theme/06/curve-intro.svg");
-  --curve-students: url("2025-theme/06/curve-students.svg");
-  --curve-resources: url("2025-theme/06/curve-resources.svg");
-  --curve-quiz: url("2025-theme/06/curve-quiz.svg");
 }
-
 body[data-course-year="2025"][data-lecture="07"],
 body[data-course-year="2025"] [data-lecture="07"] {
   --lecture-deep: #0F172A;
@@ -107,94 +57,7 @@ body[data-course-year="2025"] [data-lecture="07"] {
   --lecture-soft: #F1F5F9;
   --lecture-accent: #E85D3F;
 }
-
-/* Neutral foundation: long copy, ordinary cards, borders and course chrome. */
-body[data-course-year="2025"] .masthead,
-body[data-course-year="2025"] .student-slide,
-body[data-course-year="2025"] .resource-group,
-body[data-course-year="2025"] .quiz-board,
-body[data-course-year="2025"] .hub-feature,
-body[data-course-year="2025"] .site-footer {
-  --muted: var(--neutral-muted);
-  background-color: var(--surface);
-}
-body[data-course-year="2025"] .year-nav a {
-  color: var(--ink);
-  background: var(--surface);
-}
-body[data-course-year="2025"] .year-nav a:hover { background: #F4F4F5; }
-body[data-course-year="2025"] .year-nav a[aria-current="page"] {
-  background: #27272A;
-  border-color: #27272A;
-  color: #FFFFFF;
-}
-body[data-course-year="2025"] .brand-symbol {
-  --accent: #52525B;
-  --accent-deep: #27272A;
-  --accent-pale: #F4F4F5;
-}
-body[data-course-year="2025"] .footer-inner strong,
-body[data-course-year="2025"] .footer-inner a { color: var(--ink); }
-body[data-course-year="2025"] .hero-meta { color: var(--muted-on-canvas); }
-body[data-course-year="2025"] .hero-meta span + span::before { color: var(--lecture-primary); }
-body[data-course-year="2025"] .hero-art,
-body[data-course-year="2025"] .hub-feature img { background-color: var(--lecture-soft); }
-body[data-course-year="2025"] .lecture-main .intro-section {
-  background-color: var(--paper);
-  background-image: var(--curve-intro);
-}
-body[data-course-year="2025"][data-lecture="04"] .intro-section {
-  background-image: var(--curve-intro), linear-gradient(#F8FDFF, #ECFEFF);
-}
-body[data-course-year="2025"] .lecture-main .student-section,
-body[data-course-year="2025"] .lecture-main .student-slide {
-  background-color: var(--surface);
-  background-image: var(--curve-students);
-}
-body[data-course-year="2025"] .lecture-main .resources-section {
-  background-color: var(--paper);
-  background-image: var(--curve-resources);
-}
-body[data-course-year="2025"] .lecture-main .quiz-section {
-  background-color: var(--paper);
-  background-image: var(--curve-quiz);
-}
-body[data-course-year="2025"] .resource-group-head { background: var(--lecture-soft); }
-body[data-course-year="2025"] .quiz-board { border-color: var(--line); }
-body[data-course-year="2025"] .insight,
-body[data-course-year="2025"] .response-prompts > div,
-body[data-course-year="2025"] .outlook-lead { background: var(--surface); }
-body[data-course-year="2025"] .outlook-lead { border-left: 3px solid var(--lecture-primary); }
-body[data-course-year="2025"] .editorial-note { color: var(--ink); }
-body[data-course-year="2025"] .lecture-brief p { color: var(--muted-on-canvas); }
-body[data-course-year="2025"] .top-section-links a { color: var(--ink); }
-body[data-course-year="2025"] .top-section-links a:hover,
-body[data-course-year="2025"] .top-section-links a[aria-current="location"] {
-  color: var(--lecture-deep);
-  background: var(--lecture-soft);
-}
-body[data-course-year="2025"] .top-section-links a[aria-current="location"] {
-  border-bottom-color: var(--lecture-primary);
-}
-
-/* Only the selected lecture gets a filled tab. Other entries retain a small cue. */
-body[data-course-year="2025"] .lecture-picker summary { border-color: var(--lecture-primary); }
-body[data-course-year="2025"] .lecture-options a,
-body[data-course-year="2025"] .lecture-options span {
-  border-left: 3px solid var(--lecture-primary);
-  color: var(--ink);
-  background: var(--surface);
-}
-body[data-course-year="2025"] .lecture-options a:hover,
-body[data-course-year="2025"] .lecture-options a[aria-current="page"] {
-  color: var(--lecture-deep);
-  background: var(--lecture-soft);
-}
-body[data-course-year="2025"] .lecture-options span[aria-disabled="true"] {
-  color: var(--neutral-muted);
-  border-left-style: dashed;
-}
-
+/* The visit's red/orange identity is retained in briefing-2025.css. */
 /* Primary controls and focus rings remain legible across every palette. */
 body[data-course-year="2025"] .stage-button.active .num,
 body[data-course-year="2025"] .stage-button.active .short { opacity: 1; }
@@ -224,29 +87,3 @@ body[data-course-year="2025"] .map-fix-key {
   border: 1.5px solid var(--lecture-deep);
   background: var(--lecture-accent);
 }
-body[data-course-year="2025"] .slide-toc-row:hover {
-  --muted: var(--muted-on-canvas);
-}
-body[data-course-year="2025"] .zoybug-trigger::before {
-  background: conic-gradient(var(--lecture-primary) var(--discovery-progress, 0%), var(--line) 0);
-}
-
-/* The year register stays neutral; each lecture row supplies its own identity. */
-body[data-course-year="2025"] .hub-heading {
-  background-image: url("2025-theme/curve-home.svg");
-}
-body[data-course-year="2025"] .hub-heading h1 em { color: var(--ink); }
-body[data-course-year="2025"] .register {
-  background-image: url("2025-theme/curve-register.svg");
-}
-body[data-course-year="2025"] .register-head { border-bottom-color: var(--line-dark); }
-body[data-course-year="2025"] .lecture-row {
-  background: transparent;
-  border-left: 3px solid var(--lecture-primary);
-  padding-left: 8px;
-}
-body[data-course-year="2025"] .lecture-row.available:hover { background: var(--lecture-soft); }
-body[data-course-year="2025"] .lecture-row .number,
-body[data-course-year="2025"] .lecture-row.available .status { color: var(--lecture-primary); }
-body[data-course-year="2025"] .lecture-row.muted { color: var(--muted-on-canvas); border-left-style: dashed; }
-body[data-course-year="2025"] .lecture-row.muted .status { color: var(--muted-on-canvas); }

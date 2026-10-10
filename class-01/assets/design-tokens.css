@@ -1,0 +1,42 @@
+@import url("fonts/source-fonts.css?v=20261010");
+
+/* Shared by both course years. Legacy component aliases live in site.css. */
+:root {
+  --color-canvas: #F7F6F2;
+  --color-surface: #FFFFFF;
+  --color-ink: #242723;
+  --color-muted: #62675F;
+  --color-accent: #356052;
+  --color-accent-deep: #294B40;
+  --color-active: #EDF2EE;
+  --color-hover: #EEEFE8;
+  --color-line: #DEDFD8;
+  --color-control-line: #858C80;
+  --color-success: #2E6540;
+  --color-success-surface: #F0F5EF;
+  --color-error: #A93434;
+  --color-error-surface: #FCF1EF;
+  --font-sans: "Source Sans 3", "Noto Sans CJK SC", "Noto Sans CJK TC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Microsoft YaHei", "PingFang SC", "Hiragino Sans", "Malgun Gothic", "Segoe UI", Arial, sans-serif;
+  --font-serif: "Source Serif 4", "Noto Serif CJK SC", "Noto Serif CJK TC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Songti SC", "Yu Mincho", Georgia, serif;
+  --font-code: "IBM Plex Mono", Consolas, "SFMono-Regular", monospace;
+  --type-title: clamp(2rem, 3.5vw, 2.8rem);
+  --type-section: clamp(1.5rem, 2.3vw, 1.95rem);
+  --type-subsection: 1.25rem;
+  --type-body: 1.0625rem;
+  --type-control: .9375rem;
+  --type-meta: .875rem;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --width-app: 1040px;
+  --width-content: 960px;
+  --width-reading: 760px;
+  --radius-control: 6px;
+  --radius-panel: 8px;
+  --shadow-overlay: 0 8px 32px #24272318;
+  --motion-duration: 160ms;
+}

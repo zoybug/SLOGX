@@ -1,6 +1,8 @@
+> Original lecture palettes retained in the 10 October 2026 editorial refactor. See [EDITORIAL_DESIGN.md](EDITORIAL_DESIGN.md) for the shared typography, layout and neutral foundation.
+
 # Fall 2025 lecture colors
 
-`assets/2025-theme.css` defines the palette and topic identities. Each 2025 page identifies its year and lecture with data attributes. The 2025 briefing layout loads `assets/briefing-2025.css` after the color styles; see `LAYOUT_STYLE_2025.md` for typography and spacing. The 2026 pages do not load either file.
+`assets/2025-theme.css` defines the original palette and topic identities. Each 2025 page identifies its year and lecture with data attributes. The 2025 briefing layout loads `assets/briefing-2025.css` after the color styles, and `assets/editorial.css` loads last to apply the shared design while preserving each topic palette. The 2026 pages do not load the archive's theme or briefing styles.
 
 | 2025 lecture | Topic | Primary | Deep | Soft | Accent |
 | --- | --- | --- | --- | --- | --- |
@@ -15,10 +17,10 @@
 
 The supplied direction describes 2026. Colors follow the actual 2025 topics: cyan belongs to Lecture 04. The supplied graphite palette is used for Lecture 06 because no autonomous-driving palette was specified. Lecture 07 retains its navy/coral identity for Henry Ko's guest lecture, which replaced the scheduled container-terminals session on 3 November 2025.
 
-The closing industry visit's red tokens are defined in `assets/briefing-2025.css` for `data-lecture="visit"`, including its register row and navigation link. They provide small accents, selected states and the code-native parcel illustration. The main workspace remains white; no large red backgrounds are used.
+The closing industry visit's red tokens are defined in `assets/briefing-2025.css` for `data-lecture="visit"`, including its register row and navigation link. They provide small accents, selected states and the code-native parcel illustration. The neutral editorial foundation and new layout remain shared across both years.
 
-The centered workspace overrides the base canvas with #F3F5F8, surrounding a white #FFFFFF application shell. Light supporting surfaces use #F8FAFC and #FAFBFD, with subtle #E4E8EF workspace borders. Text remains #111827. Secondary text uses #64748B on white and #5F6F85 on neutral surfaces. The topic palette stays unchanged and is used primarily for accents inside the shell.
+The shared editorial foundation uses an ivory #F7F6F2 canvas, optional white #FFFFFF surfaces, #242723 body text, #62675F secondary text and #DEDFD8 dividers. Layout, typography and spacing match the 2026 course. The original 2025 topic palette supplies accents across the page, including scoped shared color aliases for selected and hover states. Rebind aliases on each `data-lecture` element so register rows and navigation entries keep their own identity.
 
-Primary colors identify hero emphasis, lecture numbers, selected navigation, controls, progress and chart series. Deep colors support small labels and links. Soft colors are limited to selected/hover states and supporting diagram surfaces. Accent colors mark diagram signals and movement. White-text buttons use primary colors, all exceeding 4.5:1 contrast; bright accents are not button fills. Quiz success/error feedback keeps its semantic colors. Ordinary body copy, surfaces, borders, course-year navigation and footer text remain neutral. The floating Zoybug mascot keeps its mint/coral brand colors; its fact-card accents follow the current lecture.
+Primary colors identify hero takeaways, lecture numbers, selected navigation, controls, progress and chart series. Deep colors support small labels and links. Soft colors are limited to selected/hover states and supporting diagram surfaces. Accent colors mark diagram signals and movement. White-text buttons use primary colors, all exceeding 4.5:1 contrast; bright accents are not button fills. Quiz success/error feedback keeps its semantic colors. Ordinary body copy, surfaces, borders, course-year navigation and footer text remain neutral. The floating Zoybug mascot keeps its mint/coral brand colors; its fact-card accents follow the current lecture.
 
 SVG variants live in `assets/2025-theme/`. After changing palette tokens, run `python class-01/tools/build-2025-theme-art.py` from the repository root. This rebuilds only the 2025 variants from the shared originals. The positioning lab uses the same tokens directly in its inline SVG. No website build is needed.
