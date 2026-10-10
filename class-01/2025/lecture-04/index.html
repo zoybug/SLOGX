@@ -1,5 +1,780 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#F7F6F2" name="theme-color"/><meta content="Fall 2025 Lecture 04: Urban Low-Altitude Logistics Systems. Explore the lecture, student synthesis, resources and a practice quiz." name="description"/><title>2025 Lecture 04 | Urban Low-Altitude Logistics Systems</title><link href="../../assets/site.css?v=20261010" rel="stylesheet"/><link href="../../assets/lecture-flow.css" rel="stylesheet"/><link href="../../assets/v2.css" rel="stylesheet"/><link href="../../assets/year-archive.css" rel="stylesheet"/><link href="../../assets/lecture-2025-04.css" rel="stylesheet"/><link href="../../assets/2025-theme.css?v=20261010" rel="stylesheet"/><script defer="" src="../../assets/lecture-2025-04.js?v=2025-colors-20261003"></script><script defer="" src="../../assets/zoybug-facts.js"></script><script defer="" src="../../assets/zoybug.js?v=2025-zoybug-20261004"></script><link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/><script defer="" src="../../assets/briefing-2025.js?v=2025-guest-20261004"></script><link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/><link rel="stylesheet" href="../../assets/editorial.css?v=20261010"><script src="../../assets/editorial.js?v=20261010" defer></script><link rel="preload" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" as="font" type="font/woff2" crossorigin></head><body class="lecture-page archive-lecture" data-course-year="2025" data-lecture="04"><a class="skip" href="#main">Skip to content</a><div class="course-workspace"><header class="masthead unified-header"><div class="shell briefing-header"><a class="brand" href="../"><span><strong>Smart Logistics</strong><small>COURSE ATLAS · FALL 2025</small></span></a><div class="top-section-links"><a data-section="intro" href="#intro">Overview</a><a data-section="students" href="#students">Student synthesis</a><a data-section="resources" href="#resources">Resources</a><a data-section="quiz" href="#quiz">Quiz</a></div><nav aria-label="Course year" class="year-nav"><a href="../../">2026</a><a aria-current="page" href="../">2025</a></nav></div><nav aria-label="2025 sessions" class="lecture-rail"><div class="shell"><span aria-hidden="true" class="rail-label">Sessions</span><div class="lecture-switcher"><a aria-label="Lecture 01: Digital supply chains" data-lecture="01" href="../lecture-01/" title="Lecture 01: Digital supply chains"><b>01</b><span>Digital supply chains</span></a><a aria-label="Lecture 02: Smart transportation" data-lecture="02" href="../lecture-02/" title="Lecture 02: Smart transportation"><b>02</b><span>Smart transportation</span></a><a aria-label="Lecture 03: Intelligent warehousing" data-lecture="03" href="../lecture-03/" title="Lecture 03: Intelligent warehousing"><b>03</b><span>Intelligent warehousing</span></a><a aria-current="page" aria-label="Lecture 04: Urban drone logistics" data-lecture="04" href="./" title="Lecture 04: Urban drone logistics"><b>04</b><span>Urban drone logistics</span></a><a aria-label="Lecture 05: High-precision positioning" data-lecture="05" href="../lecture-05/" title="Lecture 05: High-precision positioning"><b>05</b><span>High-precision positioning</span></a><a aria-label="Lecture 06: Autonomous driving" data-lecture="06" href="../lecture-06/" title="Lecture 06: Autonomous driving"><b>06</b><span>Autonomous driving</span></a><a aria-label="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth · Henry Ko" data-lecture="07" href="../lecture-07/" title="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth · Henry Ko"><b>07</b><span>Global trade and growth</span></a><a aria-label="Industry visit: SF Express Shenzhen · 21 November 2025" data-lecture="visit" href="../industry-visit/" title="Industry visit: SF Express Shenzhen · 21 November 2025">Visit</a></div><span aria-hidden="true" class="rail-current">Urban drone logistics</span></div></nav></header><main class="lecture-main" id="main"><section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro"><div class="shell section-inner"><section class="lecture-hero lecture-hero-illustrated"><div class="hero-copy"><p class="eyebrow">Fall 2025 · Lecture 04</p><h1 id="lecture-title">Urban drone logistics</h1><p class="hero-takeaway">Follow the whole delivery.</p><p class="hero-summary">Follow the flight and the ground operations that make an urban drone delivery work.</p><div class="hero-meta"><span>PROFESSOR XINLEI CHEN · TSINGHUA SIGS</span><span>13 OCTOBER 2025</span></div><a class="hero-start" href="#students">Explore student synthesis →</a></div><div class="hero-art"><img alt="A parcel-carrying drone follows a route between a city dispatch depot and a pickup station" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-04-transparent.webp" width="1536"/></div></section><section aria-label="Lecture outline" class="lecture-brief"><details class="outline-step"><summary><span>01 / DELIVERY SERVICE</span><h2>Follow the order</h2></summary><p>Trace preparation, rider transport, loading, flight and customer pickup. Each stage contributes to the customer’s total wait.</p></details><details class="outline-step"><summary><span>02 / TECHNICAL SUPPORT</span><h2>Support and monitor the flight</h2></summary><p>Positioning and perception guide flight. Fault-tolerant control, parachutes, fleet management and cloud–edge coordination address different kinds of failure.</p></details><details class="outline-step"><summary><span>03 / OPERATING SYSTEM</span><h2>Coordinate the service</h2></summary><p>The lecture’s TBOS framework connects time–space planning, conflict management, scheduling and environmental monitoring. Remote supervision, ground handling and maintenance support daily operations.</p></details></section><details class="lecture-details"><summary>Lecture details and sources</summary><p class="hero-deck">Urban Low-Altitude Logistics Systems</p><p class="hero-summary">A drone flight is one stage of a delivery. In “Introduction to Instant Delivery with Drones,” Prof. Xinlei Chen explains how ground stations, sensing, fleet coordination and people support the service.</p><p class="archive-note">Course instructor: Prof. Wai Kin (Victor) Chan. Students reflected on the benefits, delivery process, urban challenges and possible improvements. This page draws on 29 identified reflections and a separate essay with unresolved authorship.</p><p class="archive-note"><a href="https://www.sigs.tsinghua.edu.cn/cxl/main.psp" rel="noopener noreferrer" target="_blank">Prof. Xinlei Chen’s official faculty profile ↗</a> · The lecture also covers collaborative aerial and ground sensing and research on low-latency control.</p></details></div></section><section aria-label="Student synthesis" class="lecture-section student-section" id="students"><div class="shell synthesis-shell"><div class="synthesis-heading"><h2>Student synthesis</h2><span aria-live="polite" id="synthesis-position">Contents</span></div><div aria-label="Student synthesis" aria-roledescription="carousel" class="slide-track" id="slide-track" role="region" tabindex="0"><article aria-label="Contents" aria-roledescription="slide" class="student-slide contents-slide" data-slide="" id="slide-contents" role="group"><div class="slide-content contents-content"><div class="contents-heading"><div><h2>Choose a starting point</h2><p>Explore a main idea, then open the full notes when you need the detail.</p></div><a class="text-link" data-method-link="" href="#synthesis-method">About this synthesis ↓</a></div><div class="slide-toc"><button class="slide-toc-row" data-go-slide="1" type="button"><span class="number">01</span><strong>The delivery process</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="2" type="button"><span class="number">02</span><strong>Operating in the city</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="3" type="button"><span class="number">03</span><strong>Response time</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="4" type="button"><span class="number">04</span><strong>Adoption and public trust</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="5" type="button"><span class="number">05</span><strong>Evaluate the evidence</strong><span aria-hidden="true" class="toc-arrow">→</span></button></div></div></article><article aria-label="1 of 5: The delivery process" aria-roledescription="slide" class="student-slide" data-panel-kind="stages" data-slide="" id="slide-responses" role="group"><div class="slide-content"><div class="slide-intro"><h2>The delivery process</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Drone delivery depends on the handoffs around the flight.</p><ul><li>Preparation, station queues and collection contribute to the customer’s wait.</li><li>Automation changes the supporting work; it does not remove it.</li></ul><div class="panel-foot"><p>The lecture mainly uses designated pickup points, not every receiving design.</p><button aria-controls="notes-slide-responses" aria-expanded="false" class="notes-button" data-show-notes="slide-responses" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Drone delivery stages" class="stage-grid" id="stage-grid" role="group"></div><div aria-live="polite" class="stage-detail"><div class="serial" id="stage-serial"></div><div><h3 id="stage-title"></h3><p id="stage-description"></p></div><div class="detail-key"><span class="smallcaps">HANDOFF + CHECK</span><b id="stage-connection"></b></div></div></div></div></div></article><article aria-label="2 of 5: Operating in the city" aria-roledescription="slide" class="student-slide" data-panel-kind="cases" data-slide="" id="slide-model" role="group"><div class="slide-content"><div class="slide-intro"><h2>Operating in the city</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Urban operations need a plan for conditions that depart from the plan.</p><ul><li>Positioning, weather, airspace and receiving points impose different limits.</li><li>Scheduling works alongside onboard responses and contingency procedures.</li></ul><div class="panel-foot"><p>Comparisons explain constraints; they do not grant operating permission.</p><button aria-controls="notes-slide-model" aria-expanded="false" class="notes-button" data-show-notes="slide-model" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Choose an urban operating constraint" class="case-selector" id="case-selector" role="group"></div><article aria-live="polite" class="case-study"><p class="slide-subline" id="case-kicker"></p><h3 id="case-title"></h3><p id="case-summary"></p><dl class="case-facts" id="case-facts"></dl><a id="case-reading" rel="noopener noreferrer" target="_blank"></a></article></div></div></div></article><article aria-label="3 of 5: Response time" aria-roledescription="slide" class="student-slide" data-panel-kind="latency" data-slide="" id="slide-evidence" role="group"><div class="slide-content"><div class="slide-intro"><h2>Response time</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Sensor frequency is only one part of response time.</p><ul><li>Add processing, communication and actuation delays.</li><li>Multiply the total delay by speed to find distance before response.</li></ul><div class="panel-foot"><p>Illustrative constant-speed model; braking and variable delays are omitted.</p><button aria-controls="notes-slide-evidence" aria-expanded="false" class="notes-button" data-show-notes="slide-evidence" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div class="latency-lab"><div aria-label="Latency example presets" class="lab-presets" role="group"><button aria-pressed="true" data-preset="full" type="button">Include all delays</button><button aria-pressed="false" data-preset="sample" type="button">Sampling only</button><button aria-pressed="false" data-preset="fast" type="button">Increase sampling frequency</button></div><div class="latency-controls"><label for="lab-speed">Illustrative speed <output for="lab-speed" id="speed-value"></output><input id="lab-speed" max="20" min="1" step="1" type="range" value="10"/></label><label for="lab-frequency">Sensor frequency <output for="lab-frequency" id="frequency-value"></output><input id="lab-frequency" max="50" min="5" step="5" type="range" value="10"/></label><label for="lab-processing">Processing delay <output for="lab-processing" id="processing-value"></output><input id="lab-processing" max="500" min="0" step="50" type="range" value="200"/></label></div><div aria-live="polite" class="latency-chain" id="latency-chain"></div><div aria-live="polite" class="latency-results"><div><span>TOTAL PRE-RESPONSE DELAY</span><strong id="lab-delay"></strong></div><div><span>DISTANCE BEFORE RESPONSE</span><strong id="lab-distance"></strong></div></div><p id="lab-observation"></p></div></div></div></div></article><article aria-label="4 of 5: Adoption and public trust" aria-roledescription="slide" class="student-slide" data-panel-kind="static" data-slide="" id="slide-future" role="group"><div class="slide-content"><div class="slide-intro"><h2>Adoption and public trust</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">The first useful service may be the one where time has clear value.</p><ul><li>Students suggest medical supplies, spare parts and business deliveries.</li><li>Routine meal delivery raises different cost and infrastructure questions.</li></ul><div class="panel-foot"><p>Student proposals need testing against actual demand and operating availability.</p><button aria-controls="notes-slide-future" aria-expanded="false" class="notes-button" data-show-notes="slide-future" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><dl class="evidence-rows"><div><dt>Economics</dt><dd>Include stations, staff, maintenance and receiving infrastructure.</dd></div><div><dt>Availability</dt><dd>Prepare a ground alternative when weather prevents flight.</dd></div><div><dt>Public trust</dt><dd>Explain noise, privacy, workforce changes and realistic service limits.</dd></div></dl></div></div></div></article><article aria-label="5 of 5: Evaluate the evidence" aria-roledescription="slide" class="student-slide" data-panel-kind="static" data-slide="" id="slide-world" role="group"><div class="slide-content"><div class="slide-intro"><h2>Evaluate the evidence</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Measure the complete delivery, including its unavailable periods.</p><ul><li>Fast flight does not establish fast order-to-collection time.</li><li>Safety needs exposure and incident definitions, not delivery totals alone.</li></ul><div class="panel-foot"><p>This is a proposed pilot evaluation, not data collected by the class.</p><button aria-controls="notes-slide-world" aria-expanded="false" class="notes-button" data-show-notes="slide-world" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><dl class="evidence-rows"><div><dt>Service</dt><dd>Track eligibility, queues, walks to pickup and weather suspensions.</dd></div><div><dt>Reliability</dt><dd>Compare incidents and ground alternatives against operating exposure.</dd></div><div><dt>Cost and trust</dt><dd>Record staff hours, total costs, complaints and data retention.</dd></div></dl></div></div></div></article></div><nav aria-label="Synthesis navigation" class="deck-controls"><button data-deck-prev="" type="button">← Previous</button><div class="panel-navigation"><button aria-label="Contents" data-go-slide="0" type="button"><span class="contents-label">Contents</span><svg aria-hidden="true" class="contents-icon" focusable="false" viewbox="0 0 20 20"><path d="M7 5h9M7 10h9M7 15h9M3 5h.1M3 10h.1M3 15h.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></button><div aria-label="Choose a synthesis view" class="panel-dots" role="group"><button aria-controls="slide-responses" aria-label="1. The delivery process" data-go-slide="1" type="button"><span aria-hidden="true">1</span></button><button aria-controls="slide-model" aria-label="2. Operating in the city" data-go-slide="2" type="button"><span aria-hidden="true">2</span></button><button aria-controls="slide-evidence" aria-label="3. Response time" data-go-slide="3" type="button"><span aria-hidden="true">3</span></button><button aria-controls="slide-future" aria-label="4. Adoption and public trust" data-go-slide="4" type="button"><span aria-hidden="true">4</span></button><button aria-controls="slide-world" aria-label="5. Evaluate the evidence" data-go-slide="5" type="button"><span aria-hidden="true">5</span></button></div></div><button data-deck-next="" type="button">Next →</button></nav></div></section><div class="shell synthesis-notes" id="synthesis-notes"><section aria-labelledby="notes-title-slide-responses" class="panel-notes" data-panel-notes="slide-responses" hidden="" id="notes-slide-responses"><div class="notes-heading"><h3 id="notes-title-slide-responses">The delivery process · full notes</h3><button data-close-notes="slide-responses" type="button">Back to the synthesis ↑</button></div><p>Start with the order. Each transfer has to work before a customer can collect the package.</p><p class="deck">Select a stage to follow the lecture’s delivery example, from order eligibility to pickup and recovery.</p><div class="learning-grid"><section><h3>Automation changes the supporting work</h3><p>Students describe riders, loading staff, remote pilots, emergency support and maintenance engineers. A pilot-to-aircraft ratio covers only one of these roles.</p></section><section><h3>Measure the customer’s wait</h3><p>Preparation, rider travel, station queues, flight and walking to pickup all add time. A quick flight may offer little convenience if merchant choice is limited or collection is far away.</p></section></div><p class="editorial-note"><b>Compare receiving arrangements.</b> The lecture mainly uses designated pickup points. Some reflections discuss tether delivery as a different operator’s design; it needs a separate comparison.</p></section><section aria-labelledby="notes-title-slide-model" class="panel-notes" data-panel-notes="slide-model" hidden="" id="notes-slide-model"><div class="notes-heading"><h3 id="notes-title-slide-model">Operating in the city · full notes</h3><button data-close-notes="slide-model" type="button">Back to the synthesis ↑</button></div><p>The delivery process depends on conditions around the aircraft and at its endpoints. Explore the constraints below.</p><div class="learning-grid"><section><h3>Equipment faults and outside disturbances</h3><p>One reflection distinguishes internal faults from airflow and encounters with other aircraft. Backup equipment helps with some faults; gusts near buildings and shared airspace need other responses.</p></section><section><h3>Predictable stations, changing surroundings</h3><p>Loading stations can be controlled more closely than restaurant pickup areas or streets with moving obstacles. Students propose portable pickup modules and building reception systems, which would need access, maintenance and permission checks.</p></section></div><div class="learning-grid"><section><h3>Use several layers of security</h3><p>The deck describes access controls and audits, hardware and navigation protection, encrypted communications and area-based management with emergency priorities. Each addresses a different threat.</p></section><section><h3>Decide what sensing data is needed</h3><p>Navigation sensors may capture private surroundings. Students suggest less intrusive sensing. A review should define necessary data, access and retention while checking that obstacle detection still works.</p></section></div><p class="editorial-note"><b>Plans and onboard responses work together.</b> Scheduling position and time helps coordinate routes. Perception and contingency procedures handle departures from the plan. NASA’s UTM project offers a US research comparison rather than local operating permission.</p></section><section aria-labelledby="notes-title-slide-evidence" class="panel-notes" data-panel-notes="slide-evidence" hidden="" id="notes-slide-evidence"><div class="notes-heading"><h3 id="notes-title-slide-evidence">Response time · full notes</h3><button data-close-notes="slide-evidence" type="button">Back to the synthesis ↑</button></div><p>City conditions can change quickly. Use a timing example to see how far an aircraft moves while its response is being prepared.</p><p class="deck">Two reflections ask about distance traveled before a response. Adjust the controls to see why sensor frequency is only one part of the delay.</p><p class="editorial-note"><b>Constructed timing model.</b> Worst-case sampling wait is 1/f. Add processing, communication and actuation delay, then multiply by constant speed to find distance traveled before response. The full-chain presets use 100 ms each for communication and actuation; “Sampling only” sets both to zero. Braking, tracking error, prediction and variable delays are omitted. This is an illustrative calculation, not measured aircraft performance.</p><div class="learning-grid"><section><h3>Find the largest delay</h3><p>At 10 m/s and 10 Hz, sampling alone accounts for 1 m. The example’s other delays add 4 m. Increasing sampling to 20 Hz saves 0.5 m, while the other delays remain.</p></section><section><h3>Check response time under load</h3><p>Fast perception and cloud–edge coordination can help. Test the whole response chain with degraded communications and several aircraft operating at once, including variation in delay.</p></section></div></section><section aria-labelledby="notes-title-slide-future" class="panel-notes" data-panel-notes="slide-future" hidden="" id="notes-slide-future"><div class="notes-heading"><h3 id="notes-title-slide-future">Adoption and public trust · full notes</h3><button data-close-notes="slide-future" type="button">Back to the synthesis ↑</button></div><p>The technical examples lead to practical questions: where is the service useful, who supports it and how does it fit into the city?</p><div class="insight-grid"><article class="insight"><span class="mark">01 / FIRST USE CASE</span><h3>Choose the first service carefully</h3><p>Some students favor urgent medical supplies or industrial spare parts, where time has clear value. Others question routine meal delivery’s infrastructure costs. A proposal to start with business deliveries offers one path to test.</p></article><article class="insight"><span class="mark">02 / ECONOMICS</span><h3>Include costs on the ground</h3><p>Light, repeatable deliveries may suit drones, while riders can batch orders and vans carry bulk loads. Compare station space, electricity, staff, maintenance, availability and failed deliveries per completed order.</p></article><article class="insight"><span class="mark">03 / SHARED CITY</span><h3>Agree how shared infrastructure works</h3><p>Students propose shared hubs and modular receiving points. They also raise privacy, noise and incident handling. Shared facilities need agreements on access, responsibilities and funding.</p></article><article class="insight"><span class="mark">04 / PEOPLE</span><h3>Support workers through the change</h3><p>One identified reflection calls for technician and fleet-support training. The separate essay asks about displaced riders and unequal gains. Consider whether affected workers can access new roles, including training, pay and transition support.</p></article></div><p class="editorial-note"><b>Demand and flight availability may conflict.</b> Students note that customers may want delivery most in poor weather. Ground alternatives, realistic availability promises and clear updates help address that tension.</p></section><section aria-labelledby="notes-title-slide-world" class="panel-notes" data-panel-notes="slide-world" hidden="" id="notes-slide-world"><div class="notes-heading"><h3 id="notes-title-slide-world">Evaluate the evidence · full notes</h3><button data-close-notes="slide-world" type="button">Back to the synthesis ↑</button></div><p>Use the delivery stages and adoption questions to decide what a pilot needs to measure.</p><div class="learning-grid"><section><p class="slide-subline">SPEED + AVAILABILITY</p><h3>Measure from order to collection</h3><p>Compare total order-to-pickup time under similar conditions, including walks and station queues. Record eligible orders, weather suspensions and ground alternatives. The lecture’s fast-delivery examples describe particular settings.</p></section><section><p class="slide-subline">SAFETY + RELIABILITY</p><h3>Measure incidents against exposure</h3><p>A delivery total needs corresponding incident counts, severity and operating conditions to support a risk comparison. Fault tolerance and parachutes address particular risks rather than eliminating every hazard.</p></section><section><p class="slide-subline">ENVIRONMENT</p><h3>Include the wider environmental costs</h3><p>Compare electricity, batteries, hubs and additional transport with the ground alternative. The <a href="https://www.nature.com/articles/s41467-017-02411-5" rel="noopener noreferrer" target="_blank">2018 life-cycle study</a> shows that benefits depend on these assumptions. Its modeled aircraft describe the study’s setting.</p></section><section><p class="slide-subline">STAFFING + PERMISSIONS</p><h3>Specify staffing and operating conditions</h3><p>Count all supporting roles. Payload limits and permitted operations depend on the aircraft and location. Historical lecture ratios should be read in their original setting.</p></section></div><p class="editorial-note"><b>What a pilot should record:</b> eligible and completed orders, handoff times, ground alternatives, incident exposure, complaints, data retention, staff hours and total costs. This is a suggested evaluation plan, not data collected by the class.</p></section><details class="synthesis-method" id="synthesis-method"><summary>About this synthesis</summary><div class="method-body"><p>Lecture context, anonymous student perspectives and constructed teaching examples serve different roles. The notes below retain the source counts, inclusion decisions and limitations.</p><h3>About the source material</h3><p>After merging one duplicate, the two files contain 29 distinct identified reflections from 29 students. Work identified by a name alone or an ID alone is included.</p><p>A separate essay has unresolved authorship and is excluded from the student count, while its workforce concerns inform the discussion. Repeated headers and inconsistent assignment labels were checked against the subject matter. Counts refer to supplied work, not verified enrollment; identities and discrepancies remain private.</p></div></details></div>
-<section aria-labelledby="resources-title" class="lecture-section resources-section" id="resources"><div class="shell section-inner"><section class="main-feature reading-feature"><div class="section-heading"><h2 id="resources-title">Resources</h2><p class="intro">Explore delivery designs, sensing and research related to the panels. External resources open in a new tab.</p></div><div class="resource-grid"><div class="resource-group"><div class="resource-group-head"><h3>Lecture context</h3></div><a href="https://www.sigs.tsinghua.edu.cn/cxl/main.psp" rel="noopener noreferrer" target="_blank"><b>Prof. Xinlei Chen ↗</b><span>Official Tsinghua SIGS faculty profile. Chinese language.</span></a><a href="https://www.ted.com/talks/keller_rinaudo_cliffton_how_we_re_using_drones_to_deliver_blood_and_save_lives" rel="noopener noreferrer" target="_blank"><b>Drones delivering blood and saving lives ↗</b><span>Assigned preparation talk on medical deliveries and access.</span></a><a href="https://www.youtube.com/watch?v=6Vs8cJLjIsw" rel="noopener noreferrer" target="_blank"><b>A look at the future of drone deliveries ↗</b><span>TEDx talk linked in the syllabus. Video availability may vary.</span></a></div><div class="resource-group"><div class="resource-group-head"><h3>Delivery architectures</h3></div><a href="https://www.meituan.com/news/NN231219070003592" rel="noopener noreferrer" target="_blank"><b>Meituan’s Tsinghua SIGS campus route ↗</b><span>Company announcement dated 19 December 2023, describing a service with designated pickup points.</span></a><a href="https://wing.com/news/how-do-you-get-package-from-drone-to" rel="noopener noreferrer" target="_blank"><b>How Wing lowers a package ↗</b><span>Wing’s explanation of tether delivery, for comparison with station pickup.</span></a><a href="https://wing.com/news/do-delivery-drones-have-cameras" rel="noopener noreferrer" target="_blank"><b>Wing’s perception and cameras ↗</b><span>Wing’s sensing explanation, useful for questions about navigation data and privacy.</span></a></div><div class="resource-group"><div class="resource-group-head"><h3>Research + evidence</h3></div><a href="https://www.nasa.gov/directorates/armd/past-armd-projects/utm-project/" rel="noopener noreferrer" target="_blank"><b>NASA’s UAS Traffic Management project ↗</b><span>US research on shared airspace, route planning and coordination.</span></a><a href="https://www.nature.com/articles/s41467-017-02411-5" rel="noopener noreferrer" target="_blank"><b>Life-cycle emissions of drone delivery ↗</b><span>Stolaroff and colleagues, Nature Communications (2018), comparing electricity, warehouse energy and ground alternatives.</span></a></div></div><p class="editorial-note">Existing source records date the resource checks to 3 October 2026. These pages may change; company descriptions explain their designs and need separate performance evaluation. The lecture and student reflections are from Fall 2025.</p></section></div></section><section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz"><div class="shell section-inner"><section class="main-feature quiz-feature"><div class="section-heading"><h2 id="quiz-title">Quiz</h2><p class="intro">Practice with 12 scenarios on delivery handoffs, city constraints, response time and evaluating service claims. Each answer includes an explanation and a related resource.</p><details class="quiz-help"><summary>How the quiz works</summary><h3>Apply what you learned</h3><p>Choose an answer, read the explanation and use the related resource to review. This quiz is for practice and does not affect your course grade.</p><div class="quiz-rounds">HANDOFFS + URBAN SYSTEMS<br/>LATENCY + MEASUREMENT<br/>PEOPLE + PUBLIC TRUST</div></details></div><div class="quiz-board"><div class="quiz-main"><div class="quiz-head"><span class="quiz-status" id="quiz-status"></span><span aria-hidden="true" class="quiz-track"><i id="quiz-progress"></i></span></div><div class="quiz-topic" id="quiz-topic"></div><div class="question" id="quiz-question"></div><div class="choices" id="quiz-choices"></div><div aria-live="polite" class="feedback" id="quiz-feedback"></div><div class="quiz-controls"><button class="next-button" disabled="" id="quiz-next" type="button">Next question →</button><button class="next-button" hidden="" id="quiz-restart" type="button">Restart quiz ↺</button></div></div></div></section></div></section>
-</main><footer class="site-footer"><div class="shell footer-inner"><strong>ISL / 2025 / 04</strong><span>Student perspectives from 29 identified Lecture 04 reflections, plus a separate companion essay.</span><a href="../">2025 lectures</a></div></footer></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#F7F6F2" name="theme-color"/>
+<meta content="Fall 2025 Lecture 04: Introduction to Instant Delivery with Drones. Lecture overview, anonymous coursework synthesis, teaching examples, resources and practice questions." name="description"/>
+<title>
+   2025 Lecture 04 | Introduction to Instant Delivery with Drones
+  </title>
+<link href="../../assets/site.css?v=20261010" rel="stylesheet"/>
+<link href="../../assets/lecture-flow.css" rel="stylesheet"/>
+<link href="../../assets/v2.css" rel="stylesheet"/>
+<link href="../../assets/year-archive.css" rel="stylesheet"/>
+<link href="../../assets/lecture-2025-04.css" rel="stylesheet"/>
+<link href="../../assets/2025-theme.css?v=20261010" rel="stylesheet"/>
+<script defer="" src="../../assets/lecture-2025-04.js?v=20261011-content">
+</script>
+<script defer="" src="../../assets/zoybug-facts.js">
+</script>
+<script defer="" src="../../assets/zoybug.js?v=2025-zoybug-20261004">
+</script>
+<link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
+<link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
+<link href="../../assets/editorial.css?v=20261010" rel="stylesheet"/>
+<script defer="" src="../../assets/editorial.js?v=20261010">
+</script>
+<link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="True" src="../../assets/content-2025.js?v=20261011"></script></head>
+<body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="04">
+<a class="skip" href="#main">
+   Skip to content
+  </a>
+<div class="course-workspace">
+<header class="masthead unified-header">
+<div class="shell briefing-header">
+<a class="brand" href="../">
+<span>
+<strong>Introduction to Smart Logistics</strong>
+</span>
+</a>
+<div class="top-section-links">
+<a data-section="intro" href="#intro">
+       Overview
+      </a>
+<a data-section="students" href="#students">Student synthesis</a>
+<a data-section="resources" href="#resources">
+       Resources
+      </a>
+<a data-section="quiz" href="#quiz">
+       Quiz
+      </a>
+</div>
+<nav aria-label="Course year" class="year-nav">
+<a href="../../">
+       2026
+      </a>
+<a aria-current="page" href="../">
+       2025
+      </a>
+</nav>
+</div>
+<nav aria-label="2025 sessions" class="lecture-rail">
+<div class="shell">
+<span aria-hidden="true" class="rail-label">
+       Sessions
+      </span>
+<div class="lecture-switcher">
+<a aria-label="Lecture 01: Digital Transformation of Modern Supply Chains" data-lecture="01" href="../lecture-01/" title="Lecture 01: Digital Transformation of Modern Supply Chains">
+<b>
+         01
+        </b>
+<span>
+         Digital supply chains
+        </span>
+</a>
+<a aria-label="Lecture 02: Smart Transportation and Distribution" data-lecture="02" href="../lecture-02/" title="Lecture 02: Smart Transportation and Distribution">
+<b>
+         02
+        </b>
+<span>
+         Smart transportation
+        </span>
+</a>
+<a aria-label="Lecture 03: Intelligent warehousing system" data-lecture="03" href="../lecture-03/" title="Lecture 03: Intelligent warehousing system">
+<b>
+         03
+        </b>
+<span>
+         Intelligent warehousing
+        </span>
+</a>
+<a aria-current="page" aria-label="Lecture 04: Introduction to Instant Delivery with Drones" data-lecture="04" href="./" title="Lecture 04: Introduction to Instant Delivery with Drones">
+<b>
+         04
+        </b>
+<span>
+         Urban drone logistics
+        </span>
+</a>
+<a aria-label="Lecture 05: High Accuracy Positioning for ITS" data-lecture="05" href="../lecture-05/" title="Lecture 05: High Accuracy Positioning for ITS">
+<b>
+         05
+        </b>
+<span>
+         High-precision positioning
+        </span>
+</a>
+<a aria-label="Lecture 06: Smart city transportation and autonomous driving" data-lecture="06" href="../lecture-06/" title="Lecture 06: Smart city transportation and autonomous driving">
+<b>
+         06
+        </b>
+<span>
+         Autonomous driving
+        </span>
+</a>
+<a aria-label="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth" data-lecture="07" href="../lecture-07/" title="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth">
+<b>
+         07
+        </b>
+<span>
+         Global trade and growth
+        </span>
+</a>
+<a aria-label="Industry visit: SF Express Shenzhen · 21 November 2025" data-lecture="visit" href="../industry-visit/" title="Industry visit: SF Express Shenzhen · 21 November 2025">
+        Visit
+       </a>
+</div>
+<span aria-hidden="true" class="rail-current">
+       Urban drone logistics
+      </span>
+</div>
+</nav>
+</header>
+<main class="lecture-main" id="main">
+<section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
+<div class="shell section-inner lecture-header">
+
+<h1 id="lecture-title">
+        Introduction to Instant Delivery with Drones
+       </h1>
+<p class="lecture-meta">Lecture 04 · 13 October 2025 · Lecturer: Prof. Xinlei Chen</p>
+
+<div class="lecture-overview">
+<h2>
+        Lecture overview
+       </h2>
+<p>
+        Xinlei Chen examines instant delivery as a coordinated service, using Meituan’s urban drone operation as the main example. A customer order passes through merchant preparation, a rider’s ground handoff, station loading, flight and collection at a designated receiving point. Positioning and perception support the aircraft, while charging sites, remote supervision, maintenance and the TBOS management framework support the fleet. The lecture then considers response delay, route and time-slot coordination, fault-tolerant control, information security, noise and privacy. A fast flight is therefore only one part of providing a useful and dependable delivery service.
+       </p>
+</div>
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Xinlei Chen is an associate professor at Tsinghua Shenzhen International Graduate School. His research includes intelligent Internet of Things, multi-agent collaboration, pervasive computing, robotics and drone swarms. The supplied lecture introduces his work on low-latency response and collaborative aerial and ground sensing.
+       </p>
+<a href="https://www.sigs.tsinghua.edu.cn/cxl/main.psp" rel="noopener noreferrer" target="_blank">
+        Official lecturer profile
+       </a>
+</div>
+</div>
+</section>
+<section aria-labelledby="students-title" class="lecture-section student-section" id="students">
+<div class="shell section-inner">
+<span aria-hidden="true" class="legacy-fragment" id="slide-contents">
+</span>
+<h2 id="students-title">
+       Student synthesis
+      </h2>
+<p class="synthesis-introduction" id="synthesis-method">
+       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
+      </p>
+<div class="assignment-prompt">
+<h3>
+        Assignment — What did students think about drone delivery?
+       </h3>
+<p>
+        Students wrote a two-page report giving their views of drone delivery. The brief suggested five aspects—benefits and shortcomings, delivery process, urban technical challenges, current-system problems and improvements—while allowing other topics. The headings below follow those suggested aspects; they were not five compulsory questions. Preparation also included talks on drone delivery and trying Meituan’s service.
+       </p>
+</div>
+<section aria-labelledby="slide-future-title" class="synthesis-theme" id="slide-future">
+<h3 id="slide-future-title">
+        Benefits and shortcomings — Where could drones add value?
+       </h3>
+<h4>
+        What students said
+       </h4>
+<ul>
+<li>
+         Students valued avoiding road congestion and reaching places that are difficult to serve by road. Several saw particular value in urgent medicines, samples or small time-sensitive deliveries.
+        </li>
+<li>
+         Payload, range, battery use and weather narrowed the applications they considered feasible. Some welcomed routine meal delivery; others thought urgent medical or business deliveries offered a clearer reason to bear the infrastructure cost.
+        </li>
+<li>
+         Convenience was contested. Faster flight could be offset by walking to a receiving point, a limited choice of merchants or unavailable flights when customers most wanted delivery.
+        </li>
+</ul>
+<p class="synthesis-interpretation">
+<strong>
+         What this suggests:
+        </strong>
+        The responses suggest comparing the value of time for a particular service with the complete delivery’s constraints, rather than treating drones as a general replacement for ground transport.
+       </p>
+<button class="detail-button" data-detail="notes-slide-future" type="button">
+        More detail
+       </button>
+</section>
+<section aria-labelledby="slide-responses-title" class="synthesis-theme" id="slide-responses">
+<h3 id="slide-responses-title">
+        Delivery process — What happens around the flight?
+       </h3>
+<h4>
+        What students said
+       </h4>
+<ul>
+<li>
+         Many reports followed the lecture’s hybrid relay: order and merchant preparation, rider transport to a dispatch station, loading and flight, then customer collection at a designated receiving point.
+        </li>
+<li>
+         Students identified work that remains on the ground and in the control centre: package handling, charging, maintenance, remote monitoring and support when an operation goes wrong.
+        </li>
+<li>
+         Some reports also described another operator’s tether delivery. That receiving arrangement differs from the lecture’s main station-pickup example and should be compared separately.
+        </li>
+</ul>
+<p class="synthesis-interpretation">
+<strong>
+         What this suggests:
+        </strong>
+        Automation changes who performs each handoff; it does not make preparation, pickup access or supporting work disappear from the service.
+       </p>
+<button class="detail-button" data-detail="notes-slide-responses" type="button">
+        More detail
+       </button>
+</section>
+<section aria-labelledby="slide-model-title" class="synthesis-theme" id="slide-model">
+<h3 id="slide-model-title">
+        Urban technical challenges — How does the system handle changing conditions?
+       </h3>
+<h4>
+        What students said
+       </h4>
+<ul>
+<li>
+         Reports connected buildings, degraded satellite signals and moving obstacles with the need to combine positioning and perception inputs. Two reflections questioned how sensor updates and processing delay affect the distance travelled before a response.
+        </li>
+<li>
+         Students discussed both planned coordination and departures from the plan. Shared routes and time slots do not remove the need to recognize deviations, react onboard and coordinate contingencies.
+        </li>
+<li>
+         A useful distinction in one report was between internal equipment faults and outside disturbances such as airflow or other aircraft. Other responses linked navigation cameras with privacy and noise concerns in residential areas.
+        </li>
+</ul>
+<p class="synthesis-interpretation">
+<strong>
+         What this suggests:
+        </strong>
+        Different hazards require different protections: scheduling, sensing, fault tolerance and data governance address related but distinct parts of an urban operation.
+       </p>
+<button class="detail-button" data-detail="notes-slide-model" type="button">
+        More detail
+       </button>
+</section>
+<section aria-labelledby="slide-world-title" class="synthesis-theme" id="slide-world">
+<h3 id="slide-world-title">
+        Current-system problems — What limits dependable operation?
+       </h3>
+<h4>
+        What students said
+       </h4>
+<ul>
+<li>
+         Students repeatedly returned to ground infrastructure and supporting costs: stations need space, power, maintenance and people, even when one remote pilot can supervise several aircraft.
+        </li>
+<li>
+         Weather suspension and limited service coverage raised questions about accepted orders and the availability of a ground alternative. Restricted payloads also made larger ground vehicles relevant to the comparison.
+        </li>
+<li>
+         Reports questioned closed operator systems, shared-airspace coordination and community acceptance. Noise, privacy and responsibility for incidents were concerns alongside flight performance.
+        </li>
+</ul>
+<p class="synthesis-interpretation">
+<strong>
+         What this suggests:
+        </strong>
+        A dependable service must be evaluated during interruptions as well as successful flights, using total time, cost and supporting work per completed delivery.
+       </p>
+<button class="detail-button" data-detail="notes-slide-world" type="button">
+        More detail
+       </button>
+</section>
+<section aria-labelledby="student-suggestions-title" class="synthesis-theme" id="student-suggestions">
+<h3 id="student-suggestions-title">
+        Suggested improvements — What would students test first?
+       </h3>
+<h4>
+        What students said
+       </h4>
+<ul>
+<li>
+         Students proposed improving sensing and processing, batteries and charging, quieter flight, and a usable ground fallback. These proposals address different limits and need their own evaluation.
+        </li>
+<li>
+         Several favoured staged adoption: urgent medical or industrial deliveries first, or drones serving one leg of a hybrid service with riders, vans or ground robots. Others suggested standardized handoff modules, shared hubs or portable receiving points.
+        </li>
+<li>
+         Responses also called for clearer coordination between operators, community participation and transparent privacy and incident policies. One identified reflection emphasized training for maintenance and fleet-support roles as work changes.
+        </li>
+</ul>
+<p class="synthesis-interpretation">
+<strong>
+         What this suggests:
+        </strong>
+        The proposals provide questions for a pilot, rather than validated forecasts. Each should be tested against actual demand, access, reliability, costs and the people affected.
+       </p>
+<button class="detail-button" data-detail="student-suggestions-detail" type="button">
+        More detail
+       </button>
+</section>
+</div>
+</section>
+<section aria-labelledby="teaching-title" class="lecture-section teaching-examples" id="teaching-examples">
+<div class="shell section-inner">
+<h2 id="teaching-title">
+       Teaching examples
+      </h2>
+<section aria-labelledby="teaching-04-stages-title" class="teaching-example" id="teaching-04-stages">
+<h3 id="teaching-04-stages-title">
+        Teaching interpretation — Follow the delivery handoffs
+       </h3>
+<p class="experiment-context">
+        The lecture’s Meituan example combines ground work and flight. Following each handoff shows why the aircraft’s flight time and the customer’s total wait are different measures.
+       </p>
+<p class="experiment-inputs">
+        Select a stage to examine eligibility, preparation, station loading, flight, collection or recovery.
+       </p>
+<div class="briefing-visual">
+<div aria-label="Drone delivery stages" class="stage-grid" id="stage-grid" role="group">
+</div>
+<div aria-live="polite" class="stage-detail">
+<div class="serial" id="stage-serial">
+</div>
+<div>
+<h3 id="stage-title">
+</h3>
+<p id="stage-description">
+</p>
+</div>
+<div class="detail-key">
+<span class="smallcaps">
+           HANDOFF + CHECK
+          </span>
+<b id="stage-connection">
+</b>
+</div>
+</div>
+</div>
+<p class="experiment-limitation">
+        The sequence is an editorial explanation of the lecture case; it does not measure a delivery or describe every operator’s design.
+       </p>
+<button class="detail-button" data-detail="notes-slide-responses" type="button">
+        More detail
+       </button>
+</section>
+<section aria-labelledby="teaching-04-systems-title" class="teaching-example" id="teaching-04-systems">
+<h3 id="teaching-04-systems-title">
+        Teaching interpretation — Compare urban operating constraints
+       </h3>
+<p class="experiment-context">
+        Positioning, shared airspace, weather and receiving access create different constraints. The comparison connects the lecture’s technical support with the practical problems raised in the reports.
+       </p>
+<p class="experiment-inputs">
+        Compare the condition, the design question and the evidence a service evaluation would need.
+       </p>
+<div class="briefing-visual">
+<div aria-label="Choose an urban operating constraint" class="case-selector" id="case-selector" role="group">
+</div>
+<article aria-live="polite" class="case-study">
+<p class="slide-subline" id="case-kicker">
+</p>
+<h3 id="case-title">
+</h3>
+<p id="case-summary">
+</p>
+<dl class="case-facts" id="case-facts">
+</dl>
+<a id="case-reading">
+</a>
+</article>
+</div>
+<p class="experiment-limitation">
+        The comparisons organize questions; they do not establish an aircraft specification, permission or measured safety result.
+       </p>
+<button class="detail-button" data-detail="notes-slide-model" type="button">
+        More detail
+       </button>
+</section>
+<section aria-labelledby="slide-evidence-title" class="teaching-example" id="slide-evidence">
+<h3 id="slide-evidence-title">
+        Teaching example — Does faster sampling meaningfully shorten response time?
+       </h3>
+<p class="experiment-context">
+        A moving drone may receive a new sensor sample but still need time to process it, communicate and act. Two student reflections questioned how this delay translates into distance. This constructed example separates those parts of the response chain.
+       </p>
+<p class="experiment-inputs">
+        Change speed in m/s, sensor frequency in Hz and processing delay in ms. Compare the sampling-only and full-chain presets, then increase sampling frequency while the other delays remain fixed.
+       </p>
+<div class="latency-lab">
+<div aria-label="Latency example presets" class="lab-presets" role="group">
+<button aria-pressed="true" data-preset="full" type="button">
+          Include all delays
+         </button>
+<button aria-pressed="false" data-preset="sample" type="button">
+          Sampling only
+         </button>
+<button aria-pressed="false" data-preset="fast" type="button">
+          Increase sampling frequency
+         </button>
+</div>
+<div class="latency-controls">
+<label for="lab-speed">
+          Illustrative speed
+          <output for="lab-speed" id="speed-value">
+</output>
+<input id="lab-speed" max="20" min="1" step="1" type="range" value="10"/>
+</label>
+<label for="lab-frequency">
+          Sensor frequency
+          <output for="lab-frequency" id="frequency-value">
+</output>
+<input id="lab-frequency" max="50" min="5" step="5" type="range" value="10"/>
+</label>
+<label for="lab-processing">
+          Processing delay
+          <output for="lab-processing" id="processing-value">
+</output>
+<input id="lab-processing" max="500" min="0" step="50" type="range" value="200"/>
+</label>
+</div>
+<div aria-live="polite" class="latency-chain" id="latency-chain">
+</div>
+<div aria-live="polite" class="latency-results">
+<div>
+<span>
+           Total pre-response delay
+          </span>
+<strong id="lab-delay">
+</strong>
+</div>
+<div>
+<span>
+           Distance before response
+          </span>
+<strong id="lab-distance">
+</strong>
+</div>
+</div>
+<p id="lab-observation">
+</p>
+</div>
+<p class="experiment-limitation">
+        Illustrative constant-speed calculation; it excludes braking, changing delay and prediction, and does not certify safe separation.
+       </p>
+<button class="detail-button" data-detail="notes-slide-evidence" type="button">
+        More detail
+       </button>
+</section>
+</div>
+</section>
+<section aria-labelledby="resources-title" class="lecture-section resources-section" id="resources">
+<div class="shell section-inner">
+<h2 id="resources-title">
+       Resources
+      </h2>
+<p>
+       These sources give further context on the assigned preparation, delivery architectures and research methods.
+      </p>
+<ol class="reference-list">
+<li id="reference-04-1">
+<a href="https://www.ted.com/talks/keller_rinaudo_cliffton_how_we_re_using_drones_to_deliver_blood_and_save_lives" rel="noopener noreferrer" target="_blank">
+         Rinaudo Cliffton, K. (2017). How we’re using drones to deliver blood and save lives. TEDGlobal.
+        </a>
+<p class="reference-annotation">
+         Assigned preparation on medical access and delivery.
+        </p>
+</li>
+<li id="reference-04-2">
+<a href="https://www.youtube.com/watch?v=6Vs8cJLjIsw" rel="noopener noreferrer" target="_blank">
+         A look at the future of drone deliveries (n.d.). TEDx talk.
+        </a>
+<p class="reference-annotation">
+         Assigned preparation on the possibilities of drone delivery.
+        </p>
+</li>
+<li id="reference-04-3">
+<a href="https://www.meituan.com/news/NN231219070003592" rel="noopener noreferrer" target="_blank">
+         Meituan (2023, 19 December). 美团无人机首条高校航线落户清华大学深圳国际研究生院 鲜果榨汁后6分钟可送达.
+        </a>
+<p class="reference-annotation">
+         Historical company announcement of the Tsinghua SIGS campus route and designated receiving points; reported timings are company claims for that service.
+        </p>
+</li>
+<li id="reference-04-4">
+<a href="https://wing.com/news/how-do-you-get-package-from-drone-to" rel="noopener noreferrer" target="_blank">
+         Wing Team (2022, 17 October). How do you get a package from a drone to the ground? Wing.
+        </a>
+<p class="reference-annotation">
+         Company explanation of tether delivery, an alternative to the lecture’s station pickup.
+        </p>
+</li>
+<li id="reference-04-5">
+<a href="https://wing.com/news/do-delivery-drones-have-cameras" rel="noopener noreferrer" target="_blank">
+         Wing Team (2022, 16 November). Do delivery drones have cameras? Wing.
+        </a>
+<p class="reference-annotation">
+         Company explanation of its perception design; a companion reading.
+        </p>
+</li>
+<li id="reference-04-6">
+<a href="https://www.nasa.gov/directorates/armd/past-armd-projects/utm-project/" rel="noopener noreferrer" target="_blank">
+         NASA (2025, webpage update). UAS Traffic Management Project.
+        </a>
+<p class="reference-annotation">
+         Historical US research on low-altitude coordination; the project has concluded.
+        </p>
+</li>
+<li id="reference-04-7">
+<a href="https://www.nature.com/articles/s41467-017-02411-5" rel="noopener noreferrer" target="_blank">
+         Stolaroff, J. K., Samaras, C., O’Neill, E. R., Lubers, A., Mitchell, A. S., and Ceperley, D. (2018). Energy use and life cycle greenhouse gas emissions of drones for commercial package delivery. Nature Communications, 9, 409. DOI: 10.1038/s41467-017-02411-5.
+        </a>
+<p class="reference-annotation">
+         Independent companion research; results depend on aircraft, electricity, supporting warehouses and the ground comparison.
+        </p>
+</li>
+</ol>
+<p class="source-note">
+<strong>
+        Source note.
+       </strong>
+       The lecture and student reflections date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
+      </p>
+</div>
+</section>
+<section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
+<div class="shell section-inner">
+<h2 id="quiz-title">
+       Quiz
+      </h2>
+<p>
+       Twelve practice questions apply the lecture’s handoff, response-time and service-evaluation concepts; they do not affect course grades.
+      </p>
+<div class="quiz-main">
+<div class="quiz-head">
+<span class="quiz-status" id="quiz-status">
+</span>
+<span aria-hidden="true" class="quiz-track">
+<i id="quiz-progress">
+</i>
+</span>
+</div>
+<div class="quiz-topic" id="quiz-topic">
+</div>
+<div class="question" id="quiz-question">
+</div>
+<div class="choices" id="quiz-choices">
+</div>
+<div aria-live="polite" class="feedback" id="quiz-feedback">
+</div>
+<div class="quiz-controls">
+<button class="next-button" disabled="" id="quiz-next" type="button">
+         Next
+        </button>
+<button class="next-button" hidden="" id="quiz-restart" type="button">
+         Restart
+        </button>
+</div>
+</div>
+</div>
+</section>
+<dialog aria-labelledby="notes-slide-future-title" class="evidence-dialog" id="notes-slide-future">
+<div class="dialog-heading">
+<h2 id="notes-slide-future-title">
+<span id="notes-title-slide-future">
+        Benefits depend on the service and its users
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Original assignment wording (verbatim): Write a 2-page report about your think of delivery with drones. You can include the following contents but not limited to them: What are the benefits and shortcomings of drone delivery? What is the process of drone delivery? What are the technical challenges of drone delivery in urban scenarios? What are problems of current drone delivery systems? Do you have any suggestions on the current drone delivery system?
+      </p>
+<p>
+       The first suggested report aspect asked about benefits and shortcomings. Reports repeatedly contrasted bypassing road traffic with limited loads, energy reserves and weather-dependent availability. These are students’ explanations and expectations, not measurements of a common service trial.
+      </p>
+<p>
+       One response regarded healthcare and emergency access as more consequential than ordinary e-commerce novelty. Another proposed beginning with business-to-business samples or spare parts between controlled endpoints. In contrast, other reports emphasized the convenience of quick meals. The synthesis retains these different assessments of where speed has value.
+      </p>
+<p>
+       A report that discussed designated pickup pointed out the customer’s walk and reduced merchant choice. A separate response noted that demand can rise during poor weather even when drones cannot fly. These observations make accessibility and availability relevant to comparing services.
+      </p>
+<p>
+       Electric propulsion was often described as an environmental benefit. This is a claim to evaluate, not an established result of the reports. Electricity generation, batteries, supporting hubs and the matched ground alternative affect life-cycle comparisons. The 2018 Stolaroff study is independent research with its own aircraft and deployment assumptions.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-responses-title" class="evidence-dialog" id="notes-slide-responses">
+<div class="dialog-heading">
+<h2 id="notes-slide-responses-title">
+<span id="notes-title-slide-responses">
+        Handoffs, staffing and different receiving designs
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The second suggested aspect asked for the drone delivery process. The supplied deck depicts an app order, merchant preparation, a rider carrying the meal to the delivery station, loading onto the drone and customer collection. Its later order-taking diagram also checks whether the merchant and order are eligible for drone delivery.
+      </p>
+<p>
+       One reflection explains why a predictable station is easier to automate than a busy restaurant pickup area. Others list loading staff, remote pilots, emergency support and maintenance. The deck’s pilot-to-aircraft ratios describe supervision, not the total labour needed for a completed order.
+      </p>
+<p>
+       Order-to-collection time can include preparation, rider travel, station queues, flight and the customer’s walk. These durations are different from flight duration, and not every report describes them with the same boundary.
+      </p>
+<p>
+       Some responses blend station pickup with a tether mechanism. Wing’s 2022 company explanation describes lowering a package while its aircraft remains airborne. That is a useful alternative architecture, but it should not be attributed to every operator or treated as the receiving method in the supplied Meituan lecture example.
+      </p>
+<p>
+       The stage explorer is an editorial explanation of the service. Eligibility and recovery checks extend the lecture’s main diagram so readers can examine exceptions; they are not observed timings or additional assignment questions.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-model-title" class="evidence-dialog" id="notes-slide-model">
+<div class="dialog-heading">
+<h2 id="notes-slide-model-title">
+<span id="notes-title-slide-model">
+        Sensing, delay, coordination and security
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The third suggested aspect asked about urban technical challenges. The deck includes multimodal navigation, visual positioning, scene understanding, fault-tolerant control, parachutes and a cloud–edge management architecture. Reflections use these ideas to discuss degraded signals, changing obstacles and many aircraft sharing space.
+      </p>
+<p>
+       One response distinguishes internal failure from aerodynamic interactions and airflow around buildings. Additional backup equipment can address particular equipment failures; it does not by itself resolve every environmental disturbance.
+      </p>
+<p>
+       Two reflections give inconsistent explanations of 10 m/s flight with 10 Hz sensing. A periodic 10 Hz update has a 0.1 s interval, so the worst-case wait for the next sample corresponds to 1 m at that speed. A larger distance needs additional delays or other assumptions. The response-time exercise makes those assumptions explicit instead of adopting an ambiguous reported figure.
+      </p>
+<p>
+       The lecture’s TBOS diagram distinguishes route/time planning, conflict detection and resolution, monitoring and environmental information. An unexpected deviation still requires timely detection and a workable contingency response. NASA’s UTM project provides a historical US research comparison, not local operating permission or proof that a particular urban service is safe.
+      </p>
+<p>
+       The lecture’s information-security layers include personnel/account controls, hardware and navigation protection, encrypted communications, and area-based control with emergency priorities. These address different threats and should not be condensed into a claim that encryption alone ensures safety.
+      </p>
+<p>
+       A reflection proposes less intrusive sensing but cautions that obstacle detection must still work. Privacy review therefore needs the data purpose, access and retention as well as the performance of the perception method. Wing’s company explanation describes its own design; it is not independent evidence about every camera-equipped drone.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-world-title" class="evidence-dialog" id="notes-slide-world">
+<div class="dialog-heading">
+<h2 id="notes-slide-world-title">
+<span id="notes-title-slide-world">
+        Availability, costs and evidence for service claims
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The fourth suggested aspect concerned problems in current systems. Reports discussed substantial research and infrastructure investment, continuing human oversight, charging and battery logistics, and coordination across operators. These are reported concerns; the coursework does not establish a measured cost or adoption rate.
+      </p>
+<p>
+       A pilot-to-aircraft ratio covers one role. The supplied deck separately lists chief, remote and emergency pilots, ground-site management, maintenance, comprehensive support and training. Comparing labour costs requires a consistent boundary that includes the work still needed around the flight.
+      </p>
+<p>
+       Delivery totals and historical average-time claims in the deck describe their original settings. They do not establish a current incident rate or guarantee service for every order. Safety comparisons need exposure, incident counts, severity and operating conditions; cost comparisons need the same service and demand boundary.
+      </p>
+<p>
+       A useful pilot would record eligible and completed orders, order-to-collection times, queue and handoff durations, weather suspensions, fallback completion, incidents, complaints, staff hours and total costs. This is an editorial evaluation plan drawn from the questions raised, not data collected by the class.
+      </p>
+<p>
+       Reports contain varying payload, flight-range and permission claims. Those figures are not used as universal technical specifications or current legal rules. Aircraft, route, operating conditions and jurisdiction need to be specified before adopting them.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="student-suggestions-detail-title" class="evidence-dialog" id="student-suggestions-detail">
+<div class="dialog-heading">
+<h2 id="student-suggestions-detail-title">
+       Proposals, disagreements and workforce transition
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The fifth suggested aspect invited improvements. A response focused on faster perception and standardized merchant handoffs; another proposed shared multi-operator infrastructure. A third suggested portable pickup points to adapt coverage. These ideas differ in who must provide, maintain and govern the infrastructure.
+      </p>
+<p>
+       The proposed medical/business-first path prioritizes deliveries where delay has clear consequences and endpoints can be controlled. Reports enthusiastic about everyday convenience envisage a broader market. The synthesis does not turn those differing priorities into a class preference or predict which one will succeed.
+      </p>
+<p>
+       Several responses propose combining drones with riders, vans or ground robots, particularly for portions of the journey drones cannot conveniently serve. A hybrid arrangement still needs synchronized handoffs, enough fallback capacity and a realistic customer promise.
+      </p>
+<p>
+       One reflection expects a gradual transition towards technical and fleet-support jobs and calls for training. A separate companion essay raises displacement and unequal gains. Possible new roles do not establish that affected riders will receive accessible training, comparable pay or employment.
+      </p>
+<p>
+       Suggestions about solar assistance, future batteries, universal drone corridors or doorstep service are proposals. They are not capabilities verified by the supplied lecture or forecasts established by the submitted work.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-evidence-title" class="evidence-dialog" id="notes-slide-evidence">
+<div class="dialog-heading">
+<h2 id="notes-slide-evidence-title">
+<span id="notes-title-slide-evidence">
+        Response-time definitions and calculation
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       For periodic sensor updates at frequency f in Hz, the worst-case wait for the next sample is 1/f seconds, or 1000/f milliseconds. This is a sampling interval, not a measured processing delay or the average wait at a randomly arriving event.
+      </p>
+<p>
+       The model adds worst-case sampling wait, processing delay, communication delay and actuation delay. Total pre-response delay in seconds is the sum in milliseconds divided by 1000. Distance before response is constant speed in m/s multiplied by that delay in seconds.
+      </p>
+<p>
+       The full-chain preset uses 10 m/s, 10 Hz, 200 ms processing, 100 ms communication and 100 ms actuation. Total delay is 500 ms (0.50 s), giving 5.00 m before response. Sampling alone contributes 1.00 m. At 20 Hz with the other delays unchanged, the wait falls to 50 ms: total delay is 450 ms and distance is 4.50 m.
+      </p>
+<p>
+       The Sampling only preset sets processing, communication and actuation to zero, leaving 0.10 s and 1.00 m at 10 Hz and 10 m/s. Sliders can then vary speed, frequency and processing; the preset determines the communication and actuation values.
+      </p>
+<p>
+       The quantities are chosen teaching inputs, not measured performance of the lecture’s aircraft. Braking distance, acceleration, obstacle-motion prediction, tracking error, missed samples, queueing and delay variation are omitted. Neither a smaller calculated distance nor a high sample frequency alone establishes collision avoidance or a safe operating margin.
+      </p>
+<p class="model-equation">
+       Worst-case sampling wait = 1/f s.
+       <br/>
+       Total delay = sampling + processing + communication + actuation.
+       <br/>
+       Distance before response = speed × total delay.
+      </p>
+</div>
+</dialog>
+</main>
+<footer class="site-footer">
+<div class="shell footer-inner">
+<span>
+      Introduction to Smart Logistics · Fall 2025
+     </span>
+<a href="../">
+      2025 Sessions
+     </a>
+</div>
+</footer>
+</div>
+</body>
+</html>

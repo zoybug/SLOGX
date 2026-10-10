@@ -57,11 +57,11 @@
 
   // Historical company facts, separate from the class's visit observations.
   const facts = [
-    { date: '1993', title: 'It started in Shunde.', text: 'SF was founded in Shunde, Guangdong, in 1993. Its headquarters moved to Shenzhen in 2002.', source: 'SF Express · company history', url: 'https://www.sf-express.com/chn/en/about' },
-    { date: '2005', title: 'The scanner has its own history.', text: 'SF dates its independently developed infrared scanner and first-generation handheld terminal to 2005.', source: 'SF Express · technology milestones', url: 'https://www.sf-express.com/chn/en/about' },
-    { date: '2009', title: 'There is an airline behind the parcels.', text: 'SF Airlines was established in 2009. The cargo airline is a subsidiary of SF Express.', source: 'SF Airlines · company profile', url: 'https://www.sf-airlines.com/en/about/index.html' },
-    { date: '1 APRIL 2023', title: 'A hub connects the sorting floor to the world.', text: 'Ezhou Huahu Airport’s first international cargo route linked Ezhou with Liège, Belgium, on 1 April 2023.', source: 'SF Airlines · Ezhou–Liège announcement', url: 'https://www.sf-airlines.com/en/news/2137.html' },
-    { date: 'FEBRUARY 2023', title: 'Not every shipment comes in a box.', text: 'SF Airlines transported giant panda Xiangxiang from Tokyo to Chengdu in February 2023.', source: 'SF Airlines · 2023 operations review', url: 'https://www.sf-airlines.com/en/news/2145.html' },
+    { date: '1993', title: 'Foundation in Shunde', text: 'SF was founded in Shunde, Guangdong, in 1993. Its headquarters moved to Shenzhen in 2002.', source: 'SF Express · company history', url: 'https://www.sf-express.com/chn/en/about' },
+    { date: '2005', title: 'Scanner and handheld terminal', text: 'SF dates its independently developed infrared scanner and first-generation handheld terminal to 2005.', source: 'SF Express · technology milestones', url: 'https://www.sf-express.com/chn/en/about' },
+    { date: '2009', title: 'Establishment of SF Airlines', text: 'SF Airlines was established in 2009. The cargo airline is a subsidiary of SF Express.', source: 'SF Airlines · company profile', url: 'https://www.sf-airlines.com/en/about/index.html' },
+    { date: '1 APRIL 2023', title: 'Ezhou–Liège cargo route', text: 'Ezhou Huahu Airport’s first international cargo route linked Ezhou with Liège, Belgium, on 1 April 2023.', source: 'SF Airlines · Ezhou–Liège announcement', url: 'https://www.sf-airlines.com/en/news/2137.html' },
+    { date: 'FEBRUARY 2023', title: 'Xiangxiang’s Tokyo–Chengdu transport', text: 'SF Airlines transported giant panda Xiangxiang from Tokyo to Chengdu in February 2023.', source: 'SF Airlines · 2023 operations review', url: 'https://www.sf-airlines.com/en/news/2145.html' },
   ];
   let currentFact = 0;
   function showFact(index) {

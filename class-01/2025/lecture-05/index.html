@@ -1,5 +1,778 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#F7F6F2" name="theme-color"/><meta content="Fall 2025 Lecture 05: High-Precision Positioning Technology and Smart Logistics. Explore the lecture, student synthesis, resources and a practice quiz." name="description"/><title>2025 Lecture 05 | High-Precision Positioning Technology and Smart Logistics</title><link href="../../assets/site.css?v=20261010" rel="stylesheet"/><link href="../../assets/lecture-flow.css" rel="stylesheet"/><link href="../../assets/v2.css" rel="stylesheet"/><link href="../../assets/year-archive.css" rel="stylesheet"/><link href="../../assets/lecture-2025-05.css" rel="stylesheet"/><link href="../../assets/2025-theme.css?v=20261010" rel="stylesheet"/><script defer="" src="../../assets/lecture-2025-05.js?v=2025-colors-20261003"></script><script defer="" src="../../assets/zoybug-facts.js"></script><script defer="" src="../../assets/zoybug.js?v=2025-zoybug-20261004"></script><link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/><script defer="" src="../../assets/briefing-2025.js?v=2025-guest-20261004"></script><link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/><link rel="stylesheet" href="../../assets/editorial.css?v=20261010"><script src="../../assets/editorial.js?v=20261010" defer></script><link rel="preload" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" as="font" type="font/woff2" crossorigin></head><body class="lecture-page archive-lecture" data-course-year="2025" data-lecture="05"><a class="skip" href="#main">Skip to content</a><div class="course-workspace"><header class="masthead unified-header"><div class="shell briefing-header"><a class="brand" href="../"><span><strong>Smart Logistics</strong><small>COURSE ATLAS · FALL 2025</small></span></a><div class="top-section-links"><a data-section="intro" href="#intro">Overview</a><a data-section="students" href="#students">Student synthesis</a><a data-section="resources" href="#resources">Resources</a><a data-section="quiz" href="#quiz">Quiz</a></div><nav aria-label="Course year" class="year-nav"><a href="../../">2026</a><a aria-current="page" href="../">2025</a></nav></div><nav aria-label="2025 sessions" class="lecture-rail"><div class="shell"><span aria-hidden="true" class="rail-label">Sessions</span><div class="lecture-switcher"><a aria-label="Lecture 01: Digital supply chains" data-lecture="01" href="../lecture-01/" title="Lecture 01: Digital supply chains"><b>01</b><span>Digital supply chains</span></a><a aria-label="Lecture 02: Smart transportation" data-lecture="02" href="../lecture-02/" title="Lecture 02: Smart transportation"><b>02</b><span>Smart transportation</span></a><a aria-label="Lecture 03: Intelligent warehousing" data-lecture="03" href="../lecture-03/" title="Lecture 03: Intelligent warehousing"><b>03</b><span>Intelligent warehousing</span></a><a aria-label="Lecture 04: Urban drone logistics" data-lecture="04" href="../lecture-04/" title="Lecture 04: Urban drone logistics"><b>04</b><span>Urban drone logistics</span></a><a aria-current="page" aria-label="Lecture 05: High-precision positioning" data-lecture="05" href="./" title="Lecture 05: High-precision positioning"><b>05</b><span>High-precision positioning</span></a><a aria-label="Lecture 06: Autonomous driving" data-lecture="06" href="../lecture-06/" title="Lecture 06: Autonomous driving"><b>06</b><span>Autonomous driving</span></a><a aria-label="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth · Henry Ko" data-lecture="07" href="../lecture-07/" title="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth · Henry Ko"><b>07</b><span>Global trade and growth</span></a><a aria-label="Industry visit: SF Express Shenzhen · 21 November 2025" data-lecture="visit" href="../industry-visit/" title="Industry visit: SF Express Shenzhen · 21 November 2025">Visit</a></div><span aria-hidden="true" class="rail-current">High-precision positioning</span></div></nav></header><main class="lecture-main" id="main"><section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro"><div class="shell section-inner"><section class="lecture-hero lecture-hero-illustrated"><div class="hero-copy"><p class="eyebrow">Fall 2025 · Lecture 05</p><h1 id="lecture-title">High-precision positioning</h1><p class="hero-takeaway">Understand the estimate.</p><p class="hero-summary">Combine imperfect measurements and maps into a position estimate suited to the task.</p><div class="hero-meta"><span>PROFESSOR KAI ZHANG · TSINGHUA SIGS</span><span>20 OCTOBER 2025</span></div><a class="hero-start" href="#students">Explore student synthesis →</a></div><div class="hero-art"><img alt="Satellite signals, scattered measurements and a road map combine into a vehicle position estimate" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-05-transparent.webp" width="1536"/></div></section><section aria-label="Lecture outline" class="lecture-brief"><details class="outline-step"><summary><span>01 / OVERVIEW</span><h2>Start with the application</h2></summary><p>Navigation, fleet tracking, emergency response, bus arrivals and road pricing all need position data suited to their task.</p></details><details class="outline-step"><summary><span>02 / MULTISENSOR FUSION</span><h2>Combine complementary measurements</h2></summary><p>Satellite positioning can lose signals or receive reflections; inertial estimates can drift. Calibration and an error model help combine the two.</p></details><details class="outline-step"><summary><span>03 / MAP MATCHING</span><h2>Match observations to a road</h2></summary><p>Hidden Markov models (HMMs) and Viterbi inference compare possible road sequences. Fréchet methods compare curves. Noisy samples and imperfect maps complicate both approaches.</p></details></section><details class="lecture-details"><summary>Lecture details and sources</summary><p class="hero-deck">High-Precision Positioning Technology and Smart Logistics</p><p class="hero-summary">How does a vehicle estimate where it is when signals and maps are imperfect? In “High Accuracy Positioning for ITS,” Prof. Kai Zhang connects sensor measurements, state estimation and road matching for intelligent transportation systems (ITS).</p><p class="archive-note">Course instructor: Prof. Wai Kin (Victor) Chan. Students wrote a one-page reflection on what interested them most. This page draws on 30 identified reflections and a separate essay with unresolved authorship.</p><p class="archive-note"><a href="https://openfiesta.sigs.tsinghua.edu.cn/cn/pi/3/51" rel="noopener noreferrer" target="_blank">Prof. Kai Zhang’s official faculty profile ↗</a> · His teaching and research include sensor fusion, intelligent transportation and vehicle positioning.</p></details></div></section><section aria-label="Student synthesis" class="lecture-section student-section" id="students"><div class="shell synthesis-shell"><div class="synthesis-heading"><h2>Student synthesis</h2><span aria-live="polite" id="synthesis-position">Contents</span></div><div aria-label="Student synthesis" aria-roledescription="carousel" class="slide-track" id="slide-track" role="region" tabindex="0"><article aria-label="Contents" aria-roledescription="slide" class="student-slide contents-slide" data-slide="" id="slide-contents" role="group"><div class="slide-content contents-content"><div class="contents-heading"><div><h2>Choose a starting point</h2><p>Explore a main idea, then open the full notes when you need the detail.</p></div><a class="text-link" data-method-link="" href="#synthesis-method">About this synthesis ↓</a></div><div class="slide-toc"><button class="slide-toc-row" data-go-slide="1" type="button"><span class="number">01</span><strong>From signals to service</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="2" type="button"><span class="number">02</span><strong>Combining estimates</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="3" type="button"><span class="number">03</span><strong>Matching the road</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="4" type="button"><span class="number">04</span><strong>Student questions and connections</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="5" type="button"><span class="number">05</span><strong>Evaluate the evidence</strong><span aria-hidden="true" class="toc-arrow">→</span></button></div></div></article><article aria-label="1 of 5: From signals to service" aria-roledescription="slide" class="student-slide" data-panel-kind="stages" data-slide="" id="slide-responses" role="group"><div class="slide-content"><div class="slide-intro"><h2>From signals to service</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">A position becomes useful when its uncertainty fits the application.</p><ul><li>Satellite observations and inertial estimates have different weaknesses.</li><li>Map matching identifies a traveled road; route planning chooses a future route.</li></ul><div class="panel-foot"><p>The process explorer is a teaching addition, not a positioning benchmark.</p><button aria-controls="notes-slide-responses" aria-expanded="false" class="notes-button" data-show-notes="slide-responses" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Positioning process stages" class="stage-grid" id="stage-grid" role="group"></div><div aria-live="polite" class="stage-detail"><div class="serial" id="stage-serial"></div><div><h3 id="stage-title"></h3><p id="stage-description"></p></div><div class="detail-key"><span class="smallcaps">DECISION + CHECK</span><b id="stage-connection"></b></div></div></div></div></div></article><article aria-label="2 of 5: Combining estimates" aria-roledescription="slide" class="student-slide" data-panel-kind="fusion" data-slide="" id="slide-model" role="group"><div class="slide-content"><div class="slide-intro"><h2>Combining estimates</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">A filter weights the measurement against its prediction.</p><ul><li>The starting prediction is 8 m on a one-dimensional axis.</li><li>Change the assumed uncertainty to see the measurement’s influence.</li></ul><div class="panel-foot"><p>K = P/(P + R); assumes independent, unbiased errors and valid variances.</p><button aria-controls="notes-slide-model" aria-expanded="false" class="notes-button" data-show-notes="slide-model" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div class="position-lab"><div class="fusion-controls"><label for="kf-measurement">GNSS measurement <output for="kf-measurement" id="kf-measurement-value"></output><input id="kf-measurement" max="20" min="0" step="1" type="range" value="12"/></label><label for="kf-prior-sigma">Predicted standard deviation <output for="kf-prior-sigma" id="kf-prior-value"></output><input id="kf-prior-sigma" max="10" min="1" step="1" type="range" value="2"/></label><label for="kf-measure-sigma">Measurement standard deviation <output for="kf-measure-sigma" id="kf-noise-value"></output><input id="kf-measure-sigma" max="10" min="1" step="1" type="range" value="3"/></label></div><label class="lab-checkbox"><input id="kf-outage" type="checkbox"/> GNSS fix unavailable: skip this measurement update</label><div aria-live="polite" class="lab-results"><div><span>MEASUREMENT WEIGHT · K</span><strong id="kf-gain"></strong></div><div><span>UPDATED POSITION</span><strong id="kf-position"></strong></div><div><span>MODELED STANDARD DEVIATION</span><strong id="kf-sigma"></strong></div></div><div aria-hidden="true" class="fusion-weight"><i id="kf-weight"></i></div><p aria-live="polite" id="kf-explanation"></p><button class="lab-reset" id="kf-reset" type="button">Reset example</button></div></div></div></div></article><article aria-label="3 of 5: Matching the road" aria-roledescription="slide" class="student-slide" data-panel-kind="map" data-slide="" id="slide-evidence" role="group"><div class="slide-content"><div class="slide-intro"><h2>Matching the road</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">A sequence model can reject implausible road changes.</p><ul><li>Nearest-road matching considers each observation alone.</li><li>The HMM also uses the allowed transitions between road candidates.</li></ul><div class="panel-foot"><p>Three constructed samples; no true trajectory is supplied for validation.</p><button aria-controls="notes-slide-evidence" aria-expanded="false" class="notes-button" data-show-notes="slide-evidence" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div class="position-lab"><div aria-label="Choose a measurement sequence" class="map-presets" role="group"><button aria-pressed="true" data-map-preset="ambiguous" type="button">One ambiguous fix</button><button aria-pressed="false" data-map-preset="shift" type="button">Sustained shift</button></div><div class="map-controls"><label for="map-sigma">Assumed measurement standard deviation <output for="map-sigma" id="map-sigma-value"></output><input id="map-sigma" max="8" min="1" step="1" type="range" value="4"/></label><label class="lab-checkbox"><input id="map-connected" type="checkbox"/> Map includes a connector between each pair of samples</label></div><svg aria-label="Constructed parallel roads and noisy position fixes" id="map-plot" role="img" viewbox="0 0 360 210"></svg><div class="map-legend"><span><i aria-hidden="true" class="map-fix-key"></i>Noisy fixes</span><span>Road A: y = 0 m</span><span>Road B: y = 10 m</span></div><div aria-live="polite" class="map-results"><p><span>NEAREST ROAD</span><strong id="map-nearest"></strong></p><p><span>HMM / VITERBI SEQUENCE</span><strong id="map-sequence"></strong></p></div></div></div></div></div></article><article aria-label="4 of 5: Student questions and connections" aria-roledescription="slide" class="student-slide" data-panel-kind="static" data-slide="" id="slide-future" role="group"><div class="slide-content"><div class="slide-intro"><h2>Student questions and connections</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Intuition helps, but the error model and geometry still need checking.</p><ul><li>Students valued the leash analogy for Fréchet distance.</li><li>Others wanted more support with filter mathematics and calibration.</li></ul><div class="panel-foot"><p>A communications link and a positioning measurement serve different roles.</p><button aria-controls="notes-slide-future" aria-expanded="false" class="notes-button" data-show-notes="slide-future" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><dl class="evidence-rows"><div><dt>Geometry</dt><dd>Fréchet traversal preserves forward order while allowing different speeds.</dd></div><div><dt>Sensors</dt><dd>Bias, scale factors and alignment affect the model’s assumptions.</dd></div><div><dt>Architecture</dt><dd>Evaluate sensor cost, integration and infrastructure for the task.</dd></div></dl></div></div></div></article><article aria-label="5 of 5: Evaluate the evidence" aria-roledescription="slide" class="student-slide" data-panel-kind="static" data-slide="" id="slide-world" role="group"><div class="slide-content"><div class="slide-intro"><h2>Evaluate the evidence</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">A correct road link does not establish lane-level accuracy.</p><ul><li>Fleet tracking, road pricing and vehicle control need different tolerances.</li><li>An independent reference is needed to test physical position errors.</li></ul><div class="panel-foot"><p>Historical studies and announcements apply to their stated equipment and conditions.</p><button aria-controls="notes-slide-world" aria-expanded="false" class="notes-button" data-show-notes="slide-world" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><dl class="evidence-rows"><div><dt>Task</dt><dd>Specify accuracy, availability, continuity and response-time requirements.</dd></div><div><dt>Reference</dt><dd>Measure wrong-road choices, outages, recovery and computation delay.</dd></div><div><dt>Policy</dt><dd>Separate a charging system’s technical capability from adopted policy.</dd></div></dl></div></div></div></article></div><nav aria-label="Synthesis navigation" class="deck-controls"><button data-deck-prev="" type="button">← Previous</button><div class="panel-navigation"><button aria-label="Contents" data-go-slide="0" type="button"><span class="contents-label">Contents</span><svg aria-hidden="true" class="contents-icon" focusable="false" viewbox="0 0 20 20"><path d="M7 5h9M7 10h9M7 15h9M3 5h.1M3 10h.1M3 15h.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></button><div aria-label="Choose a synthesis view" class="panel-dots" role="group"><button aria-controls="slide-responses" aria-label="1. From signals to service" data-go-slide="1" type="button"><span aria-hidden="true">1</span></button><button aria-controls="slide-model" aria-label="2. Combining estimates" data-go-slide="2" type="button"><span aria-hidden="true">2</span></button><button aria-controls="slide-evidence" aria-label="3. Matching the road" data-go-slide="3" type="button"><span aria-hidden="true">3</span></button><button aria-controls="slide-future" aria-label="4. Student questions and connections" data-go-slide="4" type="button"><span aria-hidden="true">4</span></button><button aria-controls="slide-world" aria-label="5. Evaluate the evidence" data-go-slide="5" type="button"><span aria-hidden="true">5</span></button></div></div><button data-deck-next="" type="button">Next →</button></nav></div></section><div class="shell synthesis-notes" id="synthesis-notes"><section aria-labelledby="notes-title-slide-responses" class="panel-notes" data-panel-notes="slide-responses" hidden="" id="notes-slide-responses"><div class="notes-heading"><h3 id="notes-title-slide-responses">From signals to service · full notes</h3><button data-close-notes="slide-responses" type="button">Back to the synthesis ↑</button></div><p>Start with sensor measurements, then follow how models and maps turn them into information an application can use.</p><p class="deck">Select a stage to see what information it adds and which assumptions need checking.</p><div class="learning-grid"><section><h3>Satellite and inertial measurements have different limits</h3><p>A global navigation satellite system (GNSS) provides an external reference but can suffer blockage and reflected signals. An inertial navigation system (INS) uses acceleration and rotation to estimate motion from a starting state; errors accumulate. Combining them helps address their different weaknesses.</p></section><section><h3>Connect the coordinate with the road</h3><p>Road geometry, direction, intersections, tunnels and traffic rules help interpret latitude and longitude. An outdated or incorrect map can lead to a wrong match.</p></section></div><p class="editorial-note"><b>Identify the traveled road before planning the next route.</b> Map matching estimates which road was traveled. Route planning chooses a future journey. Positioning can support dispatch and arrival-time estimates, which still need their own models.</p></section><section aria-labelledby="notes-title-slide-model" class="panel-notes" data-panel-notes="slide-model" hidden="" id="notes-slide-model"><div class="notes-heading"><h3 id="notes-title-slide-model">Combining estimates · full notes</h3><button data-close-notes="slide-model" type="button">Back to the synthesis ↑</button></div><p>A filter weights new measurements against its prediction. Try one update to see how the assumed uncertainty changes that balance.</p><p class="deck">The predicted position is 8 m on a one-dimensional axis. Change the GNSS measurement and the standard deviation assigned to each estimate.</p><p class="editorial-note"><b>Model assumptions.</b> This scalar update assumes H = 1, independent unbiased Gaussian errors and correctly specified variances. P = predicted σ²; R = measurement σ²; K = P/(P + R); updated position = 8 + K(z − 8); updated variance = (1 − K)P. Missing data skips the update. Later INS predictions may add uncertainty through process noise. The example is one filter step, not a full navigation system or a detector of multipath bias.</p><div class="table-scroll"><table class="integration-table"><caption>Integration architectures · compare the information entering the estimator</caption><thead><tr><th scope="col">Scheme</th><th scope="col">Information fused</th><th scope="col">Question to evaluate</th></tr></thead><tbody><tr><th scope="row">Loosely coupled</th><td>GNSS position/velocity solution with inertial navigation information</td><td>Are valid GNSS solutions available often enough for the task?</td></tr><tr><th scope="row">Tightly coupled</th><td>GNSS observables, such as pseudoranges and Doppler, with inertial states in the navigation estimator</td><td>Does added integration complexity improve performance in the target conditions?</td></tr></tbody></table></div><p class="editorial-note">Loose and tight coupling describe the information entering the estimator. Feedback and feed-forward describe how corrections are applied. Both choices depend on the model and task; a Kalman filter still needs appropriate error assumptions and tuning.</p></section><section aria-labelledby="notes-title-slide-evidence" class="panel-notes" data-panel-notes="slide-evidence" hidden="" id="notes-slide-evidence"><div class="notes-heading"><h3 id="notes-title-slide-evidence">Matching the road · full notes</h3><button data-close-notes="slide-evidence" type="button">Back to the synthesis ↑</button></div><p>Once a position is estimated, several nearby roads may remain plausible. Compare matching each observation separately with matching their sequence.</p><p id="map-observation"></p><p id="map-reason"></p><p class="deck">Three noisy measurements lie near two roads. The nearest-road method considers each measurement alone; this simplified HMM also checks allowed transitions.</p><p class="editorial-note"><b>Constructed retrospective model.</b> The model uses three samples, two road candidates per sample, equal starting probabilities and Gaussian distance likelihoods. With connectors, the probability of staying is 0.9 and changing is 0.1; without connectors, they are 1 and 0. Viterbi selects the highest-scoring sequence using log likelihoods and backpointers. Speed, heading, route distance and elevation are omitted. The result follows these assumptions; no true trajectory is supplied for validation.</p><div class="learning-grid"><section><h3>Combine observations with feasible movement</h3><p>In an HMM, emission probabilities describe how well a measurement fits a road candidate; transition probabilities describe movement between candidates. The lecture also considers heading, distance and speed. Removing unlikely candidates saves computation but can remove the correct road if thresholds or map data are wrong.</p></section><section><h3>Consider when the result is needed</h3><p>Online and offline methods differ in when they produce a result. Incremental and global methods differ in how much of the trace they use. Later measurements can revise an earlier match in a full-trace analysis; a live system has to work with the evidence available at the time.</p></section></div></section><section aria-labelledby="notes-title-slide-future" class="panel-notes" data-panel-notes="slide-future" hidden="" id="notes-slide-future"><div class="notes-heading"><h3 id="notes-title-slide-future">Student questions and connections · full notes</h3><button data-close-notes="slide-future" type="button">Back to the synthesis ↑</button></div><p>The filter and road examples give concrete starting points. Students also found useful analogies, raised technical questions and connected the methods with their experience.</p><div class="insight-grid"><article class="insight"><span class="mark">01 / GEOMETRIC INTUITION</span><h3>Use the leash analogy to understand curve matching</h3><p>Several students found the dog-and-owner analogy helpful for Fréchet distance. It finds the smallest possible maximum separation as both move forward along their curves. They may move at different speeds, so the comparison preserves traversal order rather than the original timestamps.</p></article><article class="insight"><span class="mark">02 / FORMULAS + LIMITS</span><h3>Check the error model</h3><p>One reflection works through covariance and state-estimation equations. The separate essay examines bias, scale factors and axis alignment. Both point to calibration and uncertainty assumptions: a small modeled variance needs validation against the actual position.</p></article><article class="insight"><span class="mark">03 / LEARNING PACE</span><h3>Build from intuition to mathematics</h3><p>Some students connect the methods with mapping experience or future study. One found the lecture dense and wanted a clearer understanding of the Kalman filter. The simple examples provide a way to begin before returning to the mathematics.</p></article><article class="insight"><span class="mark">04 / DEPLOYMENT CHOICES</span><h3>Choose an architecture for the application</h3><p>Students ask about sensor cost, calibration, integration complexity and infrastructure. They also explore ultra-wideband (UWB), real-time kinematic GNSS (RTK) and other sensors as extensions. Their performance would need testing in the intended setting.</p></article></div><div class="learning-grid"><section><h3>Similar curves can remain ambiguous</h3><p>Similar road shapes may produce equally good geometric matches. The lecture uses free-space diagrams and threshold searches to examine curve similarity. Comparing methods still requires a defined dataset and task.</p><a href="https://www.kr.tuwien.ac.at/staff/eiter/et-archive/files/cdtr9464.pdf" rel="noopener noreferrer" target="_blank">Read Eiter and Mannila’s discrete variant ↗</a></section><section><h3>Separate communication from positioning</h3><p>One student draws on satellite-communications experience. A data link carries information; GNSS observations help estimate location. A service needs to test connectivity, navigation interference and positioning accuracy separately.</p></section></div></section><section aria-labelledby="notes-title-slide-world" class="panel-notes" data-panel-notes="slide-world" hidden="" id="notes-slide-world"><div class="notes-heading"><h3 id="notes-title-slide-world">Evaluate the evidence · full notes</h3><button data-close-notes="slide-world" type="button">Back to the synthesis ↑</button></div><p>The application determines how accurate, timely and available an estimate needs to be. Use those requirements to choose the evaluation.</p><div class="learning-grid"><section><p class="slide-subline">FLEETS + PASSENGERS</p><h3>Define the decision that needs a position</h3><p>Fleet tracking, dispatch, emergency response and bus arrivals need different tolerances and update times. Compare the effect of better positioning with matched operating data before claiming time or fuel savings.</p></section><section><p class="slide-subline">ROAD PRICING</p><h3>Distinguish capability from use</h3><p>The lecture considers distance-based road charging. The <a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2023/10/news-releases/erp-2-0-on-board-unit-installation-starting-in-november-with-fle.html" rel="noopener noreferrer" target="_blank">LTA’s October 2023 ERP 2.0 announcement</a> described GNSS capability while retaining the charging framework and stating no immediate plan for distance charging. Read that announcement as historical context, rather than evidence that all journeys were charged by distance.</p></section><section><p class="slide-subline">POSITION + MAP</p><h3>Specify what accuracy means</h3><p>Identifying the correct road link does not establish a lane-level position. Measure physical error, road-match correctness, availability, continuity and delay. Test tunnels, reflected signals, sparse samples and changed roads separately.</p></section><section><p class="slide-subline">UNCERTAINTY + VALIDATION</p><h3>Compare with an independent reference</h3><p>Use a suitable reference trajectory to measure errors, wrong-road choices, outage duration, recovery and computation delay. Check whether the stated uncertainty matches observed errors, including biased inputs.</p></section></div><p class="editorial-note"><b>Read historical examples with their assumptions.</b> The deck’s constellation timelines and positioning errors describe its source context. Claims about optimal filtering or parameter-free matching depend on the method’s assumptions. A study’s accuracy applies to its stated equipment, data and conditions.</p></section><details class="synthesis-method" id="synthesis-method"><summary>About this synthesis</summary><div class="method-body"><p>Lecture context, anonymous student perspectives and constructed teaching examples serve different roles. The notes below retain the source counts, inclusion decisions and limitations.</p><h3>About the source material</h3><p>The files contain 30 distinct identified reflections from 30 students, including one identified by name alone. Repeated page headers were merged; no duplicate submission was identified.</p><p>A separate essay has unresolved authorship and is excluded from that count; its sensor-error discussion informs the qualitative comparison. Assignment labels and ID discrepancies were checked and retained privately. Counts refer to supplied work, not verified enrollment.</p></div></details></div>
-<section aria-labelledby="resources-title" class="lecture-section resources-section" id="resources"><div class="shell section-inner"><section class="main-feature reading-feature"><div class="section-heading"><h2 id="resources-title">Resources</h2><p class="intro">Use these tutorials, research papers and official examples to revisit the models and their assumptions. External resources open in a new tab.</p></div><div class="resource-grid"><div class="resource-group"><div class="resource-group-head"><h3>Foundations</h3></div><a href="https://openfiesta.sigs.tsinghua.edu.cn/cn/pi/3/51" rel="noopener noreferrer" target="_blank"><b>Prof. Kai Zhang · official profile ↗</b><span>Faculty research and teaching in sensor fusion, transportation and positioning. Chinese language.</span></a><a href="https://sreal.ucf.edu/wp-content/uploads/2017/02/Welch2001.pdf" rel="noopener noreferrer" target="_blank"><b>Welch and Bishop · Kalman course pack ↗</b><span>Author-hosted SIGGRAPH 2001 tutorial, used as a companion to the syllabus’s older UNC link.</span></a><a href="https://gssc.esa.int/navipedia/index.php/Multipath" rel="noopener noreferrer" target="_blank"><b>ESA Navipedia · multipath ↗</b><span>How reflected GNSS signals affect measurements; mechanisms and mitigation context.</span></a></div><div class="resource-group"><div class="resource-group-head"><h3>Path inference</h3></div><a href="https://www.microsoft.com/en-us/research/publication/hidden-markov-map-matching-noise-sparseness/" rel="noopener noreferrer" target="_blank"><b>Newson and Krumm · HMM map matching ↗</b><span>2009 research on matching noisy, sparse position traces to a road network. Read the assumptions and experimental limits.</span></a><a href="https://www.kr.tuwien.ac.at/staff/eiter/et-archive/files/cdtr9464.pdf" rel="noopener noreferrer" target="_blank"><b>Eiter and Mannila · discrete Fréchet ↗</b><span>1994 technical report. Distinguishes a discrete curve-distance variant from continuous Fréchet distance.</span></a><a href="https://doi.org/10.3390/rs14235928" rel="noopener noreferrer" target="_blank"><b>GNSS RTK / UWB / DBA fusion study ↗</b><span>A 2022 positioning experiment mentioned in a reflection. Compare its equipment and conditions before applying the results.</span></a></div><div class="resource-group"><div class="resource-group-head"><h3>Application context</h3></div><a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2023/10/news-releases/erp-2-0-on-board-unit-installation-starting-in-november-with-fle.html" rel="noopener noreferrer" target="_blank"><b>Singapore ERP 2.0 · historical announcement ↗</b><span>LTA, 23 October 2023. GNSS capability and the charging framework are separate questions.</span></a><a href="https://www.itu.int/hub/2025/03/un-agencies-warn-of-satellite-navigation-jamming-and-spoofing/" rel="noopener noreferrer" target="_blank"><b>ITU · navigation jamming and spoofing ↗</b><span>March 2025 joint-agency warning about navigation interference, relevant to the distinction between positioning and connectivity.</span></a></div></div><p class="editorial-note">Existing source records date the checks to 3 October 2026. The authors’ UCF course pack replaces an unavailable UNC tutorial link. Research and announcement dates describe their original context; live pages may change. The lecture and reflections are from Fall 2025.</p></section></div></section><section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz"><div class="shell section-inner"><section class="main-feature quiz-feature"><div class="section-heading"><h2 id="quiz-title">Quiz</h2><p class="intro">Practice with 12 scenarios on sensors, uncertainty, road matching and application requirements. Each answer includes an explanation and a related resource.</p><details class="quiz-help"><summary>How the quiz works</summary><h3>Apply what you learned</h3><p>Choose an answer, read the explanation and use the related resource to review. This quiz is for practice and does not affect your course grade.</p><div class="quiz-rounds">SENSORS + UNCERTAINTY<br/>PATHS + ARCHITECTURE<br/>APPLICATIONS + EVIDENCE</div></details></div><div class="quiz-board"><div class="quiz-main"><div class="quiz-head"><span class="quiz-status" id="quiz-status"></span><span aria-hidden="true" class="quiz-track"><i id="quiz-progress"></i></span></div><div class="quiz-topic" id="quiz-topic"></div><div class="question" id="quiz-question"></div><div class="choices" id="quiz-choices"></div><div aria-live="polite" class="feedback" id="quiz-feedback"></div><div class="quiz-controls"><button class="next-button" disabled="" id="quiz-next" type="button">Next question →</button><button class="next-button" hidden="" id="quiz-restart" type="button">Restart quiz ↺</button></div></div></div></section></div></section>
-</main><footer class="site-footer"><div class="shell footer-inner"><strong>ISL / 2025 / 05</strong><span>Student perspectives from 30 identified Lecture 05 reflections, plus a separate companion essay.</span><a href="../">2025 lectures</a></div></footer></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#F7F6F2" name="theme-color"/>
+<meta content="Fall 2025 Lecture 05: High Accuracy Positioning for ITS. Lecture overview, anonymized student synthesis, teaching examples and practice questions." name="description"/>
+<title>
+   2025 Lecture 05 | High Accuracy Positioning for ITS
+  </title>
+<link href="../../assets/site.css?v=20261010" rel="stylesheet"/>
+<link href="../../assets/lecture-flow.css" rel="stylesheet"/>
+<link href="../../assets/v2.css" rel="stylesheet"/>
+<link href="../../assets/year-archive.css" rel="stylesheet"/>
+<link href="../../assets/lecture-2025-05.css" rel="stylesheet"/>
+<link href="../../assets/2025-theme.css?v=20261010" rel="stylesheet"/>
+<script defer="" src="../../assets/lecture-2025-05.js?v=20261011-content">
+</script>
+<script defer="" src="../../assets/zoybug-facts.js">
+</script>
+<script defer="" src="../../assets/zoybug.js?v=2025-zoybug-20261004">
+</script>
+<link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
+<link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
+<link href="../../assets/editorial.css?v=20261010" rel="stylesheet"/>
+<script defer="" src="../../assets/editorial.js?v=20261010">
+</script>
+<link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="True" src="../../assets/content-2025.js?v=20261011"></script></head>
+<body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="05">
+<a class="skip" href="#main">
+   Skip to content
+  </a>
+<div class="course-workspace">
+<header class="masthead unified-header">
+<div class="shell briefing-header">
+<a class="brand" href="../">
+<span>
+<strong>Introduction to Smart Logistics</strong>
+<small>Fall 2025</small>
+</span>
+</a>
+<div class="top-section-links">
+<a data-section="intro" href="#intro">
+       Overview
+      </a>
+<a data-section="students" href="#students">Student synthesis</a>
+<a data-section="resources" href="#resources">
+       Resources
+      </a>
+<a data-section="quiz" href="#quiz">
+       Quiz
+      </a>
+</div>
+<nav aria-label="Course year" class="year-nav">
+<a href="../../">
+       2026
+      </a>
+<a aria-current="page" href="../">
+       2025
+      </a>
+</nav>
+</div>
+<nav aria-label="2025 sessions" class="lecture-rail">
+<div class="shell">
+<span aria-hidden="true" class="rail-label">
+       Sessions
+      </span>
+<div class="lecture-switcher">
+<a aria-label="Lecture 01: Digital Transformation of Modern Supply Chains" data-lecture="01" href="../lecture-01/" title="Lecture 01: Digital Transformation of Modern Supply Chains">
+<b>
+         01
+        </b>
+<span>
+         Digital supply chains
+        </span>
+</a>
+<a aria-label="Lecture 02: Smart Transportation and Distribution" data-lecture="02" href="../lecture-02/" title="Lecture 02: Smart Transportation and Distribution">
+<b>
+         02
+        </b>
+<span>
+         Smart transportation
+        </span>
+</a>
+<a aria-label="Lecture 03: Intelligent warehousing system" data-lecture="03" href="../lecture-03/" title="Lecture 03: Intelligent warehousing system">
+<b>
+         03
+        </b>
+<span>
+         Intelligent warehousing
+        </span>
+</a>
+<a aria-label="Lecture 04: Introduction to Instant Delivery with Drones" data-lecture="04" href="../lecture-04/" title="Lecture 04: Introduction to Instant Delivery with Drones">
+<b>
+         04
+        </b>
+<span>
+         Urban drone logistics
+        </span>
+</a>
+<a aria-current="page" aria-label="Lecture 05: High Accuracy Positioning for ITS" data-lecture="05" href="./" title="Lecture 05: High Accuracy Positioning for ITS">
+<b>
+         05
+        </b>
+<span>
+         High-precision positioning
+        </span>
+</a>
+<a aria-label="Lecture 06: Smart city transportation and autonomous driving" data-lecture="06" href="../lecture-06/" title="Lecture 06: Smart city transportation and autonomous driving">
+<b>
+         06
+        </b>
+<span>
+         Autonomous driving
+        </span>
+</a>
+<a aria-label="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth" data-lecture="07" href="../lecture-07/" title="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth">
+<b>
+         07
+        </b>
+<span>
+         Global trade and growth
+        </span>
+</a>
+<a aria-label="Industry visit: SF Express Shenzhen · 21 November 2025" data-lecture="visit" href="../industry-visit/" title="Industry visit: SF Express Shenzhen · 21 November 2025">
+        Visit
+       </a>
+</div>
+<span aria-hidden="true" class="rail-current">
+       High-precision positioning
+      </span>
+</div>
+</nav>
+</header>
+<main class="lecture-main" id="main">
+<section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
+<div class="shell section-inner lecture-header">
+
+<h1 id="lecture-title">
+        High Accuracy Positioning for ITS
+       </h1>
+<p class="lecture-meta">Lecture 05 · 20 October 2025 · Lecturer: Prof. Kai Zhang</p>
+
+<div class="lecture-overview">
+<h2>
+        Lecture overview
+       </h2>
+<p>
+        Navigation, fleet tracking, emergency response, bus-arrival information and road pricing depend on knowing where a vehicle is. Kai Zhang’s lecture explains why that position remains uncertain: satellite signals can be blocked or reflected, while inertial estimates accumulate error. It follows three connected tasks: combining global navigation satellite system (GNSS), inertial and vehicle measurements; updating a position estimate and its uncertainty; and associating noisy positions with roads. A hidden Markov model (HMM) and Viterbi inference compare candidate road sequences, while Fréchet methods compare curve geometry. The service determines how accurate, available and timely the information must be.
+       </p>
+</div>
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Kai Zhang is an associate professor at Tsinghua Shenzhen International Graduate School. His official profile lists teaching in multisensor fusion and intelligent transportation, and research in information fusion, statistical signal processing and high-accuracy position and attitude estimation.
+       </p>
+<p>
+<a href="https://openfiesta.sigs.tsinghua.edu.cn/cn/pi/3/51" rel="noopener noreferrer" target="_blank">
+         Official faculty profile
+        </a>
+</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="student-synthesis-title" class="lecture-section student-section" id="students">
+<div class="shell section-inner">
+<h2 id="student-synthesis-title">
+       Student synthesis
+      </h2>
+<p class="synthesis-introduction">
+       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
+      </p>
+<section aria-labelledby="assignment-05-title" class="question-synthesis">
+<h3 id="assignment-05-title">
+        What interested students most about the positioning lecture?
+       </h3>
+<p>
+        The assignment asked for a one-page report on the part of the lecture that interested each student most. It was an open reflection, with no required list of separate questions.
+       </p>
+<button class="detail-button" data-detail="assignment-05-detail" type="button">
+        More detail
+       </button>
+<article aria-labelledby="finding-05-1-title" class="synthesis-theme" id="finding-05-1">
+<h4 id="finding-05-1-title">
+         Why satellite and inertial measurements are combined
+        </h4>
+<p>
+         Students were drawn to the complementary weaknesses of satellite positioning and an inertial navigation system (INS): reflected or missing satellite signals, and inertial drift between external updates. Some began with the assumption that GPS alone was sufficient; others focused on how a filter carries uncertainty through prediction and correction.
+        </p>
+<button class="detail-button" data-detail="finding-05-1-detail" type="button">
+         More detail
+        </button>
+</article>
+<article aria-labelledby="finding-05-2-title" class="synthesis-theme" id="finding-05-2">
+<h4 id="finding-05-2-title">
+         How a sequence of fixes identifies the traveled road
+        </h4>
+<p>
+         Map matching attracted both probabilistic and geometric explanations. Students discussed hidden road candidates, observation likelihoods and plausible transitions in an HMM. Others found the dog-and-owner analogy for Fréchet distance easier to visualize, while recognizing that similar road shapes can remain ambiguous.
+        </p>
+<button class="detail-button" data-detail="finding-05-2-detail" type="button">
+         More detail
+        </button>
+</article>
+<article aria-labelledby="finding-05-3-title" class="synthesis-theme" id="finding-05-3">
+<span id="slide-future">
+</span>
+<h4 id="finding-05-3-title">
+         Different levels of mathematical confidence
+        </h4>
+<p>
+         Some reports pursued state-estimation equations, sensor errors and free-space diagrams. Others valued the analogies but found the lecture dense and wanted a clearer understanding of the Kalman filter. Interest in a method therefore did not always mean confidence in applying it.
+        </p>
+<button class="detail-button" data-detail="notes-slide-future" type="button">
+         More detail
+        </button>
+</article>
+<article aria-labelledby="finding-05-4-title" class="synthesis-theme" id="finding-05-4">
+<h4 id="finding-05-4-title">
+         Choosing a system for the service and its budget
+        </h4>
+<p>
+         Students connected positioning with fleet management, road pricing and everyday navigation. They also raised sensor cost, calibration, integration complexity and map quality, and explored RTK, UWB or additional sensors as possible extensions. These were interests and proposals, rather than demonstrated improvements in cost or safety.
+        </p>
+<button class="detail-button" data-detail="finding-05-4-detail" type="button">
+         More detail
+        </button>
+</article>
+</section>
+<p class="teaching-interpretation">
+       The reflections suggest that the useful lesson is not a single accuracy claim: readers need to understand how uncertain measurements, a road model and a service requirement fit together. The teaching examples below isolate those relationships.
+      </p>
+</div>
+</section>
+<section aria-labelledby="teaching-examples-title" class="lecture-section teaching-examples" id="teaching-examples">
+<div class="shell section-inner">
+<h2 id="teaching-examples-title">
+       Teaching examples
+      </h2>
+<article aria-labelledby="slide-responses-title" class="teaching-example" id="slide-responses">
+<h3 id="slide-responses-title">
+        How measurements become usable position information
+       </h3>
+<p class="experiment-introduction">
+        This constructed process explorer follows the lecture’s measurement, estimation and map-matching concepts. Each stage adds information or makes an assumption before an application uses the estimate; it is a teaching interpretation, not a measured positioning pipeline.
+       </p>
+<p class="experiment-inputs">
+        The six stages identify measurement inputs, error models, prediction, measurement updates, road matching and the final service decision.
+       </p>
+<p class="model-limitation">
+        The sequence is explanatory; it does not run a complete estimator or establish navigation performance.
+       </p>
+<div class="briefing-visual">
+<div aria-label="Positioning process stages" class="stage-grid" id="stage-grid" role="group">
+</div>
+<div aria-live="polite" class="stage-detail">
+<div class="serial" id="stage-serial">
+</div>
+<div>
+<h3 id="stage-title">
+</h3>
+<p id="stage-description">
+</p>
+</div>
+<div class="detail-key">
+<span class="smallcaps">
+           DECISION + CHECK
+          </span>
+<b id="stage-connection">
+</b>
+</div>
+</div>
+</div>
+<button class="detail-button" data-detail="notes-slide-responses" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-model-title" class="teaching-example" id="slide-model">
+<h3 id="slide-model-title">
+        How much should a new GNSS fix change a prediction?
+       </h3>
+<p class="experiment-introduction">
+        A motion model predicts the vehicle’s position before a new satellite fix arrives. Both estimates are uncertain, so this constructed one-dimensional example weights the correction using their assumed error variances. It illustrates the Kalman measurement update discussed in the lecture; it is not a student measurement or a complete navigation filter.
+       </p>
+<p class="experiment-inputs">
+        Change the GNSS position in metres and the predicted and measurement standard deviations in metres. The prediction stays at 8 m; the result shows its updated position, modeled standard deviation and measurement weight K. The outage control skips this update.
+       </p>
+<p class="model-limitation">
+        One scalar update; biased errors, time propagation and sensor calibration are not simulated.
+       </p>
+<div class="position-lab">
+<div class="fusion-controls">
+<label for="kf-measurement">
+          GNSS measurement
+          <output for="kf-measurement" id="kf-measurement-value">
+</output>
+<input id="kf-measurement" max="20" min="0" step="1" type="range" value="12"/>
+</label>
+<label for="kf-prior-sigma">
+          Predicted standard deviation
+          <output for="kf-prior-sigma" id="kf-prior-value">
+</output>
+<input id="kf-prior-sigma" max="10" min="1" step="1" type="range" value="2"/>
+</label>
+<label for="kf-measure-sigma">
+          Measurement standard deviation
+          <output for="kf-measure-sigma" id="kf-noise-value">
+</output>
+<input id="kf-measure-sigma" max="10" min="1" step="1" type="range" value="3"/>
+</label>
+</div>
+<label class="lab-checkbox">
+<input id="kf-outage" type="checkbox"/>
+         GNSS fix unavailable: skip this measurement update
+        </label>
+<div aria-live="polite" class="lab-results">
+<div>
+<span>
+           MEASUREMENT WEIGHT · K
+          </span>
+<strong id="kf-gain">
+</strong>
+</div>
+<div>
+<span>
+           UPDATED POSITION
+          </span>
+<strong id="kf-position">
+</strong>
+</div>
+<div>
+<span>
+           MODELED STANDARD DEVIATION
+          </span>
+<strong id="kf-sigma">
+</strong>
+</div>
+</div>
+<div aria-hidden="true" class="fusion-weight">
+<i id="kf-weight">
+</i>
+</div>
+<p aria-live="polite" id="kf-explanation">
+</p>
+<button class="lab-reset" id="kf-reset" type="button">
+         Reset example
+        </button>
+</div>
+<button class="detail-button" data-detail="notes-slide-model" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-evidence-title" class="teaching-example" id="slide-evidence">
+<h3 id="slide-evidence-title">
+        Can three noisy fixes support a plausible road sequence?
+       </h3>
+<p class="experiment-introduction">
+        A position fix near two parallel roads does not identify which road was traveled. This constructed example compares choosing the nearest road for each fix with an HMM that scores the whole sequence and its allowed road changes. It makes the lecture’s emissions-and-transitions idea visible.
+       </p>
+<p class="experiment-inputs">
+        Compare the two three-fix sequences, vary the assumed measurement standard deviation in metres, and add or remove a mapped connector between each pair of samples. Road A is at y = 0 m and Road B at y = 10 m; samples are at x = 0, 100 and 200 m. Rings mark the candidates selected by Viterbi.
+       </p>
+<p class="model-limitation">
+        The selected sequence is best under this small model; no ground-truth route is supplied to test accuracy.
+       </p>
+<div class="position-lab">
+<div aria-label="Choose a measurement sequence" class="map-presets" role="group">
+<button aria-pressed="true" data-map-preset="ambiguous" type="button">
+          One ambiguous fix
+         </button>
+<button aria-pressed="false" data-map-preset="shift" type="button">
+          Sustained shift
+         </button>
+</div>
+<div class="map-controls">
+<label for="map-sigma">
+          Assumed measurement standard deviation
+          <output for="map-sigma" id="map-sigma-value">
+</output>
+<input id="map-sigma" max="8" min="1" step="1" type="range" value="4"/>
+</label>
+<label class="lab-checkbox">
+<input id="map-connected" type="checkbox"/>
+          Map includes a connector between each pair of samples
+         </label>
+</div>
+<svg aria-label="Constructed parallel roads and noisy position fixes" id="map-plot" role="img" viewbox="0 0 360 210">
+</svg>
+<div class="map-legend">
+<span>
+<i aria-hidden="true" class="map-fix-key">
+</i>
+          Noisy fixes
+         </span>
+<span>
+          Road A: y = 0 m
+         </span>
+<span>
+          Road B: y = 10 m
+         </span>
+</div>
+<div aria-live="polite" class="map-results">
+<p>
+<span>
+           NEAREST ROAD
+          </span>
+<strong id="map-nearest">
+</strong>
+</p>
+<p>
+<span>
+           HMM / VITERBI SEQUENCE
+          </span>
+<strong id="map-sequence">
+</strong>
+</p>
+</div>
+<p id="map-observation">
+</p>
+<p id="map-reason">
+</p>
+</div>
+<button class="detail-button" data-detail="notes-slide-evidence" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-world-title" class="teaching-example" id="slide-world">
+<h3 id="slide-world-title">
+        Is the estimate accurate and available enough for the task?
+       </h3>
+<p class="experiment-introduction">
+        Road-link accuracy, physical position error and service availability answer different questions. This teaching interpretation connects the lecture applications with the students’ concerns about reliable data and deployment.
+       </p>
+<button class="detail-button" data-detail="notes-slide-world" type="button">
+        More detail
+       </button>
+</article>
+</div>
+</section>
+<section aria-labelledby="resources-title" class="lecture-section resources-section" id="resources">
+<div class="shell section-inner">
+<h2 id="resources-title">
+       Resources
+      </h2>
+<p>
+       These sources provide further reading on the lecture methods and applications.
+      </p>
+<ol class="reference-list">
+<li>
+<a href="https://sreal.ucf.edu/wp-content/uploads/2017/02/Welch2001.pdf" rel="noopener noreferrer" target="_blank">
+         Welch, G., and Bishop, G. (2001). An Introduction to the Kalman Filter. SIGGRAPH Course 8.
+        </a>
+<p class="reference-annotation">
+         Author-hosted companion to the syllabus’s older UNC tutorial link.
+        </p>
+</li>
+<li>
+<a href="https://gssc.esa.int/navipedia/index.php/Multipath" rel="noopener noreferrer" target="_blank">
+         ESA Navipedia (n.d.). Multipath.
+        </a>
+<p class="reference-annotation">
+         Reference on reflected GNSS signals and their effects.
+        </p>
+</li>
+<li>
+<a href="https://www.microsoft.com/en-us/research/publication/hidden-markov-map-matching-noise-sparseness/" rel="noopener noreferrer" target="_blank">
+         Newson, P., and Krumm, J. (2009). Hidden Markov Map Matching Through Noise and Sparseness. ACM SIGSPATIAL GIS.
+        </a>
+<p class="reference-annotation">
+         Research cited in the lecture; includes data and a reference route for evaluation.
+        </p>
+</li>
+<li>
+<a href="https://www.kr.tuwien.ac.at/staff/eiter/et-archive/files/cdtr9464.pdf" rel="noopener noreferrer" target="_blank">
+         Eiter, T., and Mannila, H. (1994). Computing Discrete Fréchet Distance. Technical Report CD-TR 94/64, TU Vienna.
+        </a>
+<p class="reference-annotation">
+         Further reading on the discrete variant, distinct from the lecture’s continuous curve definition.
+        </p>
+</li>
+<li>
+<a href="https://doi.org/10.3390/rs14235928" rel="noopener noreferrer" target="_blank">
+         Wang, S., et al. (2022). GNSS RTK/UWB/DBA Fusion Positioning Method and Its Performance Evaluation. Remote Sensing, 14(23), 5928.
+        </a>
+<p class="reference-annotation">
+         An external study mentioned in a reflection; its equipment and test conditions matter.
+        </p>
+</li>
+<li>
+<a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2023/10/news-releases/erp-2-0-on-board-unit-installation-starting-in-november-with-fle.html" rel="noopener noreferrer" target="_blank">
+         Land Transport Authority (2023, 23 October). ERP 2.0 On-Board Unit Installation Starting in November with Fleet Vehicles.
+        </a>
+<p class="reference-annotation">
+         Historical announcement distinguishing GNSS capability from charging policy.
+        </p>
+</li>
+<li>
+<a href="https://www.itu.int/hub/2025/03/un-agencies-warn-of-satellite-navigation-jamming-and-spoofing/" rel="noopener noreferrer" target="_blank">
+         ITU (2025, 26 March). UN agencies warn of satellite navigation jamming and spoofing.
+        </a>
+<p class="reference-annotation">
+         Navigation-interference context; distinct from satellite communications performance.
+        </p>
+</li>
+</ol>
+<p class="source-note">
+<strong>
+        Source note.
+       </strong>
+       The lecture and student reflections date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
+      </p>
+</div>
+</section>
+<section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
+<div class="shell section-inner">
+<h2 id="quiz-title">
+       Quiz
+      </h2>
+<p>
+       Twelve practice questions on sensor errors, uncertainty, road inference and application requirements; they do not affect the course grade.
+      </p>
+<div class="quiz-board">
+<div class="quiz-main">
+<div class="quiz-head">
+<span class="quiz-status" id="quiz-status">
+</span>
+<span aria-hidden="true" class="quiz-track">
+<i id="quiz-progress">
+</i>
+</span>
+</div>
+<div class="quiz-topic" id="quiz-topic">
+</div>
+<div class="question" id="quiz-question">
+</div>
+<div class="choices" id="quiz-choices">
+</div>
+<div aria-live="polite" class="feedback" id="quiz-feedback">
+</div>
+<div class="quiz-controls">
+<button class="next-button" disabled="" id="quiz-next" type="button">
+          Next
+         </button>
+<button class="next-button" hidden="" id="quiz-restart" type="button">
+          Restart
+         </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<dialog aria-labelledby="assignment-05-detail-title" class="evidence-dialog" id="assignment-05-detail">
+<div class="dialog-heading">
+<h2 id="assignment-05-detail-title">
+       Original lecture assignment
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Write a 1-page report on what interested you the most in the lecture.
+      </p>
+<p>
+       The theme headings organize the submitted work; they are not additional assignment questions.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="finding-05-1-detail-title" class="evidence-dialog" id="finding-05-1-detail">
+<div class="dialog-heading">
+<h2 id="finding-05-1-detail-title">
+       Why satellite and inertial measurements are combined
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       One reflection describes revising an earlier belief that GPS was already accurate enough for city navigation. Others use the cooperation between sensors to make the mathematics intuitive, or work through covariance equations. These are different ways of understanding the same lecture concept. A filter does not automatically learn every bias or guarantee accuracy during an outage: calibration, the motion model and the assumed error statistics still matter.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="finding-05-2-detail-title" class="evidence-dialog" id="finding-05-2-detail">
+<div class="dialog-heading">
+<h2 id="finding-05-2-detail-title">
+       How a sequence of fixes identifies the traveled road
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The reflections distinguish knowing a coordinate from identifying the road being traveled. One connects HMM inference with previous mapping work; another follows up the Fréchet example with independent study of dynamic programming. The standard leash analogy preserves forward traversal order while allowing different speeds. It does not require identical timestamps or reduce to a shortest-path routing problem. The lecture’s online/offline distinction concerns when a result is produced; incremental/global concerns how much of a trace is considered.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="finding-05-4-detail-title" class="evidence-dialog" id="finding-05-4-detail">
+<div class="dialog-heading">
+<h2 id="finding-05-4-detail-title">
+       Choosing a system for the service and its budget
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Reports discussing road pricing and fleet services emphasize why a wrong location can affect a decision. Others ask whether a more expensive sensor or tighter integration is justified for the intended application. Loose and tight GNSS/INS coupling describe whether GNSS solutions or lower-level observables enter the estimator; feedback/feed-forward is a separate correction-design choice. A satellite communications link carries information, whereas GNSS observations contribute to estimating location. The two should not be treated as interchangeable evidence of positioning reliability.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-future-title" class="evidence-dialog" id="notes-slide-future">
+<div class="dialog-heading">
+<h2 id="notes-slide-future-title">
+<span id="notes-title-slide-future">
+        Mathematical understanding and curve matching
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       A mathematically detailed reflection works through prediction and covariance updates; a different student explicitly says the Kalman filter was not yet understood in class and plans to return to it later. Another asks how unresolved map-matching challenges can be handled in practice. These differences support introducing an intuitive example before returning to the full equations, rather than presenting the class as uniformly convinced or technically fluent.
+      </p>
+<p>
+       For continuous Fréchet distance, both traversals move forward while their speeds may differ. A free-space diagram marks curve-point pairs within a chosen distance threshold; a forward path through that space tests whether the threshold permits a complete matching. Similar road geometries can still produce ambiguous matches. The discrete variant in Resources compares finite vertex sequences and should be distinguished from the continuous definition.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-responses-title" class="evidence-dialog" id="notes-slide-responses">
+<div class="dialog-heading">
+<h2 id="notes-slide-responses-title">
+<span id="notes-title-slide-responses">
+        How measurements become usable position information
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       GNSS contributes an external position reference. Accelerometers and gyroscopes measure motion; odometer and vehicle signals can add constraints. A motion model propagates state and uncertainty, and available external observations can correct that prediction. Road geometry and connectivity then help identify the traveled link. Map matching estimates a past or current road; route planning chooses a future journey. Timestamps, units, reference frames, calibration and map quality must agree throughout.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-model-title" class="evidence-dialog" id="notes-slide-model">
+<div class="dialog-heading">
+<h2 id="notes-slide-model-title">
+<span id="notes-title-slide-model">
+        How much should a new GNSS fix change a prediction?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The measurement observes the same one-dimensional position directly, so H = 1. P is the predicted position-error variance and R is the measurement-error variance, both in m²; they are the squares of the two standard-deviation controls. With independent, unbiased errors and valid variances, K = P/(P + R), x⁺ = 8 + K(z − 8), and P⁺ = (1 − K)P. At the defaults, P = 4 m², R = 9 m², K = 4/13 ≈ 0.308, x⁺ ≈ 9.23 m, and σ⁺ ≈ 1.66 m.
+      </p>
+<p>
+       Larger R reduces the influence of the fix; larger P increases it. If the fix is unavailable, x and P are unchanged by this measurement step. Subsequent predictions may increase uncertainty through process noise. The smaller reported variance is a result under these assumptions, not an independent measurement of actual accuracy or a detector of multipath bias.
+      </p>
+<div class="table-scroll">
+<table class="integration-table">
+<caption>
+         Integration architectures · compare the information entering the estimator
+        </caption>
+<thead>
+<tr>
+<th scope="col">
+           Scheme
+          </th>
+<th scope="col">
+           Information fused
+          </th>
+<th scope="col">
+           Question to evaluate
+          </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
+           Loosely coupled
+          </th>
+<td>
+           GNSS position/velocity solution with inertial navigation information
+          </td>
+<td>
+           Are valid GNSS solutions available often enough for the task?
+          </td>
+</tr>
+<tr>
+<th scope="row">
+           Tightly coupled
+          </th>
+<td>
+           GNSS observables, such as pseudoranges and Doppler, with inertial states in the navigation estimator
+          </td>
+<td>
+           Does added integration complexity improve performance in the target conditions?
+          </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+       Loose and tight coupling describe the information entering the estimator. Feedback and feed-forward describe how corrections are applied; these are separate choices. Each still depends on calibration, appropriate uncertainty assumptions and task-specific evaluation.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-evidence-title" class="evidence-dialog" id="notes-slide-evidence">
+<div class="dialog-heading">
+<h2 id="notes-slide-evidence-title">
+<span id="notes-title-slide-evidence">
+        Can three noisy fixes support a plausible road sequence?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The presets use y observations [1, 6, 1] m and [1, 9, 9] m. Each sample has two road candidates with equal initial probabilities 0.5. A candidate’s log observation likelihood is −0.5((y − road_y)/σ)²; the Gaussian normalization term is common to all candidates and can be omitted when selecting the best path. Without connectors the transition probabilities are 1 for staying and 0 for changing road. With connectors they are 0.9 and 0.1. Viterbi adds log transition and observation likelihoods, keeps the best predecessor at each step, then backtracks to recover the highest-scoring sequence.
+      </p>
+<p>
+       At σ = 4 m, [1, 6, 1] gives nearest A → B → A but Viterbi A → A → A. For [1, 9, 9], disconnected roads give B → B → B; allowing connectors gives A → B → B. The geometry is schematic: connectors only permit a change between samples. Heading, speed, travel time, route distance, lane identity and elevation are absent. These transition weights are illustrative choices, not fitted driving probabilities or the full Newson–Krumm method.
+      </p>
+<h3>Candidate selection in the lecture</h3><p>The lecture also describes pruning candidate roads using distance and plausible route-distance or speed limits. These checks reduce the search space, but a limit that is too strict can exclude the correct road before a sequence is evaluated. The two-road teaching model above does not implement candidate pruning or speed-based constraints; it demonstrates observation uncertainty and transition consistency only.</p></div>
+</dialog>
+<dialog aria-labelledby="notes-slide-world-title" class="evidence-dialog" id="notes-slide-world">
+<div class="dialog-heading">
+<h2 id="notes-slide-world-title">
+<span id="notes-title-slide-world">
+        Is the estimate accurate and available enough for the task?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Choose requirements for the actual service: fleet tracking, emergency response, charging or vehicle control. Compare the estimated position with an independent reference trajectory; record wrong-road choices, physical errors, outages, recovery time and computational delay. Check whether reported uncertainty agrees with observed error. Correctly identifying a road does not establish lane-level accuracy. Historical experiments and announcements apply to their stated equipment and conditions. For example, LTA’s 23 October 2023 ERP 2.0 announcement described distance-charging capability while retaining the charging framework and stating there was no immediate plan to introduce distance-based charging.
+      </p>
+<p>
+       Capability and adopted policy need separate evidence.
+      </p>
+</div>
+</dialog>
+</main>
+<footer class="site-footer">
+<div class="shell footer-inner">
+<strong>SLOGX</strong>
+<span>
+      Introduction to Smart Logistics · Fall 2025
+     </span>
+<a href="../">
+      2025 lectures
+     </a>
+</div>
+</footer>
+</div>
+</body>
+</html>

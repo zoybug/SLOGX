@@ -85,7 +85,164 @@ function renderMap() {
 document.querySelector('.map-presets').addEventListener('click',event=>{const b=event.target.closest('[data-map-preset]');if(b){mapPreset=b.dataset.mapPreset;renderMap();}});
 mapSigma.addEventListener('input',renderMap);mapConnected.addEventListener('change',renderMap);renderMap();
 
-const questions = [{"topic": "Sensor roles", "question": "GNSS fixes are missing in a tunnel. What does INS provide?", "choices": ["A guaranteed permanent absolute position", "Motion propagation from the prior state, with accumulating error", "A replacement digital road map"], "correct": 1, "explanation": "INS can bridge missing external observations, but its errors can grow.", "readingUrl": "#slide-responses", "readingLabel": "Sensor complementarity"}, {"topic": "Multipath", "question": "What causes the multipath mechanism discussed in the lecture?", "choices": ["Signals arrive through reflections as well as the direct path", "Satellite signals are temporarily blocked without any reflections", "Inertial errors grow between external position updates"], "correct": 0, "explanation": "Reflected satellite signals can distort observations; this differs from a simple map-display issue.", "readingUrl": "https://gssc.esa.int/navipedia/index.php/Multipath", "readingLabel": "ESA multipath reference"}, {"topic": "Kalman gain", "question": "In the scalar lab, predicted σ = 2 m and measurement σ = 3 m. Which is the correct gain?", "choices": ["2/5", "9/13", "4/13"], "correct": 2, "explanation": "The gain uses variances: P = 4, R = 9, K = P/(P + R).", "readingUrl": "#slide-model", "readingLabel": "Fusion model equations"}, {"topic": "Uncertainty", "question": "The reported measurement variance increases while predicted variance stays fixed. What happens in the model?", "choices": ["The measurement always receives more weight", "The measurement receives less weight", "The gain must become negative"], "correct": 1, "explanation": "Larger R reduces P/(P + R), so the update moves less toward the measurement.", "readingUrl": "#slide-model", "readingLabel": "Uncertainty explorer"}, {"topic": "Model limits", "question": "A biased GNSS fix is reported with very small variance. What follows?", "choices": ["The filter can become overconfident if the error model is wrong", "The filter always recognizes and removes the bias automatically", "A small variance proves the physical position is correct"], "correct": 0, "explanation": "The update relies on the assumed measurement model; declared uncertainty is not independent validation.", "readingUrl": "#slide-world", "readingLabel": "Validation and uncertainty"}, {"topic": "Map matching", "question": "Why can nearest-road snapping fail on parallel roads?", "choices": ["Matching road names is sufficient even when the coordinates are noisy", "The closest road at each sample must be the correct traveled route", "Separate fixes may imply impossible changes between disconnected roads"], "correct": 2, "explanation": "A sequence model can consider network connectivity as well as each observation.", "readingUrl": "#slide-evidence", "readingLabel": "Two-road example"}, {"topic": "HMM states", "question": "In the lecture’s HMM map-matching interpretation, what is hidden?", "choices": ["The noise-free coordinate recorded directly by the receiver", "The road/candidate sequence that produced the noisy fixes", "Every observed GNSS coordinate"], "correct": 1, "explanation": "Road candidates are states; the measured positions are observations.", "readingUrl": "https://www.microsoft.com/en-us/research/publication/hidden-markov-map-matching-noise-sparseness/", "readingLabel": "HMM map-matching paper"}, {"topic": "Viterbi", "question": "What does Viterbi select in the constructed HMM?", "choices": ["The candidate sequence with the highest score under the model", "The shortest future delivery tour", "The nearest candidate independently at every sample"], "correct": 0, "explanation": "It uses transitions and observation likelihoods to optimize the full candidate sequence.", "readingUrl": "#slide-evidence", "readingLabel": "Sequence inference"}, {"topic": "Fréchet", "question": "What does standard Fréchet distance preserve in its allowed traversals?", "choices": ["Identical original speeds", "Identical sample timestamps", "Forward traversal order, while allowing different speeds"], "correct": 2, "explanation": "The leash interpretation compares curves under forward reparameterization, not fixed-time synchronization.", "readingUrl": "https://www.kr.tuwien.ac.at/staff/eiter/et-archive/files/cdtr9464.pdf", "readingLabel": "Fréchet variants"}, {"topic": "Architecture", "question": "Which distinction describes loosely versus tightly coupled GNSS/INS?", "choices": ["Physical distance between the sensors", "Whether GNSS solutions or lower-level GNSS observables enter the fusion estimator", "Whether GNSS positions are corrected before displaying them on a map"], "correct": 1, "explanation": "The distinction concerns the fusion interface; greater complexity is not a universal guarantee of better results.", "readingUrl": "#slide-model", "readingLabel": "Integration interfaces"}, {"topic": "Road pricing", "question": "A system has GNSS-based distance-charging capability. What can be concluded?", "choices": ["The technology can support that option; policy adoption needs separate evidence", "Every journey is already charged by distance", "Position error cannot affect charging"], "correct": 0, "explanation": "LTA’s 2023 announcement separated the capability from changes to the charging framework.", "readingUrl": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2023/10/news-releases/erp-2-0-on-board-unit-installation-starting-in-november-with-fle.html", "readingLabel": "ERP 2.0 announcement"}, {"topic": "Task + evidence", "question": "A trace is matched to the correct road link. What additional claim still needs validation?", "choices": ["That a road network was used", "That an estimate was produced", "That the result is accurate enough for lane-level autonomous control"], "correct": 2, "explanation": "Link correctness, physical accuracy, uncertainty, availability and latency are distinct evaluation questions.", "readingUrl": "#slide-world", "readingLabel": "Evaluate the evidence"}];
+const questions = [
+  {
+    "topic": "Sensor roles",
+    "question": "A delivery vehicle enters a tunnel and loses GNSS fixes. Which approach describes what INS can contribute during the outage?",
+    "choices": [
+      "Retain the last GNSS coordinate and its uncertainty until reception resumes.",
+      "Propagate motion from the prior state and account for growing inertial uncertainty.",
+      "Replace the missing GNSS coordinate with the nearest road’s midpoint."
+    ],
+    "correct": 1,
+    "explanation": "INS propagates motion using inertial measurements from a starting state. Sensor and model errors accumulate; keeping an unchanged GNSS fix does not estimate the vehicle’s continuing motion.",
+    "readingUrl": "#slide-responses",
+    "readingLabel": "Positioning process"
+  },
+  {
+    "topic": "Multipath",
+    "question": "Beside tall buildings, a receiver obtains the direct satellite signal and delayed reflected copies. Which mechanism best explains a distorted fix?",
+    "choices": [
+      "The reflected paths distort the measured signal and its inferred range.",
+      "The vehicle’s inertial bias accumulates between external position corrections.",
+      "The road network’s geometry projects the coordinate onto a nearby link."
+    ],
+    "correct": 0,
+    "explanation": "Multipath concerns a signal reaching the receiver along several paths. Blockage, inertial drift and map-matching errors are different mechanisms, even when they can occur in the same city environment.",
+    "readingUrl": "https://gssc.esa.int/navipedia/index.php/Multipath",
+    "readingLabel": "ESA multipath reference"
+  },
+  {
+    "topic": "Kalman gain",
+    "question": "The scalar example predicts 8 m with σ = 2 m and receives a 12 m fix with σ = 3 m. Which measurement weight K should it use?",
+    "choices": [
+      "2/5, using the two standard deviations directly.",
+      "9/13, using the measurement variance in the numerator.",
+      "4/13, using the predicted variance in the numerator."
+    ],
+    "correct": 2,
+    "explanation": "P = 2² = 4 m² and R = 3² = 9 m². K = P/(P + R) = 4/13, giving 8 + (4/13)×4 ≈ 9.23 m. Standard deviations must first be squared.",
+    "readingUrl": "#slide-model",
+    "readingLabel": "Scalar update equations"
+  },
+  {
+    "topic": "Uncertainty",
+    "question": "For the same prediction and fix, P stays at 4 m² while R rises from 9 to 36 m². What change should the scalar update make?",
+    "choices": [
+      "Lower K from 4/13 to 4/40 and move less toward the fix.",
+      "Raise K from 4/13 to 36/40 and move farther toward the fix.",
+      "Keep K at 4/13 because the measured coordinate has not changed."
+    ],
+    "correct": 0,
+    "explanation": "The assumed error variance affects the weight even when the measured coordinate is unchanged. Increasing R lowers P/(P + R), so the prediction changes less.",
+    "readingUrl": "#slide-model",
+    "readingLabel": "Measurement uncertainty"
+  },
+  {
+    "topic": "Model limits",
+    "question": "A multipath-biased fix is assigned a very small R. The filter reports a precise-looking result near that fix. Which follow-up best tests whether it is trustworthy?",
+    "choices": [
+      "Repeat the same update until the displayed standard deviation stabilizes.",
+      "Compare with an independent position reference and inspect the error model.",
+      "Compare the result with the nearest road chosen from the same noisy fix."
+    ],
+    "correct": 1,
+    "explanation": "A small modeled variance does not reveal an unmodeled bias. Reusing the same observation or a map match derived from it is not an independent accuracy check.",
+    "readingUrl": "#slide-world",
+    "readingLabel": "Position validation"
+  },
+  {
+    "topic": "Map matching",
+    "question": "Three fixes snap to A → B → A, but the two roads have no connector in the mapped intervals. What should a sequence matcher add to the decision?",
+    "choices": [
+      "A preference for the nearest candidate, applied separately to each fix.",
+      "Allowed road transitions and the fit of the complete observed sequence.",
+      "A fixed rule retaining the first road regardless of subsequent observations."
+    ],
+    "correct": 1,
+    "explanation": "Nearest snapping ignores whether the implied road changes are possible. The sequence model uses both observations and connectivity; it can choose either consistent road under its assumptions.",
+    "readingUrl": "#slide-evidence",
+    "readingLabel": "Parallel-road example"
+  },
+  {
+    "topic": "HMM states",
+    "question": "An HMM is given three measured position fixes and candidate locations on nearby road links. Which quantity is inferred as the hidden state sequence?",
+    "choices": [
+      "The receiver’s three recorded coordinates, treated as unknown observations.",
+      "The GNSS measurement variances, estimated only from road connectivity.",
+      "The road candidates that could have produced the recorded noisy observations."
+    ],
+    "correct": 2,
+    "explanation": "The fixes are observed. Road candidates are hidden states; emissions describe observation fit and transitions describe movement between those candidates.",
+    "readingUrl": "https://www.microsoft.com/en-us/research/publication/hidden-markov-map-matching-noise-sparseness/",
+    "readingLabel": "HMM map-matching research"
+  },
+  {
+    "topic": "Viterbi",
+    "question": "Later fixes make an earlier road choice less plausible. What result does Viterbi seek in the constructed retrospective model?",
+    "choices": [
+      "The highest-scoring complete candidate sequence under emissions and transitions.",
+      "The candidate with the highest individual emission likelihood at each sample.",
+      "The shortest road path connecting the first and final observed coordinates."
+    ],
+    "correct": 0,
+    "explanation": "Viterbi optimizes the joint sequence score, with backpointers to recover it. Independent nearest choices and shortest-path routing optimize different objectives.",
+    "readingUrl": "#slide-evidence",
+    "readingLabel": "Sequence inference"
+  },
+  {
+    "topic": "Fréchet",
+    "question": "Two traces follow similar curves at different speeds, with one vehicle stopping briefly. Which alignment does standard Fréchet distance permit?",
+    "choices": [
+      "Pair positions only at their original matching timestamps throughout the trip.",
+      "Reverse one traversal when doing so reduces the largest paired separation.",
+      "Vary forward traversal speeds while retaining the order along both curves."
+    ],
+    "correct": 2,
+    "explanation": "Forward reparameterization allows different speeds and pauses, but no backtracking. Standard Fréchet distance compares curve geometry and order, not fixed clock synchronization.",
+    "readingUrl": "https://www.kr.tuwien.ac.at/staff/eiter/et-archive/files/cdtr9464.pdf",
+    "readingLabel": "Fréchet distance variants"
+  },
+  {
+    "topic": "Architecture",
+    "question": "A designer changes the estimator from using GNSS position/velocity solutions to using pseudoranges and Doppler with inertial states. Which distinction has changed?",
+    "choices": [
+      "Feed-forward versus feedback, determined by how corrections reach the INS.",
+      "Loose versus tight coupling, determined by the GNSS information being fused.",
+      "Online versus offline matching, determined by when road results are released."
+    ],
+    "correct": 1,
+    "explanation": "The change concerns the fusion interface. Correction feedback and map-matching timing are separate design choices, and tighter coupling still requires calibration and evaluation.",
+    "readingUrl": "#slide-model",
+    "readingLabel": "Integration interfaces"
+  },
+  {
+    "topic": "Road pricing",
+    "question": "LTA’s October 2023 announcement describes ERP 2.0’s GNSS capability and says there is no immediate plan for distance charging. Which statement follows from that source?",
+    "choices": [
+      "Distance charging was technically supported, but adoption was a separate policy decision.",
+      "Distance charging began when fleet vehicles first received the new onboard units.",
+      "The replacement of gantries made position error irrelevant to charging decisions."
+    ],
+    "correct": 0,
+    "explanation": "The historical announcement explicitly separates capability from the retained charging framework. It should not be used to infer a later policy without further evidence.",
+    "readingUrl": "https://www.lta.gov.sg/content/ltagov/en/newsroom/2023/10/news-releases/erp-2-0-on-board-unit-installation-starting-in-november-with-fle.html",
+    "readingLabel": "ERP 2.0 announcement"
+  },
+  {
+    "topic": "Task and evidence",
+    "question": "A test reports few wrong-road matches. Before using the estimator for lane-level control, which additional evaluation is most directly needed?",
+    "choices": [
+      "Increase the road-link test set while retaining the same link-correctness measure.",
+      "Compare the mapped link names with the planned route’s street-name sequence.",
+      "Measure physical error, uncertainty, outages and delay against the control requirements."
+    ],
+    "correct": 2,
+    "explanation": "Road-link correctness is useful but does not establish lane-level physical accuracy or timely availability. The additional claim needs a suitable reference and task-specific measures.",
+    "readingUrl": "#slide-world",
+    "readingLabel": "Task-specific validation"
+  }
+];
 let questionIndex = 0;
 let score = 0;
 let answered = false;
@@ -105,7 +262,7 @@ function renderQuestion() {
   feedback.textContent = "";
   feedback.className = "feedback";
   nextButton.disabled = true;
-  nextButton.textContent = questionIndex === questions.length - 1 ? "See quiz result →" : "Next question →";
+  nextButton.textContent = questionIndex === questions.length - 1 ? "Result" : "Next";
 }
 document.querySelector("#quiz-choices").addEventListener("click", event => {
   const choice = event.target.closest("[data-answer]");
@@ -143,7 +300,7 @@ nextButton.addEventListener("click", () => {
     document.querySelector("#quiz-question").textContent = score === questions.length ? "You answered all 12 questions correctly." : "Review the explanations and try the quiz again.";
     document.querySelector("#quiz-choices").innerHTML = "";
     feedback.className = "feedback";
-    feedback.textContent = "Positioning needs an appropriate sensor model, a plausible road match and evidence that the estimate meets the application’s needs. Return to the models to review.";
+    feedback.textContent = "Positioning needs an appropriate sensor model, a plausible road match and evidence that the estimate meets the application’s needs. Review the model assumptions and application requirements.";
     nextButton.hidden = true;
     restartButton.hidden = false;
   }

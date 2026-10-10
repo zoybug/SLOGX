@@ -1,5 +1,902 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#F7F6F2" name="theme-color"/><meta content="Fall 2025 Lecture 06: Smart City Transportation and Autonomous Driving. Explore the lecture, student synthesis, resources and a practice quiz." name="description"/><title>2025 Lecture 06 | Smart City Transportation and Autonomous Driving</title><link href="../../assets/site.css?v=20261010" rel="stylesheet"/><link href="../../assets/lecture-flow.css" rel="stylesheet"/><link href="../../assets/v2.css" rel="stylesheet"/><link href="../../assets/year-archive.css" rel="stylesheet"/><link href="../../assets/lecture-2025-06.css" rel="stylesheet"/><link href="../../assets/2025-theme.css?v=20261010" rel="stylesheet"/><script defer="" src="../../assets/lecture-2025-06.js?v=2025-layout-20261004-zoybug"></script><script defer="" src="../../assets/zoybug-facts.js"></script><script defer="" src="../../assets/zoybug.js?v=2025-zoybug-20261004"></script><link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/><script defer="" src="../../assets/briefing-2025.js?v=2025-guest-20261004"></script><link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/><link rel="stylesheet" href="../../assets/editorial.css?v=20261010"><script src="../../assets/editorial.js?v=20261010" defer></script><link rel="preload" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" as="font" type="font/woff2" crossorigin></head><body class="lecture-page archive-lecture" data-course-year="2025" data-lecture="06"><a class="skip" href="#main">Skip to content</a><div class="course-workspace"><header class="masthead unified-header"><div class="shell briefing-header"><a class="brand" href="../"><span><strong>Smart Logistics</strong><small>COURSE ATLAS · FALL 2025</small></span></a><div class="top-section-links"><a data-section="intro" href="#intro">Overview</a><a data-section="students" href="#students">Student synthesis</a><a data-section="resources" href="#resources">Resources</a><a data-section="quiz" href="#quiz">Quiz</a></div><nav aria-label="Course year" class="year-nav"><a href="../../">2026</a><a aria-current="page" href="../">2025</a></nav></div><nav aria-label="2025 sessions" class="lecture-rail"><div class="shell"><span aria-hidden="true" class="rail-label">Sessions</span><div class="lecture-switcher"><a aria-label="Lecture 01: Digital supply chains" data-lecture="01" href="../lecture-01/" title="Lecture 01: Digital supply chains"><b>01</b><span>Digital supply chains</span></a><a aria-label="Lecture 02: Smart transportation" data-lecture="02" href="../lecture-02/" title="Lecture 02: Smart transportation"><b>02</b><span>Smart transportation</span></a><a aria-label="Lecture 03: Intelligent warehousing" data-lecture="03" href="../lecture-03/" title="Lecture 03: Intelligent warehousing"><b>03</b><span>Intelligent warehousing</span></a><a aria-label="Lecture 04: Urban drone logistics" data-lecture="04" href="../lecture-04/" title="Lecture 04: Urban drone logistics"><b>04</b><span>Urban drone logistics</span></a><a aria-label="Lecture 05: High-precision positioning" data-lecture="05" href="../lecture-05/" title="Lecture 05: High-precision positioning"><b>05</b><span>High-precision positioning</span></a><a aria-current="page" aria-label="Lecture 06: Autonomous driving" data-lecture="06" href="./" title="Lecture 06: Autonomous driving"><b>06</b><span>Autonomous driving</span></a><a aria-label="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth · Henry Ko" data-lecture="07" href="../lecture-07/" title="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth · Henry Ko"><b>07</b><span>Global trade and growth</span></a><a aria-label="Industry visit: SF Express Shenzhen · 21 November 2025" data-lecture="visit" href="../industry-visit/" title="Industry visit: SF Express Shenzhen · 21 November 2025">Visit</a></div><span aria-hidden="true" class="rail-current">Autonomous driving</span></div></nav></header><main class="lecture-main" id="main"><section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro"><div class="shell section-inner"><section class="lecture-hero lecture-hero-illustrated"><div class="hero-copy"><p class="eyebrow">Fall 2025 · Lecture 06</p><h1 id="lecture-title">Autonomous driving</h1><p class="hero-takeaway">Define the responsibility.</p><p class="hero-summary">Connect driving roles, vehicle decisions and city services with the evidence they need.</p><div class="hero-meta"><span>PROFESSOR BOKUI CHEN · TSINGHUA SIGS</span><span>27 OCTOBER 2025</span></div><a class="hero-start" href="#students">Explore student synthesis →</a></div><div class="hero-art"><img alt="An autonomous shuttle senses a pedestrian crossing and stops before the crosswalk" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-06-transparent.webp" width="1536"/></div></section><section aria-label="Lecture outline" class="lecture-brief"><details class="outline-step"><summary><span>01 / RESPONSIBILITY</span><h2>Who performs the driving task?</h2></summary><p>Compare driver support with automated driving. The operating conditions and fallback responsibilities determine the role of each feature.</p></details><details class="outline-step"><summary><span>02 / VEHICLE + NETWORK</span><h2>Connect sensing with control</h2></summary><p>Follow the deck’s Sense, Perceive, Abstract, Plan and Control steps, then examine model development, autonomous vehicle operations (AVOps) and vehicle-to-everything communication (V2X).</p></details><details class="outline-step"><summary><span>03 / APPLICATIONS</span><h2>Plan a service people can use</h2></summary><p>Compare robotaxis, shuttles, freight, delivery and civic fleets through access, reliability, costs and trust.</p></details></section><details class="lecture-details"><summary>Lecture details and sources</summary><p class="hero-deck">Smart City Transportation and Autonomous Driving</p><p class="hero-summary">What must an automated vehicle do, and who responds when conditions change? Prof. Bokui Chen’s “Introduction to the Autonomous Driving Industry and Application Scenarios” connects vehicle sensing and decisions with fleet operations and services for people and goods.</p><p class="archive-note">Course instructor: Prof. Wai Kin (Victor) Chan. Students introduced a smart transportation application in a two-page report. This page draws on 30 identified submissions and a separate essay with unresolved authorship.</p><p class="archive-note">The syllabus also planned intelligent transportation systems, microscopic simulation and mixed traffic. The supplied deck focuses on industry and applications; the traffic exercises below are teaching additions informed by the syllabus and student work. <a href="https://www.sigs.tsinghua.edu.cn/cbk_en/main.htm" rel="noopener noreferrer" target="_blank">Prof. Bokui Chen’s official faculty profile ↗</a></p></details></div></section><section aria-label="Student synthesis" class="lecture-section student-section" id="students"><div class="shell synthesis-shell"><div class="synthesis-heading"><h2>Student synthesis</h2><span aria-live="polite" id="synthesis-position">Contents</span></div><div aria-label="Student synthesis" aria-roledescription="carousel" class="slide-track" id="slide-track" role="region" tabindex="0"><article aria-label="Contents" aria-roledescription="slide" class="student-slide contents-slide" data-slide="" id="slide-contents" role="group"><div class="slide-content contents-content"><div class="contents-heading"><div><h2>Choose a starting point</h2><p>Explore a main idea, then open the full notes when you need the detail.</p></div><a class="text-link" data-method-link="" href="#synthesis-method">About this synthesis ↓</a></div><div class="slide-toc"><button class="slide-toc-row" data-go-slide="1" type="button"><span class="number">01</span><strong>Driving roles and responsibility</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="2" type="button"><span class="number">02</span><strong>From sensing to control</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="3" type="button"><span class="number">03</span><strong>Connected-city services</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="4" type="button"><span class="number">04</span><strong>Traffic flow and headway</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="5" type="button"><span class="number">05</span><strong>Shuttle service capacity</strong><span aria-hidden="true" class="toc-arrow">→</span></button><button class="slide-toc-row" data-go-slide="6" type="button"><span class="number">06</span><strong>People, trust and evidence</strong><span aria-hidden="true" class="toc-arrow">→</span></button></div></div></article><article aria-label="1 of 6: Driving roles and responsibility" aria-roledescription="slide" class="student-slide" data-panel-kind="role" data-slide="" id="slide-responses" role="group"><div class="slide-content"><div class="slide-intro"><h2>Driving roles and responsibility</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">The feature’s required driving role matters more than its label.</p><ul><li>L2 requires driver supervision; L3 needs a fallback-ready user.</li><li>At L4, the ADS performs fallback within the stated operating domain.</li></ul><div class="panel-foot"><p>SAE levels classify roles; they are not safety certificates.</p><button aria-controls="notes-slide-responses" aria-expanded="false" class="notes-button" data-show-notes="slide-responses" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Driving responsibility explorer" class="autonomy-lab"><div class="lab-controls"><div class="control-field"><label for="role-level">Feature type</label><select id="role-level"><option value="2">Level 2 · driver support</option><option value="3">Level 3 · conditional automation</option><option value="4">Level 4 · high automation</option></select></div><div class="control-field"><label for="role-boundary">Operating situation</label><select id="role-boundary"><option value="inside">Within the feature’s stated domain</option><option value="exit">Approaching a domain boundary</option></select></div></div><div aria-live="polite" class="role-results"><span id="role-label"></span><h4 id="role-title"></h4><p id="role-text"></p></div></div></div></div></div></article><article aria-label="2 of 6: From sensing to control" aria-roledescription="slide" class="student-slide" data-panel-kind="stages" data-slide="" id="slide-model" role="group"><div class="slide-content"><div class="slide-intro"><h2>From sensing to control</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Vehicle decisions form a feedback loop, with uncertainty at every step.</p><ul><li>Sensing, prediction, planning and control perform different functions.</li><li>The separate development cycle needs data checks, validation and release controls.</li></ul><div class="panel-foot"><p>This is a simplified five-step model, not an implementation specification.</p><button aria-controls="notes-slide-model" aria-expanded="false" class="notes-button" data-show-notes="slide-model" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Five-step driving cognition" class="stage-grid" id="stage-grid"></div><div aria-live="polite" class="stage-detail"><span class="stage-serial" id="stage-serial">01</span><div><h3 id="stage-title"></h3><p id="stage-description"></p><div class="stage-connection"><b>INPUT → DECISION → CHECK</b><span id="stage-connection"></span></div></div></div></div></div></div></article><article aria-label="3 of 6: Connected-city services" aria-roledescription="slide" class="student-slide" data-panel-kind="static" data-slide="" id="slide-evidence" role="group"><div class="slide-content"><div class="slide-intro"><h2>Connected-city services</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">A connected message is an input to a constrained decision.</p><ul><li>Student concepts connect rides, buses, delivery, charging and dispatch.</li><li>Connectivity does not remove conflicts or establish an automation level.</li></ul><div class="panel-foot"><p>Student targets and proposed savings are not measured citywide outcomes.</p><button aria-controls="notes-slide-evidence" aria-expanded="false" class="notes-button" data-show-notes="slide-evidence" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><dl class="evidence-rows"><div><dt>Traveler</dt><dd>Compare fare, time, access and feasible transfers.</dd></div><div><dt>Intersection</dt><dd>A bus-priority request must still account for pedestrians.</dd></div><div><dt>Network</dt><dd>Define the response to late, inconsistent or missing messages.</dd></div></dl></div></div></div></article><article aria-label="4 of 6: Traffic flow and headway" aria-roledescription="slide" class="student-slide" data-panel-kind="headway" data-slide="" id="slide-future" role="group"><div class="slide-content"><div class="slide-intro"><h2>Traffic flow and headway</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">The calculated flow changes because the assumed headway changes.</p><ul><li>Adjust the share of automated vehicles and their crossing headway.</li><li>The automation label alone does not create a capacity benefit.</li></ul><div class="panel-foot"><p>Single-lane arithmetic; queues, lane changes and network effects are omitted.</p><button aria-controls="notes-slide-future" aria-expanded="false" class="notes-button" data-show-notes="slide-future" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Mixed traffic headway sensitivity" class="autonomy-lab"><div class="lab-controls"><label for="traffic-share">Automated vehicle share<output for="traffic-share" id="traffic-share-value"></output><input id="traffic-share" max="100" min="0" step="5" type="range" value="50"/></label><label for="traffic-headway">Automated crossing headway<output for="traffic-headway" id="traffic-headway-value"></output><input id="traffic-headway" max="3" min="0.8" step="0.1" type="range" value="1.2"/></label></div><div aria-live="polite" class="lab-results"><div><span>MEAN CROSSING HEADWAY</span><strong id="traffic-mean"></strong></div><div><span>IDEALIZED FLOW</span><strong id="traffic-flow"></strong></div><div><span>VS HUMAN-ONLY ASSUMPTION</span><strong id="traffic-change"></strong></div></div><p id="traffic-explanation"></p><button class="lab-reset" id="traffic-reset" type="button">Reset headway example</button></div></div></div></div></article><article aria-label="5 of 6: Shuttle service capacity" aria-roledescription="slide" class="student-slide" data-panel-kind="shuttle" data-slide="" id="slide-capacity" role="group"><div class="slide-content"><div class="slide-intro"><h2>Shuttle service capacity</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Departure frequency depends on cycle time and available vehicles.</p><ul><li>A 30-minute cycle needs ten available vehicles for a 3-minute interval.</li><li>Reserves, disruptions and passenger capacity need separate checks.</li></ul><div class="panel-foot"><p>An illustrative fleet calculation, not a validated shuttle timetable.</p><button aria-controls="notes-slide-capacity" aria-expanded="false" class="notes-button" data-show-notes="slide-capacity" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><div aria-label="Shuttle service capacity calculator" class="autonomy-lab"><div class="lab-controls three"><label for="shuttle-cycle">Full cycle time<output for="shuttle-cycle" id="shuttle-cycle-value"></output><input id="shuttle-cycle" max="60" min="15" step="1" type="range" value="30"/></label><label for="shuttle-fleet">Available vehicles<output for="shuttle-fleet" id="shuttle-fleet-value"></output><input id="shuttle-fleet" max="20" min="2" step="1" type="range" value="8"/></label><label for="shuttle-target">Target departure interval<output for="shuttle-target" id="shuttle-target-value"></output><input id="shuttle-target" max="10" min="2" step="0.5" type="range" value="3"/></label></div><div aria-live="polite" class="lab-results"><div><span>IDEAL DEPARTURE INTERVAL</span><strong id="shuttle-interval"></strong></div><div><span>MINIMUM AVAILABLE FLEET</span><strong id="shuttle-required"></strong></div><div><span>MEETS INTERVAL TARGET?</span><strong id="shuttle-status"></strong></div></div><p id="shuttle-explanation"></p><button class="lab-reset" id="shuttle-reset" type="button">Reset shuttle example</button></div></div></div></div></article><article aria-label="6 of 6: People, trust and evidence" aria-roledescription="slide" class="student-slide" data-panel-kind="static" data-slide="" id="slide-world" role="group"><div class="slide-content"><div class="slide-intro"><h2>People, trust and evidence</h2></div><div class="briefing-grid"><div class="briefing-takeaway"><p class="takeaway-label">Main idea</p><p class="takeaway">Evaluate safety, comfort, access and trust in the service’s own setting.</p><ul><li>A passenger’s experience raises a question, not a fleet-wide rate.</li><li>A fluent explanation must still match event evidence and uncertainty.</li></ul><div class="panel-foot"><p>Forecasts and industry claims retain their Fall 2025 historical context.</p><button aria-controls="notes-slide-world" aria-expanded="false" class="notes-button" data-show-notes="slide-world" type="button">Full notes and assumptions</button></div></div><div class="briefing-visual"><dl class="evidence-rows"><div><dt>People</dt><dd>Test comfort, accessible journeys and passenger understanding.</dd></div><div><dt>Operation</dt><dd>Define the domain, fallback, maintenance and incident response.</dd></div><div><dt>Evidence</dt><dd>Compare outcomes per exposure with a suitable baseline.</dd></div></dl></div></div></div></article></div><nav aria-label="Synthesis navigation" class="deck-controls"><button data-deck-prev="" type="button">← Previous</button><div class="panel-navigation"><button aria-label="Contents" data-go-slide="0" type="button"><span class="contents-label">Contents</span><svg aria-hidden="true" class="contents-icon" focusable="false" viewbox="0 0 20 20"><path d="M7 5h9M7 10h9M7 15h9M3 5h.1M3 10h.1M3 15h.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></button><div aria-label="Choose a synthesis view" class="panel-dots" role="group"><button aria-controls="slide-responses" aria-label="1. Driving roles and responsibility" data-go-slide="1" type="button"><span aria-hidden="true">1</span></button><button aria-controls="slide-model" aria-label="2. From sensing to control" data-go-slide="2" type="button"><span aria-hidden="true">2</span></button><button aria-controls="slide-evidence" aria-label="3. Connected-city services" data-go-slide="3" type="button"><span aria-hidden="true">3</span></button><button aria-controls="slide-future" aria-label="4. Traffic flow and headway" data-go-slide="4" type="button"><span aria-hidden="true">4</span></button><button aria-controls="slide-capacity" aria-label="5. Shuttle service capacity" data-go-slide="5" type="button"><span aria-hidden="true">5</span></button><button aria-controls="slide-world" aria-label="6. People, trust and evidence" data-go-slide="6" type="button"><span aria-hidden="true">6</span></button></div></div><button data-deck-next="" type="button">Next →</button></nav></div></section><div class="shell synthesis-notes" id="synthesis-notes"><section aria-labelledby="notes-title-slide-responses" class="panel-notes" data-panel-notes="slide-responses" hidden="" id="notes-slide-responses"><div class="notes-heading"><h3 id="notes-title-slide-responses">Driving roles and responsibility · full notes</h3><button data-close-notes="slide-responses" type="button">Back to the synthesis ↑</button></div><p>Start with who performs the driving task and who must respond if the operating conditions change.</p><h3>Compare a feature within and near its limits</h3><p>Choose a feature and an operating situation. This example assumes it is validly engaged within its operational design domain (ODD), which may limit roads, speed, weather or lighting.</p><p class="editorial-note">At L3, a fallback-ready user must respond when intervention is required. At L4, the ADS handles fallback, potentially reaching a minimal risk condition. The response depends on the situation; a mapped zone or remote assistance alone does not establish the level.</p><p>SAE’s six levels, from 0 to 5, classify a driving feature and its roles. “L2+” is an industry term rather than another SAE level. An automated driving system (ADS) performs the driving task at the automation levels described below; the level itself does not certify safety.</p><div class="table-scroll"><table class="autonomy-table"><caption>Feature roles · brief paraphrases of the SAE taxonomy</caption><thead><tr><th>Level</th><th>Name</th><th>Role while engaged</th></tr></thead><tbody><tr><th scope="row">L0</th><td>No driving automation</td><td>Driver performs the task; warnings or brief interventions may assist.</td></tr><tr><th scope="row">L1</th><td>Driver assistance</td><td>Sustained steering OR speed support; driver supervises.</td></tr><tr><th scope="row">L2</th><td>Partial driving automation</td><td>Sustained steering AND speed support; driver supervises.</td></tr><tr><th scope="row">L3</th><td>Conditional driving automation</td><td>ADS performs the task in its domain; a fallback-ready user must respond when required.</td></tr><tr><th scope="row">L4</th><td>High driving automation</td><td>ADS performs the task and fallback within its domain; no driver takeover is required.</td></tr><tr><th scope="row">L5</th><td>Full driving automation</td><td>ADS performs the task and fallback across driver-manageable on-road conditions.</td></tr></tbody></table></div><p><a href="https://saemobilus.sae.org/standards/j3016_202104-taxonomy-definitions-terms-related-driving-automation-systems-road-motor-vehicles" rel="noopener noreferrer" target="_blank">Read SAE J3016’s 2021 taxonomy ↗</a></p><p>To understand a feature, check its required driver role. For example, <a href="https://www.tesla.com/support/fsd" rel="noopener noreferrer" target="_blank">Tesla’s FSD (Supervised) documentation</a> requires active driver supervision. A separate robotaxi service would need evidence about its own feature and operating conditions.</p></section><section aria-labelledby="notes-title-slide-model" class="panel-notes" data-panel-notes="slide-model" hidden="" id="notes-slide-model"><div class="notes-heading"><h3 id="notes-title-slide-model">From sensing to control · full notes</h3><button data-close-notes="slide-model" type="button">Back to the synthesis ↑</button></div><p>Once the roles are clear, follow how a vehicle turns observations into motion. Keep live control distinct from the work of improving its models.</p><div class="answer-grid"><article><h3>Compare sensor strengths and weaknesses</h3><p>Students compare camera detail, radar range and relative motion, LiDAR geometry and short-range ultrasonic sensing. Satellite positioning and inertial measurements help estimate vehicle state. Weather, lighting, obstructions, calibration, computation and cost affect performance; fusion needs testing in those conditions.</p></article><article><h3>Validate updates before putting them into operation</h3><p>Model development collects relevant events, checks and labels data, trains candidates, validates them and releases updates. A trip does not automatically rewrite the live controller. Fleet operations also need monitoring, maintenance and incident response.</p></article></div><div class="insight-strip"><strong>Collect the situations that matter.</strong><p>The lecture compares vision-focused, multisensor, ecosystem and supplier strategies. Students connect them with data quality and hardware integration. Fleet size and computing throughput need context about routes, software and test conditions before they can support performance comparisons.</p></div><p class="editorial-note">The five steps repeat as a feedback loop, with uncertainty in perception and prediction. Modular and end-to-end systems can organize the functions differently. Simulated scenarios add test coverage; real-world evaluation needs to check how closely they represent actual conditions.</p></section><section aria-labelledby="notes-title-slide-evidence" class="panel-notes" data-panel-notes="slide-evidence" hidden="" id="notes-slide-evidence"><div class="notes-heading"><h3 id="notes-title-slide-evidence">Connected-city services · full notes</h3><button data-close-notes="slide-evidence" type="button">Back to the synthesis ↑</button></div><p>Beyond one vehicle, students propose ways to coordinate transport services. Examine which decisions each connection supports.</p><p>Vehicle-to-vehicle (V2V), infrastructure (V2I), pedestrian (V2P) and network (V2N) links can provide different information. Messages need to be timely, authentic and usable across systems; missing or inconsistent data needs a defined response.</p><div class="answer-grid"><article><span class="mini-label">STUDENT PROPOSALS / SHARED MOBILITY</span><h3>CAMP and SmartFleet</h3><p>These two student concepts connect rides, buses, delivery, dispatch, charging and accessible interfaces. They propose where decisions should run: on a vehicle, at an intersection or in a fleet platform. Pickup-time and savings targets would need evaluation.</p></article><article><span class="mini-label">STUDENT PROPOSALS / COORDINATION</span><h3>Apollo Connect and Traffic Pulse</h3><p>One student proposes coordinating freight handoffs and, in a second concept, pooling fleet observations for traffic management and map updates. Both are proposals. They depend on agreements about coverage, data freshness, access and privacy.</p></article><article><span class="mini-label">STUDENT CONCEPT / URBAN FREIGHT</span><h3>CityFlow’s consolidation idea</h3><p>This student proposal uses a temporary microhub to consolidate parcels from several carriers for cargo-bike delivery. Test sorting capacity, extra handling, street access, parcel responsibility and time windows. It is separate from the traffic simulator with a similar name.</p></article><article><span class="mini-label">APPLICATION STUDY / TRANSIT</span><h3>Compare the traveler’s priorities</h3><p>The Yahoo! Transit report considers time, fares and transfers. Its official service provides route searches, timetables and operating information. A useful comparison also checks walking, accessibility and disruptions. The report does not verify the provider’s internal algorithm or citywide congestion effects.</p><a href="https://transit.yahoo.co.jp/" rel="noopener noreferrer" target="_blank">Explore the official Japanese transit service ↗</a></article></div><div class="insight-strip"><strong>A connected message still needs a decision.</strong><p>A bus-priority request must account for pedestrians; a signal-state message must be checked against the situation at the crossing. Define how the service behaves when messages are late, inconsistent or unavailable.</p></div><p><a href="https://www.itskrs.its.dot.gov/briefings/executive-briefing/connected-vehicle-pilot-deployment-program-2024-update" rel="noopener noreferrer" target="_blank">USDOT’s connected-vehicle pilot review ↗</a> describes freight alerts, urban warnings and transit priority with evaluations specific to each pilot.</p></section><section aria-labelledby="notes-title-slide-future" class="panel-notes" data-panel-notes="slide-future" hidden="" id="notes-slide-future"><div class="notes-heading"><h3 id="notes-title-slide-future">Traffic flow and headway · full notes</h3><button data-close-notes="slide-future" type="button">Back to the synthesis ↑</button></div><p>Connected services make capacity promises. Try two small calculations to see how much the result depends on the assumptions.</p><h3>Change the assumed crossing headway</h3><p>For this single-lane example, human-driven vehicles cross 2.0 seconds apart. Adjust the share of automated vehicles and their assumed crossing headway.</p><p class="editorial-note">Mean headway h̄ = (1 − p) × 2.0 + p × hAV; flow q = 3600/h̄ vehicles/hour. The example assumes continuous demand and averages the assigned headways. It omits following-pair behavior, disturbances, lane changes, signals and safety constraints. It calculates an idealized flow rather than a validated capacity or a recommended following gap.</p><p>Students discuss mixed traffic, local and network control, campus shuttles and freight services. The examples below isolate two capacity questions; they do not simulate the full network.</p><div class="answer-grid"><article><h3>Test the control strategy</h3><p>A ring-road field experiment shows a controlled vehicle reducing stop-and-go waves in its test setting. To compare a wider network, define demand, driver behavior, routing, controls and evaluation measures.</p><a href="https://arxiv.org/abs/1705.01693" rel="noopener noreferrer" target="_blank">Read the controlled field experiment ↗</a></article><article><h3>Measure the complete service</h3><p>For platoons, examine communication loss, cut-ins, braking and scheduling. For microhubs, include extra handling and failed deliveries. For shuttles, include waits, crowding and recovery.</p><a href="https://sumo.dlr.de/docs/Simulation/Basic_Definition.html" rel="noopener noreferrer" target="_blank">Review SUMO’s simulation inputs ↗</a></article></div></section><section aria-labelledby="notes-title-slide-capacity" class="panel-notes" data-panel-notes="slide-capacity" hidden="" id="notes-slide-capacity"><div class="notes-heading"><h3 id="notes-title-slide-capacity">Shuttle service capacity · full notes</h3><button data-close-notes="slide-capacity" type="button">Back to the synthesis ↑</button></div><p>Compare cycle time, available fleet and the desired departure interval.</p><h3>Check the fleet needed for a departure interval</h3><p>A student shuttle proposal motivates this example. The illustrative cycle includes travel, stops, recovery and assigned charging time. Count only vehicles available for service.</p><p class="editorial-note">Departure interval = cycle time / available vehicles; required fleet = ceil(cycle time / target interval). The example assumes equal spacing and identical cycles without disruption. Reserve vehicles, staffing, passenger capacity, accessibility, variable stops and battery scheduling require further checks.</p></section><section aria-labelledby="notes-title-slide-world" class="panel-notes" data-panel-notes="slide-world" hidden="" id="notes-slide-world"><div class="notes-heading"><h3 id="notes-title-slide-world">People, trust and evidence · full notes</h3><button data-close-notes="slide-world" type="button">Back to the synthesis ↑</button></div><p>Technical capability and capacity are part of deployment. Students also ask how the service feels, who can use it and how it will be evaluated.</p><div class="answer-grid"><article><span class="mini-label">PERSONAL EXPERIENCE</span><h3>Review passenger comfort</h3><p>One student recalls abrupt braking on a commuting shuttle. This raises questions about comfort, false detections and vehicle behavior. Compare unnecessary braking with near misses, injuries and passenger feedback; one experience does not establish a fleet-wide rate.</p></article><article><span class="mini-label">ACCESS + PARTICIPATION</span><h3>Make the whole journey accessible</h3><p>Students raise affordability, smartphone access, wheelchair access and multilingual support. Include boarding, assistance, accessible stops, emergency communication and recovery alongside booking.</p></article><article><span class="mini-label">PATROL + HUMAN AUTHORITY</span><h3>Define who reviews and acts on an alert</h3><p>Patrol proposals raise false alarms, bias and authority to intervene. Driving performance and threat classification need separate evaluation. Specify who checks an alert and authorizes a response.</p></article><article><span class="mini-label">TRUST + EXPLANATIONS</span><h3>Check explanations against event records</h3><p>Some students ask for reassuring passenger explanations, including those generated by language models. Check whether an explanation matches the event logs, acknowledges uncertainty and gives passengers a way to reach human support.</p></article><article><span class="mini-label">ENERGY + URBAN SPACE</span><h3>Evaluate energy and traffic effects</h3><p>Students imagine cleaner fleets, smoother travel and less parking. Compare electricity sources, occupancy, empty repositioning, total distance and the trips being replaced. Electric propulsion, shared use and automation each affect the result differently.</p></article><article><span class="mini-label">WORKFORCE + OPERATIONS</span><h3>Budget for the supporting work</h3><p>Students discuss maintenance, monitoring, simulation and safety roles alongside changing driving jobs. A service budget also needs charging, insurance and incident support, with a plan for staffing and training.</p></article></div><div class="world-feature"><div><span class="mini-label">APPLICATION BOUNDARIES</span><h3>Evaluate each service in its own setting</h3><p>Robotaxis, ports, mines, delivery and campus patrol involve different people, equipment and conditions. A controlled site may simplify some interactions, while still needing checks for failures and change.</p></div></div><div class="insight-strip"><strong>Design a pilot around a clear question.</strong><p>Define the operating domain, hazards, fallback, maintenance and incident response. Compare safety outcomes per exposure, reliability, uncomfortable braking, interventions, total costs and access with a suitable baseline. Include privacy, data retention and recovery from network loss.</p></div><p>Simulation coverage and disengagement counts describe parts of a test program. Read <a href="https://waymo.com/safety/" rel="noopener noreferrer" target="_blank">Waymo’s safety materials</a> with their operating area, exposure, methods and comparator in view before drawing a comparison.</p><p class="editorial-note">The lecture and reports are from Fall 2025. Forecasts, industry totals, suggested savings and regional impressions are read in that historical context rather than presented as current measured outcomes. Missing charts and an authenticated speech transcript were not supplied.</p></section><details class="synthesis-method" id="synthesis-method"><summary>About this synthesis</summary><div class="method-body"><p>Lecture context, anonymous student perspectives and constructed teaching examples serve different roles. The notes below retain the source counts, inclusion decisions and limitations.</p><h3>About the source material</h3><p>The files contain 30 distinct identified submissions from 30 students, including one identified by name alone. Repeated headers were merged. One student develops two platform ideas within one submission.</p><p>A separate essay has unresolved authorship and contributes qualitative context outside that count. Counts refer to supplied work, not verified enrollment. Identities and source discrepancies remain private.</p></div></details></div>
-<section aria-labelledby="resources-title" class="lecture-section resources-section" id="resources"><div class="shell section-inner"><section class="main-feature reading-feature"><div class="section-heading"><h2 id="resources-title">Resources</h2><p class="intro">Revisit the traffic question, compare driving roles and explore application evidence. External resources open in a new tab.</p></div><div class="resource-grid"><div class="resource-group"><div class="resource-group-head"><h3>Before + after class</h3></div><a href="https://www.sigs.tsinghua.edu.cn/cbk_en/main.htm" rel="noopener noreferrer" target="_blank"><b>Prof. Bokui Chen · official profile ↗</b><span>Official Tsinghua SIGS profile of the lecturer named in the syllabus and deck.</span></a><a href="https://www.youtube.com/watch?v=iHzzSao6ypE&amp;t=66s" rel="noopener noreferrer" target="_blank"><b>Syllabus prereading · traffic ↗</b><span>The syllabus’s “Fundamental problem of traffic” video, listed as 15 minutes. Consider why traffic becomes unstable.</span></a><a href="https://saemobilus.sae.org/standards/j3016_202104-taxonomy-definitions-terms-related-driving-automation-systems-road-motor-vehicles" rel="noopener noreferrer" target="_blank"><b>SAE J3016 · 2021 taxonomy ↗</b><span>Six feature levels and their definitions. Public abstract; access to the full standard may require a subscription.</span></a><a href="https://go.sae.org/rs/525-RCG-129/images/AVSC00003202006.pdf" rel="noopener noreferrer" target="_blank"><b>AVSC · minimal risk condition ↗</b><span>2020 best practice on passenger-initiated emergency stops and fallback context. An extension to the lecture.</span></a></div><div class="resource-group"><div class="resource-group-head"><h3>Systems + traffic</h3></div><a href="https://www.itskrs.its.dot.gov/briefings/executive-briefing/connected-vehicle-pilot-deployment-program-2024-update" rel="noopener noreferrer" target="_blank"><b>USDOT · connected-vehicle pilots ↗</b><span>A 2024 briefing on freight alerts, urban warnings, transit priority and interoperability. The page may contain later updates.</span></a><a href="https://sumo.dlr.de/docs/Simulation/Basic_Definition.html" rel="noopener noreferrer" target="_blank"><b>SUMO · simulation definition ↗</b><span>Official documentation for networks, demand and simulation inputs; a route into microscopic traffic study.</span></a><a href="https://arxiv.org/abs/1705.01693" rel="noopener noreferrer" target="_blank"><b>Stern and colleagues · traffic-wave experiment ↗</b><span>A 2017 preprint reporting controlled ring-road experiments. Compare its setting and controller with your question.</span></a></div><div class="resource-group"><div class="resource-group-head"><h3>Application review</h3></div><a href="https://transit.yahoo.co.jp/" rel="noopener noreferrer" target="_blank"><b>Yahoo! Japan · transit information ↗</b><span>Official route search, timetable and operating-information service. Japanese language; an application studied by a student.</span></a><a href="https://www.tesla.com/support/fsd" rel="noopener noreferrer" target="_blank"><b>Tesla · FSD (Supervised) ↗</b><span>Product documentation describing a feature that requires active driver supervision.</span></a><a href="https://waymo.com/safety/" rel="noopener noreferrer" target="_blank"><b>Waymo · safety approach ↗</b><span>Company safety materials and research. Inspect the operating conditions, exposure and comparator.</span></a></div></div><p class="editorial-note">Existing source records date the checks to 3 October 2026. The lecture and submissions are from Fall 2025; live documentation may change. If the syllabus video is unavailable, use the traffic-wave experiment as an alternative.</p></section></div></section><section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz"><div class="shell section-inner"><section class="main-feature quiz-feature"><div class="section-heading"><h2 id="quiz-title">Quiz</h2><p class="intro">Practice with 12 scenarios on driving roles, vehicle decisions, connected services and capacity assumptions. Each answer includes an explanation and a related resource.</p><details class="quiz-help"><summary>How the quiz works</summary><h3>Apply what you learned</h3><p>Choose an answer, read the explanation and use the related resource to review. This quiz is for practice and does not affect your course grade.</p><div class="quiz-rounds">ROLES + COGNITION<br/>TRAFFIC + OPERATIONS<br/>PEOPLE + EVIDENCE</div></details></div><div class="quiz-board"><div class="quiz-main"><div class="quiz-head"><span class="quiz-status" id="quiz-status"></span><span aria-hidden="true" class="quiz-track"><i id="quiz-progress"></i></span></div><div class="quiz-topic" id="quiz-topic"></div><div class="question" id="quiz-question"></div><div class="choices" id="quiz-choices"></div><div aria-live="polite" class="feedback" id="quiz-feedback"></div><div class="quiz-controls"><button class="next-button" disabled="" id="quiz-next" type="button">Next question →</button><button class="next-button" hidden="" id="quiz-restart" type="button">Restart quiz ↺</button></div></div></div></section></div></section>
-</main><footer class="site-footer"><div class="shell footer-inner"><strong>ISL / 2025 / 06</strong><span>Student perspectives from 30 identified Lecture 06 submissions, plus a separate companion essay.</span><a href="../">2025 lectures</a></div></footer></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#F7F6F2" name="theme-color"/>
+<meta content="Fall 2025 Lecture 06: Smart city transportation and autonomous driving. Lecture overview, anonymized student synthesis, teaching examples and practice questions." name="description"/>
+<title>
+   2025 Lecture 06 | Smart city transportation and autonomous driving
+  </title>
+<link href="../../assets/site.css?v=20261010" rel="stylesheet"/>
+<link href="../../assets/lecture-flow.css" rel="stylesheet"/>
+<link href="../../assets/v2.css" rel="stylesheet"/>
+<link href="../../assets/year-archive.css" rel="stylesheet"/>
+<link href="../../assets/lecture-2025-06.css" rel="stylesheet"/>
+<link href="../../assets/2025-theme.css?v=20261010" rel="stylesheet"/>
+<script defer="" src="../../assets/lecture-2025-06.js?v=20261011-content">
+</script>
+<script defer="" src="../../assets/zoybug-facts.js">
+</script>
+<script defer="" src="../../assets/zoybug.js?v=2025-zoybug-20261004">
+</script>
+<link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
+<link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
+<link href="../../assets/editorial.css?v=20261010" rel="stylesheet"/>
+<script defer="" src="../../assets/editorial.js?v=20261010">
+</script>
+<link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="True" src="../../assets/content-2025.js?v=20261011"></script></head>
+<body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="06">
+<a class="skip" href="#main">
+   Skip to content
+  </a>
+<div class="course-workspace">
+<header class="masthead unified-header">
+<div class="shell briefing-header">
+<a class="brand" href="../">
+<span>
+<strong>Introduction to Smart Logistics</strong>
+<small>Fall 2025</small>
+</span>
+</a>
+<div class="top-section-links">
+<a data-section="intro" href="#intro">
+       Overview
+      </a>
+<a data-section="students" href="#students">Student synthesis</a>
+<a data-section="resources" href="#resources">
+       Resources
+      </a>
+<a data-section="quiz" href="#quiz">
+       Quiz
+      </a>
+</div>
+<nav aria-label="Course year" class="year-nav">
+<a href="../../">
+       2026
+      </a>
+<a aria-current="page" href="../">
+       2025
+      </a>
+</nav>
+</div>
+<nav aria-label="2025 sessions" class="lecture-rail">
+<div class="shell">
+<span aria-hidden="true" class="rail-label">
+       Sessions
+      </span>
+<div class="lecture-switcher">
+<a aria-label="Lecture 01: Digital Transformation of Modern Supply Chains" data-lecture="01" href="../lecture-01/" title="Lecture 01: Digital Transformation of Modern Supply Chains">
+<b>
+         01
+        </b>
+<span>
+         Digital supply chains
+        </span>
+</a>
+<a aria-label="Lecture 02: Smart Transportation and Distribution" data-lecture="02" href="../lecture-02/" title="Lecture 02: Smart Transportation and Distribution">
+<b>
+         02
+        </b>
+<span>
+         Smart transportation
+        </span>
+</a>
+<a aria-label="Lecture 03: Intelligent warehousing system" data-lecture="03" href="../lecture-03/" title="Lecture 03: Intelligent warehousing system">
+<b>
+         03
+        </b>
+<span>
+         Intelligent warehousing
+        </span>
+</a>
+<a aria-label="Lecture 04: Introduction to Instant Delivery with Drones" data-lecture="04" href="../lecture-04/" title="Lecture 04: Introduction to Instant Delivery with Drones">
+<b>
+         04
+        </b>
+<span>
+         Urban drone logistics
+        </span>
+</a>
+<a aria-label="Lecture 05: High Accuracy Positioning for ITS" data-lecture="05" href="../lecture-05/" title="Lecture 05: High Accuracy Positioning for ITS">
+<b>
+         05
+        </b>
+<span>
+         High-precision positioning
+        </span>
+</a>
+<a aria-current="page" aria-label="Lecture 06: Smart city transportation and autonomous driving" data-lecture="06" href="./" title="Lecture 06: Smart city transportation and autonomous driving">
+<b>
+         06
+        </b>
+<span>
+         Autonomous driving
+        </span>
+</a>
+<a aria-label="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth" data-lecture="07" href="../lecture-07/" title="Lecture 07: Smart Supply Chain Transformation – Fueling Global Growth">
+<b>
+         07
+        </b>
+<span>
+         Global trade and growth
+        </span>
+</a>
+<a aria-label="Industry visit: SF Express Shenzhen · 21 November 2025" data-lecture="visit" href="../industry-visit/" title="Industry visit: SF Express Shenzhen · 21 November 2025">
+        Visit
+       </a>
+</div>
+<span aria-hidden="true" class="rail-current">
+       Autonomous driving
+      </span>
+</div>
+</nav>
+</header>
+<main class="lecture-main" id="main">
+<section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
+<div class="shell section-inner lecture-header">
+
+<h1 id="lecture-title">
+        Smart city transportation and autonomous driving
+       </h1>
+<p class="lecture-meta">Lecture 06 · 27 October 2025 · Lecturer: Prof. Bokui Chen</p>
+
+<div class="lecture-overview">
+<h2>
+        Lecture overview
+       </h2>
+<p>
+        Bokui Chen’s lecture connects autonomous-driving technology with transport services. The supplied deck introduces driver/system roles, sensors and fusion, the steps from sensing to vehicle control, fleet data development, vehicle-to-everything (V2X) communication and vehicle operations. It compares industry approaches and applications in robotaxis, public transit, freight, ports, mines, delivery and campus services, then raises adoption and trust questions. The syllabus also planned microscopic traffic simulation and mixed traffic; the supplied deck does not establish that those models were taught in detail. The traffic and shuttle calculators below are later teaching examples, with explicit assumptions.
+       </p>
+</div>
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Bokui Chen is an associate professor at Tsinghua Shenzhen International Graduate School. He is the lecturer named for this session in the Fall 2025 syllabus and on the supplied autonomous-driving deck.
+       </p>
+<p>
+<a href="https://www.sigs.tsinghua.edu.cn/cbk_en/main.htm" rel="noopener noreferrer" target="_blank">
+         Official faculty profile
+        </a>
+</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="student-synthesis-title" class="lecture-section student-section" id="students">
+<div class="shell section-inner">
+<h2 id="student-synthesis-title">
+       Student synthesis
+      </h2>
+<p class="synthesis-introduction">
+       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
+      </p>
+<section aria-labelledby="assignment-06-title" class="question-synthesis">
+<h3 id="assignment-06-title">
+        Which smart transportation application did students introduce?
+       </h3>
+<p>
+        Students were asked to write a two-page report introducing a smart transportation application. The reports range from existing-service studies to new service proposals and broader analyses of autonomous driving.
+       </p>
+<button class="detail-button" data-detail="assignment-06-detail" type="button">
+        More detail
+       </button>
+<article aria-labelledby="finding-06-1-title" class="synthesis-theme" id="finding-06-1">
+<span id="slide-evidence">
+</span>
+<h4 id="finding-06-1-title">
+         Connecting a traveler with a workable service
+        </h4>
+<p>
+         One report studies Yahoo! Transit through journey time, fares and transfers. Other students propose platforms such as CAMP and SmartFleet that combine rides, buses, delivery, dispatch or charging. These proposals emphasize coordination between the vehicle, local infrastructure and a fleet platform; they do not establish deployment or measured savings.
+        </p>
+<button class="detail-button" data-detail="notes-slide-evidence" type="button">
+         More detail
+        </button>
+</article>
+<article aria-labelledby="finding-06-2-title" class="synthesis-theme" id="finding-06-2">
+<h4 id="finding-06-2-title">
+         Freight and shuttle ideas need an operating plan
+        </h4>
+<p>
+         Application reports propose freight platoons, a campus–metro shuttle and parcel consolidation through a temporary microhub. Students discuss spacing, schedules, charging, maintenance and coordination across organizations. Their service targets make useful questions for a pilot, but are not observed performance results.
+        </p>
+<button class="detail-button" data-detail="finding-06-2-detail" type="button">
+         More detail
+        </button>
+</article>
+<article aria-labelledby="finding-06-3-title" class="synthesis-theme" id="finding-06-3">
+<h4 id="finding-06-3-title">
+         Autonomous operation requires more than a sensor list
+        </h4>
+<p>
+         Reports compare vision-focused and multisensor approaches, then connect perception with prediction, planning and control. They also discuss data collection, model validation and fleet monitoring. Students often favored complementary sensors, while some framed the choice as a trade-off involving cost, power, failure modes and the evidence needed for the application.
+        </p>
+<button class="detail-button" data-detail="finding-06-3-detail" type="button">
+         More detail
+        </button>
+</article>
+<article aria-labelledby="finding-06-4-title" class="synthesis-theme" id="finding-06-4">
+<h4 id="finding-06-4-title">
+         Who can use the service, and who answers when it fails?
+        </h4>
+<p>
+         Students raise affordability, smartphone access, accessible boarding, privacy and human support. One recalls abrupt braking on a shuttle; patrol reports question false alarms, bias and the authority to intervene. Some welcome passenger explanations, including language-model interfaces, while also discussing trust, liability and public participation.
+        </p>
+<button class="detail-button" data-detail="finding-06-4-detail" type="button">
+         More detail
+        </button>
+</article>
+</section>
+<p class="teaching-interpretation">
+       The reports suggest evaluating a specific service rather than autonomy in the abstract: identify the users, operating conditions, responsibilities and desired outcome, then test it against a suitable baseline. The examples below separate driving roles, traffic arithmetic and fleet scheduling.
+      </p>
+</div>
+</section>
+<section aria-labelledby="teaching-examples-title" class="lecture-section teaching-examples" id="teaching-examples">
+<div class="shell section-inner">
+<h2 id="teaching-examples-title">
+       Teaching examples
+      </h2>
+<article aria-labelledby="slide-responses-title" class="teaching-example" id="slide-responses">
+<h3 id="slide-responses-title">
+        Who performs driving and fallback when conditions change?
+       </h3>
+<p class="experiment-introduction">
+        Driving assistance and an automated driving system (ADS) assign different roles to the driver and system. This teaching example uses the lecture’s SAE-level discussion to distinguish L2 support, L3 conditional automation and L4 operation within a stated domain.
+       </p>
+<p class="experiment-inputs">
+        Compare the role within the operating domain with the role as the feature approaches its boundary.
+       </p>
+<p class="model-limitation">
+        The labels describe required roles; they do not certify a product’s safety or establish its operating domain.
+       </p>
+<div aria-label="Driving responsibility explorer" class="autonomy-lab">
+<div class="lab-controls">
+<div class="control-field">
+<label for="role-level">
+           Feature type
+          </label>
+<select id="role-level">
+<option value="2">
+            Level 2 · driver support
+           </option>
+<option value="3">
+            Level 3 · conditional automation
+           </option>
+<option value="4">
+            Level 4 · high automation
+           </option>
+</select>
+</div>
+<div class="control-field">
+<label for="role-boundary">
+           Operating situation
+          </label>
+<select id="role-boundary">
+<option value="inside">
+            Within the feature’s stated domain
+           </option>
+<option value="exit">
+            Approaching a domain boundary
+           </option>
+</select>
+</div>
+</div>
+<div aria-live="polite" class="role-results">
+<span id="role-label">
+</span>
+<h4 id="role-title">
+</h4>
+<p id="role-text">
+</p>
+</div>
+</div>
+<button class="detail-button" data-detail="notes-slide-responses" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-model-title" class="teaching-example" id="slide-model">
+<h3 id="slide-model-title">
+        How a vehicle turns observations into motion
+       </h3>
+<p class="experiment-introduction">
+        The supplied deck identifies five functions: Sense, Perceive, Abstract, Plan and Control. This process explorer expands those lecture labels into a teaching interpretation of sensing, scene estimation, behavior prediction, maneuver selection and execution.
+       </p>
+<p class="experiment-inputs">
+        The stages show what each function contributes and which information needs checking.
+       </p>
+<p class="model-limitation">
+        A simplified functional loop; it does not run a vehicle controller or represent every system architecture.
+       </p>
+<div class="briefing-visual">
+<div aria-label="Five-step driving cognition" class="stage-grid" id="stage-grid">
+</div>
+<div aria-live="polite" class="stage-detail">
+<span class="stage-serial" id="stage-serial">
+          01
+         </span>
+<div>
+<h3 id="stage-title">
+</h3>
+<p id="stage-description">
+</p>
+<div class="stage-connection">
+<b>
+            INPUT → DECISION → CHECK
+           </b>
+<span id="stage-connection">
+</span>
+</div>
+</div>
+</div>
+</div>
+<button class="detail-button" data-detail="notes-slide-model" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-future-title" class="teaching-example" id="slide-future">
+<h3 id="slide-future-title">
+        How does an assumed headway change idealized traffic flow?
+       </h3>
+<p class="experiment-introduction">
+        Headway is the time between successive vehicles passing the same point. This constructed teaching example connects the syllabus’s mixed-traffic topic with student interest in coordination: if one group is assigned a shorter headway, more vehicles can pass per hour in the arithmetic.
+       </p>
+<p class="experiment-inputs">
+        Change the automated share from 0–100% and its assumed headway from 0.8–3.0 seconds. Human-driven vehicles retain an assumed 2.0-second headway. The outputs show mean headway, idealized vehicles per hour and the percentage change from the 1,800-vehicle/hour baseline.
+       </p>
+<p class="model-limitation">
+        Steady single-lane arithmetic; it neither simulates traffic nor validates a safe following gap or road capacity.
+       </p>
+<div aria-label="Mixed traffic headway sensitivity" class="autonomy-lab">
+<div class="lab-controls">
+<label for="traffic-share">
+          Automated vehicle share
+          <output for="traffic-share" id="traffic-share-value">
+</output>
+<input id="traffic-share" max="100" min="0" step="5" type="range" value="50"/>
+</label>
+<label for="traffic-headway">
+          Automated crossing headway
+          <output for="traffic-headway" id="traffic-headway-value">
+</output>
+<input id="traffic-headway" max="3" min="0.8" step="0.1" type="range" value="1.2"/>
+</label>
+</div>
+<div aria-live="polite" class="lab-results">
+<div>
+<span>
+           MEAN CROSSING HEADWAY
+          </span>
+<strong id="traffic-mean">
+</strong>
+</div>
+<div>
+<span>
+           IDEALIZED FLOW
+          </span>
+<strong id="traffic-flow">
+</strong>
+</div>
+<div>
+<span>
+           VS HUMAN-ONLY ASSUMPTION
+          </span>
+<strong id="traffic-change">
+</strong>
+</div>
+</div>
+<p id="traffic-explanation">
+</p>
+<button class="lab-reset" id="traffic-reset" type="button">
+         Reset headway example
+        </button>
+</div>
+<button class="detail-button" data-detail="notes-slide-future" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-capacity-title" class="teaching-example" id="slide-capacity">
+<h3 id="slide-capacity-title">
+        How many available shuttles are needed for the departure interval?
+       </h3>
+<p class="experiment-introduction">
+        A campus–metro shuttle proposal raises a different capacity question: how many vehicles can complete a service cycle while departures remain evenly spaced? This constructed calculator is motivated by that student proposal; its cycle time and other inputs are illustrative, not an operating timetable.
+       </p>
+<p class="experiment-inputs">
+        Set the cycle time from 15–60 minutes, the available fleet from 2–20 vehicles and the desired departure interval from 2–10 minutes. A cycle is the time before a vehicle can begin the next departure, including the travel, stops, recovery and any charging time assigned to it.
+       </p>
+<p class="model-limitation">
+        Identical cycles and equal spacing; reserves, disruptions and passenger demand need separate planning.
+       </p>
+<div aria-label="Shuttle service capacity calculator" class="autonomy-lab">
+<div class="lab-controls three">
+<label for="shuttle-cycle">
+          Full cycle time
+          <output for="shuttle-cycle" id="shuttle-cycle-value">
+</output>
+<input id="shuttle-cycle" max="60" min="15" step="1" type="range" value="30"/>
+</label>
+<label for="shuttle-fleet">
+          Available vehicles
+          <output for="shuttle-fleet" id="shuttle-fleet-value">
+</output>
+<input id="shuttle-fleet" max="20" min="2" step="1" type="range" value="8"/>
+</label>
+<label for="shuttle-target">
+          Target departure interval
+          <output for="shuttle-target" id="shuttle-target-value">
+</output>
+<input id="shuttle-target" max="10" min="2" step="0.5" type="range" value="3"/>
+</label>
+</div>
+<div aria-live="polite" class="lab-results">
+<div>
+<span>
+           IDEAL DEPARTURE INTERVAL
+          </span>
+<strong id="shuttle-interval">
+</strong>
+</div>
+<div>
+<span>
+           MINIMUM AVAILABLE FLEET
+          </span>
+<strong id="shuttle-required">
+</strong>
+</div>
+<div>
+<span>
+           MEETS INTERVAL TARGET?
+          </span>
+<strong id="shuttle-status">
+</strong>
+</div>
+</div>
+<p id="shuttle-explanation">
+</p>
+<button class="lab-reset" id="shuttle-reset" type="button">
+         Reset shuttle example
+        </button>
+</div>
+<button class="detail-button" data-detail="notes-slide-capacity" type="button">
+        More detail
+       </button>
+</article>
+<article aria-labelledby="slide-world-title" class="teaching-example" id="slide-world">
+<h3 id="slide-world-title">
+        What evidence would justify starting or expanding this service?
+       </h3>
+<p class="experiment-introduction">
+        A proposed benefit becomes an evaluation question once its baseline and operating conditions are specified. This teaching interpretation follows the students’ concerns about comfort, access, cost, privacy and accountability.
+       </p>
+<button class="detail-button" data-detail="notes-slide-world" type="button">
+        More detail
+       </button>
+</article>
+</div>
+</section>
+<section aria-labelledby="resources-title" class="lecture-section resources-section" id="resources">
+<div class="shell section-inner">
+<h2 id="resources-title">
+       Resources
+      </h2>
+<p>
+       These sources distinguish driving roles, traffic models and application evidence.
+      </p>
+<ol class="reference-list">
+<li>
+<a href="https://www.youtube.com/watch?v=iHzzSao6ypE&amp;t=66s" rel="noopener noreferrer" target="_blank">
+         Course prereading (2025). Fundamental problem of traffic. Syllabus-specified video.
+        </a>
+<p class="reference-annotation">
+         Syllabus prereading; the field experiment below provides related reading on stop-and-go traffic.
+        </p>
+</li>
+<li>
+<a href="https://saemobilus.sae.org/standards/j3016_202104-taxonomy-definitions-terms-related-driving-automation-systems-road-motor-vehicles" rel="noopener noreferrer" target="_blank">
+         SAE International (2021). Taxonomy and Definitions for Terms Related to Driving Automation Systems for On-Road Motor Vehicles. J3016_202104.
+        </a>
+<p class="reference-annotation">
+         Classification of feature roles; full standard access may require a subscription.
+        </p>
+</li>
+<li>
+<a href="https://go.sae.org/rs/525-RCG-129/images/AVSC00003202006.pdf" rel="noopener noreferrer" target="_blank">
+         Automated Vehicle Safety Consortium (2020). AVSC Best Practice for Passenger-Initiated Emergency Trip Interruption. AVSC00003202006.
+        </a>
+<p class="reference-annotation">
+         Companion guidance on trip interruption, distinct from the lecture deck.
+        </p>
+</li>
+<li>
+<a href="https://www.itskrs.its.dot.gov/briefings/executive-briefing/connected-vehicle-pilot-deployment-program-2024-update" rel="noopener noreferrer" target="_blank">
+         U.S. Department of Transportation (2024). Connected Vehicle Pilot Deployment Program (2024 Update). ITS Deployment Evaluation.
+        </a>
+<p class="reference-annotation">
+         Pilot-specific evaluations and interoperability; the live briefing was updated in December 2025.
+        </p>
+</li>
+<li>
+<a href="https://sumo.dlr.de/docs/Simulation/Basic_Definition.html" rel="noopener noreferrer" target="_blank">
+         Eclipse SUMO (n.d.). Basic Definition. SUMO Documentation.
+        </a>
+<p class="reference-annotation">
+         Networks, demand and inputs needed for a microscopic simulation.
+        </p>
+</li>
+<li>
+<a href="https://arxiv.org/abs/1705.01693" rel="noopener noreferrer" target="_blank">
+         Stern, R. E., et al. (2018). Dissipation of stop-and-go waves via control of autonomous vehicles: Field experiments. Transportation Research Part C, 89, 205–221; preprint posted 2017.
+        </a>
+<p class="reference-annotation">
+         Controlled ring-road experiment; its results do not validate the headway calculator.
+        </p>
+</li>
+<li>
+<a href="https://transit.yahoo.co.jp/" rel="noopener noreferrer" target="_blank">
+         Yahoo! Japan (n.d.). Yahoo! Transit: route search, timetables and operating information.
+        </a>
+<p class="reference-annotation">
+         Official service studied in a student report.
+        </p>
+</li>
+<li>
+<a href="https://www.tesla.com/support/fsd" rel="noopener noreferrer" target="_blank">
+         Tesla (n.d.). Full Self-Driving (Supervised). Tesla Support.
+        </a>
+<p class="reference-annotation">
+         Current product instructions require active driver supervision; read separately from historical deck claims.
+        </p>
+</li>
+<li>
+<a href="https://waymo.com/safety/" rel="noopener noreferrer" target="_blank">
+         Waymo (n.d.). Safety. Company safety materials.
+        </a>
+<p class="reference-annotation">
+         Interpret claims with their operating area, exposure, comparator and methodology.
+        </p>
+</li>
+</ol>
+<p class="source-note">
+<strong>
+        Source note.
+       </strong>
+       The lecture and student reports date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
+      </p>
+</div>
+</section>
+<section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
+<div class="shell section-inner">
+<h2 id="quiz-title">
+       Quiz
+      </h2>
+<p>
+       Twelve practice questions on driving roles, vehicle decisions, connected services and capacity assumptions; they do not affect the course grade.
+      </p>
+<div class="quiz-board">
+<div class="quiz-main">
+<div class="quiz-head">
+<span class="quiz-status" id="quiz-status">
+</span>
+<span aria-hidden="true" class="quiz-track">
+<i id="quiz-progress">
+</i>
+</span>
+</div>
+<div class="quiz-topic" id="quiz-topic">
+</div>
+<div class="question" id="quiz-question">
+</div>
+<div class="choices" id="quiz-choices">
+</div>
+<div aria-live="polite" class="feedback" id="quiz-feedback">
+</div>
+<div class="quiz-controls">
+<button class="next-button" disabled="" id="quiz-next" type="button">
+          Next
+         </button>
+<button class="next-button" hidden="" id="quiz-restart" type="button">
+          Restart
+         </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<dialog aria-labelledby="assignment-06-detail-title" class="evidence-dialog" id="assignment-06-detail">
+<div class="dialog-heading">
+<h2 id="assignment-06-detail-title">
+       Original lecture assignment
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Write a 2-page report to introduce a smart transportation application.
+      </p>
+<p>
+       The theme headings organize the submitted work; they are not additional assignment questions.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="finding-06-2-detail-title" class="evidence-dialog" id="finding-06-2-detail">
+<div class="dialog-heading">
+<h2 id="finding-06-2-detail-title">
+       Freight and shuttle ideas need an operating plan
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The shuttle proposal specifies a route, stops, eight starter vehicles, three-minute peak departures, charging, a staged pilot and reliability targets. A timetable still needs a measured cycle time and enough vehicles actually available at each moment. The freight-platoon report raises coordinated braking, cut-ins, connectivity, maintenance and cross-border rules. The CityFlow microhub concept proposes combining parcels from several carriers for cargo-bike delivery; its percentage savings are scenario claims without a measured baseline. It is a student concept, distinct from the similarly named traffic simulator.
+      </p>
+<p>
+       Mixed-traffic discussion in another report considers ring/grid models and local versus network routing, but its thresholds were not verified by the supplied deck.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="finding-06-3-detail-title" class="evidence-dialog" id="finding-06-3-detail">
+<div class="dialog-heading">
+<h2 id="finding-06-3-detail-title">
+       Autonomous operation requires more than a sensor list
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Some reports present sensor fusion as a route to stronger robustness; a more qualified comparison considers hardware costs and how failures will be tested. The lecture’s five steps are a simplified functional loop, not a mandatory implementation architecture. Fleet data can support model development, but a collected event does not automatically improve or rewrite a live controller. Data checking, candidate training, validation and controlled release are separate from current vehicle control. SAE levels classify driving features and required roles; they are not safety certificates, an inevitable sequence of upgrades or proof that a vehicle without a visible driver is L4.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="finding-06-4-detail-title" class="evidence-dialog" id="finding-06-4-detail">
+<div class="dialog-heading">
+<h2 id="finding-06-4-detail-title">
+       Who can use the service, and who answers when it fails?
+      </h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The access discussion includes people who cannot drive or use a smartphone, and the full journey rather than booking alone. A personal shuttle experience raises comfort questions but is not a fleet-wide braking rate. The patrol reports distinguish moving a vehicle from correctly classifying a threat and deciding who may act. Generated explanations can reassure passengers, yet must be checked against event records and uncertainty. The reports also connect adoption with maintenance, monitoring, training and workforce changes. Cleaner travel or reduced parking are aspirations that require evidence about occupancy, empty travel, energy sources and the trips displaced.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-evidence-title" class="evidence-dialog" id="notes-slide-evidence">
+<div class="dialog-heading">
+<h2 id="notes-slide-evidence-title">
+<span id="notes-title-slide-evidence">
+        Connected transport proposals and their evidence
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The Yahoo! Transit report provides a concrete traveler decision: compare routes that differ in time, cost and transfers. The official service verifies route searches, timetables and operating information, but not the report’s claims about an internal AI algorithm, language coverage, popularity or congestion reduction. CAMP and SmartFleet are student concepts. One report develops Apollo Connect and Traffic Pulse as complementary proposals. Their vehicle/edge/cloud and shared-observation ideas would require rules for data freshness, access, privacy and failure handling.
+      </p>
+<p>
+       Vehicle-to-vehicle, infrastructure, pedestrian and network links carry different information. Their messages need timely, authentic and interoperable handling. A bus-priority request is one input to signal control, with pedestrian and other traffic constraints still relevant. The USDOT pilot briefing in Resources reports evaluations specific to its sites and conditions.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-responses-title" class="evidence-dialog" id="notes-slide-responses">
+<div class="dialog-heading">
+<h2 id="notes-slide-responses-title">
+<span id="notes-title-slide-responses">
+        Who performs driving and fallback when conditions change?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       The dynamic driving task covers vehicle motion and response to road events. At L0–L2 the driver performs that task and supervises any support feature. L1 supports either sustained steering or speed; L2 supports both while the driver supervises. At L3 the ADS performs the task within its domain, with a fallback-ready user expected to respond when required. At L4 the ADS performs both the task and fallback within its domain, without depending on passenger takeover; fallback may bring it to a minimal risk condition.
+      </p>
+<p>
+       L5 extends the driving and fallback roles across driver-manageable on-road conditions. An operating domain can limit roads, speed, weather or other conditions. L2+, incident logging and a driverless appearance are not additional SAE levels. Check each feature’s actual instructions and evidence.
+      </p>
+<div class="table-scroll">
+<table class="autonomy-table">
+<caption>
+         Feature roles · brief paraphrases of the SAE taxonomy
+        </caption>
+<thead>
+<tr>
+<th>
+           Level
+          </th>
+<th>
+           Name
+          </th>
+<th>
+           Role while engaged
+          </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
+           L0
+          </th>
+<td>
+           No driving automation
+          </td>
+<td>
+           Driver performs the task; warnings or brief interventions may assist.
+          </td>
+</tr>
+<tr>
+<th scope="row">
+           L1
+          </th>
+<td>
+           Driver assistance
+          </td>
+<td>
+           Sustained steering OR speed support; driver supervises.
+          </td>
+</tr>
+<tr>
+<th scope="row">
+           L2
+          </th>
+<td>
+           Partial driving automation
+          </td>
+<td>
+           Sustained steering AND speed support; driver supervises.
+          </td>
+</tr>
+<tr>
+<th scope="row">
+           L3
+          </th>
+<td>
+           Conditional driving automation
+          </td>
+<td>
+           ADS performs the task in its domain; a fallback-ready user must respond when required.
+          </td>
+</tr>
+<tr>
+<th scope="row">
+           L4
+          </th>
+<td>
+           High driving automation
+          </td>
+<td>
+           ADS performs the task and fallback within its domain; no driver takeover is required.
+          </td>
+</tr>
+<tr>
+<th scope="row">
+           L5
+          </th>
+<td>
+           Full driving automation
+          </td>
+<td>
+           ADS performs the task and fallback across driver-manageable on-road conditions.
+          </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-model-title" class="evidence-dialog" id="notes-slide-model">
+<div class="dialog-heading">
+<h2 id="notes-slide-model-title">
+<span id="notes-title-slide-model">
+        How a vehicle turns observations into motion
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Perception and localization estimate a scene from sensors. Prediction retains plausible actions of other road users rather than treating an inferred intention as certain. Planning selects a feasible path and speed profile; control executes and monitors them as new observations arrive. Calibration, timing and uncertainty affect the whole loop. Model development is separate: relevant events are collected, data checked, candidates trained and validated, and approved changes released. Simulation contributes coverage but still needs correspondence with real conditions. Fleet operations need maintenance, monitoring and incident response.
+      </p>
+<p>
+       Cameras contribute image detail for signs, markings and objects; radar supplies range and relative motion, while LiDAR measures geometry and ultrasonic sensors support short-range detection. Satellite and inertial measurements help estimate vehicle state. Lighting, weather, obstructions, calibration, computation and cost affect these contributions. Sensor diversity alone does not prove robustness.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-future-title" class="evidence-dialog" id="notes-slide-future">
+<div class="dialog-heading">
+<h2 id="notes-slide-future-title">
+<span id="notes-title-slide-future">
+        How does an assumed headway change idealized traffic flow?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Let p be automated share as a fraction and hAV its assigned headway in seconds. The model averages assigned crossing headways: h̄ = (1 − p)×2.0 + p×hAV. It then computes q = 3600/h̄ vehicles/hour and change = (2.0/h̄ − 1)×100%. At p = 0.5 and hAV = 1.2 s, h̄ = 1.6 s and q = 2,250 vehicles/hour, 25% above the assumed human-only baseline. A larger automated share helps only when its assumed headway is shorter; at 2.0 s there is no arithmetic change, and above 2.0 s flow falls.
+      </p>
+<p>
+       The inputs are illustrative, not measurements or recommendations. Continuous demand, homogeneous assigned headways and a single stream are assumed. Following-pair behavior, stop-and-go dynamics, queues, lane changes, signals, network routing, pedestrian interactions and safety constraints are absent. Stern et al.’s ring-road field experiment and SUMO documentation offer further study of dynamics, distinct from this calculator.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-capacity-title" class="evidence-dialog" id="notes-slide-capacity">
+<div class="dialog-heading">
+<h2 id="notes-slide-capacity-title">
+<span id="notes-title-slide-capacity">
+        How many available shuttles are needed for the departure interval?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       For cycle time C minutes, N available vehicles and target interval H minutes, ideal interval = C/N and required fleet = ceil(C/H). The available fleet meets the arithmetic target when C/N ≤ H. At the defaults C = 30 min, N = 8 and H = 3 min, the interval is 3.75 min and the required fleet is 10: two more available vehicles, before any reserve allowance. Corresponding theoretical frequency is 60/(C/N) departures/hour; this is 16 at the default fleet and 20 at the target interval.
+      </p>
+<p>
+       Vehicles unavailable for charging, maintenance or faults should not be counted in N; do not also charge the same downtime twice through C. The arithmetic does not schedule individual batteries or vehicles. Reserve fleet, variability in dwell and travel time, staff, stop access, passenger capacity, crowding and disruption recovery determine whether a real service can meet the desired interval. The student’s eight-vehicle/three-minute proposal motivates checking the relationship but supplies no measured 30-minute cycle.
+      </p>
+</div>
+</dialog>
+<dialog aria-labelledby="notes-slide-world-title" class="evidence-dialog" id="notes-slide-world">
+<div class="dialog-heading">
+<h2 id="notes-slide-world-title">
+<span id="notes-title-slide-world">
+        What evidence would justify starting or expanding this service?
+       </span>
+</h2>
+<button aria-label="Close details" data-close-dialog="" type="button">
+       Close
+      </button>
+</div>
+<div class="dialog-content">
+<p>
+       Define the operating domain, expected users, hazards and fallback arrangements. Choose measures for the claim being tested: safety outcomes per exposure, uncomfortable braking, service reliability, wait time, passenger capacity, full costs and accessibility. Compare the results with a suitable baseline and include uncertainty. Assess maintenance, charging, incident support, data retention and loss of connectivity. A signal-priority request remains an input to a constrained traffic-control decision; it does not remove pedestrian conflicts. Company safety materials apply to their stated routes, exposure and methods.
+      </p>
+<p>
+       A market forecast, a large fleet, simulated miles, an incident log or a fluent generated explanation alone does not validate the service.
+      </p>
+<p>
+       Accessibility covers boarding, accessible stops, assistance, emergency communication and recovery, alongside booking. Patrol systems also need a separate evaluation of threat classification, false alarms and human authority to intervene. Environmental claims should account for electricity sources, occupancy, empty repositioning and the trips replaced. A service budget includes monitoring, training, charging, insurance and incident support.
+      </p>
+</div>
+</dialog>
+</main>
+<footer class="site-footer">
+<div class="shell footer-inner">
+<strong>SLOGX</strong>
+<span>
+      Introduction to Smart Logistics · Fall 2025
+     </span>
+<a href="../">
+      2025 lectures
+     </a>
+</div>
+</footer>
+</div>
+</body>
+</html>

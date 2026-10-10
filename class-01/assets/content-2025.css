@@ -1,0 +1,145 @@
+/* The source-led 2025 reading view. Topic colors remain in 2025-theme.css. */
+body.content-2025 .lecture-main .section-inner,
+body.content-2025 .lecture-main .shell { width: min(760px, calc(100% - 40px)); }
+body.content-2025 .lecture-section { scroll-margin-top: calc(var(--briefing-header-height, 160px) + 20px); }
+body.content-2025 :is(.event-theme,.synthesis-theme,.question-synthesis,.teaching-example,.fragment-anchor) { scroll-margin-top: calc(var(--briefing-header-height, 160px) + 20px); }
+body.content-2025 .section-inner { padding-block: 32px; }
+body.content-2025 .intro-section .section-inner { padding-block: 40px 24px; }
+body.content-2025 h1 { font: 600 clamp(1.8rem, 3.2vw, 2.35rem)/1.22 var(--serif); margin: 0 0 14px; max-width: 760px; }
+body.content-2025 .lecture-section h2,
+body.content-2025 .register h2 { font: 600 1.55rem/1.3 var(--serif); margin: 0 0 16px; }
+body.content-2025 :is(.lecture-overview,.lecturer-profile) h2 { font: 600 1.05rem/1.4 var(--sans); margin: 0 0 8px; }
+body.content-2025 .lecture-meta { font: 400 .9rem/1.6 var(--sans); color: var(--muted); margin: 0 0 28px; }
+body.content-2025 :is(.lecture-overview,.lecturer-profile) { margin-top: 24px; }
+body.content-2025 .lecture-header p { margin-block: 0 12px; }
+body.content-2025 .lecturer-profile { font-size: .95rem; }
+body.content-2025 .lecture-header .lecture-meta { margin-bottom: 28px; }
+body.content-2025 .synthesis-introduction { color: var(--muted); font-size: .95rem; margin: 0 0 24px; }
+body.content-2025 .assignment-prompt { border: 0; border-left: 2px solid var(--lecture-primary); background: none; padding: 2px 0 2px 16px; margin: 0 0 24px; }
+body.content-2025 .assignment-prompt :is(p,h3) { margin: 6px 0; }
+body.content-2025 .student-section { padding: 0; }
+body.content-2025 :is(.synthesis-theme,.question-synthesis,.event-theme,.teaching-example) { margin: 0; padding: 24px 0; border: 0; border-top: 1px solid var(--line); background: none; }
+body.content-2025 :is(.synthesis-theme,.question-synthesis,.event-theme,.teaching-example) h3 { font: 600 1.2rem/1.4 var(--sans); margin: 0 0 14px; }
+body.content-2025 :is(.synthesis-theme,.question-synthesis,.event-theme,.teaching-example) :is(h4,.finding-label) { font: 600 1rem/1.5 var(--sans); margin: 14px 0 8px; }
+body.content-2025 :is(.synthesis-theme,.question-synthesis,.event-theme,.teaching-example) p { margin-block: 10px; }
+body.content-2025 :is(.synthesis-theme,.question-synthesis,.event-theme) ul { margin: 10px 0; padding-left: 22px; }
+body.content-2025 :is(.synthesis-theme,.question-synthesis,.event-theme) li { margin-block: 8px; }
+body.content-2025 :is(.model-limitation,.control-context,.source-note) { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+body.content-2025 .detail-button,
+body.content-2025 .evidence-dialog button[data-close-dialog],
+body.content-2025 .quiz-guard button { min-height: 44px; padding: 8px 14px; border: 1px solid var(--color-control-line); border-radius: 4px; background: var(--surface); color: var(--lecture-deep); font: 600 .95rem/1.4 var(--sans); cursor: pointer; }
+body.content-2025 .detail-button { margin-top: 8px; }
+body.content-2025 .detail-button:hover,
+body.content-2025 .evidence-dialog button:hover { background: var(--lecture-soft); }
+body.content-2025 .teaching-widget,
+body.content-2025 :is(.process-explorer,.case-explorer) { margin-block: 18px; }
+body.content-2025 .stage-grid { gap: 8px; }
+body.content-2025 .stage-button { border-color: var(--color-control-line); min-height: 72px; padding: 12px; border-radius: 4px; font: 400 .9rem/1.4 var(--sans); }
+body.content-2025 .stage-button :is(.name,.label) { font-size: .95rem; font-weight: 600; }
+body.content-2025 .stage-button :is(.short,.num,.serial) { font-size: .85rem; opacity: 1; }
+body.content-2025 .visit-flow-grid .stage-button.active :is(.short,.serial) { color: white; }
+body.content-2025 .stage-detail { padding: 18px 0; border: 0; border-bottom: 1px solid var(--line); background: none; gap: 16px; }
+body.content-2025 .stage-detail :is(h3,p) { margin-top: 0; }
+body.content-2025 .stage-detail p { font-size: .95rem; }
+body.content-2025 .case-selector { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+body.content-2025 :is(.filter-button,.batch-controls button,.lab-presets button,.map-presets button,.lab-reset) { min-height: 44px; padding: 9px 12px; border-radius: 4px; font: 500 .9rem/1.4 var(--sans); }
+body.content-2025 :is(.batch-lab,.latency-lab,.position-lab,.autonomy-lab) { border: 1px solid var(--color-control-line); border-radius: 4px; padding: 20px; margin: 18px 0; background: var(--surface); }
+body.content-2025 :is(.lab-controls,.control-field) label,
+body.content-2025 .lab-controls label { font: 600 .9rem/1.5 var(--sans); }
+body.content-2025 :is(.lab-controls,.control-field) :is(select,input) { max-width: 100%; min-width: 0; }
+body.content-2025 input[type=range] { min-height: 28px; }
+body.content-2025 .lab-results :is(span,p),
+body.content-2025 .role-results>span { font: 400 .9rem/1.5 var(--sans); }
+body.content-2025 .lab-results strong { font: 600 1.45rem/1.4 var(--sans); }
+body.content-2025 .reference-list { padding-left: 24px; margin: 16px 0 20px; }
+body.content-2025 .reference-list li { padding: 12px 0 12px 6px; border-bottom: 1px solid var(--line); font-size: .95rem; line-height: 1.6; }
+body.content-2025 .reference-list :is(p,small) { margin: 5px 0 0; font-size: .9rem; color: var(--muted); }
+body.content-2025 .source-note { margin-top: 20px; }
+body.content-2025 .quiz-feature { padding: 0; border: 0; background: none; }
+body.content-2025 .quiz-feature .section-heading { display: block; margin: 0; }
+body.content-2025 .quiz-feature .intro { font-size: .95rem; color: var(--muted); margin: 0; }
+body.content-2025 .quiz-section .quiz-board { padding: 20px; border-color: var(--color-control-line); margin: 20px 0 0; }
+body.content-2025 .quiz-controls { display: flex; flex-wrap: wrap; gap: 12px; }
+body.content-2025 #quiz-restart { background: var(--surface); color: var(--lecture-deep); border-color: var(--color-control-line); }
+body.content-2025 .question { font: 600 1.2rem/1.45 var(--sans); }
+body.content-2025 :is(.quiz-status,.quiz-topic) { font: 500 .85rem/1.5 var(--sans); letter-spacing: 0; }
+body.content-2025 .choices .choice { font: 400 1rem/1.5 var(--sans); }
+body.content-2025 .choices .letter { font: 600 .85rem/1.6 var(--sans); }
+body.content-2025 .feedback { font-size: .95rem; line-height: 1.6; min-height: 0; margin-block: 16px; }
+body.content-2025 .feedback a { font-weight: 500; }
+body.content-2025 .evidence-dialog { width: min(800px, calc(100% - 32px)); max-width: none; max-height: 86dvh; padding: 0; border: 1px solid var(--color-control-line); border-radius: 6px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-overlay); overflow: hidden; }
+body.content-2025 .evidence-dialog[open] { display: flex; flex-direction: column; }
+body.content-2025 .evidence-dialog::backdrop { background: rgb(24 28 25 / .55); }
+body.content-2025 .dialog-heading { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+body.content-2025 .dialog-heading h2 { font: 600 1.25rem/1.35 var(--serif); margin: 0; }
+body.content-2025 .dialog-content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 20px 24px 28px; }
+body.content-2025 .dialog-content :is(h3,h4) { font: 600 1.1rem/1.4 var(--sans); margin: 24px 0 10px; }
+body.content-2025 .dialog-content p { margin: 10px 0; }
+body.content-2025 .dialog-content figure { margin: 20px 0; }
+body.content-2025 .dialog-content figure img { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+body.content-2025 .dialog-content figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; }
+body.content-2025 .dialog-content table { max-width: 100%; }
+body.content-2025 .table-scroll { min-width: 0; max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; margin-block: 18px; }
+body.content-2025 .quiz-guard { max-width: 520px; }
+body.content-2025 .quiz-guard .dialog-content { padding-bottom: 24px; }
+body.content-2025 .guard-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+body.content-2025 .guard-actions [data-guard-stay] { background: var(--lecture-primary); border-color: var(--lecture-primary); color: white; }
+body.content-2025 .definition-list { display: grid; grid-template-columns: 160px 1fr; gap: 8px 18px; margin: 20px 0 0; }
+body.content-2025 .definition-list dt { font-weight: 600; }
+body.content-2025 .definition-list dd { margin: 0; }
+body.content-2025 .visit-service-result { padding: 18px; background: var(--lecture-soft); border: 1px solid var(--line); border-radius: 4px; }
+body.content-2025 .visit-result-label { font: 500 .9rem/1.5 var(--sans); }
+body.content-2025 .visit-course-links a { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 16px 0; background: none; }
+body.content-2025 .visit-fact-card { padding: 20px; border-radius: 4px; border-color: var(--color-control-line); background: var(--surface); }
+body.content-2025 .visit-fact-controls button { min-height: 44px; }
+body.content-2025 .hub-main { padding-block: 40px 32px; }
+body.content-2025 .hub-heading { padding: 0; max-width: 760px; }
+body.content-2025 .hub-heading p { font-size: 1rem; }
+body.content-2025 .register { margin-top: 36px; padding: 0; }
+body.content-2025 .lecture-row[data-lecture] { display: grid; grid-template-columns: 86px minmax(0,1fr) 20px; gap: 20px; padding: 22px 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; }
+body.content-2025 .lecture-row[data-lecture]:last-child { border-bottom: 1px solid var(--line); }
+body.content-2025 .lecture-row[data-lecture]:hover { background: var(--lecture-soft); }
+body.content-2025 .lecture-row .number { font: 500 .9rem/1.5 var(--sans); color: var(--lecture-primary); width: auto; height: auto; background: none; border: 0; }
+body.content-2025 .session-copy { display: grid; gap: 6px; }
+body.content-2025 .lecture-row .register-title { font: 600 1.15rem/1.4 var(--sans); color: var(--ink); }
+body.content-2025 .session-meta { color: var(--muted); font: 400 .9rem/1.5 var(--sans); }
+body.content-2025 .session-description { font: 400 .95rem/1.5 var(--sans); color: var(--ink); }
+body.content-2025 .session-arrow { color: var(--lecture-primary); align-self: center; }
+body.content-2025 .brand strong { font-size: 1rem; max-width: 250px; display: block; }
+body.content-2025 .briefing-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; padding-block: 14px; }
+body.content-2025 .briefing-header>.year-nav { grid-column: 2; grid-row: 1; }
+body.content-2025 .briefing-header .top-section-links { grid-column: 1 / -1; grid-row: 2; display: flex; justify-content: flex-start; gap: 8px; margin: 0; }
+body.content-2025 .briefing-header .top-section-links a { min-height: 44px; padding: 10px; font-size: .95rem; }
+body.content-2025 .rail-current { display: none; }
+body.content-2025 .lecture-rail .shell { gap: 12px; }
+body.content-2025 .lecture-rail [data-lecture] { min-width: 36px; min-height: 40px; }
+body.content-2025 .year-nav a { min-height: 40px; }
+@media (max-width: 1100px) {
+  body.content-2025 .zoybug-widget { position: relative; right: auto; bottom: auto; width: min(760px, calc(100% - 40px)); margin: 0 auto 24px; display: flex; justify-content: flex-end; }
+  body.content-2025 .footer-inner { padding-bottom: 24px; }
+}
+@media (max-width: 540px) {
+  body.content-2025 .section-inner { padding-block: 24px; }
+  body.content-2025 .intro-section .section-inner { padding-top: 28px; }
+  body.content-2025 .briefing-header { gap: 8px 12px; }
+  body.content-2025 .briefing-header .top-section-links { gap: 0; justify-content: space-between; flex-wrap: wrap; }
+  body.content-2025 .briefing-header .top-section-links a { font-size: .85rem; padding: 9px 5px; }
+  body.content-2025 .brand strong { font-size: .9rem; max-width: 210px; }
+  body.content-2025 .lecture-switcher { gap: 4px; }
+  body.content-2025 .lecture-rail [data-lecture] { min-width: 34px; padding-inline: 4px; }
+  body.content-2025 .lecture-rail [data-lecture="visit"] { min-width: 43px; }
+  body.content-2025 .lecture-row[data-lecture] { grid-template-columns: 64px minmax(0,1fr) 14px; gap: 10px; padding-block: 20px; }
+  body.content-2025 .lecture-row .number { font-size: .85rem; }
+  body.content-2025 .lecture-row .register-title { font-size: 1.05rem; }
+  body.content-2025 :is(.batch-lab,.latency-lab,.position-lab,.autonomy-lab) { padding: 14px; }
+  body.content-2025 .stage-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  body.content-2025 .stage-detail { grid-template-columns: 32px minmax(0,1fr); }
+  body.content-2025 .stage-detail .detail-key { grid-column: 2; }
+  body.content-2025 .quiz-section .quiz-board { padding: 16px; }
+  body.content-2025 .evidence-dialog { width: calc(100% - 20px); max-height: 90dvh; }
+  body.content-2025 .dialog-heading { padding: 12px 16px; gap: 12px; }
+  body.content-2025 .dialog-content { padding: 16px 16px 24px; }
+  body.content-2025 .definition-list { grid-template-columns: 1fr; gap: 4px; }
+  body.content-2025 .definition-list dd { margin-bottom: 12px; }
+  body.content-2025 .masthead-inner { flex-wrap: wrap; }
+}

@@ -63,7 +63,164 @@ function renderShuttle(){
 [shuttleCycle,shuttleFleet,shuttleTarget].forEach(x=>x.addEventListener('input',renderShuttle));
 document.querySelector('#shuttle-reset').addEventListener('click',()=>{shuttleCycle.value=30;shuttleFleet.value=8;shuttleTarget.value=3;renderShuttle();});renderShuttle();
 
-const questions = [{"topic": "Driver support", "question": "An L2 feature steers and controls speed. Who supervises the road?", "choices": ["The passenger app", "The driver", "Only the cloud platform"], "correct": 1, "explanation": "L2 is driver support; sustained steering and speed assistance do not remove driver supervision.", "readingUrl": "#slide-responses", "readingLabel": "Feature roles"}, {"topic": "Conditional automation", "question": "An L3 feature approaches its operating boundary and requests intervention. Which role matters?", "choices": ["A fallback-ready user who responds when required", "A passenger who may always ignore the request", "A remote support desk that replaces the user’s required role"], "correct": 0, "explanation": "L3 relies on the fallback-ready user when intervention is required.", "readingUrl": "#slide-responses", "readingLabel": "Responsibility explorer"}, {"topic": "Domain + fallback", "question": "What distinguishes L4 within its domain?", "choices": ["It can drive under every imaginable condition", "It requires a driver to monitor every steering command", "The ADS performs driving and fallback without requiring driver takeover"], "correct": 2, "explanation": "A limited operating domain does not erase the L4 system’s fallback responsibility.", "readingUrl": "#slide-responses", "readingLabel": "Domain boundaries"}, {"topic": "Taxonomy", "question": "A service claims SAE L4 because it keeps an incident log. What is the right response?", "choices": ["An incident log is an automatic safety certificate", "Assess the actual feature roles, domain and safety evidence", "All incident logs imply L5"], "correct": 1, "explanation": "SAE levels classify features and responsibility; reporting alone does not establish a level or prove safety.", "readingUrl": "https://saemobilus.sae.org/standards/j3016_202104-taxonomy-definitions-terms-related-driving-automation-systems-road-motor-vehicles", "readingLabel": "SAE terminology"}, {"topic": "Cognition", "question": "Where does choosing a path and speed profile belong in the simplified loop?", "choices": ["Plan", "Sense", "Perceive"], "correct": 0, "explanation": "Planning uses perceptions and predicted interactions to select motion; control executes it.", "readingUrl": "#slide-model", "readingLabel": "Five-step loop"}, {"topic": "Development cycle", "question": "A fleet collects a rare event. What should precede a production model release?", "choices": ["Immediately replace every live controller", "Treat the raw event as proof that all roads are covered", "Check the data, train and validate a candidate, then control the release"], "correct": 2, "explanation": "The development loop includes validation and release controls; experience does not guarantee automatic improvement.", "readingUrl": "#slide-model", "readingLabel": "Data development"}, {"topic": "V2X", "question": "A bus sends a signal-priority request near a busy pedestrian crossing. What does the request establish?", "choices": ["Permission to ignore pedestrian conflicts", "An input to a constrained traffic-control decision", "That the bus is an L5 vehicle"], "correct": 1, "explanation": "Connectivity supports coordination; priority does not remove crossing constraints or establish an automation level.", "readingUrl": "#slide-evidence", "readingLabel": "Connected-city boundaries"}, {"topic": "Transit service", "question": "Two journey options differ in fare, time and transfers. What is a useful comparison?", "choices": ["Compare the traveler’s priorities, departure data and feasible transfers", "Assume every traveler needs the lowest fare only", "Infer the provider’s unpublished AI algorithm"], "correct": 0, "explanation": "A service decision includes traveler constraints and current operating information.", "readingUrl": "#slide-evidence", "readingLabel": "Transit application"}, {"topic": "Headway assumptions", "question": "In the traffic lab, p = 50%, human headway = 2.0 s and AV headway = 1.2 s. What is the idealized flow?", "choices": ["1800 vehicles/hour", "3000 vehicles/hour", "2250 vehicles/hour"], "correct": 2, "explanation": "Mean headway = 0.5×2.0 + 0.5×1.2 = 1.6 s; 3600/1.6 = 2250. This is not validated road capacity.", "readingUrl": "#slide-future", "readingLabel": "Headway model"}, {"topic": "Shuttle capacity", "question": "A 30-minute cycle targets a 3-minute departure interval. How many available vehicles does the ideal model require?", "choices": ["Eight", "Ten", "Six"], "correct": 1, "explanation": "ceil(30/3) = 10 available vehicles, before adding reserves or disruption allowances.", "readingUrl": "#slide-capacity", "readingLabel": "Shuttle service model"}, {"topic": "Proposal + evidence", "question": "A student concept promises 40% lower costs. How should it appear in the synthesis?", "choices": ["As a proposed benefit to test against a defined baseline", "As a measured citywide outcome", "As proof that no maintenance budget is needed"], "correct": 0, "explanation": "The supplied proposal does not establish operational measurements; costs require an appropriate trial and baseline.", "readingUrl": "#slide-evidence", "readingLabel": "Student proposals"}, {"topic": "Public trust", "question": "An LLM explains a braking event fluently. What still needs checking?", "choices": ["Whether the explanation sounds confident", "Whether it uses the terminology found in the vehicle manual", "Whether it matches event evidence and communicates uncertainty"], "correct": 2, "explanation": "Generated explanations can be inaccurate; readability alone is not causal or safety evidence.", "readingUrl": "#slide-world", "readingLabel": "Trust and evidence"}];
+const questions = [
+  {
+    "topic": "Driver support",
+    "question": "An L2 feature is steering and maintaining speed on a motorway. No takeover alert is active. Who must monitor the road and respond to hazards?",
+    "choices": [
+      "The driver after the feature issues a request to resume the driving task.",
+      "The system within its domain, with the driver receptive to a later request.",
+      "The driver continuously, including while both assistance functions are active."
+    ],
+    "correct": 2,
+    "explanation": "L2 combines steering and speed support while the driver supervises the road. Waiting for a request confuses that role with L3 conditional automation.",
+    "readingUrl": "#slide-responses",
+    "readingLabel": "Driving roles"
+  },
+  {
+    "topic": "Conditional automation",
+    "question": "An L3 ADS approaches its stated operating boundary and requests intervention. Which role should the operating plan have prepared for?",
+    "choices": [
+      "A passenger whose role is limited to reporting the event after the system stops.",
+      "A fallback-ready user able to respond and assume the required driving or fallback role.",
+      "A remote fleet observer whose presence removes the fallback-ready user’s role."
+    ],
+    "correct": 1,
+    "explanation": "L3 expects a fallback-ready user to respond when required. Remote support can assist operations but does not by itself change the feature’s required role.",
+    "readingUrl": "#slide-responses",
+    "readingLabel": "Conditional automation"
+  },
+  {
+    "topic": "Domain and fallback",
+    "question": "A shuttle is described as L4 on a defined route in specified weather. As a domain boundary approaches, which plan is consistent with L4?",
+    "choices": [
+      "Have the ADS perform fallback without depending on passenger takeover.",
+      "Request passenger takeover as the required means of completing driving-task fallback.",
+      "Continue beyond the stated domain because the route’s map remains available onboard."
+    ],
+    "correct": 0,
+    "explanation": "L4 includes the ADS’s driving-task fallback within its domain. A limited domain does not transfer that responsibility to a passenger or permit unrestricted operation.",
+    "readingUrl": "#slide-responses",
+    "readingLabel": "Domain boundaries"
+  },
+  {
+    "topic": "Taxonomy",
+    "question": "Two shuttle vendors provide incident logs and use the same L4 label. Which comparison best establishes what those descriptions mean?",
+    "choices": [
+      "Compare total logged incidents without adjusting for routes or operating exposure.",
+      "Check actual driving/fallback roles and domains, then assess the relevant safety evidence.",
+      "Rank the labels by sensor count, using the larger suite as the higher automation level."
+    ],
+    "correct": 1,
+    "explanation": "J3016 classifies feature roles. Logs, sensor counts and matching labels are not safety certification or an exposure-adjusted comparison of performance.",
+    "readingUrl": "https://saemobilus.sae.org/standards/j3016_202104-taxonomy-definitions-terms-related-driving-automation-systems-road-motor-vehicles",
+    "readingLabel": "SAE taxonomy"
+  },
+  {
+    "topic": "Cognition",
+    "question": "A system has identified a cyclist and predicted several possible movements. It now chooses a path and speed profile around that uncertainty. Which function is this?",
+    "choices": [
+      "Perceive: infer scene objects and their state from the available sensor observations.",
+      "Control: track the selected maneuver through steering, braking and propulsion.",
+      "Plan: select a feasible maneuver using the scene, predictions and constraints."
+    ],
+    "correct": 2,
+    "explanation": "Selecting motion is planning. Perception supplies the scene and control executes the chosen motion; all are revisited as new information arrives.",
+    "readingUrl": "#slide-model",
+    "readingLabel": "Vehicle decision loop"
+  },
+  {
+    "topic": "Development cycle",
+    "question": "A fleet records a rare pedestrian interaction missing from the training set. Which sequence best supports a defensible software update?",
+    "choices": [
+      "Check the data, train and validate a candidate, then release it under controls.",
+      "Retrain on the event and release directly, relying on live monitoring for validation.",
+      "Add the event to simulation and infer that the new case is covered in all weather."
+    ],
+    "correct": 0,
+    "explanation": "A collected event is input to development, not proof of improvement. Candidate validation and controlled release are needed before changing production behavior.",
+    "readingUrl": "#slide-model",
+    "readingLabel": "Model development"
+  },
+  {
+    "topic": "V2X",
+    "question": "A connected bus requests a green extension as pedestrians approach the crossing. How should the controller interpret the request?",
+    "choices": [
+      "As a scheduled entitlement to priority, subject only to the bus’s current delay.",
+      "As confirmation that the bus’s onboard sensors have already cleared the crossing.",
+      "As one input to a decision that still checks crossing and traffic constraints."
+    ],
+    "correct": 2,
+    "explanation": "A priority request communicates a service need; it does not establish a conflict-free crossing or remove signal-control constraints. Message freshness and failure handling also matter.",
+    "readingUrl": "#slide-evidence",
+    "readingLabel": "Connected-service evidence"
+  },
+  {
+    "topic": "Transit service",
+    "question": "A route search offers a cheaper trip with two transfers and a faster direct trip. The traveler has limited walking tolerance. Which comparison best fits the application study?",
+    "choices": [
+      "Compare fare, timing, transfers and walking constraints with current operating information.",
+      "Choose the cheapest listed route, treating transfer walking as included in the fare.",
+      "Choose the shortest listed time, treating available accessibility as identical across routes."
+    ],
+    "correct": 0,
+    "explanation": "Journey usefulness depends on the traveler’s constraints as well as time and fare. Route-search output does not justify assumptions about accessibility or the provider’s unpublished algorithm.",
+    "readingUrl": "#slide-evidence",
+    "readingLabel": "Application reports"
+  },
+  {
+    "topic": "Headway assumptions",
+    "question": "The traffic example assigns 2.0 s headway to human-driven vehicles and 1.2 s to automated vehicles, with automated share 50%. Which calculation matches the model?",
+    "choices": [
+      "1,800 veh/h, using the human headway for the complete mixed stream.",
+      "2,250 veh/h, dividing 3,600 by the mixed mean headway of 1.6 s.",
+      "2,400 veh/h, averaging the two separate flows of 1,800 and 3,000."
+    ],
+    "correct": 1,
+    "explanation": "The model first averages headways: 0.5×2.0 + 0.5×1.2 = 1.6 s. Then q = 3600/1.6 = 2250 veh/h. Averaging flows gives a different result and is not its formula.",
+    "readingUrl": "#slide-future",
+    "readingLabel": "Headway example"
+  },
+  {
+    "topic": "Shuttle capacity",
+    "question": "A shuttle has a 30-minute cycle and a three-minute target departure interval. Eight vehicles are available for service. Which conclusion follows before reserve allowances?",
+    "choices": [
+      "Eight suffice because 30/8 rounds down to the three-minute target interval.",
+      "Ten are needed ideally; eight give a 3.75-minute interval, before disruptions.",
+      "Twelve are needed ideally, because every departure requires a separate reserve."
+    ],
+    "correct": 1,
+    "explanation": "Required fleet = ceil(30/3) = 10. Eight vehicles give 30/8 = 3.75 minutes. Reserves and variability are additional planning questions, not included in that minimum.",
+    "readingUrl": "#slide-capacity",
+    "readingLabel": "Shuttle service example"
+  },
+  {
+    "topic": "Proposal and evidence",
+    "question": "A student microhub concept predicts 40% lower cost per parcel. Which evaluation would most directly test that claim?",
+    "choices": [
+      "Compare full costs per delivered parcel with a matched baseline, including added handling.",
+      "Count fewer vans entering the district and treat that change as the cost reduction.",
+      "Compare planned vehicle purchase prices and omit sorting, labor and failed deliveries."
+    ],
+    "correct": 0,
+    "explanation": "The prediction needs a baseline and full operational accounting. A van-count reduction or vehicle-price comparison alone does not measure delivered-parcel costs.",
+    "readingUrl": "#slide-evidence",
+    "readingLabel": "Application evidence"
+  },
+  {
+    "topic": "Public trust",
+    "question": "An LLM gives a clear explanation for a shuttle’s abrupt braking. Which review most directly tests whether the explanation is faithful to the event?",
+    "choices": [
+      "Compare the wording with the vehicle manual and check that the tone is reassuring.",
+      "Ask passengers to rate readability and compare the ratings across language versions.",
+      "Compare it with sensor and control records, checking uncertainty and contradictions."
+    ],
+    "correct": 2,
+    "explanation": "Readability and familiar terminology matter for communication, but they do not establish why the event occurred. A faithful explanation must agree with the event evidence and its limits.",
+    "readingUrl": "#slide-world",
+    "readingLabel": "Trust and service evaluation"
+  }
+];
 let questionIndex = 0;
 let score = 0;
 let answered = false;
@@ -83,7 +240,7 @@ function renderQuestion() {
   feedback.textContent = "";
   feedback.className = "feedback";
   nextButton.disabled = true;
-  nextButton.textContent = questionIndex === questions.length - 1 ? "See quiz result →" : "Next question →";
+  nextButton.textContent = questionIndex === questions.length - 1 ? "Result" : "Next";
 }
 document.querySelector("#quiz-choices").addEventListener("click", event => {
   const choice = event.target.closest("[data-answer]");
@@ -121,7 +278,7 @@ nextButton.addEventListener("click", () => {
     document.querySelector("#quiz-question").textContent = score === questions.length ? "You answered all 12 questions correctly." : "Review the explanations and try the quiz again.";
     document.querySelector("#quiz-choices").innerHTML = "";
     feedback.className = "feedback";
-    feedback.textContent = "Driving roles, tested vehicle decisions and dependable service operations all matter. Return to the panels to review the responsibilities and assumptions.";
+    feedback.textContent = "Driving roles, tested vehicle decisions and dependable service operations all matter. Review the driving roles and the assumptions behind each service estimate.";
     nextButton.hidden = true;
     restartButton.hidden = false;
   }
