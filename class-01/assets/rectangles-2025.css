@@ -1,0 +1,172 @@
+/* 2025 rectangular page composition; the original topic palettes are retained. */
+body.content-2025 {
+  --panel-border: #C8CEC4;
+  --panel-inset: #F6F7F3;
+}
+/* The course identity and both navigation rows form one continuous panel. */
+body.content-2025 .course-workspace { width: min(960px, calc(100% - 48px)); padding-top: 20px; }
+body.content-2025 .masthead,
+body.content-2025 .course-workspace .masthead {
+  width: 100%; margin-inline: 0; background: var(--surface);
+  border: 1px solid var(--panel-border); border-radius: 4px;
+  backdrop-filter: none;
+}
+body.content-2025 .unified-header { overflow: visible; }
+body.content-2025 .unified-header .shell,
+body.content-2025 .course-workspace .masthead .shell { width: calc(100% - 48px); }
+body.content-2025 .lecture-rail { padding: 10px 0; margin: 0; border-top: 1px solid var(--line); }
+body.content-2025 .lecture-rail .shell { justify-content: flex-start; }
+body.content-2025 .brand strong { max-width: 300px; }
+body.content-2025 .briefing-header { padding-block: 16px; }
+body.content-2025 .top-section-links a { border-radius: 3px; }
+body.content-2025 .lecture-main { padding-block: 8px 24px; }
+/* One aligned outer frame per major section, with an inset reading column. */
+body.content-2025 .lecture-main .section-inner {
+  width: 100%; margin: 24px auto 0;
+  padding: 28px 32px; border: 1px solid var(--panel-border); border-radius: 4px;
+  background: var(--surface); box-shadow: none;
+}
+body.content-2025 .intro-section .section-inner { padding: 32px; border-top: 4px solid var(--lecture-primary); }
+body.content-2025 .lecture-main .section-inner > * { max-width: 760px; margin-inline: auto; }
+body.content-2025 .lecture-main .lecture-header > * { max-width: none; margin-inline: 0; }
+body.content-2025 .lecture-section { margin: 0; padding: 0; }
+body.content-2025 .lecture-section h2 { margin-bottom: 18px; }
+body.content-2025 .lecture-header h1 { margin: 0 0 14px; font-size: clamp(1.8rem, 3vw, 2.3rem); }
+body.content-2025 .lecture-header .lecture-meta {
+  margin: 0 0 24px; padding: 0 0 18px; border-bottom: 1px solid var(--line);
+  font-size: .9rem; text-align: left; hyphens: none;
+}
+body.content-2025 .session-intro-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: center; gap: 28px;
+}
+body.content-2025 .session-intro-copy { min-width: 0; }
+body.content-2025 .session-intro-copy .lecture-overview { margin: 0; }
+body.content-2025 .session-illustration {
+  margin: 0; width: 100%; padding: 0; border: 0; background: transparent;
+}
+body.content-2025 .session-illustration img {
+  display: block; width: 100%; height: auto; max-height: 260px;
+  aspect-ratio: 3 / 2; object-fit: contain; background: transparent;
+}
+body.content-2025 .lecture-header .lecturer-profile {
+  margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line);
+}
+body.content-2025 .lecture-header :is(.lecture-overview,.lecturer-profile) h2 { margin-bottom: 10px; }
+body.content-2025 .lecture-header p { margin-block: 0 12px; max-width: none; }
+body.content-2025 .lecturer-profile p:last-child { margin-bottom: 0; }
+body.content-2025 .lecture-cases { margin: 0; padding: 0; }
+body.content-2025 .lecture-cases-section .section-inner > .lecture-cases { max-width: 760px; }
+/* Task rectangles are siblings. Themes inside one task use simple dividers. */
+body.content-2025 .section-inner > :is(.question-synthesis,.synthesis-theme,.event-theme,.teaching-example) {
+  padding: 22px 24px; margin-block: 18px 0; border: 1px solid var(--panel-border);
+  border-left: 3px solid var(--lecture-primary); border-radius: 3px;
+  background: var(--panel-inset);
+}
+body.content-2025 .question-synthesis > .synthesis-theme {
+  border: 0; border-top: 1px solid var(--panel-border); border-radius: 0;
+  background: none; padding: 20px 0 0; margin-top: 20px;
+}
+body.content-2025 :is(.question-synthesis,.synthesis-theme,.event-theme,.teaching-example) p { max-width: none; }
+body.content-2025 .synthesis-introduction {
+  padding: 16px 18px; margin: 0 0 20px; border: 1px solid var(--line);
+  background: var(--panel-inset); color: var(--ink); border-radius: 3px;
+}
+body.content-2025 .assignment-prompt { padding: 12px 16px; background: var(--lecture-soft); margin-bottom: 20px; }
+body.content-2025 .model-limitation,
+body.content-2025 .source-note { padding-top: 14px; border-top: 1px solid var(--line); }
+body.content-2025 .stage-detail { border-bottom: 0; }
+body.content-2025 .lab-results { background: var(--panel-inset); padding: 16px 12px; }
+body.content-2025 .quiz-section .quiz-board { background: var(--panel-inset); border-color: var(--panel-border); }
+body.content-2025 .quiz-main { min-width: 0; }
+body.content-2025 .reference-list { padding-left: 26px; }
+body.content-2025 .reference-list li { padding-block: 12px; }
+body.content-2025 .visit-facts-section .visit-reading-width { max-width: 760px; }
+body.content-2025 .visit-fact-card { background: var(--panel-inset); }
+/* Justify sentences, while headings, navigation, dates and control labels retain
+   their natural alignment. The final line stays at the reading edge. */
+body.content-2025 :is(p, li, dd, td, figcaption, .question, .feedback, .session-description),
+body.content-2025 .choice > span:not(.letter) {
+  text-align: justify; text-align-last: start; hyphens: auto;
+  -webkit-hyphens: auto; overflow-wrap: break-word;
+}
+body.content-2025 :is(.lecture-meta,.eyebrow,.quiz-status,.quiz-topic,.session-meta,.visit-fact-meta),
+body.content-2025 .lecture-rail p { text-align: left; hyphens: none; }
+body.content-2025 .reference-list a { overflow-wrap: anywhere; }
+/* The archive follows the same two-panel hierarchy. */
+body.content-2025 .hub-main { width: 100%; padding: 28px 0 32px; }
+body.content-2025 .hub-heading,
+body.content-2025 .register {
+  max-width: none; padding: 28px 32px; border: 1px solid var(--panel-border);
+  border-radius: 4px; background: var(--surface);
+}
+body.content-2025 .hub-heading { border-top: 4px solid var(--lecture-primary); }
+body.content-2025 .hub-heading h1 { max-width: none; }
+body.content-2025 .home-intro-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) 250px;
+  align-items: center; gap: 28px;
+}
+body.content-2025 .home-intro-copy p { margin: 0; max-width: none; }
+body.content-2025 .register { margin-top: 24px; }
+body.content-2025 .lecture-index { display: grid; gap: 12px; }
+body.content-2025 .lecture-row[data-lecture] {
+  padding: 18px 20px; border: 1px solid var(--panel-border);
+  border-left: 3px solid var(--lecture-primary); border-radius: 3px;
+  background: var(--panel-inset); gap: 18px;
+}
+body.content-2025 .lecture-row[data-lecture]:last-child { border-bottom: 1px solid var(--panel-border); }
+body.content-2025 .lecture-row[data-lecture]:hover { border-color: var(--lecture-primary); background: var(--lecture-soft); }
+body.content-2025 .lecture-row .number { align-self: start; }
+body.content-2025 .session-copy { gap: 8px; }
+body.content-2025 .site-footer { margin-top: 24px; }
+@media (min-width: 1101px) {
+  body.content-2025 .briefing-header { grid-template-columns: minmax(220px, 1fr) auto auto; gap: 16px; }
+  body.content-2025 .briefing-header .top-section-links { grid-column: 2; grid-row: 1; gap: 2px; }
+  body.content-2025 .briefing-header > .year-nav { grid-column: 3; grid-row: 1; }
+  body.content-2025 .briefing-header .top-section-links a { padding-inline: 9px; font-size: .9rem; }
+}
+@media (max-width: 900px) {
+  body.content-2025 .course-workspace { width: calc(100% - 32px); }
+  body.content-2025 .session-intro-grid { grid-template-columns: minmax(0, 1fr) 220px; gap: 24px; }
+  body.content-2025 .home-intro-grid { grid-template-columns: minmax(0, 1fr) 190px; gap: 24px; }
+  body.content-2025 .lecture-main .section-inner { padding: 24px; }
+  body.content-2025 .hub-heading,
+  body.content-2025 .register { padding: 24px; }
+}
+@media (max-width: 650px) {
+  body.content-2025 .course-workspace { width: calc(100% - 24px); padding-top: 12px; }
+  body.content-2025 .masthead,
+  body.content-2025 .course-workspace .masthead { width: 100%; margin-inline: 0; }
+  body.content-2025 .unified-header .shell,
+  body.content-2025 .course-workspace .masthead .shell { width: calc(100% - 24px); }
+  body.content-2025 .briefing-header { gap: 8px 12px; padding-block: 12px; }
+  body.content-2025 .briefing-header .top-section-links a { padding-inline: 4px; font-size: .8rem; }
+  body.content-2025 .brand strong { max-width: 190px; font-size: .85rem; }
+  body.content-2025 .lecture-rail { padding-block: 8px; }
+  body.content-2025 .lecture-switcher { gap: 3px; }
+  body.content-2025 .lecture-rail [data-lecture] { min-width: 31px; padding-inline: 3px; }
+  body.content-2025 .lecture-rail [data-lecture="visit"] { min-width: 39px; }
+  body.content-2025 .lecture-main .section-inner { width: 100%; padding: 20px 18px; margin-top: 16px; }
+  body.content-2025 .intro-section .section-inner { padding-top: 24px; }
+  body.content-2025 .session-intro-grid,
+  body.content-2025 .home-intro-grid { grid-template-columns: 1fr; gap: 12px; }
+  body.content-2025 .session-illustration { max-width: 250px; margin-inline: auto; }
+  body.content-2025 .session-illustration { grid-row: 1; }
+  body.content-2025 :is(.session-intro-copy,.home-intro-copy) { grid-row: 2; }
+  body.content-2025 .session-illustration img { max-height: 168px; }
+  body.content-2025 .lecture-header .lecturer-profile { margin-top: 20px; padding-top: 18px; }
+  body.content-2025 .lecture-header .lecture-meta { margin-bottom: 20px; }
+  body.content-2025 .section-inner > :is(.question-synthesis,.synthesis-theme,.event-theme,.teaching-example) { padding: 18px 16px; margin-top: 16px; }
+  body.content-2025 .synthesis-introduction { padding: 14px; }
+  body.content-2025 :is(.batch-lab,.latency-lab,.position-lab,.autonomy-lab) { padding: 12px; }
+  body.content-2025 .hub-main { width: 100%; padding-top: 20px; }
+  body.content-2025 .hub-heading,
+  body.content-2025 .register { padding: 22px 18px; }
+  body.content-2025 .lecture-row[data-lecture] { grid-template-columns: minmax(0,1fr) 12px; gap: 10px; padding: 16px 12px; }
+  body.content-2025 .lecture-row .number { grid-column: 1; grid-row: 1; font-size: .8rem; }
+  body.content-2025 .lecture-row .session-arrow { grid-column: 2; grid-row: 1; }
+  body.content-2025 .lecture-row .session-copy { grid-column: 1 / -1; grid-row: 2; }
+  body.content-2025 .session-meta { font-size: .85rem; }
+  body.content-2025 .session-description { font-size: .9rem; }
+  body.content-2025 .evidence-dialog { border-radius: 4px; }
+}

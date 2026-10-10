@@ -40,8 +40,15 @@ resumes the intended destination. Refresh, tab close and cross-document browser
 history use native beforeunload where supported. Unstarted and completed attempts
 do not prompt. Multiple dialogs and navigation must not cause scroll or focus loops.
 
-content-2025.css is loaded only by 2025 pages. Keep the original topic palettes,
-Source Serif 4 headings, Source Sans 3 text, warm ivory canvas, narrow reading
-column, compact controls and restrained separators. Retain all meaningful model
-diagrams and the authentic guest poster; decorative overview illustrations are
-removed. Test at 1440, 768 and 375 pixels and verify deployed files after Pages builds.
+content-2025.css and the final rectangles-2025.css layer are loaded only by 2025
+pages. Keep the original topic palettes, Source Serif 4 headings, Source Sans 3
+text and warm ivory canvas. Put the course identity and navigation in one
+rectangle, and align the opening panel and each major section below it. Use
+inset task rectangles, simple dividers between themes within a task, and a
+narrow reading column. Justify prose and quiz sentences, keeping the last line
+at the reading edge and headings, dates and control labels naturally aligned.
+Retain all meaningful model diagrams, the authentic guest poster and the original
+transparent overview illustrations. These illustrations are decorative, not
+photographic evidence of a lecture or visit. On mobile, place the illustration
+near the title and let archive descriptions use the full card width. Test at
+1440, 768 and 375 pixels and verify deployed files after Pages builds.
