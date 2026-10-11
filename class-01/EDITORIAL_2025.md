@@ -8,8 +8,9 @@ Official detailed briefs/decks establish the delivered lecture title; the actual
 guest event poster supersedes the tentative seventh syllabus entry. Do not
 reconstruct an assignment when no student work was supplied.
 
-Each lecture begins with its full official title, date and presenter, followed by
-Lecture overview and Lecturer profile. The archive contains a course introduction
+Each lecture opens with quiet number/date/presenter metadata, its full official
+title and one official profile link. The overview stays visible; the full lecturer
+biography expands inline. The archive contains a course introduction
 and one chronological 2025 Sessions list. A single, number-free introduction is
 used for Student synthesis because enrollment of 31 was not verified.
 
@@ -40,15 +41,25 @@ resumes the intended destination. Refresh, tab close and cross-document browser
 history use native beforeunload where supported. Unstarted and completed attempts
 do not prompt. Multiple dialogs and navigation must not cause scroll or focus loops.
 
-content-2025.css and the final rectangles-2025.css layer are loaded only by 2025
-pages. Keep the original topic palettes, Source Serif 4 headings, Source Sans 3
-text and warm ivory canvas. Put the course identity and navigation in one
-rectangle, and align the opening panel and each major section below it. Use
-inset task rectangles, simple dividers between themes within a task, and a
-narrow reading column. Justify prose and quiz sentences, keeping the last line
-at the reading edge and headings, dates and control labels naturally aligned.
+The Editorial Atelier layer, atelier-2025.css, follows content-2025.css only on
+2025 pages. Keep the original topic palettes, Source Serif 4 headings, Source
+Sans 3 text and warm ivory canvas. Use a centered 1000px composition with a
+720px reading column, naturally spaced left-aligned prose, fine dividers and
+controlled whitespace. Reserve bounded white surfaces for functional controls,
+teaching models, charts and dialogs. The homepage uses compact typographic rows;
+all eight session destinations remain in a native Sessions menu.
+
+Show each genuine assignment question or thematic finding with a faithful short
+preview and a native inline Read full analysis disclosure. Keep the entire existing
+analysis, evidence, qualifications and charts inside it. Multiple items may remain
+open; no exclusive accordion or fixed-height narrative scroll area is allowed.
+Number only actual assignment questions. More detail dialogs remain secondary.
+Load atelier-2025.js before content-2025.js so accepted deep-link/history navigation
+reveals the relevant analysis before scrolling without bypassing the quiz guard.
+
 Retain all meaningful model diagrams, the authentic guest poster and the original
-transparent overview illustrations. These illustrations are decorative, not
-photographic evidence of a lecture or visit. On mobile, place the illustration
-near the title and let archive descriptions use the full card width. Test at
-1440, 768 and 375 pixels and verify deployed files after Pages builds.
+transparent overview illustrations, presented quietly. These illustrations are
+decorative, not photographic evidence of a lecture or visit. The superseded
+rectangles-2025.css is no longer loaded. Inspect computed typography and test at
+wide desktop, tablet and 390px, with narrow-screen and zoom checks. Verify actual
+deployed pages and assets after Pages builds.
