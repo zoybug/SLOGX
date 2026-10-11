@@ -9,9 +9,9 @@ guest event poster supersedes the tentative seventh syllabus entry. Do not
 reconstruct an assignment when no student work was supplied.
 
 Each lecture opens with quiet number/date/presenter metadata, its full official
-title and one official profile link. The overview stays visible; the full lecturer
-biography expands inline. The archive contains a course introduction
-and one chronological 2025 Sessions list. A single, number-free introduction is
+title. The overview and Lecturer profile section stay visible, including the full
+biography and one original official profile link. The archive contains a course
+introduction and one chronological 2025 Sessions list. A single, number-free introduction is
 used for Student synthesis because enrollment of 31 was not verified.
 
 Put the genuine assignment before its findings. Lecture 01 has four questions;

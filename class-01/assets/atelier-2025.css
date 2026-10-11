@@ -85,6 +85,8 @@ body.content-2025 .session-illustration { margin: 0; padding: 0; border: 0; back
 body.content-2025 .session-illustration img { display: block; width: 100%; height: auto; aspect-ratio: 3/2; object-fit: contain; background: none; }
 body.content-2025 .lecture-header p { margin: 0 0 12px; max-width: none; }
 body.content-2025 .lecturer-profile { padding: 0; margin: 16px 0 0; border: 0; }
+body.content-2025 .lecturer-profile > p { font-size: 16px; }
+body.content-2025 .lecturer-profile a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; line-height: 1.5; }
 body.content-2025 .profile-disclosure > summary { display: flex; align-items: center; width: fit-content; min-height: 44px; color: var(--muted); cursor: pointer; font: 500 14px/1.5 var(--sans); list-style: none; }
 body.content-2025 .profile-disclosure > summary h2 { font: inherit; margin: 0; }
 body.content-2025 .profile-disclosure p { font-size: 16px; }
