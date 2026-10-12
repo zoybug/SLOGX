@@ -63,3 +63,10 @@ decorative, not photographic evidence of a lecture or visit. The superseded
 rectangles-2025.css is no longer loaded. Inspect computed typography and test at
 wide desktop, tablet and 390px, with narrow-screen and zoom checks. Verify actual
 deployed pages and assets after Pages builds.
+
+The shared cosmic-companion layer replaces the earlier parcel creature wherever
+the fact companion is present. Every companion click reveals a sourced fact and
+evolves a luminous orb; the twelve-step visual journey ends in a Martian meerkat.
+Preserve all 100 facts and the existing discovery storage. Evolution has its own
+saved progress so returning readers can experience the new form. Keep keyboard
+controls, reduced motion and safe placement around academic controls intact.
