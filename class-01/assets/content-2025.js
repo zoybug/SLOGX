@@ -227,7 +227,7 @@
     let frame = 0;
     function place() {
       frame = 0;
-      if (widget.classList.contains('zoybug-cosmic')) return; // The shared orb manages its own safe placement.
+      if (widget.classList.contains('zoybug-meerkat')) return; // The shared meerkat manages its own safe placement.
       if (innerWidth <= 1100) return; // The companion has its own footer space.
       if (widget.querySelector('.zoybug-trigger')?.getAttribute('aria-expanded') === 'true') {
         widget.style.setProperty('--zoybug-bottom', '16px'); return;
