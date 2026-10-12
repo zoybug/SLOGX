@@ -19,7 +19,7 @@ body .zoybug-cosmic .zoybug-trigger::before { display: none; }
 body .zoybug-cosmic .zoybug-trigger:hover { filter: none; transform: none; }
 body .zoybug-cosmic .zoybug-trigger:focus-visible { outline: 2px solid #6264bd; outline-offset: 3px; }
 .cosmic-form { position: relative; width: 86px; height: 86px; display: block; isolation: isolate; }
-.cosmic-halo { position: absolute; inset: 7px; border-radius: 50%; background: radial-gradient(circle,#7abfff60 0,#a582e545 38%,#ba8be022 57%,transparent 73%); filter: blur(8px); scale: calc(1.12 + var(--cosmic-progress)*.28); transition: scale .7s; }
+.cosmic-halo { position: absolute; inset: 7px; border-radius: 50%; background: radial-gradient(circle,#7abfff60 0,#a582e545 38%,#ba8be022 57%,transparent 73%); filter: blur(8px); scale: calc(1.12 + var(--cosmic-progress)*.28); transition: scale .7s,opacity .7s; }
 .cosmic-sphere {
   position: absolute; inset: 9px; overflow: hidden; border-radius: 50%;
   background: radial-gradient(circle at 36% 24%,#6f9db5 0,transparent 42%),radial-gradient(circle at 60% 82%,#6468cd 0,transparent 50%),#131837;
@@ -35,8 +35,10 @@ body .zoybug-cosmic .zoybug-trigger:focus-visible { outline: 2px solid #6264bd; 
 .cosmic-orbit { position: absolute; inset: 3px; border: 1px solid #9f8ae000; border-top-color: #b6a5f699; border-right-color: #90cadd77; border-radius: 50%; rotate: var(--cosmic-angle); scale: calc(.86 + var(--cosmic-progress)*.21); opacity: calc(.25 + var(--cosmic-progress)*.55 - var(--cosmic-reveal)*.6); transition: rotate .8s,scale .8s,opacity .8s; }
 .cosmic-ripple { position: absolute; inset: 4px; border: 1px solid #aa99e3; border-radius: 50%; opacity: 0; pointer-events: none; }
 .cosmic-meerkat { position: absolute; z-index: 3; width: 80px; height: 106px; object-fit: contain; left: 3px; bottom: -5px; opacity: var(--cosmic-reveal); transform: translateY(calc((1 - var(--cosmic-reveal))*12px)) scale(calc(.7 + var(--cosmic-reveal)*.3)); transition: opacity .8s,transform .8s; pointer-events: none; }
-.cosmic-caption { font: 500 12px/1.5 var(--font-sans,var(--sans,sans-serif)); letter-spacing: 0; transition: color .2s; }
-body .zoybug-cosmic .zoybug-trigger:hover .cosmic-caption { color: #5047a7; }
+.zoybug-cosmic[data-stage="5"][data-portrait-ready="true"] :is(.cosmic-halo,.cosmic-sphere,.cosmic-orbit) { opacity: 0; }
+.zoybug-cosmic[data-stage="5"][data-portrait-ready="true"] .cosmic-cloud { animation-play-state: paused; }
+.zoybug-cosmic[data-stage="5"]:not([data-portrait-ready="true"]) .cosmic-sphere { opacity: 1; }
+.zoybug-cosmic[data-stage="5"] .cosmic-ripple { border-color: #8d969f; }
 body .zoybug-cosmic .zoybug-card {
   position: fixed; right: max(18px,env(safe-area-inset-right)); bottom: max(134px,calc(env(safe-area-inset-bottom) + 134px));
   width: min(380px,calc(100vw - 36px)); max-height: calc(100dvh - 154px); overflow-y: auto; overscroll-behavior: contain;
@@ -46,16 +48,10 @@ body .zoybug-cosmic .zoybug-card {
 }
 body .zoybug-cosmic .zoybug-card[hidden] { display: none !important; }
 .cosmic-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-.cosmic-eyebrow { color: #b9bdd7; font: 400 12px/1.5 var(--font-sans,var(--sans,sans-serif)); }
-body .zoybug-cosmic .zoybug-card h2 { color: #f4f3ff; font: 500 21px/1.3 var(--font-sans,var(--sans,sans-serif)); letter-spacing: -.01em; margin: 5px 0 0; }
+body .zoybug-cosmic .zoybug-card h2 { color: #b1dfeb; font: 500 14px/1.5 var(--font-sans,var(--sans,sans-serif)); letter-spacing: normal; margin: 0; }
 body .zoybug-cosmic .zoybug-close { width: 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; margin: -6px -8px 0 0; color: #e5e7ff; background: transparent; border: 0; border-radius: 50%; font: 400 26px/1 sans-serif; cursor: pointer; }
 body .zoybug-cosmic .zoybug-close:hover { background: #b7b8fa1c; }
-.cosmic-evolution { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; color: #c7c6e3; font-size: 12px; line-height: 1.5; }
-.cosmic-step-count { white-space: nowrap; font-variant-numeric: tabular-nums; }
-.cosmic-progress { height: 2px; background: #ffffff20; margin-top: 7px; overflow: hidden; }
-.cosmic-progress > span { display: block; width: calc(var(--cosmic-progress)*100%); height: 100%; background: linear-gradient(90deg,#86e2ec,#bba0ee,#eea5ac); transition: width .7s; }
-body .zoybug-cosmic .cosmic-journey { color: #b9bdd7; font-size: 13px; line-height: 1.55; margin: 10px 0 22px; }
-.cosmic-fact-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; font-size: 12px; line-height: 1.5; }
+.cosmic-fact-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; font-size: 12px; line-height: 1.5; }
 .zoybug-cosmic .zoybug-topic { color: #b1dfeb; text-transform: capitalize; }
 .zoybug-cosmic .zoybug-count { color: #b9bdd7; font: inherit; white-space: nowrap; }
 body .zoybug-cosmic .zoybug-fact { color: #f4f3ff; font: 400 17px/1.55 var(--font-sans,var(--sans,sans-serif)); letter-spacing: normal; word-spacing: normal; text-align: left; margin: 8px 0 20px; }

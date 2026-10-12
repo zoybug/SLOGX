@@ -1,12 +1,11 @@
 (() => {
   const facts = window.ZOYBUG_FACTS;
   if (!Array.isArray(facts) || facts.length !== 100) return;
-  const meerkatUrl = new URL('cosmic-meerkat.webp', document.currentScript.src).href;
+  const meerkatUrl = new URL('mechanic-meerkat.webp', document.currentScript.src).href;
   const discoveryKey = 'zoybug-discoveries-v2';
   const evolutionKey = 'zoybug-cosmic-evolution-v1';
   const validIds = new Set(facts.map(fact => fact.id));
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const stages = ['A spark of curiosity', 'A growing nebula', 'Stellar orbit', 'A signal from Mars', 'Taking shape', 'Martian meerkat'];
   let seen = new Set(), steps = 0, pulse = null, ripple = null, frame = 0, storageAvailable = true;
 
   function loadProgress() {
@@ -24,7 +23,7 @@
   dock.className = 'cosmic-dock';
   const widget = document.createElement('aside');
   widget.className = 'zoybug-widget zoybug-cosmic';
-  widget.setAttribute('aria-label', 'Zoybug cosmic companion');
+  widget.setAttribute('aria-label', 'Logistics discoveries');
   widget.dataset.open = 'false';
   widget.innerHTML = `
     <button class="zoybug-trigger" type="button" aria-expanded="false" aria-controls="zoybug-fact-card">
@@ -33,14 +32,9 @@
         <span class="cosmic-sphere"><span class="cosmic-cloud cosmic-cloud-one"></span><span class="cosmic-cloud cosmic-cloud-two"></span><span class="cosmic-stars"></span><span class="cosmic-glass"></span></span>
         <img class="cosmic-meerkat" alt="" width="400" height="600" decoding="async">
       </span>
-      <span class="cosmic-caption" aria-hidden="true">Discover</span>
     </button>
     <section class="zoybug-card" id="zoybug-fact-card" aria-labelledby="zoybug-card-title" hidden>
-      <div class="cosmic-card-header"><div><span class="cosmic-eyebrow">Zoybug · cosmic companion</span><h2 id="zoybug-card-title"></h2></div><button class="zoybug-close" type="button" aria-label="Close discovery">×</button></div>
-      <div class="cosmic-evolution"><span class="cosmic-evolution-label"></span><span class="cosmic-step-count"></span></div>
-      <div class="cosmic-progress" aria-hidden="true"><span></span></div>
-      <p class="cosmic-journey"></p>
-      <div class="cosmic-fact-heading"><span class="zoybug-topic"></span><span class="zoybug-count"></span></div>
+      <div class="cosmic-card-header"><div class="cosmic-fact-heading"><h2 id="zoybug-card-title" class="zoybug-topic"></h2><span class="zoybug-count"></span></div><button class="zoybug-close" type="button" aria-label="Close discovery">×</button></div>
       <p class="zoybug-fact" aria-live="polite" aria-atomic="true"></p>
       <div class="zoybug-card-foot"><a class="zoybug-source" target="_blank" rel="noopener noreferrer"></a><button class="cosmic-next" type="button">Discover another <span aria-hidden="true">↗</span></button></div>
     </section>`;
@@ -60,15 +54,11 @@
     widget.style.setProperty('--cosmic-angle', `${steps * 29}deg`);
     widget.style.setProperty('--cosmic-hue', `${steps * 13}deg`);
     widget.style.setProperty('--cosmic-reveal', String(Math.max(0, (steps - 8) / 4)));
-    widget.querySelector('#zoybug-card-title').textContent = stages[stage];
-    widget.querySelector('.cosmic-evolution-label').textContent = steps === 12 ? 'Awakened on Mars' : 'Evolving with every discovery';
-    widget.querySelector('.cosmic-step-count').textContent = `${steps} / 12`;
-    widget.querySelector('.cosmic-caption').textContent = steps === 0 ? 'Discover' : steps === 12 ? 'Zoybug' : `${steps} / 12`;
-    widget.querySelector('.cosmic-journey').textContent = steps === 12 ? 'Your cosmic meerkat has arrived. There is always more to discover.' : 'Twelve discoveries turn this little universe into a Martian meerkat.';
     count.textContent = `${seen.size} / ${facts.length} facts`;
-    trigger.setAttribute('aria-label', `Zoybug: ${stages[stage]}. Reveal a logistics fact. Evolution ${steps} of 12; ${seen.size} of ${facts.length} facts discovered.`);
+    trigger.setAttribute('aria-label', `Discover a logistics fact. ${seen.size} of ${facts.length} facts discovered.`);
     if (steps >= 8 && !portrait.hasAttribute('src')) portrait.src = meerkatUrl;
   }
+  portrait.addEventListener('load', () => { widget.dataset.portraitReady = 'true'; });
   updateEvolution();
   function react() {
     pulse?.cancel(); ripple?.cancel();

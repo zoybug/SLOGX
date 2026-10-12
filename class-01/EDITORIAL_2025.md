@@ -66,7 +66,9 @@ deployed pages and assets after Pages builds.
 
 The shared cosmic-companion layer replaces the earlier parcel creature wherever
 the fact companion is present. Every companion click reveals a sourced fact and
-evolves a luminous orb; the twelve-step visual journey ends in a Martian meerkat.
+evolves a luminous orb; the twelve-step visual journey ends in a car-mechanic meerkat.
+Keep the fact panel focused on the sourced fact and controls. No evolution-story
+headings, progress narration or Mars discussion should appear in the interface.
 Preserve all 100 facts and the existing discovery storage. Evolution has its own
 saved progress so returning readers can experience the new form. Keep keyboard
 controls, reduced motion and safe placement around academic controls intact.
