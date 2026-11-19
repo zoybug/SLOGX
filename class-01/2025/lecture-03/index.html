@@ -19,7 +19,7 @@
 </script>
 <script defer="" src="../../assets/zoybug-facts.js">
 </script>
-<script defer="" src="../../assets/meerkat-companion.js?v=20261012-natural-meerkat">
+<script defer="" src="../../assets/meerkat-companion.js?v=20261119">
 </script>
 <link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
 <link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
@@ -28,7 +28,7 @@
 </script>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
-<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261011-atelier"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/></head>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261119"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/><link rel="stylesheet" href="../../assets/fieldnotes-2025.css"/></head>
 <body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="03">
 <a class="skip" href="#main">
    Skip to content
@@ -36,19 +36,13 @@
 <div class="course-workspace">
 <header class="masthead unified-header">
 <div class="shell briefing-header">
-<a class="brand" href="../">
-<span>
-<strong>Introduction to Smart Logistics</strong>
-</span>
-</a>
+<a class="archive-brand" href="../" aria-label="SLOGX, Fall 2025 course archive"><span class="archive-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>SLOGX</strong><span class="brand-divider"></span><span class="brand-caption">Course archive</span></a>
 <div class="top-section-links">
 <a data-section="intro" href="#intro">
        Overview
       </a>
-<a data-section="students" href="#students">Student synthesis</a>
-<a data-section="resources" href="#resources">
-       Resources
-      </a>
+<a data-section="students" href="#students">Student work</a>
+<a data-section="teaching-examples" href="#teaching-examples">Examples</a><a data-section="resources" href="#resources">Sources</a>
 <a data-section="quiz" href="#quiz">
        Quiz
       </a>
@@ -132,53 +126,33 @@
 </header>
 <main class="lecture-main" id="main">
 <section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
-<div class="shell section-inner lecture-header">
-<p class="lecture-meta">Lecture 03 · 29 September 2025 · Lecturer: Prof. Peng Yang</p><h1 id="lecture-title">
+<div class="shell section-inner lecture-header"><div class="reader-intro"><p class="lecture-meta"><span class="edition-label">Lecture 03</span><time datetime="2025-09-29">29 September 2025</time></p><h1 id="lecture-title">
         Intelligent warehousing system
-       </h1>
-<div class="session-intro-grid"><div class="session-intro-copy"><div class="lecture-overview">
-<h2>
+       </h1><div class="lecture-overview">
+<h2 class="visually-hidden">
         Lecture overview
        </h2>
-<p>
-        A warehouse buffers supply and demand, consolidates shipments and prepares customer orders. Peng Yang follows the work from receiving and put-away to picking, checking, packing and shipping, then compares tote-handling, grid-storage, rack-climbing and shelf-moving systems. The lecture treats equipment and operating rules as complementary choices: storage assignment, order batching, task sequencing and energy-aware scheduling determine how the hardware performs. Its final discussion considers human–robot collaboration, sustainability and the need to evaluate the complete order-fulfilment process.
-       </p>
-</div></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-03-transparent.webp" width="1536"/></figure></div>
-<div class="lecturer-profile">
-<h2>
-        Lecturer profile
-       </h2>
-<p>
-        Peng Yang is an associate professor at Tsinghua Shenzhen International Graduate School. His research covers robotic warehousing, AI in warehousing and logistics, dynamic order picking, and sustainable logistics. These interests connect the lecture’s equipment comparisons with decisions about how warehouses are operated.
-       </p>
-<a href="https://www.sigs.tsinghua.edu.cn/yp_en/main.htm" rel="noopener noreferrer" target="_blank">
-        Official lecturer profile
-       </a>
-</div>
-</div>
+<p>Follow an order from the receiving dock to the packing bench. Storage locations, picking routes and the way orders are grouped can matter as much as the robot doing the work.</p>
+</div><p class="session-byline">Lecturer · <a href="https://www.sigs.tsinghua.edu.cn/yp_en/main.htm" rel="noopener noreferrer" target="_blank">Prof. Peng Yang</a></p></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="480" src="../../assets/2025-lecture-art/lecture-03-720.webp" width="720"/></figure></div>
 </section>
 <section aria-labelledby="students-title" class="lecture-section student-section" id="students">
-<div class="shell section-inner">
-<span aria-hidden="true" class="legacy-fragment" id="slide-contents">
-</span>
-<h2 id="students-title">
-       Student synthesis
-      </h2>
-<p class="synthesis-introduction" id="synthesis-method">
-       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
-      </p>
-<div class="assignment-prompt">
+<div class="shell section-inner"><div class="reading-label"><h2 id="students-title">Student work</h2><p class="prompt-caption">Students compared robotic warehouse systems, then wrote two pages on what they learned.</p><details class="context-disclosure assignment-brief"><summary>Assignment and sources</summary><p class="synthesis-introduction" id="synthesis-method">These summaries draw on anonymized submissions. They include recurring ideas and differences between reports.</p><div class="assignment-prompt">
 <h3>
         Assignment — What did students learn about intelligent warehousing?
        </h3>
 <p>
         Students wrote a two-page reflection on the lecture. The assignment was open-ended; the themes below organize their responses rather than represent separate homework questions. The preparation task asked them to compare robotic warehousing solutions and consider what efficient operation requires.
        </p>
-</div>
+</div></details></div><div class="reading-entries">
+<span aria-hidden="true" class="legacy-fragment" id="slide-contents">
+</span>
+
+
+
 <section aria-labelledby="slide-responses-title" class="synthesis-theme" id="slide-responses">
-<h3 id="slide-responses-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-responses-title">
         Why storage and inventory records must agree
-       </h3><p class="analysis-preview">Students connected warehouse operations with trustworthy item, location and status records. Their reflections distinguish coordinating inventory and work from directing equipment.</p><details class="analysis-disclosure"><summary aria-describedby="slide-responses-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-responses-title" class="analysis-body" id="slide-responses-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-responses-title" class="analysis-body" id="slide-responses-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -202,11 +176,11 @@
 <button class="detail-button" data-detail="notes-slide-responses" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">Moving an item also means updating its location and status. Students distinguished that recordkeeping from directing a machine.</p></section>
 <section aria-labelledby="slide-model-title" class="synthesis-theme" id="slide-model">
-<h3 id="slide-model-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-model-title">
         What determines the right picking system?
-       </h3><p class="analysis-preview">Students compared retrieval arrangements through product and order profiles, access routes and workstation handoffs. They did not identify one picking system as best for every warehouse.</p><details class="analysis-disclosure"><summary aria-describedby="slide-model-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-model-title" class="analysis-body" id="slide-model-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-model-title" class="analysis-body" id="slide-model-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -230,11 +204,11 @@
 <button class="detail-button" data-detail="notes-slide-model" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">Students compared systems by the items they handled, the routes they used and the work waiting at the picking station.</p></section>
 <section aria-labelledby="slide-world-title" class="synthesis-theme" id="slide-world">
-<h3 id="slide-world-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-world-title">
         How operating rules change fulfilment
-       </h3><p class="analysis-preview">Students considered batching, work allocation and storage assignment alongside new equipment. Their reflections distinguish shorter travel at one stage from better full-order turnaround.</p><details class="analysis-disclosure"><summary aria-describedby="slide-world-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-world-title" class="analysis-body" id="slide-world-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-world-title" class="analysis-body" id="slide-world-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -258,11 +232,11 @@
 <button class="detail-button" data-detail="notes-slide-world" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">An uneven workload can leave an order waiting at one picking zone after it has cleared another.</p></section>
 <section aria-labelledby="slide-future-title" class="synthesis-theme" id="slide-future">
-<h3 id="slide-future-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-future-title">
         What students expected automation to change
-       </h3><p class="analysis-preview">Students expressed different expectations about automation, worker roles and autonomy. They also raised affordability, maintenance and recovery from failure alongside normal-day throughput.</p><details class="analysis-disclosure"><summary aria-describedby="slide-future-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-future-title" class="analysis-body" id="slide-future-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-future-title" class="analysis-body" id="slide-future-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -286,8 +260,8 @@
 <button class="detail-button" data-detail="notes-slide-future" type="button">
         More detail
        </button>
-</div></details></section>
-</div>
+</div></details><p class="analysis-preview">Reports weighed throughput against maintenance costs, changing jobs and the work of recovering from a breakdown.</p></section>
+</div></div>
 </section>
 <section aria-labelledby="teaching-title" class="lecture-section teaching-examples" id="teaching-examples">
 <div class="shell section-inner">
@@ -518,6 +492,18 @@
        </strong>
        The lecture and student reflections date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
       </p>
+
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Peng Yang is an associate professor at Tsinghua Shenzhen International Graduate School. His research covers robotic warehousing, AI in warehousing and logistics, dynamic order picking, and sustainable logistics. These interests connect the lecture’s equipment comparisons with decisions about how warehouses are operated.
+       </p>
+<a href="https://www.sigs.tsinghua.edu.cn/yp_en/main.htm" rel="noopener noreferrer" target="_blank">
+        Official lecturer profile
+       </a>
+</div><details class="context-disclosure"><summary>Full lecture overview</summary><p>A warehouse buffers supply and demand, consolidates shipments and prepares customer orders. Peng Yang follows the work from receiving and put-away to picking, checking, packing and shipping, then compares tote-handling, grid-storage, rack-climbing and shelf-moving systems. The lecture treats equipment and operating rules as complementary choices: storage assignment, order batching, task sequencing and energy-aware scheduling determine how the hardware performs. Its final discussion considers human–robot collaboration, sustainability and the need to evaluate the complete order-fulfilment process.</p></details>
 </div>
 </section>
 <section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
@@ -783,7 +769,7 @@
       2025 Sessions
      </a>
 </div>
-</footer>
+<div data-companion-slot></div></footer>
 </div>
 </body>
 </html>

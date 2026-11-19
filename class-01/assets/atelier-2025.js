@@ -2,7 +2,8 @@
 (() => {
   if (!document.body.classList.contains('content-2025')) return;
 
-  const readingDetails = [...document.querySelectorAll('details.analysis-disclosure, details.profile-disclosure')];
+  const readingSelector = 'details.analysis-disclosure, details.profile-disclosure, details.context-disclosure';
+  const readingDetails = [...document.querySelectorAll(readingSelector)];
   const menus = [...document.querySelectorAll('details.session-menu')];
   const quizStatus = document.getElementById('quiz-status');
   let activeAttempt = false;
@@ -36,11 +37,11 @@
   }
 
   function revealAncestors(target) {
-    let details = target?.closest('details.analysis-disclosure, details.profile-disclosure');
+    let details = target?.closest(readingSelector);
     while (details) {
       details.open = true;
       syncDisclosure(details);
-      details = details.parentElement?.closest('details.analysis-disclosure, details.profile-disclosure');
+      details = details.parentElement?.closest(readingSelector);
     }
   }
 

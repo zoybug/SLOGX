@@ -19,7 +19,7 @@
 </script>
 <script defer="" src="../../assets/zoybug-facts.js">
 </script>
-<script defer="" src="../../assets/meerkat-companion.js?v=20261012-natural-meerkat">
+<script defer="" src="../../assets/meerkat-companion.js?v=20261119">
 </script>
 <link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
 <link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
@@ -28,7 +28,7 @@
 </script>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
-<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261011-atelier"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/></head>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261119"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/><link rel="stylesheet" href="../../assets/fieldnotes-2025.css"/></head>
 <body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="06">
 <a class="skip" href="#main">
    Skip to content
@@ -36,20 +36,13 @@
 <div class="course-workspace">
 <header class="masthead unified-header">
 <div class="shell briefing-header">
-<a class="brand" href="../">
-<span>
-<strong>Introduction to Smart Logistics</strong>
-<small>Fall 2025</small>
-</span>
-</a>
+<a class="archive-brand" href="../" aria-label="SLOGX, Fall 2025 course archive"><span class="archive-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>SLOGX</strong><span class="brand-divider"></span><span class="brand-caption">Course archive</span></a>
 <div class="top-section-links">
 <a data-section="intro" href="#intro">
        Overview
       </a>
-<a data-section="students" href="#students">Student synthesis</a>
-<a data-section="resources" href="#resources">
-       Resources
-      </a>
+<a data-section="students" href="#students">Student work</a>
+<a data-section="teaching-examples" href="#teaching-examples">Examples</a><a data-section="resources" href="#resources">Sources</a>
 <a data-section="quiz" href="#quiz">
        Quiz
       </a>
@@ -133,102 +126,80 @@
 </header>
 <main class="lecture-main" id="main">
 <section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
-<div class="shell section-inner lecture-header">
-<p class="lecture-meta">Lecture 06 · 27 October 2025 · Lecturer: Prof. Bokui Chen</p><h1 id="lecture-title">
+<div class="shell section-inner lecture-header"><div class="reader-intro"><p class="lecture-meta"><span class="edition-label">Lecture 06</span><time datetime="2025-10-27">27 October 2025</time></p><h1 id="lecture-title">
         Smart city transportation and autonomous driving
-       </h1>
-<div class="session-intro-grid"><div class="session-intro-copy"><div class="lecture-overview">
-<h2>
+       </h1><div class="lecture-overview">
+<h2 class="visually-hidden">
         Lecture overview
        </h2>
-<p>
-        Bokui Chen’s lecture connects autonomous-driving technology with transport services. The supplied deck introduces driver/system roles, sensors and fusion, the steps from sensing to vehicle control, fleet data development, vehicle-to-everything (V2X) communication and vehicle operations. It compares industry approaches and applications in robotaxis, public transit, freight, ports, mines, delivery and campus services, then raises adoption and trust questions. The syllabus also planned microscopic traffic simulation and mixed traffic; the supplied deck does not establish that those models were taught in detail. The traffic and shuttle calculators below are later teaching examples, with explicit assumptions.
-       </p>
-</div></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-06-transparent.webp" width="1536"/></figure></div>
-<div class="lecturer-profile">
-<h2>
-        Lecturer profile
-       </h2>
-<p>
-        Bokui Chen is an associate professor at Tsinghua Shenzhen International Graduate School. He is the lecturer named for this session in the Fall 2025 syllabus and on the supplied autonomous-driving deck.
-       </p>
-<p>
-<a href="https://www.sigs.tsinghua.edu.cn/cbk_en/main.htm" rel="noopener noreferrer" target="_blank">
-         Official faculty profile
-        </a>
-</p>
-</div>
-</div>
+<p>Follow the decisions between sensing a pedestrian and controlling a vehicle. The lecture compares those demands across robotaxis, buses and freight. The traffic and shuttle calculators are teaching exercises.</p>
+</div><p class="session-byline">Lecturer · <a href="https://www.sigs.tsinghua.edu.cn/cbk_en/main.htm" rel="noopener noreferrer" target="_blank">Prof. Bokui Chen</a></p></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="480" src="../../assets/2025-lecture-art/lecture-06-720.webp" width="720"/></figure></div>
 </section>
 <section aria-labelledby="student-synthesis-title" class="lecture-section student-section" id="students">
-<div class="shell section-inner">
-<h2 id="student-synthesis-title">
-       Student synthesis
-      </h2>
-<p class="synthesis-introduction">
-       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
-      </p>
-<section aria-labelledby="assignment-06-title" class="question-synthesis">
-<h3 id="assignment-06-title">
+<div class="shell section-inner"><div class="reading-label"><h2 id="student-synthesis-title">Student work</h2><p class="prompt-caption">The two-page reports covered existing transport services and student proposals for new ones.</p><details class="context-disclosure assignment-brief"><summary>Assignment and sources</summary><p class="synthesis-introduction">These summaries draw on anonymized submissions. They include recurring ideas and differences between reports.</p><h3 id="assignment-06-title">
         Which smart transportation application did students introduce?
-       </h3>
-<p>
+       </h3><p>
         Students were asked to write a two-page report introducing a smart transportation application. The reports range from existing-service studies to new service proposals and broader analyses of autonomous driving.
-       </p>
-<button class="detail-button" data-detail="assignment-06-detail" type="button">
+       </p><button class="detail-button" data-detail="assignment-06-detail" type="button">
         More detail
-       </button>
+       </button></details></div><div class="reading-entries">
+
+
+<section aria-labelledby="assignment-06-title" class="question-synthesis">
+
+
+
 <article aria-labelledby="finding-06-1-title" class="synthesis-theme" id="finding-06-1">
 <span id="slide-evidence">
 </span>
-<h4 id="finding-06-1-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-06-1-title">
          Connecting a traveler with a workable service
-        </h4><p class="analysis-preview">Students considered journey planning and proposed platforms that coordinate rides, buses, delivery or charging. The proposals identify service connections without establishing deployment or measured savings.</p><details class="analysis-disclosure"><summary aria-describedby="finding-06-1-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-06-1-title" class="analysis-body" id="finding-06-1-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-06-1-title" class="analysis-body" id="finding-06-1-analysis" role="region">
 <p>
          One report studies Yahoo! Transit through journey time, fares and transfers. Other students propose platforms such as CAMP and SmartFleet that combine rides, buses, delivery, dispatch or charging. These proposals emphasize coordination between the vehicle, local infrastructure and a fleet platform; they do not establish deployment or measured savings.
         </p>
 <button class="detail-button" data-detail="notes-slide-evidence" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Students explored how travelers could connect rides, buses and charging stops in a single journey.</p></article>
 <article aria-labelledby="finding-06-2-title" class="synthesis-theme" id="finding-06-2">
-<h4 id="finding-06-2-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-06-2-title">
          Freight and shuttle ideas need an operating plan
-        </h4><p class="analysis-preview">Freight and shuttle proposals raise questions about spacing, schedules, charging and organizational coordination. Their targets are pilot questions rather than observed results.</p><details class="analysis-disclosure"><summary aria-describedby="finding-06-2-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-06-2-title" class="analysis-body" id="finding-06-2-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-06-2-title" class="analysis-body" id="finding-06-2-analysis" role="region">
 <p>
          Application reports propose freight platoons, a campus–metro shuttle and parcel consolidation through a temporary microhub. Students discuss spacing, schedules, charging, maintenance and coordination across organizations. Their service targets make useful questions for a pilot, but are not observed performance results.
         </p>
 <button class="detail-button" data-detail="finding-06-2-detail" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Freight and shuttle proposals depended on vehicle spacing, timetables, charging and coordination between operators.</p></article>
 <article aria-labelledby="finding-06-3-title" class="synthesis-theme" id="finding-06-3">
-<h4 id="finding-06-3-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-06-3-title">
          Autonomous operation requires more than a sensor list
-        </h4><p class="analysis-preview">Students connected sensing with prediction, planning, control and validation. Their comparisons also considered cost, power and failure modes when choosing a sensor approach.</p><details class="analysis-disclosure"><summary aria-describedby="finding-06-3-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-06-3-title" class="analysis-body" id="finding-06-3-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-06-3-title" class="analysis-body" id="finding-06-3-analysis" role="region">
 <p>
          Reports compare vision-focused and multisensor approaches, then connect perception with prediction, planning and control. They also discuss data collection, model validation and fleet monitoring. Students often favored complementary sensors, while some framed the choice as a trade-off involving cost, power, failure modes and the evidence needed for the application.
         </p>
 <button class="detail-button" data-detail="finding-06-3-detail" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Students traced a chain from sensing to control, comparing sensor cost, power needs and failure modes.</p></article>
 <article aria-labelledby="finding-06-4-title" class="synthesis-theme" id="finding-06-4">
-<h4 id="finding-06-4-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-06-4-title">
          Who can use the service, and who answers when it fails?
-        </h4><p class="analysis-preview">Students raised access, comfort, privacy and human support alongside trust and liability. Reports also question who can intervene when a service or automated decision fails.</p><details class="analysis-disclosure"><summary aria-describedby="finding-06-4-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-06-4-title" class="analysis-body" id="finding-06-4-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-06-4-title" class="analysis-body" id="finding-06-4-analysis" role="region">
 <p>
          Students raise affordability, smartphone access, accessible boarding, privacy and human support. One recalls abrupt braking on a shuttle; patrol reports question false alarms, bias and the authority to intervene. Some welcome passenger explanations, including language-model interfaces, while also discussing trust, liability and public participation.
         </p>
 <button class="detail-button" data-detail="finding-06-4-detail" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Reports asked who could use the service, who could intervene and who would take responsibility after a failure.</p></article>
 </section>
 <p class="teaching-interpretation">
        The reports suggest evaluating a specific service rather than autonomy in the abstract: identify the users, operating conditions, responsibilities and desired outcome, then test it against a suitable baseline. The examples below separate driving roles, traffic arithmetic and fleet scheduling.
       </p>
-</div>
+</div></div>
 </section>
 <section aria-labelledby="teaching-examples-title" class="lecture-section teaching-examples" id="teaching-examples">
 <div class="shell section-inner">
@@ -561,6 +532,20 @@
        </strong>
        The lecture and student reports date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
       </p>
+
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Bokui Chen is an associate professor at Tsinghua Shenzhen International Graduate School. He is the lecturer named for this session in the Fall 2025 syllabus and on the supplied autonomous-driving deck.
+       </p>
+<p>
+<a href="https://www.sigs.tsinghua.edu.cn/cbk_en/main.htm" rel="noopener noreferrer" target="_blank">
+         Official faculty profile
+        </a>
+</p>
+</div><details class="context-disclosure"><summary>Full lecture overview</summary><p>Bokui Chen’s lecture connects autonomous-driving technology with transport services. The supplied deck introduces driver/system roles, sensors and fusion, the steps from sensing to vehicle control, fleet data development, vehicle-to-everything (V2X) communication and vehicle operations. It compares industry approaches and applications in robotaxis, public transit, freight, ports, mines, delivery and campus services, then raises adoption and trust questions. The syllabus also planned microscopic traffic simulation and mixed traffic; the supplied deck does not establish that those models were taught in detail. The traffic and shuttle calculators below are later teaching examples, with explicit assumptions.</p></details>
 </div>
 </section>
 <section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
@@ -889,7 +874,7 @@
       2025 lectures
      </a>
 </div>
-</footer>
+<div data-companion-slot></div></footer>
 </div>
 </body>
 </html>

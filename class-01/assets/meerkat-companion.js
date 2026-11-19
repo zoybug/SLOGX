@@ -31,7 +31,8 @@
       <div class="zoybug-card-foot"><a class="zoybug-source" target="_blank" rel="noopener noreferrer"></a><button class="meerkat-next" type="button">Discover another <span aria-hidden="true">↗</span></button></div>
     </section>`;
   dock.append(widget);
-  document.body.append(dock);
+  const footerSlot = document.querySelector('[data-companion-slot]');
+  (footerSlot || document.body).append(dock);
   const trigger = widget.querySelector('.zoybug-trigger'), card = widget.querySelector('.zoybug-card');
   const close = widget.querySelector('.zoybug-close'), topic = widget.querySelector('.zoybug-topic');
   const text = widget.querySelector('.zoybug-fact'), source = widget.querySelector('.zoybug-source');
@@ -76,6 +77,10 @@
           (document.activeElement === trigger || document.activeElement === document.body)) {
         close.focus({ preventScroll: true });
       }
+      return;
+    }
+    if (footerSlot && innerWidth <= 1100) {
+      dockAtFooter(true);
       return;
     }
     if (widget.contains(document.activeElement) || (matchMedia('(hover: hover)').matches && widget.matches(':hover'))) return;

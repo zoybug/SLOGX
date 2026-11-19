@@ -19,7 +19,7 @@
 </script>
 <script defer="" src="../../assets/zoybug-facts.js">
 </script>
-<script defer="" src="../../assets/meerkat-companion.js?v=20261012-natural-meerkat">
+<script defer="" src="../../assets/meerkat-companion.js?v=20261119">
 </script>
 <link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
 <link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
@@ -28,7 +28,7 @@
 </script>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
-<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261011-atelier"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/></head>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261119"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/><link rel="stylesheet" href="../../assets/fieldnotes-2025.css"/></head>
 <body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="04">
 <a class="skip" href="#main">
    Skip to content
@@ -36,19 +36,13 @@
 <div class="course-workspace">
 <header class="masthead unified-header">
 <div class="shell briefing-header">
-<a class="brand" href="../">
-<span>
-<strong>Introduction to Smart Logistics</strong>
-</span>
-</a>
+<a class="archive-brand" href="../" aria-label="SLOGX, Fall 2025 course archive"><span class="archive-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>SLOGX</strong><span class="brand-divider"></span><span class="brand-caption">Course archive</span></a>
 <div class="top-section-links">
 <a data-section="intro" href="#intro">
        Overview
       </a>
-<a data-section="students" href="#students">Student synthesis</a>
-<a data-section="resources" href="#resources">
-       Resources
-      </a>
+<a data-section="students" href="#students">Student work</a>
+<a data-section="teaching-examples" href="#teaching-examples">Examples</a><a data-section="resources" href="#resources">Sources</a>
 <a data-section="quiz" href="#quiz">
        Quiz
       </a>
@@ -132,53 +126,33 @@
 </header>
 <main class="lecture-main" id="main">
 <section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
-<div class="shell section-inner lecture-header">
-<p class="lecture-meta">Lecture 04 · 13 October 2025 · Lecturer: Prof. Xinlei Chen</p><h1 id="lecture-title">
+<div class="shell section-inner lecture-header"><div class="reader-intro"><p class="lecture-meta"><span class="edition-label">Lecture 04</span><time datetime="2025-10-13">13 October 2025</time></p><h1 id="lecture-title">
         Introduction to Instant Delivery with Drones
-       </h1>
-<div class="session-intro-grid"><div class="session-intro-copy"><div class="lecture-overview">
-<h2>
+       </h1><div class="lecture-overview">
+<h2 class="visually-hidden">
         Lecture overview
        </h2>
-<p>
-        Xinlei Chen examines instant delivery as a coordinated service, using Meituan’s urban drone operation as the main example. A customer order passes through merchant preparation, a rider’s ground handoff, station loading, flight and collection at a designated receiving point. Positioning and perception support the aircraft, while charging sites, remote supervision, maintenance and the TBOS management framework support the fleet. The lecture then considers response delay, route and time-slot coordination, fault-tolerant control, information security, noise and privacy. A fast flight is therefore only one part of providing a useful and dependable delivery service.
-       </p>
-</div></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-04-transparent.webp" width="1536"/></figure></div>
-<div class="lecturer-profile">
-<h2>
-        Lecturer profile
-       </h2>
-<p>
-        Xinlei Chen is an associate professor at Tsinghua Shenzhen International Graduate School. His research includes intelligent Internet of Things, multi-agent collaboration, pervasive computing, robotics and drone swarms. The supplied lecture introduces his work on low-latency response and collaborative aerial and ground sensing.
-       </p>
-<a href="https://www.sigs.tsinghua.edu.cn/cxl/main.psp" rel="noopener noreferrer" target="_blank">
-        Official lecturer profile
-       </a>
-</div>
-</div>
+<p>Trace a Meituan order from the merchant to a rider, a drone station and the customer’s collection point. Flight time is one part of a delivery that also depends on ground crews, weather and a place to land.</p>
+</div><p class="session-byline">Lecturer · <a href="https://www.sigs.tsinghua.edu.cn/cxl/main.psp" rel="noopener noreferrer" target="_blank">Prof. Xinlei Chen</a></p></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="480" src="../../assets/2025-lecture-art/lecture-04-720.webp" width="720"/></figure></div>
 </section>
 <section aria-labelledby="students-title" class="lecture-section student-section" id="students">
-<div class="shell section-inner">
-<span aria-hidden="true" class="legacy-fragment" id="slide-contents">
-</span>
-<h2 id="students-title">
-       Student synthesis
-      </h2>
-<p class="synthesis-introduction" id="synthesis-method">
-       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
-      </p>
-<div class="assignment-prompt">
+<div class="shell section-inner"><div class="reading-label"><h2 id="students-title">Student work</h2><p class="prompt-caption">Students assessed drone delivery in a two-page report. The brief offered five suggested topics.</p><details class="context-disclosure assignment-brief"><summary>Assignment and sources</summary><p class="synthesis-introduction" id="synthesis-method">These summaries draw on anonymized submissions. They include recurring ideas and differences between reports.</p><div class="assignment-prompt">
 <h3>
         Assignment — What did students think about drone delivery?
        </h3>
 <p>
         Students wrote a two-page report giving their views of drone delivery. The brief suggested five aspects—benefits and shortcomings, delivery process, urban technical challenges, current-system problems and improvements—while allowing other topics. The headings below follow those suggested aspects; they were not five compulsory questions. Preparation also included talks on drone delivery and trying Meituan’s service.
        </p>
-</div>
+</div></details></div><div class="reading-entries">
+<span aria-hidden="true" class="legacy-fragment" id="slide-contents">
+</span>
+
+
+
 <section aria-labelledby="slide-future-title" class="synthesis-theme" id="slide-future">
-<h3 id="slide-future-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-future-title">
         Benefits and shortcomings — Where could drones add value?
-       </h3><p class="analysis-preview">Students saw potential in urgent or hard-to-reach deliveries, while questioning payload, range, weather and receiving access. Faster flight alone did not settle whether a complete service would be more convenient.</p><details class="analysis-disclosure"><summary aria-describedby="slide-future-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-future-title" class="analysis-body" id="slide-future-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-future-title" class="analysis-body" id="slide-future-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -202,11 +176,11 @@
 <button class="detail-button" data-detail="notes-slide-future" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">Students saw promise for urgent deliveries but questioned how payload, weather and pickup locations would limit the service.</p></section>
 <section aria-labelledby="slide-responses-title" class="synthesis-theme" id="slide-responses">
-<h3 id="slide-responses-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-responses-title">
         Delivery process — What happens around the flight?
-       </h3><p class="analysis-preview">Reports followed the preparation, ground transport, flight and collection handoffs in the hybrid service. They also identified supporting work that remains on the ground and in the control centre.</p><details class="analysis-disclosure"><summary aria-describedby="slide-responses-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-responses-title" class="analysis-body" id="slide-responses-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-responses-title" class="analysis-body" id="slide-responses-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -230,11 +204,11 @@
 <button class="detail-button" data-detail="notes-slide-responses" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">Students followed each handoff, from the merchant and rider to the dispatch station and customer.</p></section>
 <section aria-labelledby="slide-model-title" class="synthesis-theme" id="slide-model">
-<h3 id="slide-model-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-model-title">
         Urban technical challenges — How does the system handle changing conditions?
-       </h3><p class="analysis-preview">Students connected changing urban conditions with positioning, sensing, processing delay and coordination. Their reflections distinguish equipment faults, outside disturbances and privacy concerns.</p><details class="analysis-disclosure"><summary aria-describedby="slide-model-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-model-title" class="analysis-body" id="slide-model-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-model-title" class="analysis-body" id="slide-model-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -258,11 +232,11 @@
 <button class="detail-button" data-detail="notes-slide-model" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">Reports considered how a drone would sense a change, process it in time and coordinate with other aircraft.</p></section>
 <section aria-labelledby="slide-world-title" class="synthesis-theme" id="slide-world">
-<h3 id="slide-world-title">
+<details class="analysis-disclosure"><summary><h3 id="slide-world-title">
         Current-system problems — What limits dependable operation?
-       </h3><p class="analysis-preview">Students raised station costs, weather interruptions, service coverage and responsibility for incidents. Their reflections call for evaluating supporting work and fallback arrangements as well as successful flights.</p><details class="analysis-disclosure"><summary aria-describedby="slide-world-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="slide-world-title" class="analysis-body" id="slide-world-analysis" role="region">
+       </h3></summary><div aria-labelledby="slide-world-title" class="analysis-body" id="slide-world-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -286,11 +260,11 @@
 <button class="detail-button" data-detail="notes-slide-world" type="button">
         More detail
        </button>
-</div></details></section>
+</div></details><p class="analysis-preview">Coverage, station costs and fallback plans shaped whether students thought a service could run reliably.</p></section>
 <section aria-labelledby="student-suggestions-title" class="synthesis-theme" id="student-suggestions">
-<h3 id="student-suggestions-title">
+<details class="analysis-disclosure"><summary><h3 id="student-suggestions-title">
         Suggested improvements — What would students test first?
-       </h3><p class="analysis-preview">Students proposed technical improvements, hybrid services and staged adoption, alongside shared infrastructure and clearer governance. These remain questions for a pilot rather than validated forecasts.</p><details class="analysis-disclosure"><summary aria-describedby="student-suggestions-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="student-suggestions-title" class="analysis-body" id="student-suggestions-analysis" role="region">
+       </h3></summary><div aria-labelledby="student-suggestions-title" class="analysis-body" id="student-suggestions-analysis" role="region">
 <h4>
         What students said
        </h4>
@@ -314,8 +288,8 @@
 <button class="detail-button" data-detail="student-suggestions-detail" type="button">
         More detail
        </button>
-</div></details></section>
-</div>
+</div></details><p class="analysis-preview">Students proposed staged pilots, shared facilities and hybrid services. These ideas still needed testing.</p></section>
+</div></div>
 </section>
 <section aria-labelledby="teaching-title" class="lecture-section teaching-examples" id="teaching-examples">
 <div class="shell section-inner">
@@ -537,6 +511,18 @@
        </strong>
        The lecture and student reflections date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
       </p>
+
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Xinlei Chen is an associate professor at Tsinghua Shenzhen International Graduate School. His research includes intelligent Internet of Things, multi-agent collaboration, pervasive computing, robotics and drone swarms. The supplied lecture introduces his work on low-latency response and collaborative aerial and ground sensing.
+       </p>
+<a href="https://www.sigs.tsinghua.edu.cn/cxl/main.psp" rel="noopener noreferrer" target="_blank">
+        Official lecturer profile
+       </a>
+</div><details class="context-disclosure"><summary>Full lecture overview</summary><p>Xinlei Chen examines instant delivery as a coordinated service, using Meituan’s urban drone operation as the main example. A customer order passes through merchant preparation, a rider’s ground handoff, station loading, flight and collection at a designated receiving point. Positioning and perception support the aircraft, while charging sites, remote supervision, maintenance and the TBOS management framework support the fleet. The lecture then considers response delay, route and time-slot coordination, fault-tolerant control, information security, noise and privacy. A fast flight is therefore only one part of providing a useful and dependable delivery service.</p></details>
 </div>
 </section>
 <section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
@@ -767,7 +753,7 @@
       2025 Sessions
      </a>
 </div>
-</footer>
+<div data-companion-slot></div></footer>
 </div>
 </body>
 </html>

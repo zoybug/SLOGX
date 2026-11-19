@@ -19,7 +19,7 @@
 </script>
 <script defer="" src="../../assets/zoybug-facts.js">
 </script>
-<script defer="" src="../../assets/meerkat-companion.js?v=20261012-natural-meerkat">
+<script defer="" src="../../assets/meerkat-companion.js?v=20261119">
 </script>
 <link href="../../assets/briefing-2025.css?v=2025-guest-20261004" rel="stylesheet"/>
 <link href="../../assets/lecture-graphics-2025.css?v=20261004-transparent" rel="stylesheet"/>
@@ -28,7 +28,7 @@
 </script>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Sans-3-normal-latin.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="../../assets/fonts/Source-Serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
-<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261011-atelier"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/></head>
+<link href="../../assets/content-2025.css?v=20261011" rel="stylesheet"/><script defer="" src="../../assets/atelier-2025.js?v=20261119"></script><script defer="True" src="../../assets/content-2025.js?v=20261012-natural-meerkat"></script><link href="../../assets/atelier-2025.css?v=20261012-profiles" rel="stylesheet"/><link rel="stylesheet" href="../../assets/meerkat-companion.css?v=20261012-natural-meerkat"/><link rel="stylesheet" href="../../assets/fieldnotes-2025.css"/></head>
 <body class="lecture-page archive-lecture content-2025" data-course-year="2025" data-lecture="05">
 <a class="skip" href="#main">
    Skip to content
@@ -36,20 +36,13 @@
 <div class="course-workspace">
 <header class="masthead unified-header">
 <div class="shell briefing-header">
-<a class="brand" href="../">
-<span>
-<strong>Introduction to Smart Logistics</strong>
-<small>Fall 2025</small>
-</span>
-</a>
+<a class="archive-brand" href="../" aria-label="SLOGX, Fall 2025 course archive"><span class="archive-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>SLOGX</strong><span class="brand-divider"></span><span class="brand-caption">Course archive</span></a>
 <div class="top-section-links">
 <a data-section="intro" href="#intro">
        Overview
       </a>
-<a data-section="students" href="#students">Student synthesis</a>
-<a data-section="resources" href="#resources">
-       Resources
-      </a>
+<a data-section="students" href="#students">Student work</a>
+<a data-section="teaching-examples" href="#teaching-examples">Examples</a><a data-section="resources" href="#resources">Sources</a>
 <a data-section="quiz" href="#quiz">
        Quiz
       </a>
@@ -133,102 +126,80 @@
 </header>
 <main class="lecture-main" id="main">
 <section aria-labelledby="lecture-title" class="lecture-section intro-section" id="intro">
-<div class="shell section-inner lecture-header">
-<p class="lecture-meta">Lecture 05 · 20 October 2025 · Lecturer: Prof. Kai Zhang</p><h1 id="lecture-title">
+<div class="shell section-inner lecture-header"><div class="reader-intro"><p class="lecture-meta"><span class="edition-label">Lecture 05</span><time datetime="2025-10-20">20 October 2025</time></p><h1 id="lecture-title">
         High Accuracy Positioning for ITS
-       </h1>
-<div class="session-intro-grid"><div class="session-intro-copy"><div class="lecture-overview">
-<h2>
+       </h1><div class="lecture-overview">
+<h2 class="visually-hidden">
         Lecture overview
        </h2>
-<p>
-        Navigation, fleet tracking, emergency response, bus-arrival information and road pricing depend on knowing where a vehicle is. Kai Zhang’s lecture explains why that position remains uncertain: satellite signals can be blocked or reflected, while inertial estimates accumulate error. It follows three connected tasks: combining global navigation satellite system (GNSS), inertial and vehicle measurements; updating a position estimate and its uncertainty; and associating noisy positions with roads. A hidden Markov model (HMM) and Viterbi inference compare candidate road sequences, while Fréchet methods compare curve geometry. The service determines how accurate, available and timely the information must be.
-       </p>
-</div></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="1024" src="../../assets/2025-lecture-art/lecture-05-transparent.webp" width="1536"/></figure></div>
-<div class="lecturer-profile">
-<h2>
-        Lecturer profile
-       </h2>
-<p>
-        Kai Zhang is an associate professor at Tsinghua Shenzhen International Graduate School. His official profile lists teaching in multisensor fusion and intelligent transportation, and research in information fusion, statistical signal processing and high-accuracy position and attitude estimation.
-       </p>
-<p>
-<a href="https://openfiesta.sigs.tsinghua.edu.cn/cn/pi/3/51" rel="noopener noreferrer" target="_blank">
-         Official faculty profile
-        </a>
-</p>
-</div>
-</div>
+<p>Which road is a vehicle on when its satellite fixes fall between two streets? Combine satellite and inertial measurements, then compare how a sequence of noisy positions fits the road network.</p>
+</div><p class="session-byline">Lecturer · <a href="https://openfiesta.sigs.tsinghua.edu.cn/cn/pi/3/51" rel="noopener noreferrer" target="_blank">Prof. Kai Zhang</a></p></div><figure aria-hidden="true" class="session-illustration"><img alt="" decoding="async" fetchpriority="high" height="480" src="../../assets/2025-lecture-art/lecture-05-720.webp" width="720"/></figure></div>
 </section>
 <section aria-labelledby="student-synthesis-title" class="lecture-section student-section" id="students">
-<div class="shell section-inner">
-<h2 id="student-synthesis-title">
-       Student synthesis
-      </h2>
-<p class="synthesis-introduction">
-       This section brings together anonymized coursework from the Fall 2025 class. We reviewed the submitted responses, compared the ideas raised, and grouped recurring themes while preserving meaningful differences in perspective. Student names and IDs are not shown. The findings describe the submitted work, rather than the views of every student or a measured outcome of the lecture.
-      </p>
-<section aria-labelledby="assignment-05-title" class="question-synthesis">
-<h3 id="assignment-05-title">
+<div class="shell section-inner"><div class="reading-label"><h2 id="student-synthesis-title">Student work</h2><p class="prompt-caption">Students chose the part of the positioning lecture that most interested them for a one-page reflection.</p><details class="context-disclosure assignment-brief"><summary>Assignment and sources</summary><p class="synthesis-introduction">These summaries draw on anonymized submissions. They include recurring ideas and differences between reports.</p><h3 id="assignment-05-title">
         What interested students most about the positioning lecture?
-       </h3>
-<p>
+       </h3><p>
         The assignment asked for a one-page report on the part of the lecture that interested each student most. It was an open reflection, with no required list of separate questions.
-       </p>
-<button class="detail-button" data-detail="assignment-05-detail" type="button">
+       </p><button class="detail-button" data-detail="assignment-05-detail" type="button">
         More detail
-       </button>
+       </button></details></div><div class="reading-entries">
+
+
+<section aria-labelledby="assignment-05-title" class="question-synthesis">
+
+
+
 <article aria-labelledby="finding-05-1-title" class="synthesis-theme" id="finding-05-1">
-<h4 id="finding-05-1-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-05-1-title">
          Why satellite and inertial measurements are combined
-        </h4><p class="analysis-preview">Students explored how satellite and inertial measurements address complementary weaknesses, and how a filter carries uncertainty through prediction and correction.</p><details class="analysis-disclosure"><summary aria-describedby="finding-05-1-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-05-1-title" class="analysis-body" id="finding-05-1-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-05-1-title" class="analysis-body" id="finding-05-1-analysis" role="region">
 <p>
          Students were drawn to the complementary weaknesses of satellite positioning and an inertial navigation system (INS): reflected or missing satellite signals, and inertial drift between external updates. Some began with the assumption that GPS alone was sufficient; others focused on how a filter carries uncertainty through prediction and correction.
         </p>
 <button class="detail-button" data-detail="finding-05-1-detail" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Satellite fixes can be interrupted and inertial estimates drift. Students explored how a filter combines the two.</p></article>
 <article aria-labelledby="finding-05-2-title" class="synthesis-theme" id="finding-05-2">
-<h4 id="finding-05-2-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-05-2-title">
          How a sequence of fixes identifies the traveled road
-        </h4><p class="analysis-preview">Students approached map matching through probabilistic road sequences and geometric similarity, while recognizing that similar roads can remain ambiguous.</p><details class="analysis-disclosure"><summary aria-describedby="finding-05-2-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-05-2-title" class="analysis-body" id="finding-05-2-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-05-2-title" class="analysis-body" id="finding-05-2-analysis" role="region">
 <p>
          Map matching attracted both probabilistic and geometric explanations. Students discussed hidden road candidates, observation likelihoods and plausible transitions in an HMM. Others found the dog-and-owner analogy for Fréchet distance easier to visualize, while recognizing that similar road shapes can remain ambiguous.
         </p>
 <button class="detail-button" data-detail="finding-05-2-detail" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Students compared sequences of fixes and road shapes. Nearby roads with similar geometry could still be hard to tell apart.</p></article>
 <article aria-labelledby="finding-05-3-title" class="synthesis-theme" id="finding-05-3">
 <span id="slide-future">
 </span>
-<h4 id="finding-05-3-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-05-3-title">
          Different levels of mathematical confidence
-        </h4><p class="analysis-preview">Students differed in mathematical confidence: some pursued equations and diagrams, while others valued analogies and wanted clearer explanations of the Kalman filter.</p><details class="analysis-disclosure"><summary aria-describedby="finding-05-3-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-05-3-title" class="analysis-body" id="finding-05-3-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-05-3-title" class="analysis-body" id="finding-05-3-analysis" role="region">
 <p>
          Some reports pursued state-estimation equations, sensor errors and free-space diagrams. Others valued the analogies but found the lecture dense and wanted a clearer understanding of the Kalman filter. Interest in a method therefore did not always mean confidence in applying it.
         </p>
 <button class="detail-button" data-detail="notes-slide-future" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Some students worked through the equations. Others used analogies and wanted a clearer account of the Kalman filter.</p></article>
 <article aria-labelledby="finding-05-4-title" class="synthesis-theme" id="finding-05-4">
-<h4 id="finding-05-4-title">
+<details class="analysis-disclosure"><summary><h4 id="finding-05-4-title">
          Choosing a system for the service and its budget
-        </h4><p class="analysis-preview">Students connected positioning with service needs, sensor costs, integration and map quality. Their proposed extensions were interests to investigate, rather than demonstrated improvements.</p><details class="analysis-disclosure"><summary aria-describedby="finding-05-4-title"><span class="disclosure-open">Read full analysis</span><span class="disclosure-close">Close analysis</span></summary><div aria-labelledby="finding-05-4-title" class="analysis-body" id="finding-05-4-analysis" role="region">
+        </h4></summary><div aria-labelledby="finding-05-4-title" class="analysis-body" id="finding-05-4-analysis" role="region">
 <p>
          Students connected positioning with fleet management, road pricing and everyday navigation. They also raised sensor cost, calibration, integration complexity and map quality, and explored RTK, UWB or additional sensors as possible extensions. These were interests and proposals, rather than demonstrated improvements in cost or safety.
         </p>
 <button class="detail-button" data-detail="finding-05-4-detail" type="button">
          More detail
         </button>
-</div></details></article>
+</div></details><p class="analysis-preview">Reports weighed sensor and integration costs against the accuracy a particular service needed.</p></article>
 </section>
 <p class="teaching-interpretation">
        The reflections suggest that the useful lesson is not a single accuracy claim: readers need to understand how uncertain measurements, a road model and a service requirement fit together. The teaching examples below isolate those relationships.
       </p>
-</div>
+</div></div>
 </section>
 <section aria-labelledby="teaching-examples-title" class="lecture-section teaching-examples" id="teaching-examples">
 <div class="shell section-inner">
@@ -507,6 +478,20 @@
        </strong>
        The lecture and student reflections date to Fall 2025. Companion links were last recorded as checked in October 2026 and may have changed since. Research findings and company descriptions should be interpreted in the context of their original publication dates and operating conditions.
       </p>
+
+<div class="lecturer-profile">
+<h2>
+        Lecturer profile
+       </h2>
+<p>
+        Kai Zhang is an associate professor at Tsinghua Shenzhen International Graduate School. His official profile lists teaching in multisensor fusion and intelligent transportation, and research in information fusion, statistical signal processing and high-accuracy position and attitude estimation.
+       </p>
+<p>
+<a href="https://openfiesta.sigs.tsinghua.edu.cn/cn/pi/3/51" rel="noopener noreferrer" target="_blank">
+         Official faculty profile
+        </a>
+</p>
+</div><details class="context-disclosure"><summary>Full lecture overview</summary><p>Navigation, fleet tracking, emergency response, bus-arrival information and road pricing depend on knowing where a vehicle is. Kai Zhang’s lecture explains why that position remains uncertain: satellite signals can be blocked or reflected, while inertial estimates accumulate error. It follows three connected tasks: combining global navigation satellite system (GNSS), inertial and vehicle measurements; updating a position estimate and its uncertainty; and associating noisy positions with roads. A hidden Markov model (HMM) and Viterbi inference compare candidate road sequences, while Fréchet methods compare curve geometry. The service determines how accurate, available and timely the information must be.</p></details>
 </div>
 </section>
 <section aria-labelledby="quiz-title" class="lecture-section quiz-section" id="quiz">
@@ -765,7 +750,7 @@
       2025 lectures
      </a>
 </div>
-</footer>
+<div data-companion-slot></div></footer>
 </div>
 </body>
 </html>
