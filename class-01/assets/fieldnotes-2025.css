@@ -44,11 +44,7 @@
 .archive-brand strong { font: 700 1.36rem/1 var(--font-sans); letter-spacing: -.055em; }
 .brand-divider { height: 17px; width: 1px; background: #a4afa5; margin-inline: 5px; }
 .brand-caption { color: var(--archive-muted); font: 500 .95rem/1 var(--font-sans); }
-.archive-mark {
-  display: inline-grid; align-content: center; justify-items: center; gap: 2px;
-  width: 27px; height: 29px; background: var(--archive-ink); border-radius: 3px;
-}
-.archive-mark i { width: 13px; height: 3px; background: #deeac6; transform: skewY(-19deg); }
+.archive-brand img { display: block; flex: none; }
 .archive-actions { gap: 24px; font-size: .9375rem; }
 .author-link { gap: 6px; min-height: 44px; text-decoration: none; }
 .author-link:hover { text-decoration: underline; }

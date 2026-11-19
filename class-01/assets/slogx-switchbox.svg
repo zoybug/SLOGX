@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">SLOGX · Switchbox</title>
+  <g transform="matrix(.875 .4375 -.875 .4375 32 2)" fill="#142B40">
+    <path d="M0 0h12.5v12.5H0z M19.5 0H32v12.5H19.5z M0 19.5h12.5V32H0z M19.5 19.5H32V32H19.5z"/>
+  </g>
+  <path fill="#142B40" d="M4 19.5 30.3 32.65v28L4 47.5z M33.7 32.65 60 19.5v28L33.7 60.65z"/>
+  <path fill="#F4B23D" d="M21.0625,7.46875 38.125,16 21.0625,24.5312 21.0625,38.5312 14.9375,35.4688 14.9375,21.4688 25.875,16 14.9375,10.5312Z"/>
+</svg>
